@@ -29,9 +29,9 @@ jobs:
       run: |
         pip install -r core_requirements.txt
     
-    - name: Check for dependecies chnages
-      run: |
-        pigar
+    #- name: Check for dependecies chnages
+    #  run: |
+    #    pigar
 
     - name: Install dependencies
       run: |
