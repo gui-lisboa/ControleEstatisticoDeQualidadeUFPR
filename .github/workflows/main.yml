@@ -29,9 +29,9 @@ jobs:
       run: |
         pip install -r requirements.txt
     
-    - name: Install Jupyter 1.0.0
+    - name: Install Jupyter and Jupyter-Book
       run : |
-        pip install jupyter
+        pip install jupyter jupyter-book
 
     # Build the book
     - name: Build the book
