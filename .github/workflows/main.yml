@@ -36,10 +36,6 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-    
-    - name: Install Jupyter and Jupyter-Book
-      run : |
-        pip install jupyter jupyter-book
 
     # Build the book
     - name: Build the book
@@ -51,4 +47,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
+        publish_dir: atividades/_build/html
