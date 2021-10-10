@@ -36,6 +36,10 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+    
+    - name: Install Jupyter and Jupyter-Book
+      run : |
+        pip install jupyter jupyter-book
 
     # Build the book
     - name: Build the book
