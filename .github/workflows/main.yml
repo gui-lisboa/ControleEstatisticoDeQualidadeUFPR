@@ -25,6 +25,14 @@ jobs:
       with:
         python-version: 3.9
 
+    - name: Install core dependencies
+      run: |
+        pip install -r core_requirements.txt
+    
+    - name: Check for dependecies chnages
+      run: |
+        pigar
+
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
@@ -32,7 +40,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
+        jupyter-book build atividades
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
