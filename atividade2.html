@@ -428,20 +428,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1830</span><span class="o">/</span><span class="mf">137612747.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Imports</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">matplotlib_venn</span> <span class="kn">import</span> <span class="n">venn3</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib_venn&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="os-diametros-de-oito-mancais-selecionados-ao-acaso-sao-os-seguintes-em-mm-br">
@@ -520,11 +506,37 @@
 </div>
 <div class="cell_output docutils container">
 <p>c. Quartis são:</p>
-<p>|   Quartil |   Tempo de Vida (hr) |
-|----------:|---------------------:|
-|      0.25 |               124    |
-|      0.5  |               128    |
-|      0.75 |               133.75 |</p>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1769</span><span class="o">/</span><span class="mf">1709441421.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">quartis</span> <span class="o">=</span> <span class="n">tempos_de_vida</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;c. Quartis são:&#39;</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">quartis</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Quartil&quot;</span><span class="p">,</span> <span class="s2">&quot;Tempo de Vida (hr)&quot;</span><span class="p">])))</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/core/series.py</span> in <span class="ni">to_markdown</span><span class="nt">(self, buf, mode, index, storage_options, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1635</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1636</span><span class="s2">         return self.to_frame().to_markdown(</span>
+<span class="ne">-&gt; </span><span class="mi">1637</span><span class="s2">             buf, mode, index, storage_options=storage_options, **kwargs</span>
+<span class="g g-Whitespace">   </span><span class="mi">1638</span><span class="s2">         )</span>
+<span class="g g-Whitespace">   </span><span class="mi">1639</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ni">to_markdown</span><span class="nt">(self, buf, mode, index, storage_options, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2565</span><span class="s2">         kwargs.setdefault(&quot;tablefmt&quot;, &quot;pipe&quot;)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2566</span><span class="s2">         kwargs.setdefault(&quot;showindex&quot;, index)</span>
+<span class="ne">-&gt; </span><span class="mi">2567</span><span class="s2">         tabulate = import_optional_dependency(&quot;tabulate&quot;)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2568</span><span class="s2">         result = tabulate.tabulate(self, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2569</span><span class="s2">         if buf is None:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/compat/_optional.py</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
+<span class="g g-Whitespace">    </span><span class="mi">116</span><span class="s2">     except ImportError:</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span><span class="s2">         if errors == &quot;raise&quot;:</span>
+<span class="ne">--&gt; </span><span class="mi">118</span><span class="s2">             raise ImportError(msg) from None</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span><span class="s2">         else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span><span class="s2">             return None</span>
+
+<span class="ne">ImportError</span>: Missing optional dependency &#39;tabulate&#39;.  Use pip or conda to install tabulate.
+</pre></div>
+</div>
 </div>
 </div>
 </div>
