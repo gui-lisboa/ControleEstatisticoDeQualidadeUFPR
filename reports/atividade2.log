@@ -24,7 +24,7 @@ display(Markdown(quartis.to_markdown(headers=["Quartil", "Tempo de Vida (hr)"]))
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1769/1709441421.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1759/1709441421.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0mquartis[0m [0;34m=[0m [0mtempos_de_vida[0m[0;34m.[0m[0mquantile[0m[0;34m([0m[0;34m[[0m[0;36m.25[0m[0;34m,[0m [0;36m.5[0m[0;34m,[0m [0;36m.75[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0mdisplay[0m[0;34m([0m[0mMarkdown[0m[0;34m([0m[0;34mf'c. Quartis são:'[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 3[0;31m [0mdisplay[0m[0;34m([0m[0mMarkdown[0m[0;34m([0m[0mquartis[0m[0;34m.[0m[0mto_markdown[0m[0;34m([0m[0mheaders[0m[0;34m=[0m[0;34m[[0m[0;34m"Quartil"[0m[0;34m,[0m [0;34m"Tempo de Vida (hr)"[0m[0;34m][0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

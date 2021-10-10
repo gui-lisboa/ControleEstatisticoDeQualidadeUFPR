@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,27 +95,10 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="content.html">
-   Content in Jupyter Book
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Atividade 2
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="markdown.html">
-     Markdown Files
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Atividade 2
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -177,10 +160,7 @@
             href="https://github.com/gui-lisboa/ControleEstatisticoDeQualidadeUFPR"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/gui-lisboa/ControleEstatisticoDeQualidadeUFPR/issues/new?title=Issue%20on%20page%20%2Fatividade2.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
         
     </div>
 </div>
@@ -508,7 +488,7 @@
 <p>c. Quartis são:</p>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1769</span><span class="o">/</span><span class="mf">1709441421.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1759</span><span class="o">/</span><span class="mf">1709441421.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">quartis</span> <span class="o">=</span> <span class="n">tempos_de_vida</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">.25</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="mf">.75</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;c. Quartis são:&#39;</span><span class="p">))</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">quartis</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Quartil&quot;</span><span class="p">,</span> <span class="s2">&quot;Tempo de Vida (hr)&quot;</span><span class="p">])))</span>
@@ -809,18 +789,53 @@
     <span class="sa">f</span><span class="s1">&#39;b. Média = </span><span class="si">{</span><span class="n">media</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">; Variância = </span><span class="si">{</span><span class="n">variancia</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> &lt;br&gt;&#39;</span>
     <span class="sa">f</span><span class="s1">&#39;c. Função distribuição acumulada P(X&lt;=x):&#39;</span><span class="p">))</span>
 
-<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">tabela_dist</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">()))</span>
+<span class="n">tabela_dist</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <p>a. K = 0.050 <br>b. Média = 1.867; Variância = 0.616 <br>c. Função distribuição acumulada P(X&lt;=x):</p>
-<p>|    |   P(X=x) |   P(X&lt;=x) |
-|---:|---------:|----------:|
-|  1 | 0.383333 |  0.383333 |
-|  2 | 0.366667 |  0.75     |
-|  3 | 0.25     |  1        |</p>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>P(X=x)</th>
+      <th>P(X&lt;=x)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>[0.3833333333333333]</td>
+      <td>[0.3833333333333333]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>[0.36666666666666664]</td>
+      <td>[0.75]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>[0.24999999999999997]</td>
+      <td>[1.0]</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </div>
 <hr class="docutils" />
@@ -1002,11 +1017,11 @@ dtype: float64
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="markdown.html" title="previous page">
+        <a class="left-prev" href="intro.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Markdown Files</p>
+                <p class="prevnext-title">Welcome to your Jupyter Book</p>
             </div>
         </a>
     </div>
