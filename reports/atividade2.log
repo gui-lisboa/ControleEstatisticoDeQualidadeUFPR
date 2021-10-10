@@ -17,39 +17,78 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-quartis = tempos_de_vida.quantile([.25, .5, .75])
-display(Markdown(f'c. Quartis são:'))
-display(Markdown(quartis.to_markdown(headers=["Quartil", "Tempo de Vida (hr)"])))
+amostra = utils.ler_quadro_txt_como_serie("datasets\Atividade2-Exercicio12.txt")
+amostra.describe()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1759/1709441421.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0mquartis[0m [0;34m=[0m [0mtempos_de_vida[0m[0;34m.[0m[0mquantile[0m[0;34m([0m[0;34m[[0m[0;36m.25[0m[0;34m,[0m [0;36m.5[0m[0;34m,[0m [0;36m.75[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0mdisplay[0m[0;34m([0m[0mMarkdown[0m[0;34m([0m[0;34mf'c. Quartis são:'[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 3[0;31m [0mdisplay[0m[0;34m([0m[0mMarkdown[0m[0;34m([0m[0mquartis[0m[0;34m.[0m[0mto_markdown[0m[0;34m([0m[0mheaders[0m[0;34m=[0m[0;34m[[0m[0;34m"Quartil"[0m[0;34m,[0m [0;34m"Tempo de Vida (hr)"[0m[0;34m][0m[0;34m)[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/core/series.py[0m in [0;36mto_markdown[0;34m(self, buf, mode, index, storage_options, **kwargs)[0m
-[1;32m   1635[0m         """
-[1;32m   1636[0m         return self.to_frame().to_markdown(
-[0;32m-> 1637[0;31m             [0mbuf[0m[0;34m,[0m [0mmode[0m[0;34m,[0m [0mindex[0m[0;34m,[0m [0mstorage_options[0m[0;34m=[0m[0mstorage_options[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1638[0m         )
-[1;32m   1639[0m [0;34m[0m[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/tmp/ipykernel_1853/2979591273.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mamostra[0m [0;34m=[0m [0mutils[0m[0;34m.[0m[0mler_quadro_txt_como_serie[0m[0;34m([0m[0;34m"datasets\Atividade2-Exercicio12.txt"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0mamostra[0m[0;34m.[0m[0mdescribe[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/core/frame.py[0m in [0;36mto_markdown[0;34m(self, buf, mode, index, storage_options, **kwargs)[0m
-[1;32m   2565[0m         [0mkwargs[0m[0;34m.[0m[0msetdefault[0m[0;34m([0m[0;34m"tablefmt"[0m[0;34m,[0m [0;34m"pipe"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   2566[0m         [0mkwargs[0m[0;34m.[0m[0msetdefault[0m[0;34m([0m[0;34m"showindex"[0m[0;34m,[0m [0mindex[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 2567[0;31m         [0mtabulate[0m [0;34m=[0m [0mimport_optional_dependency[0m[0;34m([0m[0;34m"tabulate"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   2568[0m         [0mresult[0m [0;34m=[0m [0mtabulate[0m[0;34m.[0m[0mtabulate[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   2569[0m         [0;32mif[0m [0mbuf[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m~/work/ControleEstatisticoDeQualidadeUFPR/ControleEstatisticoDeQualidadeUFPR/atividades/utils/ler_quadro_txt_como_serie.py[0m in [0;36mler_quadro_txt_como_serie[0;34m(nome_arquivo)[0m
+[1;32m      2[0m [0;34m[0m[0m
+[1;32m      3[0m [0;32mdef[0m [0mler_quadro_txt_como_serie[0m[0;34m([0m[0mnome_arquivo[0m[0;34m:[0m [0mstr[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 4[0;31m     [0mdata_frame[0m [0;34m=[0m [0mpandas[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0mnome_arquivo[0m[0;34m,[0m [0msep[0m[0;34m=[0m[0;34m'\s+'[0m[0;34m,[0m [0mheader[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m [0mdecimal[0m[0;34m=[0m[0;34m","[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m     [0;32mreturn[0m [0mpandas[0m[0;34m.[0m[0mSeries[0m[0;34m([0m[0;34m[[0m[0mvalor[0m [0;32mfor[0m [0mlinha[0m [0;32min[0m [0mdata_frame[0m[0;34m.[0m[0mvalues[0m [0;32mfor[0m [0mvalor[0m [0;32min[0m [0mlinha[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/compat/_optional.py[0m in [0;36mimport_optional_dependency[0;34m(name, extra, errors, min_version)[0m
-[1;32m    116[0m     [0;32mexcept[0m [0mImportError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    117[0m         [0;32mif[0m [0merrors[0m [0;34m==[0m [0;34m"raise"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 118[0;31m             [0;32mraise[0m [0mImportError[0m[0;34m([0m[0mmsg[0m[0;34m)[0m [0;32mfrom[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    119[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    120[0m             [0;32mreturn[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
+[1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    310[0m                 )
+[0;32m--> 311[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    312[0m [0;34m[0m[0m
+[1;32m    313[0m         [0;32mreturn[0m [0mwrapper[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mImportError[0m: Missing optional dependency 'tabulate'.  Use pip or conda to install tabulate.
-ImportError: Missing optional dependency 'tabulate'.  Use pip or conda to install tabulate.
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py[0m in [0;36mread_csv[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)[0m
+[1;32m    584[0m     [0mkwds[0m[0;34m.[0m[0mupdate[0m[0;34m([0m[0mkwds_defaults[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    585[0m [0;34m[0m[0m
+[0;32m--> 586[0;31m     [0;32mreturn[0m [0m_read[0m[0;34m([0m[0mfilepath_or_buffer[0m[0;34m,[0m [0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    587[0m [0;34m[0m[0m
+[1;32m    588[0m [0;34m[0m[0m
+
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py[0m in [0;36m_read[0;34m(filepath_or_buffer, kwds)[0m
+[1;32m    480[0m [0;34m[0m[0m
+[1;32m    481[0m     [0;31m# Create the parser.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 482[0;31m     [0mparser[0m [0;34m=[0m [0mTextFileReader[0m[0;34m([0m[0mfilepath_or_buffer[0m[0;34m,[0m [0;34m**[0m[0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    483[0m [0;34m[0m[0m
+[1;32m    484[0m     [0;32mif[0m [0mchunksize[0m [0;32mor[0m [0miterator[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py[0m in [0;36m__init__[0;34m(self, f, engine, **kwds)[0m
+[1;32m    809[0m             [0mself[0m[0;34m.[0m[0moptions[0m[0;34m[[0m[0;34m"has_index_names"[0m[0;34m][0m [0;34m=[0m [0mkwds[0m[0;34m[[0m[0;34m"has_index_names"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    810[0m [0;34m[0m[0m
+[0;32m--> 811[0;31m         [0mself[0m[0;34m.[0m[0m_engine[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_make_engine[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mengine[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    812[0m [0;34m[0m[0m
+[1;32m    813[0m     [0;32mdef[0m [0mclose[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/readers.py[0m in [0;36m_make_engine[0;34m(self, engine)[0m
+[1;32m   1038[0m             )
+[1;32m   1039[0m         [0;31m# error: Too many arguments for "ParserBase"[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1040[0;31m         [0;32mreturn[0m [0mmapping[0m[0;34m[[0m[0mengine[0m[0;34m][0m[0;34m([0m[0mself[0m[0;34m.[0m[0mf[0m[0;34m,[0m [0;34m**[0m[0mself[0m[0;34m.[0m[0moptions[0m[0;34m)[0m  [0;31m# type: ignore[call-arg][0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1041[0m [0;34m[0m[0m
+[1;32m   1042[0m     [0;32mdef[0m [0m_failover_to_python[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py[0m in [0;36m__init__[0;34m(self, src, **kwds)[0m
+[1;32m     49[0m [0;34m[0m[0m
+[1;32m     50[0m         [0;31m# open handles[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 51[0;31m         [0mself[0m[0;34m.[0m[0m_open_handles[0m[0;34m([0m[0msrc[0m[0;34m,[0m [0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     52[0m         [0;32massert[0m [0mself[0m[0;34m.[0m[0mhandles[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     53[0m [0;34m[0m[0m
+
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py[0m in [0;36m_open_handles[0;34m(self, src, kwds)[0m
+[1;32m    227[0m             [0mmemory_map[0m[0;34m=[0m[0mkwds[0m[0;34m.[0m[0mget[0m[0;34m([0m[0;34m"memory_map"[0m[0;34m,[0m [0;32mFalse[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    228[0m             [0mstorage_options[0m[0;34m=[0m[0mkwds[0m[0;34m.[0m[0mget[0m[0;34m([0m[0;34m"storage_options"[0m[0;34m,[0m [0;32mNone[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 229[0;31m             [0merrors[0m[0;34m=[0m[0mkwds[0m[0;34m.[0m[0mget[0m[0;34m([0m[0;34m"encoding_errors"[0m[0;34m,[0m [0;34m"strict"[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    230[0m         )
+[1;32m    231[0m [0;34m[0m[0m
+
+[0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/io/common.py[0m in [0;36mget_handle[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
+[1;32m    705[0m                 [0mencoding[0m[0;34m=[0m[0mioargs[0m[0;34m.[0m[0mencoding[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    706[0m                 [0merrors[0m[0;34m=[0m[0merrors[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 707[0;31m                 [0mnewline[0m[0;34m=[0m[0;34m""[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    708[0m             )
+[1;32m    709[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'datasets\\Atividade2-Exercicio12.txt'
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets\\Atividade2-Exercicio12.txt'
 
