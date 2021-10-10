@@ -4,7 +4,4 @@
 format: jb-article
 root: intro
 sections:
-- file: content
-  sections:
-  - file: markdown
-  - file: atividade2
+- file: atividade2
