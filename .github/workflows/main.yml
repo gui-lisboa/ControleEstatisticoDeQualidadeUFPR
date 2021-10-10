@@ -28,6 +28,10 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+    
+    - name: Install Jupyter 1.0.0
+      run : |
+        pip install jupyter
 
     # Build the book
     - name: Build the book
