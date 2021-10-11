@@ -1,4 +1,4 @@
-# Controle Estatistico De Qualidade - UFPR
+# Estatística - UFPR
 
 Notebooks usados para atividades de frequência.
 
