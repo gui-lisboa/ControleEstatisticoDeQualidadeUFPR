@@ -14,6 +14,19 @@ logo                        : logo.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    # - html_admonition
+    - html_image
+    # - linkify
+    # - replacements
+    # - smartquotes
+    # - substitution
 
 # Define the name of the latex output file for PDF builds
 latex:
