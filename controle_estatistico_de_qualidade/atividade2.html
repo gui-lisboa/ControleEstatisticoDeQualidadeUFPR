@@ -285,25 +285,29 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-distribuicao-de-probabilidade-da-v-a-continua-x-tem-a-seguinte-funcao-densidade-de-probabilidade-f-x-x-k-exp-kx-0-le-x-le-infty-ache-a-valor-da-constante-k-e-tambem-a-media-e-a-variancia-de-x">
-     8) A distribuição de probabilidade da v.a. contínua X tem a seguinte função densidade de probabilidade $
+     8) A distribuição de probabilidade da v.a. contínua X tem a seguinte função densidade de probabilidade
      <span class="math notranslate nohighlight">
-      \(f_X (x) = k\exp(-kx) , 0 \le x \le \infty\)
+      \( f_X (x) = k\exp(-kx) , 0 \le x \le \infty \)
      </span>
-     $Ache a valor da constante k e também a média e a variância de X.
+     Ache a valor da constante k e também a média e a variância de X.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-v-a-x-assume-os-valores-1-2-ou-3-com-probabilidades-1-3k-3-1-2k-3-e-0-5-5k-3-respectivamente">
-     9. A v.a. X assume os valores 1, 2, ou 3 com probabilidades (1+3k)/3, (1+2k)/3 e (0,5+5k)/3, respectivamente.
+     9. A v.a. X assume os valores 1, 2, ou 3 com probabilidades
+     <span class="math notranslate nohighlight">
+      \( (1+3k)/3, (1+2k)/3 e (0,5+5k)/3 \)
+     </span>
+     , respectivamente.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-distribuicao-de-probabilidade-de-uma-v-a-discreta-e-p-x-x-kr-x-0-le-r-le-1-ache-o-valor-adequado-de-k-sabendo-se-que-o-contradominio-de-x-e-0-1-2">
-     10. A distribuição de probabilidade de uma v.a. discreta é: $
+     10. A distribuição de probabilidade de uma v.a. discreta é:
      <span class="math notranslate nohighlight">
-      \(p_{x}(x) = kr^x , 0 \le r \le 1 \)
+      \( p_{x}(x) = kr^x , 0 \le r \le 1 \)
      </span>
-     $ Ache o valor adequado de k sabendo-se que o contradomínio de x é 0,1,2,…
+     Ache o valor adequado de k sabendo-se que o contradomínio de x é 0,1,2,…
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -730,8 +734,11 @@ c. Calculadoras com defeito maior ou menor ou ambos devem ser consertados. Qual 
 </div>
 <hr class="docutils" />
 <div class="section" id="a-distribuicao-de-probabilidade-da-v-a-continua-x-tem-a-seguinte-funcao-densidade-de-probabilidade-f-x-x-k-exp-kx-0-le-x-le-infty-ache-a-valor-da-constante-k-e-tambem-a-media-e-a-variancia-de-x">
-<h3>8) A distribuição de probabilidade da v.a. contínua X tem a seguinte função densidade de probabilidade $<span class="math notranslate nohighlight">\(f_X (x) = k\exp(-kx) , 0 \le x \le \infty\)</span>$Ache a valor da constante k e também a média e a variância de X.<a class="headerlink" href="#a-distribuicao-de-probabilidade-da-v-a-continua-x-tem-a-seguinte-funcao-densidade-de-probabilidade-f-x-x-k-exp-kx-0-le-x-le-infty-ache-a-valor-da-constante-k-e-tambem-a-media-e-a-variancia-de-x" title="Permalink to this headline">¶</a></h3>
-<p>Como trata-se de uma função densidade de probabilidade, temos: $<span class="math notranslate nohighlight">\(\int_{0}^{b} k\exp(-kx) dx = 1 \)</span>$</p>
+<h3>8) A distribuição de probabilidade da v.a. contínua X tem a seguinte função densidade de probabilidade <span class="math notranslate nohighlight">\( f_X (x) = k\exp(-kx) , 0 \le x \le \infty \)</span> Ache a valor da constante k e também a média e a variância de X.<a class="headerlink" href="#a-distribuicao-de-probabilidade-da-v-a-continua-x-tem-a-seguinte-funcao-densidade-de-probabilidade-f-x-x-k-exp-kx-0-le-x-le-infty-ache-a-valor-da-constante-k-e-tambem-a-media-e-a-variancia-de-x" title="Permalink to this headline">¶</a></h3>
+<p>Como trata-se de uma função densidade de probabilidade, temos:
+$<span class="math notranslate nohighlight">\(
+\int_{0}^{b} k\exp(-kx) dx = 1
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp_integration</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
@@ -752,7 +759,7 @@ c. Calculadoras com defeito maior ou menor ou ambos devem ser consertados. Qual 
 </div>
 <hr class="docutils" />
 <div class="section" id="a-v-a-x-assume-os-valores-1-2-ou-3-com-probabilidades-1-3k-3-1-2k-3-e-0-5-5k-3-respectivamente">
-<h3>9. A v.a. X assume os valores 1, 2, ou 3 com probabilidades (1+3k)/3, (1+2k)/3 e (0,5+5k)/3, respectivamente.<a class="headerlink" href="#a-v-a-x-assume-os-valores-1-2-ou-3-com-probabilidades-1-3k-3-1-2k-3-e-0-5-5k-3-respectivamente" title="Permalink to this headline">¶</a></h3>
+<h3>9. A v.a. X assume os valores 1, 2, ou 3 com probabilidades <span class="math notranslate nohighlight">\( (1+3k)/3, (1+2k)/3 e (0,5+5k)/3 \)</span>, respectivamente.<a class="headerlink" href="#a-v-a-x-assume-os-valores-1-2-ou-3-com-probabilidades-1-3k-3-1-2k-3-e-0-5-5k-3-respectivamente" title="Permalink to this headline">¶</a></h3>
 <p>a. Determine o valor adequado de k. <br>
 b. Determine a média e a variância de X. <br>
 c. Determine a função distribuição acumulada de X.</p>
@@ -829,11 +836,20 @@ c. Determine a função distribuição acumulada de X.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="a-distribuicao-de-probabilidade-de-uma-v-a-discreta-e-p-x-x-kr-x-0-le-r-le-1-ache-o-valor-adequado-de-k-sabendo-se-que-o-contradominio-de-x-e-0-1-2">
-<h3>10. A distribuição de probabilidade de uma v.a. discreta é: $<span class="math notranslate nohighlight">\(p_{x}(x) = kr^x , 0 \le r \le 1 \)</span>$ Ache o valor adequado de k sabendo-se que o contradomínio de x é 0,1,2,…<a class="headerlink" href="#a-distribuicao-de-probabilidade-de-uma-v-a-discreta-e-p-x-x-kr-x-0-le-r-le-1-ache-o-valor-adequado-de-k-sabendo-se-que-o-contradominio-de-x-e-0-1-2" title="Permalink to this headline">¶</a></h3>
-<p>Como trate-se de uma V.A., temos: $<span class="math notranslate nohighlight">\( \sum_{n=0}^{\infty} kr^x = 1 \)</span>$</p>
-<p>Desmembrando o somatório, temos: $<span class="math notranslate nohighlight">\( k (r^0 + r^1 + r^2 + ...) = 1 \)</span>$</p>
-<p>Dado 0&lt;r&lt;1, temos: $<span class="math notranslate nohighlight">\( k ( \frac{1}{(1 - r)}) = 1 \)</span>$</p>
-<p>Logo, $<span class="math notranslate nohighlight">\( k = (1 - r) \)</span>$</p>
+<h3>10. A distribuição de probabilidade de uma v.a. discreta é: <span class="math notranslate nohighlight">\( p_{x}(x) = kr^x , 0 \le r \le 1 \)</span> Ache o valor adequado de k sabendo-se que o contradomínio de x é 0,1,2,…<a class="headerlink" href="#a-distribuicao-de-probabilidade-de-uma-v-a-discreta-e-p-x-x-kr-x-0-le-r-le-1-ache-o-valor-adequado-de-k-sabendo-se-que-o-contradominio-de-x-e-0-1-2" title="Permalink to this headline">¶</a></h3>
+<p>Como trate-se de uma V.A., temos:
+$<span class="math notranslate nohighlight">\(
+\sum_{n=0}^{\infty} kr^x = 1 
+\)</span>$</p>
+<p>Desmembrando o somatório, temos:
+$<span class="math notranslate nohighlight">\(
+k (r^0 + r^1 + r^2 + ...) = 1
+\)</span>$</p>
+<p>Dado 0&lt;r&lt;1, temos:
+$<span class="math notranslate nohighlight">\(
+k ( \frac{1}{(1 - r)}) = 1
+\)</span>$</p>
+<p>Logo, <span class="math notranslate nohighlight">\( k = (1 - r) \)</span></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="uma-fabrica-de-calculadoras-eletronicas-oferece-garantia-de-um-ano-se-a-calculadora-falha-por-qualquer-razao-neste-periodo-ela-e-substituida-o-tempo-de-falha-e-modelado-pela-seguinte-distribuicao-de-probabilidade-f-x-x-0-125e-0-125x-therefore-exp-lambda-0-125">
