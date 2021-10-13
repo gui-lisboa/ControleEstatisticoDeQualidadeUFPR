@@ -17,13 +17,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-display(Image(filename='./imagens/Atividade2-Exercicio7.png', embed=True))
+display(Image(filename='imagens/Atividade2-Exercicio7.png', embed=True))
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1643/3230553986.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mdisplay[0m[0;34m([0m[0mImage[0m[0;34m([0m[0mfilename[0m[0;34m=[0m[0;34m'./imagens/Atividade2-Exercicio7.png'[0m[0;34m,[0m [0membed[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/tmp/ipykernel_1648/849613082.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mdisplay[0m[0;34m([0m[0mImage[0m[0;34m([0m[0mfilename[0m[0;34m=[0m[0;34m'imagens/Atividade2-Exercicio7.png'[0m[0;34m,[0m [0membed[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/IPython/core/display.py[0m in [0;36m__init__[0;34m(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata)[0m
 [1;32m   1230[0m         [0mself[0m[0;34m.[0m[0munconfined[0m [0;34m=[0m [0munconfined[0m[0;34m[0m[0;34m[0m[0m
@@ -53,6 +53,6 @@ display(Image(filename='./imagens/Atividade2-Exercicio7.png', embed=True))
 [0m[1;32m    663[0m                 [0mself[0m[0;34m.[0m[0mdata[0m [0;34m=[0m [0mf[0m[0;34m.[0m[0mread[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    664[0m         [0;32melif[0m [0mself[0m[0;34m.[0m[0murl[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: './imagens/Atividade2-Exercicio7.png'
-FileNotFoundError: [Errno 2] No such file or directory: './imagens/Atividade2-Exercicio7.png'
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'imagens/Atividade2-Exercicio7.png'
+FileNotFoundError: [Errno 2] No such file or directory: 'imagens/Atividade2-Exercicio7.png'
 
