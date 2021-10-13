@@ -4,14 +4,21 @@
 format: jb-book
 root: home
 parts:
-- caption: Controle Estatístico de Qualidade
-  chapters:
-  - file: controle_estatistico_de_qualidade/intro
-    sections:
-    - file: controle_estatistico_de_qualidade/atividade2
 
 - caption: Análise de Regressão Linear
   chapters:
   - file: analise_de_regressao_linear/intro
     sections:
     - file: analise_de_regressao_linear/atividade1
+
+- caption: Controle Estatístico de Qualidade
+  chapters:
+  - file: controle_estatistico_de_qualidade/intro
+    sections:
+    - file: controle_estatistico_de_qualidade/atividade2
+
+- caption: Visualização de Dados
+  chapters:
+  - file: visualizacao_de_dados/intro
+    sections:
+    - file: visualizacao_de_dados/desafio1
