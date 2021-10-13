@@ -33,6 +33,8 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/gui-lisboa/estatisticaufpr
+  path_to_book: ""
+  branch: main
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
