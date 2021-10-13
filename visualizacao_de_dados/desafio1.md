@@ -48,8 +48,10 @@ O gráfico dá a entender que há uma grande mudança na região central dos Est
 
 ## 4. Única barra
 
-<iframe src="https://www.portaltransparencia.gov.br/graficos/embed/funcao-especifica/visao-geral/barras-horizontais-empilhada?ano=2017&codigoFuncao=12&titulo=Vis%C3%A3o%20geral%20da%20distribui%C3%A7%C3%A3o%20por%20sub%C3%A1rea%20(subfun%C3%A7%C3%A3o)" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.portaltransparencia.gov.br/graficos/embed/funcao-especifica/visao-geral/barras-horizontais-empilhada?ano=2021&codigoFuncao=12&titulo=Vis%C3%A3o%20geral%20da%20distribui%C3%A7%C3%A3o%20por%20sub%C3%A1rea%20(subfun%C3%A7%C3%A3o)" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 O gráfico acima não deixa claro quais os valores pagos nas subfunções não associadas à função educação. Só é possível saber os valores calculando a diferença ou usando o ponteiro sobre a área verde. Um gráfico com duas barras separadas para cada categoria traria a mesma informação de maneira mais direta.
 
-> Fonte [Portal da Transparência](https://www.portaltransparencia.gov.br/graficos/funcao-especifica/visao-geral/barras-horizontais-empilhada?ano=2017&codigoFuncao=12&titulo=Vis%C3%A3o%20geral%20da%20distribui%C3%A7%C3%A3o%20por%20sub%C3%A1rea%20(subfun%C3%A7%C3%A3o)
+> Fonte [Portal da Transparência](https://www.portaltransparencia.gov.br/graficos/funcao-especifica/visao-geral/barras-horizontais-empilhada?ano=2021&codigoFuncao=12&titulo=Vis%C3%A3o%20geral%20da%20distribui%C3%A7%C3%A3o%20por%20sub%C3%A1rea%20(subfun%C3%A7%C3%A3o))
+
+## 5. 
