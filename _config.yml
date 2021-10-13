@@ -43,5 +43,7 @@ sphinx:
   config:
     myst_update_mathjax: false
     myst_dmath_double_inline: true
+    language: pt
+    html_extra_path: ['imagens']
     html_theme_options:
       search_bar_text: "Pesquisar..."
