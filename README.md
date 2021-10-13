@@ -2,4 +2,4 @@
 
 Notebooks usados para atividades de frequência.
 
-Disponível em: https://gui-lisboa.github.io/ControleEstatisticoDeQualidadeUFPR
+Disponível em: https://gui-lisboa.github.io/estatisticaufpr
