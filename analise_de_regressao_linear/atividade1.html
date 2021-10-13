@@ -52,6 +52,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Controle Estatístico de Qualidade" href="../controle_estatistico_de_qualidade/intro.html" />
     <link rel="prev" title="Análise de Regressão Linear" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -88,6 +89,30 @@
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   Análise de Regressão Linear
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Atividade 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Controle Estatístico de Qualidade
  </span>
 </p>
@@ -96,8 +121,8 @@
   <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
    Controle Estatístico de Qualidade
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -112,23 +137,23 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Análise de Regressão Linear
+  Visualização de Dados
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="intro.html">
-   Análise de Regressão Linear
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Atividade 1
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+     Desafio 1
     </a>
    </li>
   </ul>
@@ -256,11 +281,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matplotlib is building the font cache; this may take a moment.
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="resumo-dos-dados">
 <h2>Resumo dos dados<a class="headerlink" href="#resumo-dos-dados" title="Link permanente para este título">¶</a></h2>
@@ -293,7 +313,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1621</span><span class="o">/</span><span class="mf">89785573.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1632</span><span class="o">/</span><span class="mf">89785573.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">colunas_not_null</span> <span class="o">=</span> <span class="n">cameras_dataframe</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">colunas_info</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">colunas_dtypes</span><span class="p">,</span> <span class="n">colunas_not_null</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">colunas_info</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">headers</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Coluna&quot;</span><span class="p">,</span> <span class="s2">&quot;Tipo&quot;</span><span class="p">,</span> <span class="s2">&quot;Qnt. Não Nulos&quot;</span><span class="p">])))</span>
@@ -403,6 +423,15 @@
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="../controle_estatistico_de_qualidade/intro.html" title="próximo page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">próximo</p>
+                <p class="prevnext-title">Controle Estatístico de Qualidade</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

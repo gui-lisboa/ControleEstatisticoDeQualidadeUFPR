@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controle Estatístico de Qualidade &#8212; Estatística - UFPR</title>
+    <title>Desafio 1 &#8212; Estatística - UFPR</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -43,6 +43,7 @@
     <script src="../_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,8 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Atividade 2" href="atividade2.html" />
-    <link rel="prev" title="Atividade 1" href="../analise_de_regressao_linear/atividade1.html" />
+    <link rel="prev" title="Sobre" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -116,19 +116,19 @@
   Controle Estatístico de Qualidade
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
    Controle Estatístico de Qualidade
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="atividade2.html">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
      Atividade 2
     </a>
    </li>
@@ -140,19 +140,19 @@
   Visualização de Dados
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
    Sobre
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Desafio 1
     </a>
    </li>
@@ -199,7 +199,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/controle_estatistico_de_qualidade/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/visualizacao_de_dados/desafio1.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -224,6 +224,34 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escala-linear-representada-por-area">
+   1. Escala linear representada por área
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#infograficos-carregados-para-informacoes-simples">
+   2. Infográficos carregados para informações simples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mapa-de-cores">
+   3. Mapa de cores
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unica-barra">
+   4. Única barra
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -232,10 +260,54 @@
         
               <div>
                 
-  <div class="section" id="controle-estatistico-de-qualidade">
-<h1>Controle Estatístico de Qualidade<a class="headerlink" href="#controle-estatistico-de-qualidade" title="Link permanente para este título">¶</a></h1>
-<p>Atividades de frequência desenvolvidas durante o curso de Controle Estatístico de Qualidade, 2021/1.</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="desafio-1">
+<h1>Desafio 1<a class="headerlink" href="#desafio-1" title="Link permanente para este título">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Desafio</p>
+<p>Criar um relatório em rmarkdown que contenha pelo menos 10 gráficos errados ou não efetivos.</p>
+</div>
+<div class="section" id="escala-linear-representada-por-area">
+<h2>1. Escala linear representada por área<a class="headerlink" href="#escala-linear-representada-por-area" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="http://eagereyes.org/media/2008/FastFood.jpg" src="http://eagereyes.org/media/2008/FastFood.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Receita de redes de restaurantes (US$ Bilhões)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>O gráfico acima tem como escala receitas de redes de restaurantes, em bilhões de dólares, e usa a altura das logomarcas para alinhar o valor da receita com o eixo vertical. Porém, a fim de não distorcer as logomarcas, o autor mantém as larguras proporcionais, fazendo com que a impressão fique distorcida. Por exemplo, a receita da Starbucks for de US$ 4,1 bilhões, cerca de 1/3 da receita de US$ 11,3 bilhões do Burguer King, entretanto o tamanho da logomarca ocupa menos de 1/4 da área que representa a rede concorrente.</p>
+<blockquote>
+<div><p>Fonte: <a class="reference external" href="https://eagereyes.org/blog/2008/linear-vs-quadratic-change">Linear vs. Quadratic Change, Robert Kosara</a></p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="infograficos-carregados-para-informacoes-simples">
+<h2>2. Infográficos carregados para informações simples<a class="headerlink" href="#infograficos-carregados-para-informacoes-simples" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="https://ychef.files.bbci.co.uk/1600x900/p054jykn.png" src="https://ychef.files.bbci.co.uk/1600x900/p054jykn.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Quantidade de torradas com avocado para dar entrada em uma casa de 90<span class="math notranslate nohighlight">\(m^2\)</span> fora do centro das cidades</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>O infográfico é um entre 5 similares que quantificam a quantidade que pode ser economizada por não comprar torradas com avocado. Entretanto, a quantidade de torradas ocupa a mesma área em todos os gráficos, a escala de cada torrada que diminui. Além disso, para entender essa relação nas 10 cidades, é preciso ver todos os 5 gráficos.</p>
+<blockquote>
+<div><p>Fonte: <a class="reference external" href="https://www.bbc.com/worklife/article/20170530-the-avocado-toast-index-how-many-breakfasts-to-buy-a-house">Avocado Toast Index, BBC</a></p>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="mapa-de-cores">
+<h2>3. Mapa de cores<a class="headerlink" href="#mapa-de-cores" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-center" id="id3">
+<img alt="https://eagereyes.org/wp-content/uploads/2013/07/evapotranspiration-map-600x483.jpg" src="https://eagereyes.org/wp-content/uploads/2013/07/evapotranspiration-map-600x483.jpg" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Fração de precipitação perdida por evapotranspiração entre 1971-2000</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>O gráfico dá a entender que há uma grande mudança na região central dos Estados Unidos, saltando de uma faixa verde para amarela. Observando a legenda, nota-se que a escala segue do verde escuro (0,7 - 0,79) para o amarelo escuro (0,8 - 0,89). Assim o impacto na mudança da cor superestima a diferença real.</p>
+<blockquote>
+<div><p>Fonte: <a class="reference external" href="https://eagereyes.org/basics/rainbow-color-map">How The Rainbow Color Map Misleads, Robert Kosara</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="unica-barra">
+<h2>4. Única barra<a class="headerlink" href="#unica-barra" title="Link permanente para este título">¶</a></h2>
+<iframe src="https://www.portaltransparencia.gov.br/graficos/embed/funcao-especifica/visao-geral/barras-horizontais-empilhada?ano=2017&codigoFuncao=12&titulo=Vis%C3%A3o%20geral%20da%20distribui%C3%A7%C3%A3o%20por%20sub%C3%A1rea%20(subfun%C3%A7%C3%A3o)" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+<p>O gráfico acima não deixa claro quais os valores pagos nas subfunções não associadas à função educação. Só é possível saber os valores calculando a diferença ou usando o ponteiro sobre a área verde. Um gráfico com duas barras separadas para cada categoria traria a mesma informação de maneira mais direta.</p>
+<blockquote>
+<div><p>Fonte [Portal da Transparência](https://www.portaltransparencia.gov.br/graficos/funcao-especifica/visao-geral/barras-horizontais-empilhada?ano=2017&amp;codigoFuncao=12&amp;titulo=Vis%C3%A3o%20geral%20da%20distribui%C3%A7%C3%A3o%20por%20sub%C3%A1rea%20(subfun%C3%A7%C3%A3o)</p>
+</div></blockquote>
 </div>
 </div>
 
@@ -252,7 +324,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./controle_estatistico_de_qualidade"
+            path: "./visualizacao_de_dados"
         },
         predefinedOutput: true
     }
@@ -269,23 +341,14 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../analise_de_regressao_linear/atividade1.html" title="anterior page">
+        <a class="left-prev" href="intro.html" title="anterior page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">anterior</p>
-                <p class="prevnext-title">Atividade 1</p>
+                <p class="prevnext-title">Sobre</p>
             </div>
         </a>
     </div>
-     <div id="next">
-        <a class="right-next" href="atividade2.html" title="próximo page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Atividade 2</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
