@@ -7,7 +7,6 @@
 # Book settings
 title                       : Estatística - UFPR
 author                      : Guilherme L Oliveira
-copyright                   : "2021"
 logo                        : logo.png
 exclude_patterns            : [_build, "**.ipynb_checkpoints"]
 
