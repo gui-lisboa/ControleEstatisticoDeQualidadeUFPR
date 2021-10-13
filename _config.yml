@@ -5,10 +5,11 @@
 
 #######################################################################################
 # Book settings
-title                       : Controle Estatístico de Qualidade - UFPR
+title                       : Estatística - UFPR
 author                      : Guilherme L Oliveira
 copyright                   : "2021"
 logo                        : logo.png
+exclude_patterns            : [_build, "**.ipynb_checkpoints"]
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -18,15 +19,7 @@ execute:
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
     - amsmath
-    - colon_fence
-    - deflist
     - dollarmath
-    # - html_admonition
-    - html_image
-    # - linkify
-    # - replacements
-    # - smartquotes
-    # - substitution
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -39,9 +32,16 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/gui-lisboa/ControleEstatisticoDeQualidadeUFPR
+  url: https://github.com/gui-lisboa/estatisticaufpr
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_repository_button: true
+
+sphinx:
+  config:
+    myst_update_mathjax: false
+    myst_dmath_double_inline: true
+    html_theme_options:
+      search_bar_text: "Pesquisar..."
