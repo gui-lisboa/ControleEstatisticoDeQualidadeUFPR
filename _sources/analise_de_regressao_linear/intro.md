@@ -1,3 +1,3 @@
-# Análise de Regressão Linear
+# Sobre
 
 Atividades de frequência desenvolvidas durante o curso de Análise de Regressão Linear, 2021/1.

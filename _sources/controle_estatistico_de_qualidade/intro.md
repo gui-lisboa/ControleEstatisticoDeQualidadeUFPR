@@ -1,3 +1,3 @@
-# Controle Estatístico de Qualidade
+# Sobre
 
 Atividades de frequência desenvolvidas durante o curso de Controle Estatístico de Qualidade, 2021/1.
