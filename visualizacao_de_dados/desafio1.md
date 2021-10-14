@@ -20,7 +20,7 @@ O gráfico acima tem como escala receitas de redes de restaurantes, em bilhões 
 
 ---
 
-## 2. Infográficos carregados para informações simples
+## 2. Infográficos prolixos
 
 ```{figure} https://ychef.files.bbci.co.uk/1600x900/p054jykn.png
 :align: center
@@ -28,7 +28,7 @@ O gráfico acima tem como escala receitas de redes de restaurantes, em bilhões 
 Quantidade de torradas com avocado para dar entrada em uma casa de 90$m^2$ fora do centro das cidades
 ```
 
-O infográfico é um entre 5 similares que quantificam a quantidade que pode ser economizada por não comprar torradas com avocado. Entretanto, a quantidade de torradas ocupa a mesma área em todos os gráficos, a escala de cada torrada que diminui. Além disso, para entender essa relação nas 10 cidades, é preciso ver todos os 5 gráficos.
+O infográfico é um entre 5 similares (ver link abaixo) que quantificam a economia gerada por não comprar torradas com avocado. Entretanto, a quantidade de torradas ocupa a mesma área em todos os gráficos, a escala de cada torrada que diminui. Além disso, para entender essa relação nas 10 cidades, é preciso ver todos os 5 gráficos.
 
 > Fonte: [Avocado Toast Index, BBC](https://www.bbc.com/worklife/article/20170530-the-avocado-toast-index-how-many-breakfasts-to-buy-a-house)
 
@@ -58,10 +58,48 @@ O gráfico acima não deixa claro quais os valores pagos nas subfunções não a
 
 ---
 
-## 5. Escala
+## 5. Escala - valor discrepante dos demais
 
 <iframe src="https://www.portaltransparencia.gov.br/graficos/embed/funcao-especifica/pessoa/barras-horizontais?ano=2020&codigoFuncao=12&titulo=Maiores%20Favorecidos" width="100%" height="1000px" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 O gráfico acima tem uma categoria com um valor muito acima das outras (Banco do Brasil SA), fazendo com que fique imperceptível a diferença da quarta categoria em diante.
 
 > Fonte: [Gastos com Educação em 2020, Portal da Transparência](https://www.portaltransparencia.gov.br/graficos/funcao-especifica/pessoa/barras-horizontais?ano=2020&codigoFuncao=12&titulo=Maiores%20Favorecidos)
+
+---
+
+## 6. Escala - recorte
+
+```{figure} https://i2.wp.com/gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2014/04/000blog.png?w=720&ssl=1
+:align: center
+
+IPCA de 2009 a 2013 - recorte de valores entre aprox. 4 e 7%
+```
+```{figure} https://i0.wp.com/gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2014/04/globo-news-grafico.png?resize=940%2C530&ssl=1
+:align: center
+
+IPCA de 2009 a 2013 - versão corrigida entre 0 e 7%
+```
+
+Uso de um recorte dos valores, partindo de 4% na primeira imagem para superestimar a variação do IPCA (além de um erro na altura do último ano). Na segunda imagem os índices partem de 0% e melhor refletem a variação no período.
+
+> Fonte: [Como são feitos os gráficos enganosos – e como não ser enganado por eles, Gizmodo Brasil](https://gizmodo.uol.com.br/mentir-visualizacao-dados/)
+
+---
+
+## 7 - Valores incorretos
+
+````{admonition} **Isto é uma notícial falsa**
+:class: danger
+
+```{figure} https://piaui.folha.uol.com.br/lupa/wp-content/uploads/2020/07/jornal-interna-vale3.jpg
+:align: center
+
+Notícia falsa resultado de um erro de digitação
+```
+
+````
+
+Não validar elementos gráficos e dados para visualizações que não foram geradas pro algum algoritmo que cria estes elementos.
+
+> Fonte: [É falso que Globo aumentou gráfico para manipular números de mortes por Covid-19 em Petrolina (PE), Revista Piauí](https://piaui.folha.uol.com.br/lupa/2020/07/20/verificamos-globo-aumentou-grafico/)
