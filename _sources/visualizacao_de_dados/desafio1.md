@@ -87,7 +87,48 @@ Uso de um recorte dos valores, partindo de 4% na primeira imagem para superestim
 
 ---
 
-## 7 - Valores incorretos
+## 7 - Escala - amplitude
+
+```{figure} https://eagereyes.org/wp-content/uploads/2019/07/global-warming-zero.jpg
+:align: center
+
+Média global anual de temperatura em Fahrenheit
+```
+
+Escala vertical muito ampla que minimiza a variação dos valores ao longo do período descrito.
+
+> Fonte: [What Is A Misleading Chart?, Robert Kosara](https://eagereyes.org/blog/2019/what-is-a-misleading-chart)
+
+---
+
+## 8 - Gráficos de Pizza
+
+```{figure} https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Pie_chart_of_US_population_by_state.png/751px-Pie_chart_of_US_population_by_state.png
+:align: center
+
+População dos Estados Unidos por estado
+```
+Gráficos de pizza com muitas fatias e que não somam um valor claro, como por exemplo 100% das categorias.
+
+> Fonte: [Understanding Pie Charts, Robert Kosara](https://eagereyes.org/pie-charts)
+
+---
+
+## 9 - 3D (que poderiam ser 2D)
+
+```{figure} https://qph.fs.quoracdn.net/main-qimg-36a7cb1cce69189933eacb2a9f9e96ab
+:align: center
+
+Volume de vendas por pessoa por mês
+```
+
+Gráficos em 3D podem levar a conclusões imprecisas e aumentam o tempo que o observador leva para entender a informação.
+
+> Fonte: [The issue with 3d in data visualization, DataToViz](https://www.data-to-viz.com/caveat/3d.html)
+
+---
+
+## 10 - Valores incorretos
 
 ````{admonition} **Isto é uma notícial falsa**
 :class: danger
@@ -100,6 +141,6 @@ Notícia falsa resultado de um erro de digitação
 
 ````
 
-Não validar elementos gráficos e dados para visualizações que não foram geradas pro algum algoritmo que cria estes elementos.
+Não validar elementos gráficos e dados para visualizações que não foram geradas por algum algoritmo que cria estes elementos.
 
 > Fonte: [É falso que Globo aumentou gráfico para manipular números de mortes por Covid-19 em Petrolina (PE), Revista Piauí](https://piaui.folha.uol.com.br/lupa/2020/07/20/verificamos-globo-aumentou-grafico/)
