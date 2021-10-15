@@ -39,7 +39,7 @@ jobs:
       with:
         r-version: '4.1'
     - run: |
-        RScript r_requirements.r
+        /usr/local/bin/RScript r_requirements.r
     
     # Build the book
     - name: Build the book
