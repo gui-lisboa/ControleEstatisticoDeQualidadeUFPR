@@ -14,6 +14,7 @@ exclude_patterns            : [_build, "**.ipynb_checkpoints"]
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
+  only_build_toc_files: true
   
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
@@ -43,10 +44,10 @@ html:
 sphinx:
   config:
     myst_update_mathjax: false
-    myst_dmath_double_inline: true
     language: pt
     html_theme_options:
       search_bar_text: "Pesquisar..."
+    html_show_copyright: false
     nb_custom_formats:
       .rmd:
         - jupytext.reads
