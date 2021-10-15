@@ -47,3 +47,7 @@ sphinx:
     language: pt
     html_theme_options:
       search_bar_text: "Pesquisar..."
+    nb_custom_formats:
+      .rmd:
+        - jupytext.reads
+        - fmt: Rmd
