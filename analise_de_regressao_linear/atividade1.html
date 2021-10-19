@@ -52,7 +52,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Teste" href="teste.html" />
+    <link rel="next" title="Sobre" href="../controle_estatistico_de_qualidade/intro.html" />
     <link rel="prev" title="Sobre" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -108,11 +108,6 @@
      Atividade 1
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="teste.html">
-     Teste
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -135,6 +130,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
      Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+     Atividade 3
     </a>
    </li>
   </ul>
@@ -316,30 +316,40 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_18055</span><span class="o">/</span><span class="mf">89785573.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">colunas_not_null</span> <span class="o">=</span> <span class="n">cameras_dataframe</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">colunas_info</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">colunas_dtypes</span><span class="p">,</span> <span class="n">colunas_not_null</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">colunas_info</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">headers</span><span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Coluna&quot;</span><span class="p">,</span> <span class="s2">&quot;Tipo&quot;</span><span class="p">,</span> <span class="s2">&quot;Qnt. Não Nulos&quot;</span><span class="p">])))</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ni">to_markdown</span><span class="nt">(self, buf, mode, index, storage_options, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2565</span>         <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;tablefmt&quot;</span><span class="p">,</span> <span class="s2">&quot;pipe&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2566</span>         <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;showindex&quot;</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2567</span>         <span class="n">tabulate</span> <span class="o">=</span> <span class="n">import_optional_dependency</span><span class="p">(</span><span class="s2">&quot;tabulate&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2568</span>         <span class="n">result</span> <span class="o">=</span> <span class="n">tabulate</span><span class="o">.</span><span class="n">tabulate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2569</span>         <span class="k">if</span> <span class="n">buf</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/compat/_optional.py</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span>     <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span>         <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="s2">&quot;raise&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">118</span>             <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">119</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">120</span>             <span class="k">return</span> <span class="kc">None</span>
-
-<span class="ne">ImportError</span>: Missing optional dependency &#39;tabulate&#39;.  Use pip or conda to install tabulate.
-</pre></div>
-</div>
+<p>| Coluna               | Tipo           |   Qnt. Não Nulos |
+|:---------------------|:---------------|-----------------:|
+| id                   | Int64          |              256 |
+| name                 | string         |              256 |
+| price                | Float64        |              256 |
+| last_update          | datetime64[ns] |              256 |
+| url                  | string         |              256 |
+| popularity           | Int64          |                2 |
+| needs_update         | Int64          |              256 |
+| aperture_max         | Float64        |              250 |
+| base_name            | string         |              256 |
+| brand                | string         |              255 |
+| display_size         | Float64        |              245 |
+| dslr_camera          | Int64          |              256 |
+| focal_35mm_max       | Float64        |              228 |
+| focal_35mm_min       | Float64        |              228 |
+| focal_length_max     | Float64        |              240 |
+| focal_length_min     | Float64        |              240 |
+| fps                  | Float64        |              209 |
+| iso_max              | Int64          |              240 |
+| iso_min              | Int64          |              240 |
+| lens_interchangeable | Int64          |              256 |
+| optical_zoom         | Float64        |              250 |
+| release_date         | datetime64[ns] |              256 |
+| sensor_resolution    | Float64        |              256 |
+| sensor_size          | string         |              229 |
+| sensor_type          | string         |              245 |
+| video_resolution_x   | Int64          |              249 |
+| video_resolution_y   | Int64          |              249 |
+| viewfinder_type      | string         |              256 |
+| weight               | Float64        |              245 |
+| weight_body          | Float64        |              100 |
+| weight_lens          | Float64        |               99 |
+| release_month        | datetime64[ns] |              256 |</p>
 </div>
 </div>
 </div>
@@ -429,10 +439,10 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="teste.html" title="próximo page">
+        <a class="right-next" href="../controle_estatistico_de_qualidade/intro.html" title="próximo page">
             <div class="prevnext-info">
                 <p class="prevnext-label">próximo</p>
-                <p class="prevnext-title">Teste</p>
+                <p class="prevnext-title">Sobre</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
@@ -448,7 +458,6 @@
         
           De Guilherme L Oliveira<br/>
         
-            &copy; direito autoral 2021.<br/>
       </p>
     </div>
   </footer>

@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 3 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../visualizacao_de_dados/intro.html" />
+    <link rel="prev" title="Atividade 2" href="atividade2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+     Atividade 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="atividade2.html">
+     Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Atividade 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+     Desafio 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/controle_estatistico_de_qualidade/atividade3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumo-de-teste-de-hipoteses">
+   Resumo de Teste de Hipóteses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teste-sobre-a-media-com-variancia-conhecida">
+     1. Teste sobre a média com variância conhecida
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teste-sobre-a-media-com-variancia-desconhecida">
+     2. Teste sobre a média com variância desconhecida
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparacao-duas-medias-com-variancias-conhecidas">
+     3. Comparação duas médias com variâncias conhecidas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variancias-iguais-desconhecidas">
+     4. Variâncias iguais, desconhecidas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variancias-desiguais-desconhecidas">
+     5. Variancias desiguais, desconhecidas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observacoes-emparelhadas">
+     6. Observações emparelhadas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teste-para-a-variancia-de-uma-distribuicao-normal-n-mu-sigma-2">
+     7. Teste para a variância de uma distribuição normal
+     <span class="math notranslate nohighlight">
+      \(N(\mu , \sigma^{2})\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparacao-das-variancias-de-duas-populacoes-normais">
+     8. Comparação das variâncias de duas populações normais
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teste-para-a-proporcao">
+     9. Teste para a proporção
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparacao-de-duas-proporcoes">
+     10. Comparação de duas proporções
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="atividade-3">
+<h1>Atividade 3<a class="headerlink" href="#atividade-3" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="resumo-de-teste-de-hipoteses">
+<h2>Resumo de Teste de Hipóteses<a class="headerlink" href="#resumo-de-teste-de-hipoteses" title="Link permanente para este título">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">scipy_stats</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="teste-sobre-a-media-com-variancia-conhecida">
+<h3>1. Teste sobre a média com variância conhecida<a class="headerlink" href="#teste-sobre-a-media-com-variancia-conhecida" title="Link permanente para este título">¶</a></h3>
+<p>1.1</p>
+<p><span class="math notranslate nohighlight">\(H_{0}: \mu \geq 500 \\ H_{1}: \mu \lt 500\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mu = 500g \\ \sigma^{2} = 400g \\ \bar{x} = 492g \\ n = 16\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">media_amostral</span> <span class="o">=</span> <span class="mi">492</span>
+<span class="n">variancia</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">16</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variancia</span><span class="o">/</span><span class="n">n</span><span class="p">))</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste z = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é insuficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste z = -1.600 e p-valor = 0.0548, a evidência é insuficiente contra a hipótese nula</p>
+</div>
+</div>
+<p>1.2</p>
+<p><span class="math notranslate nohighlight">\(H_{0}: \mu \lt 23mg \\ H_{1}: \mu \geq 23mg\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mu = 23mg \\ x = \{27, 24, 21, 25, 26, 22\} \\ \sigma^{2} = 4,86 mg^{2} \\ \alpha = 10\%\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">amostras</span> <span class="o">=</span> <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<span class="n">variancia</span> <span class="o">=</span> <span class="mf">4.86</span>
+<span class="n">significancia</span> <span class="o">=</span> <span class="mf">.1</span>
+
+<span class="n">media_amostral</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">amostras</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">amostras</span><span class="p">)</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variancia</span><span class="o">/</span><span class="n">n</span><span class="p">))</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste z = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é insuficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste z = 1.296 e p-valor = 0.0974, a evidência é insuficiente contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="teste-sobre-a-media-com-variancia-desconhecida">
+<h3>2. Teste sobre a média com variância desconhecida<a class="headerlink" href="#teste-sobre-a-media-com-variancia-desconhecida" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: \mu \leq 30mg \\ H_{1}: \mu \gt 30mg\)</span></p>
+<p><span class="math notranslate nohighlight">\(\mu = 30mg \\ \bar{x} = 31,5mg \\ \sigma = 3 mg \\ n = 25 \\ \alpha = 5\%\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">media_amostral</span> <span class="o">=</span> <span class="mf">31.5</span>
+<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">significancia</span> <span class="o">=</span> <span class="mf">.05</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">desvio_padrao</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste t = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é suficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste t = 2.500 e p-valor = 0.0098, a evidência é suficiente contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="comparacao-duas-medias-com-variancias-conhecidas">
+<h3>3. Comparação duas médias com variâncias conhecidas<a class="headerlink" href="#comparacao-duas-medias-com-variancias-conhecidas" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: \mu_{A} = \mu_{B} \\ H_{1}: \mu_{A} \neq \mu_{B}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\bar{x}_{A} = 502,74g \\ \bar{x}_{B} = 496,60g \\ n_{A} = 25 \\ n_{B} = 16 \\ \alpha = 5\%\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## REVER GABARITO</span>
+
+<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">media_amostral_a</span> <span class="o">=</span> <span class="mf">502.74</span>
+<span class="n">n_a</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">media_amostral_b</span> <span class="o">=</span> <span class="mf">496.6</span>
+<span class="n">n_b</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">significancia</span> <span class="o">=</span> <span class="mf">.05</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral_a</span> <span class="o">-</span> <span class="n">media_amostral_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">desvio_padrao</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">n_a</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n_b</span><span class="p">)))</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">n_a</span> <span class="o">+</span> <span class="n">n_b</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste t = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é suficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste t = 1.918 e p-valor = 0.0312, a evidência é suficiente contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="variancias-iguais-desconhecidas">
+<h3>4. Variâncias iguais, desconhecidas<a class="headerlink" href="#variancias-iguais-desconhecidas" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: \mu_{A} = \mu_{B} \\ H_{1}: \mu_{A} \lt \mu_{B}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+    \bar{x}_{A}=68 \quad \bar{x}_{B} = 76 \\
+    \sigma_{A}^{2}=50 \quad \sigma_{B}^{2} = 75 \\
+    n_{A} = 12 \quad n_{B} = 15
+\end{align}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_amostral_a</span> <span class="o">=</span> <span class="mi">68</span>
+<span class="n">variancia_amostral_a</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">n_a</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">media_amostral_b</span> <span class="o">=</span> <span class="mi">76</span>
+<span class="n">variancia_amostral_b</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">n_b</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">significancia</span> <span class="o">=</span> <span class="mf">.05</span>
+
+<span class="n">sp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="p">((</span><span class="n">n_a</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">variancia_amostral_a</span> <span class="o">+</span> <span class="p">(</span><span class="n">n_b</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">variancia_amostral_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_a</span> <span class="o">+</span> <span class="n">n_b</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral_a</span> <span class="o">-</span> <span class="n">media_amostral_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="n">sp</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="mi">1</span><span class="o">/</span><span class="n">n_a</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">n_b</span> <span class="p">))</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">n_a</span> <span class="o">+</span> <span class="n">n_b</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste t = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é muito forte contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste t = -2.582 e p-valor = 0.0080, a evidência é muito forte contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="variancias-desiguais-desconhecidas">
+<h3>5. Variancias desiguais, desconhecidas<a class="headerlink" href="#variancias-desiguais-desconhecidas" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: \mu_{A} = \mu_{B} \\ H_{1}: \mu_{A} \lt \mu_{B}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+    \bar{x}_{A}=70.5 \quad \bar{x}_{B} = 84.3 \\
+    \sigma_{A}^{2}=81.6 \quad \sigma_{B}^{2} = 120.5 \\
+    n_{A} = 15 \quad n_{B} = 20
+\end{align}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media_amostral_a</span> <span class="o">=</span> <span class="mf">70.5</span>
+<span class="n">variancia_amostral_a</span> <span class="o">=</span> <span class="mf">81.6</span>
+<span class="n">n_a</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">media_amostral_b</span> <span class="o">=</span> <span class="mf">84.3</span>
+<span class="n">variancia_amostral_b</span> <span class="o">=</span> <span class="mf">120.5</span>
+<span class="n">n_b</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">soma_variancias_sobre_ns</span> <span class="o">=</span> <span class="p">(</span><span class="n">variancia_amostral_a</span><span class="o">/</span><span class="n">n_a</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">variancia_amostral_b</span><span class="o">/</span><span class="n">n_b</span><span class="p">)</span>
+<span class="n">graus_de_liberdade</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">soma_variancias_sobre_ns</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> 
+        <span class="p">(</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">variancia_amostral_a</span><span class="o">/</span><span class="n">n_a</span><span class="p">)</span><span class="o">/</span><span class="n">n_a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">variancia_amostral_b</span><span class="o">/</span><span class="n">n_b</span><span class="p">)</span><span class="o">/</span><span class="n">n_b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+    <span class="p">)</span> <span class="o">-</span><span class="mi">2</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral_a</span> <span class="o">-</span> <span class="n">media_amostral_b</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">soma_variancias_sobre_ns</span><span class="p">)</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">graus_de_liberdade</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste t = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é muito forte contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste t = -4.076 e p-valor = 0.0003, a evidência é muito forte contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="observacoes-emparelhadas">
+<h3>6. Observações emparelhadas<a class="headerlink" href="#observacoes-emparelhadas" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: \mu_{d} = 0 \\ H_{1}: \mu_{d} \gt 0\)</span></p>
+<p><span class="math notranslate nohighlight">\(Amostra A = [80, 72, 65, 78, 85] \\ Amostra B = [75, 70, 60, 72, 78]\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amostra_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">85</span><span class="p">]</span>
+<span class="n">amostra_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">75</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">78</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">amostra_a</span><span class="p">)</span>
+
+<span class="n">diff_medias_amostrais</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">amostra_a</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">amostra_b</span><span class="p">)</span>
+<span class="n">diff_variancias_amostrais</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">amostra_a</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">amostra_b</span><span class="p">)</span>
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="n">diff_medias_amostrais</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">diff_variancias_amostrais</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste t = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é insuficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste t = 3.536 e p-valor = 0.0121, a evidência é insuficiente contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="teste-para-a-variancia-de-uma-distribuicao-normal-n-mu-sigma-2">
+<h3>7. Teste para a variância de uma distribuição normal <span class="math notranslate nohighlight">\(N(\mu , \sigma^{2})\)</span><a class="headerlink" href="#teste-para-a-variancia-de-uma-distribuicao-normal-n-mu-sigma-2" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: \sigma^{2} = 100 \\ H_{1}: \sigma^{2} = 100\)</span></p>
+<p><span class="math notranslate nohighlight">\(\sigma^{2} = 100 \\ \mu = 500 \\ s^{2} = 169 \\ n = 16\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">variancia</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">media</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">variancia_amostral</span> <span class="o">=</span> <span class="mi">169</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">16</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">((</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">variancia_amostral</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">variancia</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">chi2</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">),</span> <span class="n">df</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste X² = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é insuficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste X² = 0.254 e p-valor = 1.0000, a evidência é insuficiente contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="comparacao-das-variancias-de-duas-populacoes-normais">
+<h3>8. Comparação das variâncias de duas populações normais<a class="headerlink" href="#comparacao-das-variancias-de-duas-populacoes-normais" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: \sigma_{A}^{2} = \sigma_{B}^{2} \\ H_{1}: \sigma_{A}^{2} \gt \sigma_{B}^{2}\)</span></p>
+<p><span class="math notranslate nohighlight">\(Amostra A = [145, 127, 136, 142, 141, 137] \\ Amostra B = [143, 128, 132, 138, 142, 132]\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amostra_a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">145</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">141</span><span class="p">,</span> <span class="mi">137</span><span class="p">]</span>
+<span class="n">amostra_b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">143</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">132</span><span class="p">]</span>
+<span class="n">n_a</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">amostra_a</span><span class="p">)</span>
+<span class="n">n_b</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">amostra_b</span><span class="p">)</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">amostra_a</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">amostra_b</span><span class="p">))</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">),</span> <span class="n">dfn</span><span class="o">=</span> <span class="n">n_a</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">dfd</span><span class="o">=</span> <span class="n">n_b</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste f = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é insuficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste f = 1.082 e p-valor = 0.4666, a evidência é insuficiente contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="teste-para-a-proporcao">
+<h3>9. Teste para a proporção<a class="headerlink" href="#teste-para-a-proporcao" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: p = 0,6  \\ H_{1}: p \lt 0,6\)</span></p>
+<p><span class="math notranslate nohighlight">\(\hat{p} = 0,52 \\ n = 200\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">proporcao</span> <span class="o">=</span> <span class="mf">.6</span>
+<span class="n">proporcao_amostral</span> <span class="o">=</span> <span class="mf">.52</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">200</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">proporcao_amostral</span> <span class="o">-</span> <span class="n">proporcao</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">proporcao_amostral</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">proporcao_amostral</span><span class="p">))</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste z = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é adequada contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste z = -2.265 e p-valor = 0.0118, a evidência é adequada contra a hipótese nula</p>
+</div>
+</div>
+</div>
+<div class="section" id="comparacao-de-duas-proporcoes">
+<h3>10. Comparação de duas proporções<a class="headerlink" href="#comparacao-de-duas-proporcoes" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(H_{0}: p_{A} = p_{B} \\ H_{1}: p_{A} \lt p_{B}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+    \hat{p}_{A} = 0,40 \quad \hat{p}_{B} = 0,52 \\
+    n_{A} = 80 \quad n_{B} = 50
+\end{align}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">proporcao_a</span> <span class="o">=</span> <span class="mf">.4</span>
+<span class="n">n_a</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">proporcao_b</span> <span class="o">=</span> <span class="mf">.52</span>
+<span class="n">n_b</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">significancia</span> <span class="o">=</span> <span class="mf">.05</span>
+
+<span class="n">proporcao_combinada</span> <span class="o">=</span> <span class="p">(</span><span class="n">proporcao_a</span> <span class="o">*</span> <span class="n">n_a</span> <span class="o">+</span> <span class="n">proporcao_b</span> <span class="o">*</span> <span class="n">n_b</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_a</span> <span class="o">+</span> <span class="n">n_b</span><span class="p">)</span>
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">proporcao_a</span> <span class="o">-</span> <span class="n">proporcao_b</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">proporcao_combinada</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">proporcao_combinada</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">n_a</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n_b</span><span class="p">)))</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">scipy_stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;**Solução**: dada a estatística de teste z = </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1"> e p-valor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">, a evidência é insuficiente contra a hipótese nula&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Solução</strong>: dada a estatística de teste z = -1.339 e p-valor = 0.0903, a evidência é insuficiente contra a hipótese nula</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./controle_estatistico_de_qualidade"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="atividade2.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Atividade 2</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../visualizacao_de_dados/intro.html" title="próximo page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">próximo</p>
+                <p class="prevnext-title">Sobre</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
