@@ -11,7 +11,7 @@ parts:
     sections:
     - file: analise_de_regressao_linear/atividade1
     - file: analise_de_regressao_linear/atividade2
-    - file: analise_de_regressao_linear/atividade3
+    - file: analise_de_regressao_linear/atividade4
 
 - caption: Controle Estatístico de Qualidade
   chapters:
