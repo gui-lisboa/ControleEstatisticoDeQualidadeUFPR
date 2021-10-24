@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 3 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../controle_estatistico_de_qualidade/intro.html" />
+    <link rel="prev" title="Atividade 2" href="atividade2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="atividade1.html">
+     Atividade 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="atividade2.html">
+     Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Atividade 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+     Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+     Atividade 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+     Desafio 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analise_de_regressao_linear/atividade3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="atividade-3">
+<h1>Atividade 3<a class="headerlink" href="#atividade-3" title="Link permanente para este título">¶</a></h1>
+<div class="admonition-atividade admonition">
+<p class="admonition-title">Atividade</p>
+<p>Continue usando o conjunto de dados disponibilizado na primeira semana de aula.</p>
+<p>Considerando as três covariáveis que vc usou semana passada faça:</p>
+<ol class="simple">
+<li><p>Implemente o modelo de regressão linear múltipla utilizando operações com vetores e matrizes (não use a função lm).</p></li>
+<li><p>Obtenha a matriz de variâncias e covariâncias dos coeficientes de regressão.</p></li>
+<li><p>Obtenha a variância e o desvio padrão para cada coeficiente de regressão.</p></li>
+<li><p>Obtenha a estatística t para cada coeficiente de regressão (exceto para o intercepto) e intereprete as estimativas e o teste. Quais covariáveis são importantes para descrever a variabilidade da variável resposta?</p></li>
+<li><p>Para o modelo considerando as três covariáveis que você usou semana passado obtenha o coeficiente de determinação.</p></li>
+</ol>
+<p>Usando os resultados da semana passada some os coeficientes de determinação de cada modelo individual. Explique pq a soma dos coeficientes de determinação dos ajsutes individuais não é igual a do modelo conjunto. Existe alguma situação em que o coeficiente de determinação do modelo conjunto é igual a soma dos coeficientes de determinação dos modelos individuais? Explique.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">read_cameras_dataset</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">covariaveis</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;weight_lens&#39;</span><span class="p">,</span> <span class="s1">&#39;weight_body&#39;</span><span class="p">,</span> <span class="s1">&#39;focal_length_min&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cameras_dataframe</span> <span class="o">=</span> <span class="n">read_cameras_dataset</span><span class="p">()</span>
+<span class="n">price_e_covariaveis_dataframe</span> <span class="o">=</span> <span class="n">cameras_dataframe</span><span class="p">[[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">covariaveis</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+<span class="n">price_e_covariaveis_dataframe</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>price</th>
+      <th>weight_lens</th>
+      <th>weight_body</th>
+      <th>focal_length_min</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>499.99</td>
+      <td>3.88</td>
+      <td>14.46</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2096.95</td>
+      <td>16.10</td>
+      <td>30.34</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>499.99</td>
+      <td>7.40</td>
+      <td>15.20</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>498.00</td>
+      <td>4.09</td>
+      <td>12.13</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2896.00</td>
+      <td>22.22</td>
+      <td>22.60</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>1449.00</td>
+      <td>18.16</td>
+      <td>24.73</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>2099.00</td>
+      <td>10.40</td>
+      <td>22.92</td>
+      <td>28.0</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>325.99</td>
+      <td>6.70</td>
+      <td>15.37</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>253</th>
+      <td>1623.90</td>
+      <td>12.34</td>
+      <td>29.63</td>
+      <td>85.0</td>
+    </tr>
+    <tr>
+      <th>254</th>
+      <td>996.95</td>
+      <td>4.76</td>
+      <td>15.87</td>
+      <td>16.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>99 rows × 4 columns</p>
+</div></div></div>
+</div>
+<p>Seja X a matriz das covariaveis e Y o vetor das respostas, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">price_e_covariaveis_dataframe</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span>
+
+<span class="n">vetor_beta0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">price_e_covariaveis_dataframe</span><span class="p">))</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">vetor_beta0</span><span class="p">,</span> <span class="n">price_e_covariaveis_dataframe</span><span class="p">[</span><span class="n">covariaveis</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>3.88</td>
+      <td>14.46</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.0</td>
+      <td>16.10</td>
+      <td>30.34</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>7.40</td>
+      <td>15.20</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.0</td>
+      <td>4.09</td>
+      <td>12.13</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.0</td>
+      <td>22.22</td>
+      <td>22.60</td>
+      <td>35.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>1.0</td>
+      <td>18.16</td>
+      <td>24.73</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>1.0</td>
+      <td>10.40</td>
+      <td>22.92</td>
+      <td>28.0</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>1.0</td>
+      <td>6.70</td>
+      <td>15.37</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>1.0</td>
+      <td>12.34</td>
+      <td>29.63</td>
+      <td>85.0</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>1.0</td>
+      <td>4.76</td>
+      <td>15.87</td>
+      <td>16.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>99 rows × 4 columns</p>
+</div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       499.99
+2      2096.95
+3       499.99
+5       498.00
+19     2896.00
+        ...   
+248    1449.00
+249    2099.00
+250     325.99
+253    1623.90
+254     996.95
+Name: price, Length: 99, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Estimando <span class="math notranslate nohighlight">\(\hat{\beta} = (X^{T} X)^{-1} X^{T} Y\)</span>, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beta_estimado</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span> \
+                  <span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">))</span> \
+                  <span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> \
+                  <span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+
+<span class="n">beta_estimado</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-250.17574454,   74.82135626,   20.7988353 ,   12.18768157])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Usando a biblioteca StatsModels, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>price</td>      <th>  R-squared:         </th> <td>   0.593</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.580</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   46.14</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sun, 24 Oct 2021</td> <th>  Prob (F-statistic):</th> <td>1.73e-18</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>23:27:03</td>     <th>  Log-Likelihood:    </th> <td> -767.51</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>    99</td>      <th>  AIC:               </th> <td>   1543.</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>    95</td>      <th>  BIC:               </th> <td>   1553.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     3</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+    <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th> <td> -250.1757</td> <td>  179.353</td> <td>   -1.395</td> <td> 0.166</td> <td> -606.236</td> <td>  105.884</td>
+</tr>
+<tr>
+  <th>x1</th>    <td>   74.8214</td> <td>   12.424</td> <td>    6.022</td> <td> 0.000</td> <td>   50.157</td> <td>   99.486</td>
+</tr>
+<tr>
+  <th>x2</th>    <td>   20.7988</td> <td>   13.087</td> <td>    1.589</td> <td> 0.115</td> <td>   -5.182</td> <td>   46.780</td>
+</tr>
+<tr>
+  <th>x3</th>    <td>   12.1877</td> <td>    7.404</td> <td>    1.646</td> <td> 0.103</td> <td>   -2.511</td> <td>   26.887</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>59.296</td> <th>  Durbin-Watson:     </th> <td>   2.224</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td> 273.316</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 1.953</td> <th>  Prob(JB):          </th> <td>4.47e-60</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td>10.141</td> <th>  Cond. No.          </th> <td>    93.2</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analise_de_regressao_linear"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="atividade2.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Atividade 2</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../controle_estatistico_de_qualidade/intro.html" title="próximo page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">próximo</p>
+                <p class="prevnext-title">Sobre</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
