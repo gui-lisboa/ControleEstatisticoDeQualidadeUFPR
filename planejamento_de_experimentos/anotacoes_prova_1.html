@@ -403,6 +403,7 @@
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">patsy</span>
 <span class="kn">import</span> <span class="nn">utils</span>
 
 <span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
@@ -556,7 +557,7 @@
 <p>Para a hipótese H1 assumimos que as médias <span class="math notranslate nohighlight">\(\mu_i\)</span> são diferentes para cada um dos 3 tratamentos, para este modelo temos a matriz de delineamento X1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s1">&#39;1 0 0; 0 1 0; 0 0 1&#39;</span><span class="p">),</span> <span class="n">repeats</span><span class="o">=</span><span class="n">numero_de_repeticoes</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X1</span> <span class="o">=</span> <span class="n">patsy</span><span class="o">.</span><span class="n">dmatrix</span><span class="p">(</span><span class="s1">&#39;~0 + tratamentos&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">observacoes_dataframe</span><span class="p">)</span>
 <span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="s1">&#39;X1 =&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -565,29 +566,32 @@
 <div class="output text_latex math notranslate nohighlight">
 \[\begin{split}X1 =
 \begin{bmatrix}
-  1 &amp; 0 &amp; 0\\
-  1 &amp; 0 &amp; 0\\
-  1 &amp; 0 &amp; 0\\
-  1 &amp; 0 &amp; 0\\
-  0 &amp; 1 &amp; 0\\
-  0 &amp; 1 &amp; 0\\
-  0 &amp; 1 &amp; 0\\
-  0 &amp; 1 &amp; 0\\
-  0 &amp; 0 &amp; 1\\
-  0 &amp; 0 &amp; 1\\
-  0 &amp; 0 &amp; 1\\
-  0 &amp; 0 &amp; 1\\
+  1. &amp; 0. &amp; 0.\\
+  1. &amp; 0. &amp; 0.\\
+  1. &amp; 0. &amp; 0.\\
+  1. &amp; 0. &amp; 0.\\
+  0. &amp; 1. &amp; 0.\\
+  0. &amp; 1. &amp; 0.\\
+  0. &amp; 1. &amp; 0.\\
+  0. &amp; 1. &amp; 0.\\
+  0. &amp; 0. &amp; 1.\\
+  0. &amp; 0. &amp; 1.\\
+  0. &amp; 0. &amp; 1.\\
+  0. &amp; 0. &amp; 1.\\
 \end{bmatrix}\end{split}\]</div>
 </div>
 </div>
 <p>Dados X0 e X1, podemos encontrar as matrizes de projeção H0 e H1</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H0</span> <span class="o">=</span> <span class="n">X0</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X0</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X0</span><span class="p">)))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X0</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">H0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;H0 =&#39;</span><span class="p">)))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcula_matriz_de_projecao</span><span class="p">(</span><span class="n">delineamento</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">delineamento</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">delineamento</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">delineamento</span><span class="p">)))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">delineamento</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
-<span class="n">H1</span> <span class="o">=</span> <span class="n">X1</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X1</span><span class="p">)))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">H1</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;H1 =&#39;</span><span class="p">)))</span>
+<span class="n">H0</span> <span class="o">=</span> <span class="n">calcula_matriz_de_projecao</span><span class="p">(</span><span class="n">X0</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">H0</span><span class="p">,</span> <span class="s1">&#39;H0 =&#39;</span><span class="p">)))</span>
+
+<span class="n">H1</span> <span class="o">=</span> <span class="n">calcula_matriz_de_projecao</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">H1</span><span class="p">,</span> <span class="s1">&#39;H1 =&#39;</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -696,7 +700,7 @@
 <p>Comparando os resultados com ANOVA:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;y ~ C(tratamentos)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">observacoes_dataframe</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;y ~ tratamentos&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">observacoes_dataframe</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 <span class="n">anova</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
 <span class="n">anova</span>
 </pre></div>
@@ -730,7 +734,7 @@
   </thead>
   <tbody>
     <tr>
-      <th>C(tratamentos)</th>
+      <th>tratamentos</th>
       <td>2.0</td>
       <td>38.00</td>
       <td>19.000000</td>
