@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anotações - Prova 1 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../visualizacao_de_dados/intro.html" />
+    <link rel="prev" title="Sobre" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+     Atividade 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+     Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+     Atividade 4
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+     Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+     Atividade 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Anotações - Prova 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+     Desafio 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/planejamento_de_experimentos/anotacoes_prova_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="anotacoes-prova-1">
+<h1>Anotações - Prova 1<a class="headerlink" href="#anotacoes-prova-1" title="Link permanente para este título">¶</a></h1>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">#-----------------------------------------------------------------------</span>
+<span class="c1">#                                            Prof. Dr. Walmes M. Zeviani</span>
+<span class="c1">#                                leg.ufpr.br/~walmes · github.com/walmes</span>
+<span class="c1">#                                        walmes@ufpr.br · @walmeszeviani</span>
+<span class="c1">#                      Laboratory of Statistics and Geoinformation (LEG)</span>
+<span class="c1">#                Department of Statistics · Federal University of Paraná</span>
+<span class="c1">#                                       2021-out-21 · Curitiba/PR/Brazil</span>
+<span class="c1">#-----------------------------------------------------------------------</span>
+
+<span class="c1">#-----------------------------------------------------------------------</span>
+
+<span class="n">sache</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="nf">rep</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="s">&quot;C&quot;</span><span class="p">),</span> <span class="n">each</span> <span class="o">=</span> <span class="m">4</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">18</span><span class="p">,</span> <span class="m">23</span><span class="p">,</span> <span class="m">21</span><span class="p">,</span> <span class="m">17</span><span class="p">,</span>
+       <span class="m">17</span><span class="p">,</span> <span class="m">21</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">19</span><span class="p">,</span>
+       <span class="m">23</span><span class="p">,</span> <span class="m">21</span><span class="p">,</span> <span class="m">25</span><span class="p">,</span> <span class="m">24</span><span class="p">)</span>
+
+<span class="nf">plot</span><span class="p">(</span><span class="n">y</span> <span class="o">~</span> <span class="nf">as.integer</span><span class="p">(</span><span class="n">sache</span><span class="p">))</span>
+
+<span class="n">X</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>
+              <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> <span class="n">byrow</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">X</span>
+
+<span class="n">Y</span> <span class="o">&lt;-</span> <span class="nf">cbind</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="n">Y</span>
+
+<span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">X</span><span class="p">)</span>
+<span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span>
+
+<span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span>
+
+
+<span class="nf">tapply</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">sache</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
+
+<span class="n">m0</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span> <span class="o">~</span> <span class="m">0</span> <span class="o">+</span> <span class="n">sache</span><span class="p">)</span>
+<span class="nf">coef</span><span class="p">(</span><span class="n">m0</span><span class="p">)</span>
+
+<span class="n">m0</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span> <span class="o">~</span> <span class="n">sache</span><span class="p">)</span>
+<span class="nf">coef</span><span class="p">(</span><span class="n">m0</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span>
+              <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span> <span class="n">ncol</span> <span class="o">=</span> <span class="m">3</span><span class="p">,</span> <span class="n">byrow</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">X</span>
+
+<span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span>
+
+<span class="nf">anova</span><span class="p">(</span><span class="n">m0</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------------------------------------------------</span>
+
+<span class="c1"># \mu + e_{ij}</span>
+<span class="n">X0</span> <span class="o">&lt;-</span> <span class="nf">model.matrix</span><span class="p">(</span><span class="o">~</span><span class="m">1</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">sache</span> <span class="o">=</span> <span class="n">sache</span><span class="p">))</span>
+<span class="n">X0</span>
+
+<span class="c1"># \mu_i + e_{ij} ou \mu + \tau_i + e_{ij}</span>
+<span class="n">X1</span> <span class="o">&lt;-</span> <span class="nf">model.matrix</span><span class="p">(</span><span class="o">~</span><span class="m">0</span> <span class="o">+</span> <span class="n">sache</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">sache</span> <span class="o">=</span> <span class="n">sache</span><span class="p">))</span>
+<span class="n">X1</span>
+
+<span class="n">I</span> <span class="o">&lt;-</span> <span class="nf">diag</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+<span class="n">I</span> <span class="o">%*%</span> <span class="n">I</span> <span class="c1"># Indepotente: é simétrica e ela vezes ela é ela.</span>
+
+<span class="n">H0</span> <span class="o">&lt;-</span> <span class="n">X0</span> <span class="o">%*%</span> <span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X0</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">X0</span><span class="p">)</span> <span class="o">%*%</span> <span class="nf">t</span><span class="p">(</span><span class="n">X0</span><span class="p">)</span>
+<span class="n">MASS</span><span class="o">::</span><span class="nf">fractions</span><span class="p">(</span><span class="n">H0</span><span class="p">)</span>
+
+<span class="n">H1</span> <span class="o">&lt;-</span> <span class="n">X1</span> <span class="o">%*%</span> <span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">X1</span><span class="p">)</span> <span class="o">%*%</span> <span class="nf">t</span><span class="p">(</span><span class="n">X1</span><span class="p">)</span>
+<span class="n">MASS</span><span class="o">::</span><span class="nf">fractions</span><span class="p">(</span><span class="n">H1</span><span class="p">)</span>
+
+<span class="c1"># Fator de correção C = sum y_{..}^2/n</span>
+<span class="nf">sum</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="o">/</span><span class="nf">length</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">H0</span> <span class="o">%*%</span> <span class="n">Y</span>
+
+<span class="c1"># sum y_{i.}^2/r    - C</span>
+<span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">H1</span> <span class="o">%*%</span> <span class="n">Y</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">H0</span> <span class="o">%*%</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">H0</span> <span class="o">%*%</span> <span class="n">Y</span>
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">H1</span> <span class="o">%*%</span> <span class="n">Y</span>
+
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="p">(</span><span class="n">I</span> <span class="o">-</span> <span class="n">H1</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span>
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="p">(</span><span class="n">I</span> <span class="o">-</span> <span class="n">H0</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span>
+
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="p">(</span><span class="n">H1</span> <span class="o">-</span> <span class="n">H0</span><span class="p">)</span> <span class="o">%*%</span> <span class="nf">Y</span>
+<span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">H1</span> <span class="o">%*%</span> <span class="n">Y</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">H0</span> <span class="o">%*%</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="p">(</span><span class="n">H1</span> <span class="o">-</span> <span class="n">H0</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span> <span class="c1"># SQtratamento</span>
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="p">(</span><span class="n">I</span> <span class="o">-</span> <span class="n">H1</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span>  <span class="c1"># SQresiduo</span>
+
+<span class="n">traco</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="nf">sum</span><span class="p">(</span><span class="nf">diag</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="nf">traco</span><span class="p">(</span><span class="n">H1</span> <span class="o">-</span> <span class="n">H0</span><span class="p">)</span>
+<span class="nf">traco</span><span class="p">(</span><span class="n">I</span> <span class="o">-</span> <span class="n">H1</span><span class="p">)</span>
+
+<span class="nf">anova</span><span class="p">(</span><span class="nf">lm</span><span class="p">(</span><span class="n">y</span> <span class="o">~</span> <span class="n">sache</span><span class="p">))</span>
+
+<span class="n">SQTotal</span> <span class="o">&lt;-</span> <span class="nf">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="nf">mean</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">^</span><span class="m">2</span><span class="p">)</span>
+
+<span class="nf">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="n">Y</span>
+
+<span class="nf">pf</span><span class="p">(</span><span class="m">4.2484</span><span class="p">,</span> <span class="n">df1</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">df2</span> <span class="o">=</span> <span class="m">9</span><span class="p">,</span> <span class="n">lower.tail</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="c1">#-----------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<p>Implementação em python</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Latex</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">utils</span>
+
+<span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Definindo os tratamentos, repetições e arbitrando resultados das observações, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tratamentos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
+<span class="n">numero_de_repeticoes</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">observado</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">24</span><span class="p">]</span>
+
+<span class="n">observacoes_dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">observado</span><span class="p">,</span> <span class="s1">&#39;tratamentos&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">tratamentos</span><span class="p">,</span> <span class="n">numero_de_repeticoes</span><span class="p">)})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">observacoes_dataframe</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">observacoes_dataframe</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;tratamentos&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>y</th>
+      <td>18</td>
+      <td>23</td>
+      <td>21</td>
+      <td>17</td>
+      <td>17</td>
+      <td>21</td>
+      <td>20</td>
+      <td>19</td>
+      <td>23</td>
+      <td>21</td>
+      <td>25</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>tratamentos</th>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>A</td>
+      <td>B</td>
+      <td>B</td>
+      <td>B</td>
+      <td>B</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/anotacoes_prova_1_4_1.png" src="../_images/anotacoes_prova_1_4_1.png" />
+</div>
+</div>
+<p>Na forma matricial, temos um vetor de observações Y:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">observacoes_dataframe</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+<span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;Y =&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}Y =
+\begin{bmatrix}
+  18\\
+  23\\
+  21\\
+  17\\
+  17\\
+  21\\
+  20\\
+  19\\
+  23\\
+  21\\
+  25\\
+  24\\
+\end{bmatrix}\end{split}\]</div>
+</div>
+</div>
+<p>Partimos de 2 hipóteses:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    H_0: \mu_A = \mu_B = \mu_C \\
+    H_1: \mu_i \neq \mu_j \quad para \quad i \neq j
+\end{split}\]</div>
+<p>Destas hipóteses, formulamos um modelo para cada hipótese:</p>
+<p>Para H0 assumimos que existe apenas uma média <span class="math notranslate nohighlight">\(\mu\)</span> e assim temos a matriz X0 como matriz de delineamento para H0.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">))</span>
+<span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">X0</span><span class="p">,</span> <span class="s1">&#39;X0 =&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}X0 =
+\begin{bmatrix}
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+  1\\
+\end{bmatrix}\end{split}\]</div>
+</div>
+</div>
+<p>Para a hipótese H1 assumimos que as médias <span class="math notranslate nohighlight">\(\mu_i\)</span> são diferentes para cada um dos 3 tratamentos, para este modelo temos a matriz de delineamento X1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s1">&#39;1 0 0; 0 1 0; 0 0 1&#39;</span><span class="p">),</span> <span class="n">repeats</span><span class="o">=</span><span class="n">numero_de_repeticoes</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="s1">&#39;X1 =&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}X1 =
+\begin{bmatrix}
+  1 &amp; 0 &amp; 0\\
+  1 &amp; 0 &amp; 0\\
+  1 &amp; 0 &amp; 0\\
+  1 &amp; 0 &amp; 0\\
+  0 &amp; 1 &amp; 0\\
+  0 &amp; 1 &amp; 0\\
+  0 &amp; 1 &amp; 0\\
+  0 &amp; 1 &amp; 0\\
+  0 &amp; 0 &amp; 1\\
+  0 &amp; 0 &amp; 1\\
+  0 &amp; 0 &amp; 1\\
+  0 &amp; 0 &amp; 1\\
+\end{bmatrix}\end{split}\]</div>
+</div>
+</div>
+<p>Dados X0 e X1, podemos encontrar as matrizes de projeção H0 e H1</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H0</span> <span class="o">=</span> <span class="n">X0</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X0</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X0</span><span class="p">)))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X0</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">H0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;H0 =&#39;</span><span class="p">)))</span>
+
+<span class="n">H1</span> <span class="o">=</span> <span class="n">X1</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X1</span><span class="p">)))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">array_to_latex</span><span class="p">(</span><span class="n">H1</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;H1 =&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}H0 =
+\begin{bmatrix}
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+  0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333 &amp; 0.08333333\\
+\end{bmatrix}\end{split}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}H1 =
+\begin{bmatrix}
+  0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0. &amp; 0. &amp; 0. &amp; 0.\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25\\
+  0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0. &amp; 0.25 &amp; 0.25 &amp; 0.25 &amp; 0.25\\
+\end{bmatrix}\end{split}\]</div>
+</div>
+</div>
+<p>Com as matrizes de projeção para H0 e H1, podemos contruir o quadro ANOVA</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
+
+<span class="n">graus_de_liberadade_tratamentos</span> <span class="o">=</span> <span class="p">(</span><span class="n">H1</span> <span class="o">-</span> <span class="n">H0</span><span class="p">)</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;GL Tratamentos: </span><span class="si">{</span><span class="n">graus_de_liberadade_tratamentos</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">graus_de_liberadade_residuos</span> <span class="o">=</span> <span class="p">(</span><span class="n">I</span> <span class="o">-</span> <span class="n">H1</span><span class="p">)</span><span class="o">.</span><span class="n">trace</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;GL Resíduos: </span><span class="si">{</span><span class="n">graus_de_liberadade_residuos</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">soma_quadrados_tratamentos</span> <span class="o">=</span> <span class="n">Y</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">((</span><span class="n">H1</span> <span class="o">-</span> <span class="n">H0</span><span class="p">))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SQ Tratamentos: </span><span class="si">{</span><span class="n">soma_quadrados_tratamentos</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">soma_quadrados_residuos</span> <span class="o">=</span> <span class="n">Y</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">((</span><span class="n">I</span> <span class="o">-</span> <span class="n">H1</span><span class="p">))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;SQ Resíduos: </span><span class="si">{</span><span class="n">soma_quadrados_residuos</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">media_soma_quadrados_tratamento</span> <span class="o">=</span> <span class="n">soma_quadrados_tratamentos</span> <span class="o">/</span> <span class="n">graus_de_liberadade_tratamentos</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Média SQ Tratamentos: </span><span class="si">{</span><span class="n">media_soma_quadrados_tratamento</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">media_soma_quadrados_residuos</span> <span class="o">=</span> <span class="n">soma_quadrados_residuos</span> <span class="o">/</span> <span class="n">graus_de_liberadade_residuos</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Média SQ Resíduos: </span><span class="si">{</span><span class="n">media_soma_quadrados_residuos</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="n">media_soma_quadrados_tratamento</span> <span class="o">/</span> <span class="n">media_soma_quadrados_residuos</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Estatística de Teste: </span><span class="si">{</span><span class="n">estatistica_de_teste</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">p_valor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">,</span> <span class="n">graus_de_liberadade_tratamentos</span><span class="p">,</span> <span class="n">graus_de_liberadade_residuos</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;P-Valor: </span><span class="si">{</span><span class="n">p_valor</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GL Tratamentos: 2&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;GL Resíduos: 9&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;SQ Tratamentos: 38.00&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;SQ Resíduos: 40.25&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Média SQ Tratamentos: 19.00&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Média SQ Resíduos: 4.47&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Estatística de Teste: 4.248&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;P-Valor: 0.050&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comparando os resultados com ANOVA:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;y ~ C(tratamentos)&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">observacoes_dataframe</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">anova</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
+<span class="n">anova</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>df</th>
+      <th>sum_sq</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>C(tratamentos)</th>
+      <td>2.0</td>
+      <td>38.00</td>
+      <td>19.000000</td>
+      <td>4.248447</td>
+      <td>0.050207</td>
+    </tr>
+    <tr>
+      <th>Residual</th>
+      <td>9.0</td>
+      <td>40.25</td>
+      <td>4.472222</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./planejamento_de_experimentos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="intro.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Sobre</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../visualizacao_de_dados/intro.html" title="próximo page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">próximo</p>
+                <p class="prevnext-title">Sobre</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
