@@ -26,6 +26,12 @@ parts:
     sections:
     - file: planejamento_de_experimentos/anotacoes_prova_1
 
+- caption: Teoria do Risco
+  chapters:
+  - file: teoria_do_risco/intro
+    sections:
+    - file: teoria_do_risco/atividade1
+
 - caption: Visualização de Dados
   chapters:
   - file: visualizacao_de_dados/intro

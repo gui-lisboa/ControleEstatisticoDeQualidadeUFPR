@@ -18,7 +18,7 @@ execute:
   
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
-    - amsmath
+    #- amsmath
     - dollarmath
 
 # Define the name of the latex output file for PDF builds
@@ -43,7 +43,6 @@ html:
 
 sphinx:
   config:
-    myst_update_mathjax: false
     language: pt
     html_theme_options:
       search_bar_text: "Pesquisar..."
