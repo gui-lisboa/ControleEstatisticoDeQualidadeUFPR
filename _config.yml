@@ -18,7 +18,6 @@ execute:
   
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
-    #- amsmath
     - dollarmath
 
 # Define the name of the latex output file for PDF builds
