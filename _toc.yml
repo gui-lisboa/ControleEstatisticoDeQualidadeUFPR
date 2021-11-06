@@ -8,33 +8,28 @@ parts:
 - caption: Análise de Regressão Linear
   chapters:
   - file: analise_de_regressao_linear/intro
-    sections:
-    - file: analise_de_regressao_linear/atividade1
-    - file: analise_de_regressao_linear/atividade2
-    - file: analise_de_regressao_linear/atividade4
-    - file: analise_de_regressao_linear/prova1
+  - file: analise_de_regressao_linear/atividade1
+  - file: analise_de_regressao_linear/atividade2
+  - file: analise_de_regressao_linear/atividade4
+  - file: analise_de_regressao_linear/prova1
 
 - caption: Controle Estatístico de Qualidade
   chapters:
   - file: controle_estatistico_de_qualidade/intro
-    sections:
-    - file: controle_estatistico_de_qualidade/atividade2
-    - file: controle_estatistico_de_qualidade/atividade3
+  - file: controle_estatistico_de_qualidade/atividade2
+  - file: controle_estatistico_de_qualidade/atividade3
 
 - caption: Planejamento de Experimentos
   chapters:
   - file: planejamento_de_experimentos/intro
-    sections:
-    - file: planejamento_de_experimentos/anotacoes_prova_1
+  - file: planejamento_de_experimentos/anotacoes_prova_1
 
 - caption: Teoria do Risco
   chapters:
   - file: teoria_do_risco/intro
-    sections:
-    - file: teoria_do_risco/atividade1
+  - file: teoria_do_risco/atividade1
 
 - caption: Visualização de Dados
   chapters:
   - file: visualizacao_de_dados/intro
-    sections:
-    - file: visualizacao_de_dados/desafio1
+  - file: visualizacao_de_dados/desafio1
