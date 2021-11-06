@@ -1,0 +1,953 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avaliação 1 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../controle_estatistico_de_qualidade/intro.html" />
+    <link rel="prev" title="Atividade 4" href="atividade4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="atividade1.html">
+     Atividade 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="atividade2.html">
+     Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="atividade4.html">
+     Atividade 4
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Avaliação 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+     Atividade 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+     Atividade 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+     Anotações - Prova 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+     Atividade 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+     Desafio 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analise_de_regressao_linear/prova1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#considere-o-modelo-de-regressao-linear-simples-com-a-variavel-independente-x-centrada">
+   1. Considere o modelo de regressão linear simples com a variável independente x centrada:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-qual-a-interpretacao-dos-parametros-0-e-1-justifique">
+     a. Qual a interpretação dos parâmetros β0 e β1? Justifique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-derive-os-estimadores-de-minimos-quadrados-de-0-e-1-nao-e-necessario-provar-que-a-solucao-encontrada-corresponde-a-um-ponto-de-minimo">
+     b. Derive os estimadores de mínimos quadrados de β0 e β1. Não é necessário provar que a solução encontrada corresponde a um ponto de mínimo.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-qual-a-relacao-matematica-entre-os-estimadores-de-0-e-1-encontrados-em-relacao-aos-correspondentes-estimadores-do-modelo-de-regressao-linear-simples-usual-definido-por-y-i-beta-0-beta-1-x-i-epsilon-i">
+     c. Qual a relação matemática entre os estimadores de β0 e β1 encontrados em relação aos correspondentes estimadores do modelo de regressão linear simples usual, definido por
+     <span class="math notranslate nohighlight">
+      \(y_{i} = \beta_{0} + \beta_{1}x_{i} + \epsilon_{i}\)
+     </span>
+     ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-discuta-em-que-tipos-de-situacao-pode-ser-preferivel-usar-o-modelo-centrado-ao-inves-do-modelo-usual">
+     d. Discuta em que tipos de situação pode ser preferível usar o modelo centrado ao invés do modelo usual.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-figura-seguinte-representa-os-resultados-de-n-100-realizacoes-de-uma-reacao-quimica-o-objetivo-e-ajustar-um-modelo-de-regressao-capaz-de-explicar-a-velocidade-da-reacao-y-em-funcao-da-quantidade-utilizada-de-certo-reagente-x">
+   2. A figura seguinte representa os resultados de
+   <span class="math notranslate nohighlight">
+    \(n = 100\)
+   </span>
+   realizações de uma reação química. O objetivo é ajustar um modelo de regressão capaz de explicar a velocidade da reação (
+   <span class="math notranslate nohighlight">
+    \(y\)
+   </span>
+   ) em função da quantidade utilizada de certo reagente (
+   <span class="math notranslate nohighlight">
+    \(x\)
+   </span>
+   ).
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-o-modelo-especificado-configura-um-modelo-de-regressao-linear-justifique">
+     a) O modelo especificado configura um modelo de regressão linear? Justifique.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-apresente-a-expressao-do-modelo-ajustado-qual-a-estimativa-da-velocidade-media-de-reacao-para-quantidade-de-reagente-igual-a-1-5-considere-a-saida-do-modelo-seguinte">
+     b )Apresente a expressão do modelo ajustado. Qual a estimativa da velocidade média de reação para quantidade de reagente igual a 1.5? Considere a saída do modelo seguinte
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-complete-o-quadro-de-analise-de-variancia-e-forneca-uma-estimativa-para-sigma-2">
+     c) Complete o quadro de análise de variância e forneça uma estimativa para
+     <span class="math notranslate nohighlight">
+      \(\sigma^{2}\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-descreve-as-hipoteses-nula-e-alternativa-da-anova-e-conclua-o-teste-interprete-o-resultado-no-contexto-do-exercicio">
+     d) Descreve as hipóteses nula e alternativa da ANOVA e conclua o teste. Interprete o resultado no contexto do exercício.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-calcule-e-interprete-o-valor-do-coeficiente-de-determinacao-r2">
+     e) Calcule e interprete o valor do coeficiente de determinação (R2).
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-qualidade-do-vinho-pinot-noir-e-supostamente-relacionada-as-seguintes-propriedades-sensoriais-clareza-aroma-consistencia-sabor-e-textura-trinta-e-oito-marcas-de-vinho-pinot-noir-foram-avaliadas-as-seis-primeiras-linhas-da-base-de-dados-resultante-sao-apresentadas-na-sequencia">
+   3. A qualidade do vinho Pinot Noir é supostamente relacionada às seguintes propriedades sensoriais: clareza, aroma, consistência, sabor e textura. Trinta e oito marcas de vinho Pinot Noir foram avaliadas. As seis primeiras linhas da base de dados resultante são apresentadas na sequência.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crie-uma-situacao-em-que-um-modelo-de-regressao-linear-multipla-seja-adequado-explique-qual-e-a-variavel-resposta-e-as-covariaveis-use-duas-covariaveis">
+   4. Crie uma situação em que um modelo de regressão linear múltipla seja adequado. Explique qual é a variável resposta e as covariáveis (use duas covariáveis).
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-descreva-e-explique-quais-suposicoes-voce-deve-fazer-para-que-o-modelo-de-regressao-linear-multipla-seja-adequado-e-discuta-como-elas-se-aplicam-no-contexto-que-voce-criou">
+     a) Descreva e explique quais suposições você deve fazer para que o modelo de regressão linear múltipla seja adequado. E discuta como elas se aplicam no contexto que você criou.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-escreva-a-equacao-do-modelo-e-interprete-os-coeficientes-de-regressao-no-contexto-do-problema-que-voce-criou">
+     b) Escreva a equação do modelo e interprete os coeficientes de regressão no contexto do problema que você criou.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-simule-um-conjunto-de-dados-de-tamanho-100-lembre-se-para-isto-voce-deve-especificar-os-coeficientes-de-regressao-e-o-valor-das-covariaveis">
+     c)  Simule um conjunto de dados de tamanho 100. Lembre-se para isto você deve especificar os coeficientes de regressão e o valor das covariáveis.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-estime-os-parametros-do-modelo-seus-erros-padroes-e-faca-teste-de-hipoteses-adequados-explique-quais-sao-os-testes-e-de-a-sua-conclusao-com-95-de-confianca-voce-pode-usar-as-funcoes-residentes-do-r-para-estas-tarefas">
+     d. Estime os parâmetros do modelo, seus erros padrões e faça teste de hipóteses adequados. Explique quais são os testes e dê a sua conclusão com 95% de confiança. Você pode usar as funções residentes do R para estas tarefas.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="avaliacao-1">
+<h1>Avaliação 1<a class="headerlink" href="#avaliacao-1" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="considere-o-modelo-de-regressao-linear-simples-com-a-variavel-independente-x-centrada">
+<h2>1. Considere o modelo de regressão linear simples com a variável independente x centrada:<a class="headerlink" href="#considere-o-modelo-de-regressao-linear-simples-com-a-variavel-independente-x-centrada" title="Link permanente para este título">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[
+y_{i} = \beta_{0} + \beta_{1}(x_{i} − \bar{x}) + \epsilon_{i} \quad , i = 1, . . . , n.
+\]</div>
+<p>em que <span class="math notranslate nohighlight">\(\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_{i}\)</span> e <span class="math notranslate nohighlight">\(\epsilon_{i} \tt N(0, \sigma^{2})\)</span></p>
+<div class="section" id="a-qual-a-interpretacao-dos-parametros-0-e-1-justifique">
+<h3>a. Qual a interpretação dos parâmetros β0 e β1? Justifique<a class="headerlink" href="#a-qual-a-interpretacao-dos-parametros-0-e-1-justifique" title="Link permanente para este título">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(\beta_{0}\)</span> é deslocado para o ponto das médias <span class="math notranslate nohighlight">\(x_{1} = \bar{x_{1}}, x_{2} = \bar{x_{2}} ... x_{k} = \bar{x_{k}}\)</span>. Já <span class="math notranslate nohighlight">\(\beta_{1}\)</span> deve ser interpretado levando-se em consideração os valores escalonados das variáveis originais.</p>
+</div>
+<div class="section" id="b-derive-os-estimadores-de-minimos-quadrados-de-0-e-1-nao-e-necessario-provar-que-a-solucao-encontrada-corresponde-a-um-ponto-de-minimo">
+<h3>b. Derive os estimadores de mínimos quadrados de β0 e β1. Não é necessário provar que a solução encontrada corresponde a um ponto de mínimo.<a class="headerlink" href="#b-derive-os-estimadores-de-minimos-quadrados-de-0-e-1-nao-e-necessario-provar-que-a-solucao-encontrada-corresponde-a-um-ponto-de-minimo" title="Link permanente para este título">¶</a></h3>
+</div>
+<div class="section" id="c-qual-a-relacao-matematica-entre-os-estimadores-de-0-e-1-encontrados-em-relacao-aos-correspondentes-estimadores-do-modelo-de-regressao-linear-simples-usual-definido-por-y-i-beta-0-beta-1-x-i-epsilon-i">
+<h3>c. Qual a relação matemática entre os estimadores de β0 e β1 encontrados em relação aos correspondentes estimadores do modelo de regressão linear simples usual, definido por <span class="math notranslate nohighlight">\(y_{i} = \beta_{0} + \beta_{1}x_{i} + \epsilon_{i}\)</span>?<a class="headerlink" href="#c-qual-a-relacao-matematica-entre-os-estimadores-de-0-e-1-encontrados-em-relacao-aos-correspondentes-estimadores-do-modelo-de-regressao-linear-simples-usual-definido-por-y-i-beta-0-beta-1-x-i-epsilon-i" title="Link permanente para este título">¶</a></h3>
+</div>
+<div class="section" id="d-discuta-em-que-tipos-de-situacao-pode-ser-preferivel-usar-o-modelo-centrado-ao-inves-do-modelo-usual">
+<h3>d. Discuta em que tipos de situação pode ser preferível usar o modelo centrado ao invés do modelo usual.<a class="headerlink" href="#d-discuta-em-que-tipos-de-situacao-pode-ser-preferivel-usar-o-modelo-centrado-ao-inves-do-modelo-usual" title="Link permanente para este título">¶</a></h3>
+<p>Usar o modelo centrado ao invés do modelo usual é preferível quando há variáveis explicativas com valores muito altos, que podem distorcer o modelo. Essa diferença de valores pode ocorrer, por exemplo, devido a unidades de medida.</p>
+</div>
+</div>
+<div class="section" id="a-figura-seguinte-representa-os-resultados-de-n-100-realizacoes-de-uma-reacao-quimica-o-objetivo-e-ajustar-um-modelo-de-regressao-capaz-de-explicar-a-velocidade-da-reacao-y-em-funcao-da-quantidade-utilizada-de-certo-reagente-x">
+<h2>2. A figura seguinte representa os resultados de <span class="math notranslate nohighlight">\(n = 100\)</span> realizações de uma reação química. O objetivo é ajustar um modelo de regressão capaz de explicar a velocidade da reação (<span class="math notranslate nohighlight">\(y\)</span>) em função da quantidade utilizada de certo reagente (<span class="math notranslate nohighlight">\(x\)</span>).<a class="headerlink" href="#a-figura-seguinte-representa-os-resultados-de-n-100-realizacoes-de-uma-reacao-quimica-o-objetivo-e-ajustar-um-modelo-de-regressao-capaz-de-explicar-a-velocidade-da-reacao-y-em-funcao-da-quantidade-utilizada-de-certo-reagente-x" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="a-o-modelo-especificado-configura-um-modelo-de-regressao-linear-justifique">
+<h3>a) O modelo especificado configura um modelo de regressão linear? Justifique.<a class="headerlink" href="#a-o-modelo-especificado-configura-um-modelo-de-regressao-linear-justifique" title="Link permanente para este título">¶</a></h3>
+<p>Sim, pois é possível escrever o modelo usando operadores como <span class="math notranslate nohighlight">\(Y = \beta_{0} + \beta_{1}x + \epsilon_{i}\)</span> com <span class="math notranslate nohighlight">\(\epsilon_{i} \tt N(0, \sigma^{2})\)</span></p>
+</div>
+<div class="section" id="b-apresente-a-expressao-do-modelo-ajustado-qual-a-estimativa-da-velocidade-media-de-reacao-para-quantidade-de-reagente-igual-a-1-5-considere-a-saida-do-modelo-seguinte">
+<h3>b )Apresente a expressão do modelo ajustado. Qual a estimativa da velocidade média de reação para quantidade de reagente igual a 1.5? Considere a saída do modelo seguinte<a class="headerlink" href="#b-apresente-a-expressao-do-modelo-ajustado-qual-a-estimativa-da-velocidade-media-de-reacao-para-quantidade-de-reagente-igual-a-1-5-considere-a-saida-do-modelo-seguinte" title="Link permanente para este título">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Estimate</p></th>
+<th class="head"><p>Std Error</p></th>
+<th class="head"><p>t-Statistics</p></th>
+<th class="head"><p>p-value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Intecept</p></td>
+<td><p>10.061</p></td>
+<td><p>0.055</p></td>
+<td><p>182.059</p></td>
+<td><p>&lt; 0.001</p></td>
+</tr>
+<tr class="row-odd"><td><p>I(1/x )</p></td>
+<td><p>-2.088</p></td>
+<td><p>0.066</p></td>
+<td><p>-31.503</p></td>
+<td><p>&lt; 0.001</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Latex</span>
+
+<span class="n">beta_0</span> <span class="o">=</span> <span class="mf">10.061</span>
+<span class="n">beta_1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.088</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+<span class="n">y_estimado</span> <span class="o">=</span> <span class="n">beta_0</span> <span class="o">+</span> <span class="n">beta_1</span><span class="o">/</span><span class="n">x</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\hat</span><span class="si">{y}</span><span class="s1"> = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_estimado</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{y} = 8.669\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="c-complete-o-quadro-de-analise-de-variancia-e-forneca-uma-estimativa-para-sigma-2">
+<h3>c) Complete o quadro de análise de variância e forneça uma estimativa para <span class="math notranslate nohighlight">\(\sigma^{2}\)</span><a class="headerlink" href="#c-complete-o-quadro-de-analise-de-variancia-e-forneca-uma-estimativa-para-sigma-2" title="Link permanente para este título">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fonte de variação</p></th>
+<th class="head"><p>Graus de liberdade</p></th>
+<th class="head"><p>Soma de Quadrados</p></th>
+<th class="head"><p>Quadrado Médio</p></th>
+<th class="head"><p>F</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Regressão</p></td>
+<td><p></p></td>
+<td><p>74.868</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Residual</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Total</p></td>
+<td><p></p></td>
+<td><p>82.412</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">qm_regressao</span> <span class="o">=</span> <span class="mf">74.868</span>
+<span class="n">qm_residual</span> <span class="o">=</span> <span class="mf">82.412</span>
+
+<span class="c1"># graus de liberdade</span>
+<span class="n">gl_regressao</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">gl_residual</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="n">gl_total</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="c1"># soma de quadrados</span>
+<span class="n">sq_regressao</span> <span class="o">=</span> <span class="n">qm_regressao</span> <span class="o">*</span> <span class="mi">1</span>
+<span class="n">sq_residual</span> <span class="o">=</span> <span class="n">qm_residual</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">sq_total</span> <span class="o">=</span> <span class="n">sq_regressao</span> <span class="o">+</span> <span class="n">sq_residual</span>
+
+<span class="c1"># estatística F</span>
+<span class="n">estatistica_f</span> <span class="o">=</span> <span class="n">qm_regressao</span><span class="o">/</span><span class="n">qm_residual</span>
+
+<span class="n">variancia</span> <span class="o">=</span> <span class="n">sq_total</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">anova</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Fonte de Variação&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Regressão&#39;</span><span class="p">,</span> <span class="s1">&#39;Residual&#39;</span><span class="p">,</span> <span class="s1">&#39;Total&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;GL&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">gl_regressao</span><span class="p">,</span> <span class="n">gl_residual</span><span class="p">,</span> <span class="n">gl_total</span><span class="p">],</span>
+    <span class="s1">&#39;SQ&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">sq_regressao</span><span class="p">,</span> <span class="n">sq_residual</span><span class="p">,</span> <span class="n">sq_total</span><span class="p">],</span>
+    <span class="s1">&#39;QM&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">qm_regressao</span><span class="p">,</span> <span class="n">qm_residual</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">estatistica_f</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">anova</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Fonte de Variação</th>
+      <th>GL</th>
+      <th>SQ</th>
+      <th>QM</th>
+      <th>F</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Regressão</td>
+      <td>1</td>
+      <td>74.868</td>
+      <td>74.868</td>
+      <td>0.90846</td>
+    </tr>
+    <tr>
+      <td>Residual</td>
+      <td>98</td>
+      <td>8076.376</td>
+      <td>82.412</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>99</td>
+      <td>8151.244</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\hat_{\sigma^</span><span class="si">{2}</span><span class="s1">} = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">variancia</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat_{\sigma^{2}} = 82.33579797979799\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="d-descreve-as-hipoteses-nula-e-alternativa-da-anova-e-conclua-o-teste-interprete-o-resultado-no-contexto-do-exercicio">
+<h3>d) Descreve as hipóteses nula e alternativa da ANOVA e conclua o teste. Interprete o resultado no contexto do exercício.<a class="headerlink" href="#d-descreve-as-hipoteses-nula-e-alternativa-da-anova-e-conclua-o-teste-interprete-o-resultado-no-contexto-do-exercicio" title="Link permanente para este título">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+H0: \beta_{1} = 0 \\
+H1: \beta_{1} \ne 0
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p_valor</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">estatistica_f</span><span class="p">,</span> <span class="n">gl_regressao</span><span class="p">,</span> <span class="n">gl_residual</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\text{p-valor} = &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">p_valor</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\text{p-valor} = 0.343\]</div>
+</div>
+</div>
+<p>p-Valor encontrado é menor que o nível de significancia usual (5%), portanto, há forte evidência contra a hipótese nula, assim, rejeita-se <span class="math notranslate nohighlight">\(H0\)</span> e aceita-se <span class="math notranslate nohighlight">\(H1\)</span>.</p>
+</div>
+<div class="section" id="e-calcule-e-interprete-o-valor-do-coeficiente-de-determinacao-r2">
+<h3>e) Calcule e interprete o valor do coeficiente de determinação (R2).<a class="headerlink" href="#e-calcule-e-interprete-o-valor-do-coeficiente-de-determinacao-r2" title="Link permanente para este título">¶</a></h3>
+<p>R² é o percentual da variabilidade da resposta do modelo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_quadrado</span> <span class="o">=</span> <span class="n">sq_regressao</span> <span class="o">/</span> <span class="n">sq_total</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;R^</span><span class="si">{2}</span><span class="s1"> = &#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">r_quadrado</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[R^{2} = 0.0092\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-qualidade-do-vinho-pinot-noir-e-supostamente-relacionada-as-seguintes-propriedades-sensoriais-clareza-aroma-consistencia-sabor-e-textura-trinta-e-oito-marcas-de-vinho-pinot-noir-foram-avaliadas-as-seis-primeiras-linhas-da-base-de-dados-resultante-sao-apresentadas-na-sequencia">
+<h2>3. A qualidade do vinho Pinot Noir é supostamente relacionada às seguintes propriedades sensoriais: clareza, aroma, consistência, sabor e textura. Trinta e oito marcas de vinho Pinot Noir foram avaliadas. As seis primeiras linhas da base de dados resultante são apresentadas na sequência.<a class="headerlink" href="#a-qualidade-do-vinho-pinot-noir-e-supostamente-relacionada-as-seguintes-propriedades-sensoriais-clareza-aroma-consistencia-sabor-e-textura-trinta-e-oito-marcas-de-vinho-pinot-noir-foram-avaliadas-as-seis-primeiras-linhas-da-base-de-dados-resultante-sao-apresentadas-na-sequencia" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="crie-uma-situacao-em-que-um-modelo-de-regressao-linear-multipla-seja-adequado-explique-qual-e-a-variavel-resposta-e-as-covariaveis-use-duas-covariaveis">
+<h2>4. Crie uma situação em que um modelo de regressão linear múltipla seja adequado. Explique qual é a variável resposta e as covariáveis (use duas covariáveis).<a class="headerlink" href="#crie-uma-situacao-em-que-um-modelo-de-regressao-linear-multipla-seja-adequado-explique-qual-e-a-variavel-resposta-e-as-covariaveis-use-duas-covariaveis" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="a-descreva-e-explique-quais-suposicoes-voce-deve-fazer-para-que-o-modelo-de-regressao-linear-multipla-seja-adequado-e-discuta-como-elas-se-aplicam-no-contexto-que-voce-criou">
+<h3>a) Descreva e explique quais suposições você deve fazer para que o modelo de regressão linear múltipla seja adequado. E discuta como elas se aplicam no contexto que você criou.<a class="headerlink" href="#a-descreva-e-explique-quais-suposicoes-voce-deve-fazer-para-que-o-modelo-de-regressao-linear-multipla-seja-adequado-e-discuta-como-elas-se-aplicam-no-contexto-que-voce-criou" title="Link permanente para este título">¶</a></h3>
+<p>Modelo para cálculo de peso em Kg (<span class="math notranslate nohighlight">\(y\)</span>) em função de altura em metros (<span class="math notranslate nohighlight">\(x_{1}\)</span>) e quantas Kcal são ingeridas por dia (<span class="math notranslate nohighlight">\(x_{2}\)</span>).</p>
+<p>É esperado que tanto a altura quanto o total de Kcal tenham relação direta com o peso</p>
+</div>
+<div class="section" id="b-escreva-a-equacao-do-modelo-e-interprete-os-coeficientes-de-regressao-no-contexto-do-problema-que-voce-criou">
+<h3>b) Escreva a equação do modelo e interprete os coeficientes de regressão no contexto do problema que você criou.<a class="headerlink" href="#b-escreva-a-equacao-do-modelo-e-interprete-os-coeficientes-de-regressao-no-contexto-do-problema-que-voce-criou" title="Link permanente para este título">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\beta_{0} = 20 \text{: Valor base para o peso, mas não útil na realidade (altura e Kcal = 0)} \\
+\beta_{1} = 20 \text{: Parâmetro multiplicador para a altura)} \\
+\beta_{2} = 0,002 \text{: Parâmetro multiplicador para a quantidade de calorias} \\
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beta_0</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">beta_1</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">beta_2</span> <span class="o">=</span> <span class="mf">0.002</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="c-simule-um-conjunto-de-dados-de-tamanho-100-lembre-se-para-isto-voce-deve-especificar-os-coeficientes-de-regressao-e-o-valor-das-covariaveis">
+<h3>c)  Simule um conjunto de dados de tamanho 100. Lembre-se para isto você deve especificar os coeficientes de regressão e o valor das covariáveis.<a class="headerlink" href="#c-simule-um-conjunto-de-dados-de-tamanho-100-lembre-se-para-isto-voce-deve-especificar-os-coeficientes-de-regressao-e-o-valor-das-covariaveis" title="Link permanente para este título">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># simulando valores de altura e calorias consumidas</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mf">.3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="c1">#simulando variação dos estimadores dos betas 1 e 2</span>
+<span class="n">beta_1_simulados</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">beta_1</span><span class="p">,</span> <span class="n">beta_1</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">beta_2_simulados</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">beta_2</span><span class="p">,</span> <span class="n">beta_2</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">beta_0</span> <span class="o">+</span> <span class="n">beta_1_simulados</span> <span class="o">*</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">beta_2_simulados</span> <span class="o">*</span> <span class="n">x2</span>
+
+<span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x1&#39;</span><span class="p">:</span> <span class="n">x1</span><span class="p">,</span><span class="s1">&#39;x2&#39;</span><span class="p">:</span> <span class="n">x2</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">y</span><span class="p">})</span>
+
+<span class="n">dados</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x1</th>
+      <th>x2</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.004392</td>
+      <td>1919.846575</td>
+      <td>84.145495</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.775761</td>
+      <td>865.936376</td>
+      <td>79.816182</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2.049933</td>
+      <td>1564.246234</td>
+      <td>87.211864</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.793427</td>
+      <td>2490.424065</td>
+      <td>76.853186</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.400053</td>
+      <td>1165.326718</td>
+      <td>71.609030</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>1.898758</td>
+      <td>1813.488855</td>
+      <td>78.428531</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>1.833540</td>
+      <td>1724.042404</td>
+      <td>79.392061</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>1.705702</td>
+      <td>1537.205057</td>
+      <td>72.111232</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>1.691439</td>
+      <td>1732.274422</td>
+      <td>74.708175</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>1.109019</td>
+      <td>2320.337796</td>
+      <td>63.750041</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 3 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="d-estime-os-parametros-do-modelo-seus-erros-padroes-e-faca-teste-de-hipoteses-adequados-explique-quais-sao-os-testes-e-de-a-sua-conclusao-com-95-de-confianca-voce-pode-usar-as-funcoes-residentes-do-r-para-estas-tarefas">
+<h3>d. Estime os parâmetros do modelo, seus erros padrões e faça teste de hipóteses adequados. Explique quais são os testes e dê a sua conclusão com 95% de confiança. Você pode usar as funções residentes do R para estas tarefas.<a class="headerlink" href="#d-estime-os-parametros-do-modelo-seus-erros-padroes-e-faca-teste-de-hipoteses-adequados-explique-quais-sao-os-testes-e-de-a-sua-conclusao-com-95-de-confianca-voce-pode-usar-as-funcoes-residentes-do-r-para-estas-tarefas" title="Link permanente para este título">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">dados</span><span class="o">.</span><span class="n">y</span>
+
+<span class="n">BETA_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">BETA_0</span><span class="p">,</span> <span class="n">dados</span><span class="p">[[</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="s1">&#39;x2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.639</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.632</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   85.83</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 06 Nov 2021</td> <th>  Prob (F-statistic):</th> <td>3.48e-22</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>00:21:06</td>     <th>  Log-Likelihood:    </th> <td> -323.14</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   652.3</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>    97</td>      <th>  BIC:               </th> <td>   660.1</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     2</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+    <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th> <td>   25.3689</td> <td>    4.572</td> <td>    5.549</td> <td> 0.000</td> <td>   16.294</td> <td>   34.443</td>
+</tr>
+<tr>
+  <th>x1</th>    <td>   27.7835</td> <td>    2.123</td> <td>   13.088</td> <td> 0.000</td> <td>   23.570</td> <td>   31.997</td>
+</tr>
+<tr>
+  <th>x2</th>    <td>    0.0006</td> <td>    0.001</td> <td>    0.459</td> <td> 0.648</td> <td>   -0.002</td> <td>    0.003</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 6.065</td> <th>  Durbin-Watson:     </th> <td>   2.284</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.048</td> <th>  Jarque-Bera (JB):  </th> <td>   5.445</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.507</td> <th>  Prob(JB):          </th> <td>  0.0657</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.527</td> <th>  Cond. No.          </th> <td>1.63e+04</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.63e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analise_de_regressao_linear"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="atividade4.html" title="anterior page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">anterior</p>
+                <p class="prevnext-title">Atividade 4</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../controle_estatistico_de_qualidade/intro.html" title="próximo page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">próximo</p>
+                <p class="prevnext-title">Sobre</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

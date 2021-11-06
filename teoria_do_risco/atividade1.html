@@ -120,6 +120,11 @@
      Atividade 4
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+     Avaliação 1
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -447,6 +452,24 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-a-distribuicao-de-frequencia-das-simulacoes-estabelecendo-a-frequencia-percentual-de-0s-e-das-classes-definidas-por-0-0001-a-4-4-0001-a-8-36-0001-a-40">
      a. A distribuição de frequência das simulações estabelecendo a frequência percentual de 0’s e das classes definidas por 0,0001 a 4; 4,0001 a 8; … ; 36,0001 a 40
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-desenhe-o-histograma-da-distribuicao-construida-em-a">
+     b. Desenhe o histograma da distribuição construída em a.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-calcule-a-media-dos-valores-simulados-de-x">
+     c. Calcule a média dos valores simulados de
+     <span class="math notranslate nohighlight">
+      \(X\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-calcule-os-percentis-0-3333-e-0-98">
+     d. Calcule os percentis 0,3333 e 0,98
     </a>
    </li>
   </ul>
@@ -799,7 +822,7 @@ E[X] = p_{1} E[Z_{1}] + p_{2} E[Z_{2}]
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># E[Z1] = integral z1 * z1/200</span>
-<span class="n">esperanca_Z1</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z1</span><span class="p">:</span> <span class="n">z1</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">esperanca_Z1</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">z1</span><span class="p">:</span> <span class="p">(</span><span class="n">z1</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># Z2 segue uma Uniforme(0, 20)</span>
 <span class="n">esperanca_Z2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="mi">20</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
@@ -885,7 +908,6 @@ E[X] = p_{1} E[Z_{1}] + p_{2} E[Z_{2}]
 
 <span class="n">distribuicao_frequencias</span> <span class="o">=</span> <span class="p">(</span><span class="n">simulacoes</span><span class="p">[</span><span class="s1">&#39;classes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
 <span class="n">distribuicao_frequencias</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Frequência(%)&#39;</span>
-<span class="n">distribuicao_frequencias</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">distribuicao_frequencias</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
 </pre></div>
 </div>
@@ -901,51 +923,108 @@ E[X] = p_{1} E[Z_{1}] + p_{2} E[Z_{2}]
   <tbody>
     <tr>
       <th>[0.0, 0.0001)</th>
-      <td>16.785</td>
+      <td>16.260</td>
     </tr>
     <tr>
       <th>[0.0001, 4.0)</th>
-      <td>24.005</td>
+      <td>23.995</td>
     </tr>
     <tr>
       <th>[4.0, 8.0)</th>
-      <td>14.790</td>
+      <td>14.905</td>
     </tr>
     <tr>
       <th>[8.0, 12.0)</th>
-      <td>14.120</td>
+      <td>13.970</td>
     </tr>
     <tr>
       <th>[12.0, 16.0)</th>
-      <td>12.655</td>
+      <td>12.660</td>
     </tr>
     <tr>
       <th>[16.0, 20.0)</th>
-      <td>11.795</td>
+      <td>12.200</td>
     </tr>
     <tr>
       <th>[20.0, 24.0)</th>
-      <td>3.420</td>
+      <td>3.605</td>
     </tr>
     <tr>
       <th>[24.0, 28.0)</th>
-      <td>1.745</td>
+      <td>1.680</td>
     </tr>
     <tr>
       <th>[28.0, 32.0)</th>
-      <td>0.655</td>
+      <td>0.675</td>
     </tr>
     <tr>
       <th>[32.0, 36.0)</th>
-      <td>0.030</td>
+      <td>0.050</td>
     </tr>
     <tr>
       <th>[36.0, 40.0)</th>
       <td>0.000</td>
     </tr>
   </tbody>
-</table></div><img alt="../_images/atividade1_31_1.png" src="../_images/atividade1_31_1.png" />
+</table></div></div>
 </div>
+</div>
+<div class="section" id="b-desenhe-o-histograma-da-distribuicao-construida-em-a">
+<h3>b. Desenhe o histograma da distribuição construída em a.<a class="headerlink" href="#b-desenhe-o-histograma-da-distribuicao-construida-em-a" title="Link permanente para este título">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distribuicao_frequencias</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/atividade1_33_0.png" src="../_images/atividade1_33_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="c-calcule-a-media-dos-valores-simulados-de-x">
+<h3>c. Calcule a média dos valores simulados de <span class="math notranslate nohighlight">\(X\)</span><a class="headerlink" href="#c-calcule-a-media-dos-valores-simulados-de-x" title="Link permanente para este título">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulacoes</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.016215809904747
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="d-calcule-os-percentis-0-3333-e-0-98">
+<h3>d. Calcule os percentis 0,3333 e 0,98<a class="headerlink" href="#d-calcule-os-percentis-0-3333-e-0-98" title="Link permanente para este título">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentis</span> <span class="o">=</span> <span class="n">simulacoes</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">.3333</span><span class="p">,</span> <span class="mf">.98</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">percentis</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">to_html</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>X</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0.3333</th>
+      <td>2.214332</td>
+    </tr>
+    <tr>
+      <th>0.9800</th>
+      <td>24.744092</td>
+    </tr>
+  </tbody>
+</table></div></div>
 </div>
 </div>
 </div>
