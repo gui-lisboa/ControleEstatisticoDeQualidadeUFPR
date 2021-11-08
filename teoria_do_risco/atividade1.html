@@ -906,21 +906,23 @@ E[X] = p_{1} \int_{0}^{20} \frac{z_{1}^{2}}{200}dz_{1} + p_{2} \int_{0}^{20} \fr
 <div class="section" id="a-a-distribuicao-de-frequencia-das-simulacoes-estabelecendo-a-frequencia-percentual-de-0s-e-das-classes-definidas-por-0-0001-a-4-4-0001-a-8-36-0001-a-40">
 <h3>a. A distribuição de frequência das simulações estabelecendo a frequência percentual de 0’s e das classes definidas por 0,0001 a 4; 4,0001 a 8; … ; 36,0001 a 40<a class="headerlink" href="#a-a-distribuicao-de-frequencia-das-simulacoes-estabelecendo-a-frequencia-percentual-de-0s-e-das-classes-definidas-por-0-0001-a-4-4-0001-a-8-36-0001-a-40" title="Link permanente para este título">¶</a></h3>
 <p>Para simular <span class="math notranslate nohighlight">\(X\)</span> devemos definir funções que geram valores de <span class="math notranslate nohighlight">\(z_{1}\)</span> e <span class="math notranslate nohighlight">\(z_{2}\)</span> a partir de uma Uniforme:</p>
-<p><span class="math notranslate nohighlight">\(Z_{1}\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p><span class="math notranslate nohighlight">\(Z_{1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 f_{Z_{1}}(z_{1}) = \frac{z_{1}}{200}; \quad  0 &lt; z_{1} &lt; 20 \\
 \int_{0}^{z_{1}} \frac{y}{200} dy = \frac{z_{1}^2}{200}
-\)</span>$</p>
+\end{split}\]</div>
 <p>Igualando a uma Uniforme <span class="math notranslate nohighlight">\(u\)</span>, temos:</p>
 <div class="math notranslate nohighlight">
 \[
 u = \frac{z_{1}^2}{200} \rightarrow z_{1} = 20 \sqrt{u}
 \]</div>
-<p><span class="math notranslate nohighlight">\(Z_{2}\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p><span class="math notranslate nohighlight">\(Z_{2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 f_{Z_{2}}(z_{2}) = \frac{1}{20}; \quad  0 &lt; z_{2} &lt; 20 \\
 \int_{0}^{z_{2}} \frac{1}{200} dy = \frac{z_{2}}{20}
-\)</span>$</p>
+\end{split}\]</div>
 <p>Igualando a uma Uniforme <span class="math notranslate nohighlight">\(u\)</span>, temos:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -972,47 +974,47 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
   <tbody>
     <tr>
       <th>[0.0, 0.0001)</th>
-      <td>15.930</td>
+      <td>15.980</td>
     </tr>
     <tr>
       <th>[0.0001, 4.0)</th>
-      <td>5.770</td>
+      <td>5.850</td>
     </tr>
     <tr>
       <th>[4.0, 8.0)</th>
-      <td>8.290</td>
+      <td>8.295</td>
     </tr>
     <tr>
       <th>[8.0, 12.0)</th>
-      <td>11.380</td>
+      <td>11.235</td>
     </tr>
     <tr>
       <th>[12.0, 16.0)</th>
-      <td>15.010</td>
+      <td>15.420</td>
     </tr>
     <tr>
       <th>[16.0, 20.0)</th>
-      <td>19.460</td>
+      <td>19.160</td>
     </tr>
     <tr>
       <th>[20.0, 24.0)</th>
-      <td>7.390</td>
+      <td>7.345</td>
     </tr>
     <tr>
       <th>[24.0, 28.0)</th>
-      <td>6.545</td>
+      <td>6.400</td>
     </tr>
     <tr>
       <th>[28.0, 32.0)</th>
-      <td>5.355</td>
+      <td>5.270</td>
     </tr>
     <tr>
       <th>[32.0, 36.0)</th>
-      <td>3.605</td>
+      <td>3.670</td>
     </tr>
     <tr>
       <th>[36.0, 40.0)</th>
-      <td>1.265</td>
+      <td>1.375</td>
     </tr>
   </tbody>
 </table></div></div>
@@ -1040,7 +1042,7 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.038809580695789
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.006620205623989
 </pre></div>
 </div>
 </div>
@@ -1066,11 +1068,11 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
   <tbody>
     <tr>
       <th>0.3333</th>
-      <td>9.334522</td>
+      <td>9.269987</td>
     </tr>
     <tr>
       <th>0.9800</th>
-      <td>35.068469</td>
+      <td>35.137106</td>
     </tr>
   </tbody>
 </table></div></div>
