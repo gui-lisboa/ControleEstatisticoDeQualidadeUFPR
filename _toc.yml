@@ -18,6 +18,8 @@ parts:
   - file: controle_estatistico_de_qualidade/intro
   - file: controle_estatistico_de_qualidade/atividade2
   - file: controle_estatistico_de_qualidade/atividade3
+  - file: controle_estatistico_de_qualidade/atividade4
+  - file: controle_estatistico_de_qualidade/prova1
 
 - caption: Planejamento de Experimentos
   chapters:
@@ -33,3 +35,4 @@ parts:
   chapters:
   - file: visualizacao_de_dados/intro
   - file: visualizacao_de_dados/desafio1
+  - file: visualizacao_de_dados/avaliacao1
