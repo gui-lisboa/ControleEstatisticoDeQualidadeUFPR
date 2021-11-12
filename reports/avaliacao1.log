@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 560, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from IPython.display import display
+import matplotlib.pyplot as plt
+
+# importa pop, pib e cria dataframe cidades com os 2
+populacao_estimada = pd.read_csv('./dados/populacao_estimada.csv', delimiter=';')
+pib = pd.read_csv('./dados/pib.csv')
+cidades = pd.merge(populacao_estimada, pib, on='Cidade')
+
+# importa desligamentos e admissoes do caged, cria linha para Total e dataframe saldo_caged
+desligamentos_caged = pd.read_csv('./dados/desligamentos_caged.csv', delimiter=';')
+desligamentos_caged.loc["Total"] = desligamentos_caged.sum(numeric_only=True)
+admissoes_caged = pd.read_csv('./dados/admissoes_caged.csv')
+admissoes_caged.loc["Total"] = admissoes_caged.sum(numeric_only=True)
+caged_colunas_meses = admissoes_caged.columns.values[3:]
+saldo_caged = admissoes_caged.copy()
+for coluna in caged_colunas_meses:
+    saldo_caged[coluna] -= desligamentos_caged[coluna]
+
+# Dados Caged Ajustado a PIB e população
+faixas_populacao = [p * 1000 for p in [0, 10, 100, 500, 1000, 10000]]
+faixas_pib_per_capita = [0, 20, 40, 60, 100, 1000]
+cidades_completo = pd.merge(saldo_caged, cidades, on='Cidade')
+cidades_completo['Tamanho'] = pd.cut(cidades_completo.Populacao, bins=faixas_populacao, labels=['Pequena', 'Pequena_Media', 'Media', 'Media_Grande', 'Grande'])
+cidades_completo['Pib_per_capita'] = pd.cut(cidades_completo.PIB/cidades_completo.Populacao, bins=faixas_pib_per_capita, labels=['Pobre', 'Pobre_Media', 'Media', 'Media_Rica', 'Rica'])
+cidades_completo['Saldo'] = cidades_completo[caged_colunas_meses].sum(axis=1)
+cidades_completo['Saldo_per_capita'] = cidades_completo.Saldo/cidades_completo.Populacao
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[0;32m/tmp/ipykernel_17989/2616921206.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0;32mimport[0m [0mseaborn[0m [0;32mas[0m [0msns[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      4[0m [0;32mfrom[0m [0mIPython[0m[0;34m.[0m[0mdisplay[0m [0;32mimport[0m [0mdisplay[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mModuleNotFoundError[0m: No module named 'seaborn'
+ModuleNotFoundError: No module named 'seaborn'
+

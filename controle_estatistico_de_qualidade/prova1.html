@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../planejamento_de_experimentos/intro.html" />
+    <link rel="prev" title="Atividade 4" href="atividade4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/controle_estatistico_de_qualidade/prova1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17924</span><span class="o">/</span><span class="mf">4244517235.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># questão 1</span>
+
+<span class="n">dados</span> <span class="o">=</span> <span class="p">[</span><span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.8</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.0</span><span class="p">,</span> <span class="mf">36.9</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span>
+         <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">36.9</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span>
+         <span class="mf">37.5</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">36.4</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">36.9</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span>
+         <span class="mf">37.0</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.6</span><span class="p">,</span> <span class="mf">37.0</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">36.7</span><span class="p">,</span> <span class="mf">37.6</span><span class="p">,</span> <span class="mf">36.7</span><span class="p">,</span> <span class="mf">36.5</span><span class="p">,</span>
+         <span class="mf">37.1</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">36.5</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span>
+         <span class="mf">37.0</span><span class="p">,</span> <span class="mf">37.7</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">]</span>
+
+<span class="n">media</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+<span class="n">desvio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+<span class="n">mediana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+<span class="n">quartis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">])</span>
+<span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dados</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">((</span><span class="n">minimo</span><span class="p">,</span> <span class="n">quartis</span><span class="p">,</span> <span class="n">maximo</span><span class="p">))</span>
+
+<span class="n">assimetria</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="n">media</span> <span class="o">-</span> <span class="n">mediana</span><span class="p">)</span><span class="o">/</span><span class="n">desvio</span>
+<span class="n">display</span><span class="p">(</span><span class="n">assimetria</span><span class="p">)</span>
+
+<span class="n">curtose</span> <span class="o">=</span> <span class="p">(</span><span class="n">quartis</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">quartis</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="p">[</span><span class="mi">90</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">])))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">curtose</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(36.4, array([36.975, 37.1  , 37.3  ]), 37.8)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.293807855560021
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.23214286])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># questão 2</span>
+
+<span class="n">n</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">media_amostral</span> <span class="o">=</span> <span class="mf">74.2</span>
+<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">desvio_padrao_media</span> <span class="o">=</span> <span class="mf">.1</span>
+<span class="n">media</span> <span class="o">=</span> <span class="mi">74</span>
+
+<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span> <span class="o">/</span> <span class="n">desvio_padrao_media</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">((</span><span class="n">estatistica_de_teste</span><span class="p">,</span> <span class="n">pvalor</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.0000000000000284, 0.022750131948177654)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># questão 3</span>
+
+<span class="n">amostras</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+    <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;medias&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">amostras</span><span class="o">.</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;amplitudes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">amostras</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;variancias&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">amostras</span><span class="o">.</span><span class="n">medias</span> <span class="o">-</span> <span class="n">amostras</span><span class="o">.</span><span class="n">medias</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">amostras</span><span class="p">)</span>
+<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;desvios_padrao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">variancias</span><span class="p">)</span>
+
+<span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">amostras</span><span class="o">.</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">amostras</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">media_das_medias</span> <span class="o">=</span> <span class="n">amostras</span><span class="o">.</span><span class="n">medias</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mediana_medias</span> <span class="o">=</span> <span class="n">amostras</span><span class="o">.</span><span class="n">medias</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">amostras</span><span class="p">,</span> <span class="n">media</span><span class="p">,</span> <span class="n">media_das_medias</span><span class="p">,</span> <span class="n">mediana_medias</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>medias</th>
+      <th>amplitudes</th>
+      <th>variancias</th>
+      <th>desvios_padrao</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>2</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>0.444444</td>
+      <td>0.666667</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>3</td>
+      <td>2.5</td>
+      <td>1</td>
+      <td>0.250000</td>
+      <td>0.500000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>7</td>
+      <td>4.5</td>
+      <td>5</td>
+      <td>0.027778</td>
+      <td>0.166667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>2</td>
+      <td>2.5</td>
+      <td>1</td>
+      <td>0.250000</td>
+      <td>0.500000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>3</td>
+      <td>3.0</td>
+      <td>0</td>
+      <td>0.111111</td>
+      <td>0.333333</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>3</td>
+      <td>7</td>
+      <td>5.0</td>
+      <td>4</td>
+      <td>0.111111</td>
+      <td>0.333333</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>2</td>
+      <td>4.5</td>
+      <td>5</td>
+      <td>0.027778</td>
+      <td>0.166667</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>7</td>
+      <td>3</td>
+      <td>5.0</td>
+      <td>4</td>
+      <td>0.111111</td>
+      <td>0.333333</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>7</td>
+      <td>7</td>
+      <td>7.0</td>
+      <td>0</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.5
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./controle_estatistico_de_qualidade"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="atividade4.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Atividade 4</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../planejamento_de_experimentos/intro.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Sobre</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

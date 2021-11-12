@@ -48,7 +48,7 @@ def get_pvalor(estatistica_de_teste_t: np.number) -> np.number:
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_18100/706325833.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_17784/706325833.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0;32mdef[0m [0mget_parametros_regressao_linear[0m[0;34m([0m[0mx[0m[0;34m:[0m [0mpd[0m[0;34m.[0m[0mSeries[0m[0;34m,[0m [0my[0m[0;34m:[0m [0mpd[0m[0;34m.[0m[0mSeries[0m[0;34m)[0m [0;34m->[0m [0mtuple[0m[0;34m[[0m[0mnp[0m[0;34m.[0m[0mnumber[0m[0;34m,[0m [0mnp[0m[0;34m.[0m[0mnumber[0m[0;34m][0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m     [0mmedia_x[0m[0;34m:[0m [0mnp[0m[0;34m.[0m[0mnumber[0m [0;34m=[0m [0mx[0m[0;34m.[0m[0mmean[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m     [0mmedia_y[0m[0;34m:[0m [0mnp[0m[0;34m.[0m[0mnumber[0m [0;34m=[0m [0my[0m[0;34m.[0m[0mmean[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m

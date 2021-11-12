@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avaliação 1 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Desafio 1" href="desafio1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/visualizacao_de_dados/avaliacao1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="avaliacao-1">
+<h1>Avaliação 1<a class="headerlink" href="#avaliacao-1" title="Link permanente para este título">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Instruções</p>
+<ul class="simple">
+<li><p>Os exercícios abaixo devem ser resolvidos e entregues em um arquivo único em formato PDF.</p></li>
+<li><p>Interpretações e respostas devem ser feitas à mão livre e escaneadas.</p></li>
+<li><p>Insira os códigos que utilizar como anexo no PDF.</p></li>
+</ul>
+</div>
+<p><strong>Exercício 1 (1 ponto):</strong> Defina os seguintes termos:</p>
+<p>a.  Visualização de dados.</p>
+<p>É uma forma de apresentar informações utilizando recursos gráficos com o objetivo de facilitar o entendimento do conteúdo, auxiliar no reconhecimento de padrões e/ou destacar aspectos de um conjunto de dados.</p>
+<p>Os recursos a serem utilizados variam conforme a mídia em que a visualização é construída, podendo incluir elementos de interatividade como filtros e animações que ajudam a destacar comportamentos e variáveis de interesse.</p>
+<p>b. Cores complementares.</p>
+<p>São o conjuto de cores combinadas com seus pares opostos na roda de cores. Exemplos:</p>
+<ul class="simple">
+<li><p>Vermelho e verde</p></li>
+<li><p>Laranja e azul</p></li>
+</ul>
+<p>c. Cores análogas.</p>
+<p>São o conjunto de cores combinadas com cores adjacentes na roda de cores. Exemplos:</p>
+<ul class="simple">
+<li><p>Vermelho e laranja</p></li>
+<li><p>Azul e roxo</p></li>
+</ul>
+<p>d. Excelência Gráfica em Visualização.</p>
+<p>É a capacidade de informar o leitor de forma simples e direta, comprimindo informações em diferentes dimensões sem fazer com que a visualização fique poluída. A velocidade com que podemos entender qual o conteúdo e a facilidade em identificar padrões podem ser medidas de excelência.</p>
+<p><img alt="Gráfico" src="../_images/avaliacao1_exercicio1_resolucao.jpg" /></p>
+<p><strong>Exercício 2 (1,5 pontos):</strong> Interprete o gráfico abaixo</p>
+<p><img alt="Gráfico" src="../_images/avaliacao1_exercicio2_grafico.PNG" /></p>
+<p>O gráfico mostra a distribuição do tempo gasto em 13 atividades por um casal, categorizando cada realização de atividade em função de quem a faz: esposa, alternado, esposo ou juntos.</p>
+<p>A espessura de cada barra vertical mostra o tempo gasto em cada atividade de forma comparativa. Por exemplo, a barra L.Roupas é mais espessa que a barra Jantar, logo a atividade lavar roupas toma mais tempo do que preparar o jantar.</p>
+<p>A altura de cada barra por categoria mostra a proporção de tempo gasto com certa atividade. Por exemplo, a limpeza é normalmente feita pela esposa ou juntos, poucas vezes de forma alternada e raramente feita exclusivamente pelo esposo.</p>
+<p>Há duas atividades que não são feitas exclusivamente pela esposa: reparos e feriados. O recurso visual escolhido foi tracejar a posição onde veríamos o tempo gasto pela esposa, assim ainda há a divisão em 4 categorias sem que haja altura para o tempo gasto pela esposa.</p>
+<p>É possível concluir que a esposa gasta muito mais tempo em afazeres domésticos. Já o tempo gasto com reparos é majoritariamente ocupado pelo esposo. Nas demais tarefas há um certo equilíbrio, por vezes pendendo para a esposa como compras ou para o esposo como em dirigir.</p>
+<p><img alt="Gráfico" src="../_images/avaliacao1_exercicio2_resolucao.jpg" /></p>
+<p><strong>Exercício 3 (1,5 ponto):</strong> 1. Escolha uma visualização não vista em aula (site, imagem, dashborad, livro, revista, dinâmica ou não) e comente os seguintes aspectos:</p>
+<p>a. Interprete-a com base no contexto;</p>
+<p>b. Os pontos positivos e negativos da visualização;</p>
+<p>c. Detalhes da ferramenta utilizada.</p>
+<p><strong>Exercício 4 (3,0 pontos):</strong> Crie um conjunto de dados sobre as 399 cidades do Paraná, relativo a qualquer temática (estatísticas por município sobre Saúde, Economia, Educação, Covid-19 etc) e com no mínimo 5 variáveis. Crie gráficos informativos sobre esse conjunto de dados. Não é necessário criar mapas. Algumas fontes de dados possíveis: localizasus.saude.gov.br, www.ipea.gov.br, cidades.ibge.gov.br, www.inep.gov.br, www.atlasbrasil.org.br</p>
+<p><strong>Mercado de Trabalho no Paraná durante a pandemia (Março/20 à Agosto/21)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># importa pop, pib e cria dataframe cidades com os 2</span>
+<span class="n">populacao_estimada</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/populacao_estimada.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">pib</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/pib.csv&#39;</span><span class="p">)</span>
+<span class="n">cidades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">populacao_estimada</span><span class="p">,</span> <span class="n">pib</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Cidade&#39;</span><span class="p">)</span>
+
+<span class="c1"># importa desligamentos e admissoes do caged, cria linha para Total e dataframe saldo_caged</span>
+<span class="n">desligamentos_caged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/desligamentos_caged.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">desligamentos_caged</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">desligamentos_caged</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">admissoes_caged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/admissoes_caged.csv&#39;</span><span class="p">)</span>
+<span class="n">admissoes_caged</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">admissoes_caged</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">caged_colunas_meses</span> <span class="o">=</span> <span class="n">admissoes_caged</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+<span class="n">saldo_caged</span> <span class="o">=</span> <span class="n">admissoes_caged</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">caged_colunas_meses</span><span class="p">:</span>
+    <span class="n">saldo_caged</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span> <span class="o">-=</span> <span class="n">desligamentos_caged</span><span class="p">[</span><span class="n">coluna</span><span class="p">]</span>
+
+<span class="c1"># Dados Caged Ajustado a PIB e população</span>
+<span class="n">faixas_populacao</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span> <span class="o">*</span> <span class="mi">1000</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">]]</span>
+<span class="n">faixas_pib_per_capita</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
+<span class="n">cidades_completo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">saldo_caged</span><span class="p">,</span> <span class="n">cidades</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Cidade&#39;</span><span class="p">)</span>
+<span class="n">cidades_completo</span><span class="p">[</span><span class="s1">&#39;Tamanho&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">cidades_completo</span><span class="o">.</span><span class="n">Populacao</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">faixas_populacao</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Pequena&#39;</span><span class="p">,</span> <span class="s1">&#39;Pequena_Media&#39;</span><span class="p">,</span> <span class="s1">&#39;Media&#39;</span><span class="p">,</span> <span class="s1">&#39;Media_Grande&#39;</span><span class="p">,</span> <span class="s1">&#39;Grande&#39;</span><span class="p">])</span>
+<span class="n">cidades_completo</span><span class="p">[</span><span class="s1">&#39;Pib_per_capita&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">cidades_completo</span><span class="o">.</span><span class="n">PIB</span><span class="o">/</span><span class="n">cidades_completo</span><span class="o">.</span><span class="n">Populacao</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">faixas_pib_per_capita</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Pobre&#39;</span><span class="p">,</span> <span class="s1">&#39;Pobre_Media&#39;</span><span class="p">,</span> <span class="s1">&#39;Media&#39;</span><span class="p">,</span> <span class="s1">&#39;Media_Rica&#39;</span><span class="p">,</span> <span class="s1">&#39;Rica&#39;</span><span class="p">])</span>
+<span class="n">cidades_completo</span><span class="p">[</span><span class="s1">&#39;Saldo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cidades_completo</span><span class="p">[</span><span class="n">caged_colunas_meses</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cidades_completo</span><span class="p">[</span><span class="s1">&#39;Saldo_per_capita&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cidades_completo</span><span class="o">.</span><span class="n">Saldo</span><span class="o">/</span><span class="n">cidades_completo</span><span class="o">.</span><span class="n">Populacao</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17989</span><span class="o">/</span><span class="mf">2616921206.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dados Caged</span>
+<span class="c1"># Cria figura e eixos</span>
+<span class="n">caged_fig</span><span class="p">,</span> <span class="p">(</span><span class="n">caged_ax</span><span class="p">,</span> <span class="n">saldo_categorias_ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">caged_fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Configura gráficos</span>
+<span class="n">caged_ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Admissões, Demissões e Saldo Acumulado&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">caged_ax</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">caged_colunas_meses</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">admissoes_caged</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">,</span> <span class="n">caged_colunas_meses</span><span class="p">],</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">caged_ax</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">caged_colunas_meses</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">desligamentos_caged</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">,</span> <span class="n">caged_colunas_meses</span><span class="p">]</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">caged_ax</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">caged_colunas_meses</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">saldo_caged</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Total&#39;</span><span class="p">,</span> <span class="n">caged_colunas_meses</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(),</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">caged_ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Acumulado&#39;</span><span class="p">]);</span>
+
+<span class="n">saldo_categorias_ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Saldo em Agosto/21&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">saldo_categorias_ax</span><span class="p">,</span>
+    <span class="n">x</span> <span class="o">=</span><span class="s1">&#39;Tamanho&#39;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span><span class="s1">&#39;Saldo_per_capita&#39;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Pib_per_capita&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">cidades_completo</span><span class="p">,</span>
+    <span class="n">showfliers</span> <span class="o">=</span> <span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/avaliacao1_16_0.png" src="../_images/avaliacao1_16_0.png" />
+</div>
+</div>
+<p><strong>Exercício 5 (3,0 pontos):</strong> Reconstrua os gráficos abaixo alterando a paleta de cores.</p>
+<p>a. <span class="math notranslate nohighlight">\(sen(x)\)</span> e <span class="math notranslate nohighlight">\(cos(x)\)</span></p>
+<p><img alt="Sen e Cos" src="../_images/avaliacao1_exercicio5a_grafico.PNG" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s1">&#39;cos(x)&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)},</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="n">plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span> <span class="n">dashes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/avaliacao1_19_0.png" src="../_images/avaliacao1_19_0.png" />
+</div>
+</div>
+<p>b. <span class="math notranslate nohighlight">\(z = sen(x) + cos(y)\)</span></p>
+<p><img alt="Sen+Cos" src="../_images/avaliacao1_exercicio5b_grafico.PNG" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+
+<span class="n">espaco</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">espaco</span><span class="p">,</span> <span class="n">espaco</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zticks</span><span class="p">([])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+
+<span class="n">grafico</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_rainbow</span><span class="p">)</span>
+<span class="n">legenda_cores</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">grafico</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/avaliacao1_21_0.png" src="../_images/avaliacao1_21_0.png" />
+</div>
+</div>
+<p>c. “Rolo suiço”</p>
+<p><img alt="RoloSuiço" src="../_images/avaliacao1_exercicio5c_grafico.PNG" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">cor</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">make_swiss_roll</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
+
+<span class="n">ax_3d</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">)</span>
+<span class="n">ax_3d</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_rainbow</span><span class="p">)</span>
+<span class="n">ax_3d</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="n">ax_2d</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">ax_2d</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gist_rainbow</span><span class="p">)</span>
+<span class="n">ax_2d</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax_2d</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span>  <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]))</span>
+<span class="n">ax_2d</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span>  <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/avaliacao1_23_0.png" src="../_images/avaliacao1_23_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./visualizacao_de_dados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="desafio1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Desafio 1</p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 4 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="prova1.html" />
+    <link rel="prev" title="Atividade 3" href="atividade3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Atividade 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/controle_estatistico_de_qualidade/atividade4.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#em-uma-populacao-normal-com-sigma-20-uma-amostra-aleatoria-de-tamanho-n-obtemos-bar-x-55-483-ao-nivel-alpha-5-faca-um-teste-unilateral-para-a-hipotese-nula-mu-50-quando">
+   1. Em uma população normal com
+   <span class="math notranslate nohighlight">
+    \(\sigma = 20\)
+   </span>
+   , uma amostra aleatória de tamanho n obtemos
+   <span class="math notranslate nohighlight">
+    \(\bar{x} = 55,483\)
+   </span>
+   . Ao nível
+   <span class="math notranslate nohighlight">
+    \(\alpha = 5%\)
+   </span>
+   , faça um teste unilateral para a hipótese nula
+   <span class="math notranslate nohighlight">
+    \(\mu = 50\)
+   </span>
+   , quando:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-diametro-do-pino-de-metal-usado-em-uma-unidade-de-disk-drive-e-normalmente-distribuida-com-media-de-0-2508-e-desvio-padrao-de-0-0005-unidades-a-especificacao-de-projeto-do-pino-estabeleceu-que-o-diametro-deve-ficar-entre-0-2500-pm-0-0015-unidades-determine-a-fracao-de-defeituosos-produzidos-de-acordo-com-a-especificacao">
+   2. O diâmetro do pino de metal usado em uma unidade de «disk-drive» é normalmente distribuída com média de 0,2508 e desvio padrão de 0,0005 unidades. A especificação de projeto do pino estabeleceu que o diâmetro deve ficar entre 0,2500
+   <span class="math notranslate nohighlight">
+    \(\pm\)
+   </span>
+   0,0015 unidades. Determine a fração de defeituosos produzidos de acordo com a especificação.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#o-comprimento-do-corpo-do-acendedor-de-cigarros-utilizado-em-automoveis-e-monitorado-em-uma-industria-utilizando-graficos-de-controle-para-bar-x-e-r-a-tabela-a-seguir-fornece-as-medidas-de-20-amostras-de-tamanho-4-as-medidas-foram-codificadas-em-mm-isto-e-15-e-5-15">
+   3. O comprimento do corpo do acendedor de cigarros utilizado em automóveis é monitorado em uma indústria utilizando gráficos de controle para
+   <span class="math notranslate nohighlight">
+    \(\bar{x}\)
+   </span>
+   e R. A tabela a seguir fornece as medidas de 20 amostras de tamanho 4. (As medidas foram codificadas em mm; isto é, 15 é 5,15)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-construa-os-graficos-de-controle-para-bar-x-e-r-o-processo-esta-sob-controle">
+     a) Construa os gráficos de controle para
+     <span class="math notranslate nohighlight">
+      \(\bar{x}\)
+     </span>
+     e R. O processo está sob controle?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="atividade-4">
+<h1>Atividade 4<a class="headerlink" href="#atividade-4" title="Link permanente para este título">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="em-uma-populacao-normal-com-sigma-20-uma-amostra-aleatoria-de-tamanho-n-obtemos-bar-x-55-483-ao-nivel-alpha-5-faca-um-teste-unilateral-para-a-hipotese-nula-mu-50-quando">
+<h2>1. Em uma população normal com <span class="math notranslate nohighlight">\(\sigma = 20\)</span>, uma amostra aleatória de tamanho n obtemos <span class="math notranslate nohighlight">\(\bar{x} = 55,483\)</span>. Ao nível <span class="math notranslate nohighlight">\(\alpha = 5%\)</span>, faça um teste unilateral para a hipótese nula <span class="math notranslate nohighlight">\(\mu = 50\)</span>, quando:<a class="headerlink" href="#em-uma-populacao-normal-com-sigma-20-uma-amostra-aleatoria-de-tamanho-n-obtemos-bar-x-55-483-ao-nivel-alpha-5-faca-um-teste-unilateral-para-a-hipotese-nula-mu-50-quando" title="Link permanente para este título">¶</a></h2>
+<p>(i) n=25
+(ii) n=36
+(iii)  n=64</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">media_amostral</span> <span class="o">=</span> <span class="mf">55.483</span>
+<span class="n">significancia</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">media</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">tamanho_amostras</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">64</span><span class="p">]</span>
+
+<span class="n">estatisticas</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="n">desvio_padrao</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">tamanho_amostras</span><span class="p">))</span>
+<span class="n">pvalores</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatisticas</span><span class="p">))</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="n">tamanho_amostras</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">:</span> <span class="n">estatisticas</span><span class="p">,</span> <span class="s1">&#39;pvalor&#39;</span><span class="p">:</span> <span class="n">pvalores</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;ii&#39;</span><span class="p">,</span> <span class="s1">&#39;iii&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>n</th>
+      <th>Z</th>
+      <th>pvalor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>i</th>
+      <td>25</td>
+      <td>1.37075</td>
+      <td>0.085226</td>
+    </tr>
+    <tr>
+      <th>ii</th>
+      <td>36</td>
+      <td>1.64490</td>
+      <td>0.049995</td>
+    </tr>
+    <tr>
+      <th>iii</th>
+      <td>64</td>
+      <td>2.19320</td>
+      <td>0.014146</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="o-diametro-do-pino-de-metal-usado-em-uma-unidade-de-disk-drive-e-normalmente-distribuida-com-media-de-0-2508-e-desvio-padrao-de-0-0005-unidades-a-especificacao-de-projeto-do-pino-estabeleceu-que-o-diametro-deve-ficar-entre-0-2500-pm-0-0015-unidades-determine-a-fracao-de-defeituosos-produzidos-de-acordo-com-a-especificacao">
+<h2>2. O diâmetro do pino de metal usado em uma unidade de «disk-drive» é normalmente distribuída com média de 0,2508 e desvio padrão de 0,0005 unidades. A especificação de projeto do pino estabeleceu que o diâmetro deve ficar entre 0,2500 <span class="math notranslate nohighlight">\(\pm\)</span> 0,0015 unidades. Determine a fração de defeituosos produzidos de acordo com a especificação.<a class="headerlink" href="#o-diametro-do-pino-de-metal-usado-em-uma-unidade-de-disk-drive-e-normalmente-distribuida-com-media-de-0-2508-e-desvio-padrao-de-0-0005-unidades-a-especificacao-de-projeto-do-pino-estabeleceu-que-o-diametro-deve-ficar-entre-0-2500-pm-0-0015-unidades-determine-a-fracao-de-defeituosos-produzidos-de-acordo-com-a-especificacao" title="Link permanente para este título">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">media</span> <span class="o">=</span> <span class="mf">.2508</span>
+<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mf">.0005</span>
+<span class="n">spec</span> <span class="o">=</span> <span class="mf">.25</span>
+<span class="n">desvio_spec</span> <span class="o">=</span> <span class="mf">.0015</span>
+<span class="n">limites_spec</span> <span class="o">=</span> <span class="p">[</span><span class="n">spec</span> <span class="o">-</span> <span class="n">desvio_spec</span><span class="p">,</span> <span class="n">spec</span> <span class="o">+</span> <span class="n">desvio_spec</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="o-comprimento-do-corpo-do-acendedor-de-cigarros-utilizado-em-automoveis-e-monitorado-em-uma-industria-utilizando-graficos-de-controle-para-bar-x-e-r-a-tabela-a-seguir-fornece-as-medidas-de-20-amostras-de-tamanho-4-as-medidas-foram-codificadas-em-mm-isto-e-15-e-5-15">
+<h2>3. O comprimento do corpo do acendedor de cigarros utilizado em automóveis é monitorado em uma indústria utilizando gráficos de controle para <span class="math notranslate nohighlight">\(\bar{x}\)</span> e R. A tabela a seguir fornece as medidas de 20 amostras de tamanho 4. (As medidas foram codificadas em mm; isto é, 15 é 5,15)<a class="headerlink" href="#o-comprimento-do-corpo-do-acendedor-de-cigarros-utilizado-em-automoveis-e-monitorado-em-uma-industria-utilizando-graficos-de-controle-para-bar-x-e-r-a-tabela-a-seguir-fornece-as-medidas-de-20-amostras-de-tamanho-4-as-medidas-foram-codificadas-em-mm-isto-e-15-e-5-15" title="Link permanente para este título">¶</a></h2>
+<p><img alt="Quadro" src="../_images/Atividade4-Exercicio3.PNG" /></p>
+<div class="section" id="a-construa-os-graficos-de-controle-para-bar-x-e-r-o-processo-esta-sob-controle">
+<h3>a) Construa os gráficos de controle para <span class="math notranslate nohighlight">\(\bar{x}\)</span> e R. O processo está sob controle?<a class="headerlink" href="#a-construa-os-graficos-de-controle-para-bar-x-e-r-o-processo-esta-sob-controle" title="Link permanente para este título">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;amostras&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span>
+    <span class="s1">&#39;medias&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">10.5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">9.75</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">9.75</span><span class="p">,</span> <span class="mf">12.25</span><span class="p">,</span> <span class="mf">12.75</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">8.75</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">11.75</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">,</span> <span class="mf">10.75</span><span class="p">,</span> <span class="mf">10.25</span><span class="p">,</span> <span class="mf">11.5</span><span class="p">,</span> <span class="mf">9.75</span><span class="p">],</span>
+    <span class="s1">&#39;amplitudes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">A2_tabelado</span> <span class="o">=</span> <span class="mf">.729</span>
+<span class="n">D2_tabelado</span> <span class="o">=</span> <span class="mf">2.059</span>
+<span class="n">D3_tabelado</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">D4_tabelado</span> <span class="o">=</span> <span class="mf">2.282</span>
+
+<span class="n">media</span> <span class="o">=</span> <span class="n">dados</span><span class="o">.</span><span class="n">medias</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">amplitude_media</span> <span class="o">=</span> <span class="n">dados</span><span class="o">.</span><span class="n">amplitudes</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="n">amplitude_media</span><span class="o">/</span><span class="n">D2_tabelado</span>
+
+<span class="n">limite_superior_xbarra</span> <span class="o">=</span> <span class="n">media</span> <span class="o">+</span> <span class="n">A2_tabelado</span> <span class="o">*</span> <span class="n">amplitude_media</span>
+<span class="n">limite_inferior_xbarra</span> <span class="o">=</span> <span class="n">media</span> <span class="o">-</span> <span class="n">A2_tabelado</span> <span class="o">*</span> <span class="n">amplitude_media</span>
+
+<span class="n">limite_superior_r</span> <span class="o">=</span> <span class="n">amplitude_media</span> <span class="o">*</span> <span class="n">D4_tabelado</span>
+<span class="n">limite_inferior_r</span> <span class="o">=</span> <span class="n">amplitude_media</span> <span class="o">*</span> <span class="n">D3_tabelado</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">[</span><span class="n">grafico_xbarra</span><span class="p">,</span> <span class="n">grafico_r</span><span class="p">]</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">configura_grafico_de_controle</span><span class="p">(</span><span class="n">grafico</span><span class="p">,</span> <span class="n">ykey</span><span class="p">,</span> <span class="n">controle</span><span class="p">,</span> <span class="n">limite_superior</span><span class="p">,</span> <span class="n">limite_inferior</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">clabel</span><span class="p">):</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dados</span><span class="p">[</span><span class="n">ykey</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">limite_superior</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">controle</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">limite_inferior</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Gráfico de Controle para </span><span class="si">{</span><span class="n">clabel</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Amostra&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="n">ylabel</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">grafico</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">right</span> <span class="o">+</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">limite_superior</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;UCL = </span><span class="si">{</span><span class="n">limite_superior</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">right</span> <span class="o">+</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">controle</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">clabel</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">controle</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+    <span class="n">grafico</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">right</span> <span class="o">+</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">limite_inferior</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;LCL = </span><span class="si">{</span><span class="n">limite_inferior</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">grafico</span>
+
+<span class="n">grafico_xbarra</span> <span class="o">=</span> <span class="n">configura_grafico_de_controle</span><span class="p">(</span><span class="n">grafico_xbarra</span><span class="p">,</span> <span class="s1">&#39;medias&#39;</span><span class="p">,</span> <span class="n">media</span><span class="p">,</span> <span class="n">limite_superior_xbarra</span><span class="p">,</span> <span class="n">limite_inferior_xbarra</span><span class="p">,</span> <span class="s1">&#39;Média&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\bar</span><span class="si">{x}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">grafico_r</span> <span class="o">=</span> <span class="n">configura_grafico_de_controle</span><span class="p">(</span><span class="n">grafico_r</span><span class="p">,</span> <span class="s1">&#39;amplitudes&#39;</span><span class="p">,</span> <span class="n">amplitude_media</span><span class="p">,</span> <span class="n">limite_superior_r</span><span class="p">,</span> <span class="n">limite_inferior_r</span><span class="p">,</span> <span class="s1">&#39;Amplitude&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\bar</span><span class="si">{R}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/atividade4_8_0.png" src="../_images/atividade4_8_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./controle_estatistico_de_qualidade"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="atividade3.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Atividade 3</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="prova1.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
