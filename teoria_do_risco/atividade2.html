@@ -1,0 +1,1129 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 2 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../visualizacao_de_dados/intro.html" />
+    <link rel="prev" title="Atividade 1" href="atividade1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/teoria_do_risco/atividade2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#i-considere-que-se-deseja-estabelecer-a-tarifa-de-um-plano-de-seguros-que-cobre-consultas-medicas-o-numero-de-consultas-medicas-de-cada-segurado-por-ano-segue-uma-distribuicao-de-poisson-com-parametro-3-e-o-custo-de-cada-consulta-e-igual-a-r-100-00-o-plano-de-seguro-esta-sendo-prospectado-para-uma-carteira-com-10-000-segurados-no-estabelecimento-do-premio-tem-se-como-condicao-uma-probabilidade-de-ruina-igual-a-0-025-e-os-carregamentos-comerciais-dados-por">
+   <strong>
+    I-
+   </strong>
+   Considere que se deseja estabelecer a tarifa de um plano de seguros que cobre consultas médicas. O número de consultas médicas de cada segurado por ano segue uma distribuição de Poisson com parâmetro 3 e o custo de cada consulta é igual a R$ 100,00. O plano de seguro está sendo prospectado para uma carteira com 10.000 segurados. No estabelecimento do prêmio tem-se como condição uma probabilidade de ruína igual a 0,025 e os carregamentos comerciais dados por:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determine-o-numero-esperado-de-consultas-por-ano-na-carteira">
+     1. Determine o número esperado de consultas por ano na carteira
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qual-a-probabilidade-de-um-segurado-ter-nenhuma-consulta-no-periodo-de-1-ano">
+     2. Qual a probabilidade de um segurado ter nenhuma consulta no período de 1 ano
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qual-o-numero-esperado-de-segurados-com-nenhuma-consulta-no-periodo-de-1-ano">
+     3. Qual o número esperado de segurados com nenhuma consulta no período de 1 ano
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qual-o-premio-de-risco-da-carteira">
+     4. Qual o prêmio de risco da carteira?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#considerando-a-probabilidade-de-ruina-adotada-qual-o-premio-de-puro-da-carteira-dado-que-nao-se-use-capital-de-garantia">
+     5. Considerando a probabilidade de ruína adotada qual o prêmio de puro da carteira, dado que não se use capital de garantia?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determine-o-premio-comercial-individual-mensal">
+     6. Determine o prêmio comercial individual mensal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mantendo-a-probabilidade-de-ruina-adotada-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-deve-ser-o-capital-de-garantia-a-ser-adotado">
+     7. Mantendo a probabilidade de ruína adotada, se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual deve ser o capital de garantia a ser adotado?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-sera-a-probabilidade-de-ruina-que-a-seguradora-estara-incorrendo">
+     8. Se for adotado um capital de garantia igual a R$ 250.000,00 e se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual será a probabilidade de ruína que a seguradora estará incorrendo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-devera-ser-a-comissao-de-corretagem-a-ser-adotada-se-for-desejada-a-probabilidade-de-ruina-de-0-025">
+     9. Se for adotado um capital de garantia igual a R$ 250.000,00 e se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual deverá ser a comissão de corretagem a ser adotada se for desejada a probabilidade de ruína de 0,025?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ii-considere-uma-carteira-composta-por-4000-segurados-onde-cada-um-tem-um-veiculo-cujo-valor-corresponde-a-r-20-000-00-o-contrato-feito-entre-o-segurado-e-a-seguradora-declara-que-so-e-coberto-o-evento-de-perda-total-sabe-se-que-a-probabilidade-de-um-veiculo-ter-sinistro-de-perda-total-no-periodo-de-um-ano-e-igual-a-0-02-a-seguradora-admite-uma-probabilidade-de-ruina-igual-a-0-05-e-adota-como-carregamento-para-despesas-administrativas-comissao-de-corretagem-e-margem-de-lucro-respectivamente-os-percentuais-de-15-20-e-10-o-periodo-do-contrato-de-seguro-e-de-um-ano-com-base-nestas-informacoes-responda-as-questoes-abaixo">
+   <strong>
+    II-
+   </strong>
+   Considere uma carteira composta por 4000 segurados, onde cada um tem um veículo cujo valor corresponde a R$ 20.000,00. O contrato feito entre o segurado e a seguradora declara que só é coberto o evento de perda total. Sabe-se que a probabilidade de um veículo ter sinistro de perda total no período de um ano é igual a 0,02. A seguradora admite uma probabilidade de ruína igual a 0,05 e adota como carregamento para despesas administrativas, comissão de corretagem e margem de lucro, respectivamente os percentuais de 15%, 20% e 10%. O período do contrato de seguro é de um ano. Com base nestas informações responda as questões abaixo:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-qual-o-premio-de-risco-p-da-carteira-no-periodo-de-um-ano">
+     a. Qual o prêmio de risco (P) da carteira no período de um ano?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-com-a-probabilidade-de-ruina-adotada-qual-o-premio-puro-a-ser-praticado-pp">
+     b. Com a probabilidade de ruína adotada qual o prêmio puro a ser praticado (PP)?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-se-for-adotado-um-carregamento-de-seguranca-igual-a-0-07-7-qual-o-premio-puro-praticado-e-qual-a-probabilidade-de-ruina-associada-a-esta-pratica">
+     c. Se for adotado um carregamento de segurança igual a 0,07 (7%) qual o prêmio puro praticado e qual a probabilidade de ruína associada a esta prática?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-com-a-pratica-do-carregamento-de-seguranca-de-7-qual-devera-ser-o-capital-de-garantia-u-0-a-ser-adotado-de-forma-que-se-mantenha-a-probabilidade-de-ruina-igual-a-0-05">
+     d. Com a prática do carregamento de segurança de 7% qual deverá ser o capital de garantia (
+     <span class="math notranslate nohighlight">
+      \(U_{0}\)
+     </span>
+     ) a ser adotado de forma que se mantenha a probabilidade de ruína igual a 0,05?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-com-as-condicoes-definidas-anteriormente-qual-o-premio-comercial-pc-praticado-na-carteira-como-um-todo">
+     e. Com as condições definidas anteriormente, qual o prêmio comercial (PC) praticado na carteira como um todo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-adotando-se-um-parcelamento-em-12-vezes-sem-juros-qual-sera-o-premio-comercial-individual-por-parcela">
+     f. Adotando-se um parcelamento em 12 vezes sem juros, qual será o prêmio comercial individual por parcela?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#g-se-a-area-comercial-desejar-praticar-um-premio-individual-por-parcela-igual-a-r-60-00-em-vez-de-um-carregamento-de-margem-de-lucro-igual-a-10-qual-devera-ser-o-carregamento-de-margem-de-lucro-a-ser-adotado">
+     g. Se a área comercial desejar praticar um prêmio individual por parcela igual a R$ 60,00, em vez de um carregamento de margem de lucro igual a 10%, qual deverá ser o carregamento de margem de lucro a ser adotado?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#h-para-qual-tamanho-de-carteira-poderiamos-manter-o-premio-comercial-individual-por-parcela-igual-a-r-60-00-adotando-uma-probabilidade-de-ruina-igual-a-0-05-uma-margem-de-lucro-igual-a-10-uma-comissao-de-corretagem-igual-a-20-e-uma-despesa-administrativa-igual-a-15-sem-a-adocao-de-capital-de-garantia">
+     h. Para qual tamanho de carteira poderíamos manter o prêmio comercial individual por parcela igual a R$ 60,00, adotando uma probabilidade de ruína igual a 0,05, uma margem de lucro igual a 10%, uma comissão de corretagem igual a 20% e uma despesa administrativa igual a 15%, sem a adoção de capital de garantia?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-com-o-capital-de-garantia-adotado-na-questao-d-qual-sera-a-probabilidade-de-lucro-com-a-subscricao">
+     i. Com o capital de garantia adotado na questão d) qual será a probabilidade de lucro com a subscrição?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="atividade-2">
+<h1>Atividade 2<a class="headerlink" href="#atividade-2" title="Link permanente para este título">¶</a></h1>
+<div class="admonition-prazo admonition">
+<p class="admonition-title">Prazo</p>
+<p>A lista é individual e deverá ser entregue até o dia 29/11/21, em editor de texto. Os trabalhos deverão ser entregues em ary.sabbag&#64;ufpr.br</p>
+</div>
+<div class="section" id="i-considere-que-se-deseja-estabelecer-a-tarifa-de-um-plano-de-seguros-que-cobre-consultas-medicas-o-numero-de-consultas-medicas-de-cada-segurado-por-ano-segue-uma-distribuicao-de-poisson-com-parametro-3-e-o-custo-de-cada-consulta-e-igual-a-r-100-00-o-plano-de-seguro-esta-sendo-prospectado-para-uma-carteira-com-10-000-segurados-no-estabelecimento-do-premio-tem-se-como-condicao-uma-probabilidade-de-ruina-igual-a-0-025-e-os-carregamentos-comerciais-dados-por">
+<h2><strong>I-</strong> Considere que se deseja estabelecer a tarifa de um plano de seguros que cobre consultas médicas. O número de consultas médicas de cada segurado por ano segue uma distribuição de Poisson com parâmetro 3 e o custo de cada consulta é igual a R$ 100,00. O plano de seguro está sendo prospectado para uma carteira com 10.000 segurados. No estabelecimento do prêmio tem-se como condição uma probabilidade de ruína igual a 0,025 e os carregamentos comerciais dados por:<a class="headerlink" href="#i-considere-que-se-deseja-estabelecer-a-tarifa-de-um-plano-de-seguros-que-cobre-consultas-medicas-o-numero-de-consultas-medicas-de-cada-segurado-por-ano-segue-uma-distribuicao-de-poisson-com-parametro-3-e-o-custo-de-cada-consulta-e-igual-a-r-100-00-o-plano-de-seguro-esta-sendo-prospectado-para-uma-carteira-com-10-000-segurados-no-estabelecimento-do-premio-tem-se-como-condicao-uma-probabilidade-de-ruina-igual-a-0-025-e-os-carregamentos-comerciais-dados-por" title="Link permanente para este título">¶</a></h2>
+<p>Despesa administrativa – 10%;</p>
+<p>Comissão de corretagem - 20%</p>
+<p>Margem de lucro – 10%.</p>
+<p>Com base nestas informações resolva as questões abaixo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dados retirados do enunciado</span>
+<span class="n">parametro_poisson</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">custo_consulta</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">numero_segurados</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">prob_ruina</span> <span class="o">=</span> <span class="mf">.025</span>
+<span class="n">despesas_administrativas</span> <span class="o">=</span> <span class="mf">.1</span>
+<span class="n">comissao_corretagem</span> <span class="o">=</span> <span class="mf">.2</span>
+<span class="n">margem_lucro</span> <span class="o">=</span> <span class="mf">.1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="determine-o-numero-esperado-de-consultas-por-ano-na-carteira">
+<h3>1. Determine o número esperado de consultas por ano na carteira<a class="headerlink" href="#determine-o-numero-esperado-de-consultas-por-ano-na-carteira" title="Link permanente para este título">¶</a></h3>
+<p>O número de consultas <span class="math notranslate nohighlight">\(Y\)</span> por ano na carteira é dado pela soma das consultas dos segurados <span class="math notranslate nohighlight">\(X_{i}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+Y = \sum^{N}_{i=1} X_{i}
+\]</div>
+<p>Como <span class="math notranslate nohighlight">\(X_{i}\)</span> segue uma Poisson(<span class="math notranslate nohighlight">\(\theta\)</span>), Y segue uma Poisson(<span class="math notranslate nohighlight">\(N\theta\)</span>). Logo, <span class="math notranslate nohighlight">\(E[Y] = N\theta\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Latex</span>
+
+<span class="n">esperanca_Y</span> <span class="o">=</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="n">parametro_poisson</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;E[Y] = </span><span class="si">{</span><span class="n">esperanca_Y</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[E[Y] = 30000\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="qual-a-probabilidade-de-um-segurado-ter-nenhuma-consulta-no-periodo-de-1-ano">
+<h3>2. Qual a probabilidade de um segurado ter nenhuma consulta no período de 1 ano<a class="headerlink" href="#qual-a-probabilidade-de-um-segurado-ter-nenhuma-consulta-no-periodo-de-1-ano" title="Link permanente para este título">¶</a></h3>
+<p>A probabilidade de um segurado não ter nenhuma consulta é dado por <span class="math notranslate nohighlight">\(P[X=0]\)</span> onde X segue uma distribuição Poisson(3)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">prob_segurado_zero_consultas</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parametro_poisson</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;P[X=0] = </span><span class="si">{</span><span class="n">prob_segurado_zero_consultas</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[P[X=0] = 0.049787068367863944\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="qual-o-numero-esperado-de-segurados-com-nenhuma-consulta-no-periodo-de-1-ano">
+<h3>3. Qual o número esperado de segurados com nenhuma consulta no período de 1 ano<a class="headerlink" href="#qual-o-numero-esperado-de-segurados-com-nenhuma-consulta-no-periodo-de-1-ano" title="Link permanente para este título">¶</a></h3>
+<p>Como mostrado no ítem 1, o número esperado de consultas é o resultado do produto entre o número de segurados (N) e o valor esperado de <span class="math notranslate nohighlight">\(X_{i}\)</span>. Utilizando a probabilidade de P[X=0] do ítem 2, temos que o número esperado de segurados com nenhuma consulta é dado <span class="math notranslate nohighlight">\(N*P[X=0]\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero_segurados_zero_consultas</span> <span class="o">=</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="n">prob_segurado_zero_consultas</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Y_</span><span class="se">{{</span><span class="s1">X_</span><span class="se">{{</span><span class="s1">i</span><span class="se">}}</span><span class="s1"> = 0</span><span class="se">}}</span><span class="s1"> = </span><span class="si">{</span><span class="n">numero_segurados_zero_consultas</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Y_{X_{i} = 0} = 497.87068367863947\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="qual-o-premio-de-risco-da-carteira">
+<h3>4. Qual o prêmio de risco da carteira?<a class="headerlink" href="#qual-o-premio-de-risco-da-carteira" title="Link permanente para este título">¶</a></h3>
+<p>O prêmio de risco P da carteira é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+P = E[cX_{1} + cX_{2} + cX_{3} ... cX_{N}] = cE[Y] = cN\theta
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_de_risco</span> <span class="o">=</span> <span class="n">custo_consulta</span> <span class="o">*</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="n">parametro_poisson</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;P = R\$ </span><span class="si">{</span><span class="n">premio_de_risco</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[P = R\$ 3000000\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="considerando-a-probabilidade-de-ruina-adotada-qual-o-premio-de-puro-da-carteira-dado-que-nao-se-use-capital-de-garantia">
+<h3>5. Considerando a probabilidade de ruína adotada qual o prêmio de puro da carteira, dado que não se use capital de garantia?<a class="headerlink" href="#considerando-a-probabilidade-de-ruina-adotada-qual-o-premio-de-puro-da-carteira-dado-que-nao-se-use-capital-de-garantia" title="Link permanente para este título">¶</a></h3>
+<p>O prêmio puro PP da carteira é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PP = (1 + \lambda)P
+\]</div>
+<p>O prêmio de risco P é conhecido (ítem 4) e a carga de segurança <span class="math notranslate nohighlight">\(\lambda\)</span> pode ser encontrada uma vez que sabemos probabilidade de ruína adotada e definido capital de garantia igual a zero.</p>
+<p>Utilizando o Teorema Central do Limite, temos:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{-\frac{U_{o}}{c} + Z_{\epsilon}\sqrt{N\theta}}{N\theta}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">Z_prob_ruina</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob_ruina</span><span class="p">)</span>
+<span class="n">capital_garantia</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n_theta</span> <span class="o">=</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="n">parametro_poisson</span>
+
+<span class="n">carga_seguranca</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">capital_garantia</span><span class="o">/</span><span class="n">custo_consulta</span> <span class="o">+</span> <span class="n">Z_prob_ruina</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_theta</span><span class="p">))</span> <span class="p">)</span><span class="o">/</span> <span class="n">n_theta</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;\lambda = </span><span class="si">{</span><span class="n">carga_seguranca</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\lambda = 0.011315857340761718\]</div>
+</div>
+</div>
+<p>Com a carga de segurança definida, podemos calcular o prêmio puro PP:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_puro</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="p">)</span><span class="o">*</span><span class="n">premio_de_risco</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PP = R\$ </span><span class="si">{</span><span class="n">premio_puro</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[PP = R\$ 3033947.57\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="determine-o-premio-comercial-individual-mensal">
+<h3>6. Determine o prêmio comercial individual mensal<a class="headerlink" href="#determine-o-premio-comercial-individual-mensal" title="Link permanente para este título">¶</a></h3>
+<p>Seja o prêmio comercial PC dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC = \frac{PP}{1-(DA + CC + L)}
+\]</div>
+<p>Temos que o prêmio comercial individual <span class="math notranslate nohighlight">\(PC_{i}\)</span> é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC_{i} = PC/N
+\]</div>
+<p>Como os prêmios até aqui foram calculados para o período de 1 ano, o prêmio comercial individual mensal <span class="math notranslate nohighlight">\(PC_{i_{mensal}}\)</span> é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC_{i_{mensal}} = PC_{i}/12
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_comercial</span> <span class="o">=</span> <span class="n">premio_puro</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">despesas_administrativas</span> <span class="o">+</span> <span class="n">comissao_corretagem</span> <span class="o">+</span> <span class="n">margem_lucro</span><span class="p">))</span>
+
+<span class="n">premio_comercial_individual</span> <span class="o">=</span> <span class="n">premio_comercial</span> <span class="o">/</span> <span class="n">numero_segurados</span>
+
+<span class="n">premio_comercial_individual_mensal</span> <span class="o">=</span> <span class="n">premio_comercial_individual</span> <span class="o">/</span> <span class="mi">12</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PC_</span><span class="se">{{</span><span class="s1">i_</span><span class="se">{{</span><span class="s1">mensal</span><span class="se">}}}}</span><span class="s1"> = R\$ </span><span class="si">{</span><span class="n">premio_comercial_individual_mensal</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[PC_{i_{mensal}} = R\$ 42.14\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="mantendo-a-probabilidade-de-ruina-adotada-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-deve-ser-o-capital-de-garantia-a-ser-adotado">
+<h3>7. Mantendo a probabilidade de ruína adotada, se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual deve ser o capital de garantia a ser adotado?<a class="headerlink" href="#mantendo-a-probabilidade-de-ruina-adotada-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-deve-ser-o-capital-de-garantia-a-ser-adotado" title="Link permanente para este título">¶</a></h3>
+<p>Revertendo os passos dos ítens anteriores, partindo do <span class="math notranslate nohighlight">\(PC_{i_{mensal}}\)</span> do ítem 6 até a equação da carga de segurança <span class="math notranslate nohighlight">\(\lambda\)</span> do ítem 5, temos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+PC_{i} = 12PC_{i_{mensal}} \\
+PC = NPC_{i} \\
+PP = (1 - (DA + CC + L))PC \\
+\lambda = \frac{PP - P}{P} \\
+U_{o} = c(Z_{\epsilon}\sqrt{N\theta} - \lambda N\theta)
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_comercial_individual_mensal</span> <span class="o">=</span> <span class="mi">38</span>
+
+<span class="n">premio_comercial_individual</span> <span class="o">=</span> <span class="n">premio_comercial_individual_mensal</span> <span class="o">*</span> <span class="mi">12</span>
+
+<span class="n">premio_comercial</span> <span class="o">=</span> <span class="n">premio_comercial_individual</span> <span class="o">*</span> <span class="n">numero_segurados</span>
+
+<span class="n">premio_puro</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">despesas_administrativas</span> <span class="o">+</span> <span class="n">comissao_corretagem</span> <span class="o">+</span> <span class="n">margem_lucro</span><span class="p">))</span> <span class="o">*</span> <span class="n">premio_comercial</span>
+
+<span class="n">carga_seguranca</span> <span class="o">=</span> <span class="p">(</span><span class="n">premio_puro</span> <span class="o">-</span> <span class="n">premio_de_risco</span><span class="p">)</span><span class="o">/</span><span class="n">premio_de_risco</span>
+
+<span class="n">capital_garantia</span> <span class="o">=</span> <span class="n">custo_consulta</span> <span class="o">*</span> <span class="p">(</span><span class="n">Z_prob_ruina</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_theta</span><span class="p">)</span> <span class="o">-</span> <span class="n">carga_seguranca</span> <span class="o">*</span> <span class="n">n_theta</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;U_</span><span class="se">{{</span><span class="s1">o</span><span class="se">}}</span><span class="s1"> = R\$ </span><span class="si">{</span><span class="n">capital_garantia</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[U_{o} = R\$ 297947.57\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-sera-a-probabilidade-de-ruina-que-a-seguradora-estara-incorrendo">
+<h3>8. Se for adotado um capital de garantia igual a R$ 250.000,00 e se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual será a probabilidade de ruína que a seguradora estará incorrendo?<a class="headerlink" href="#se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-sera-a-probabilidade-de-ruina-que-a-seguradora-estara-incorrendo" title="Link permanente para este título">¶</a></h3>
+<p>Utilizando o resultado do ítem anterior que também teve como base um <span class="math notranslate nohighlight">\(PC_{i_{mensal}} = R\$ 38,00\)</span> e aplicando o capital de garantia de R$ 250.000,00, descobrimos o valor de <span class="math notranslate nohighlight">\(Z_{\epsilon}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+Z_{\epsilon} = \frac{\frac{U_{o}}{c} + \lambda N\theta}{\sqrt{N\theta}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">capital_garantia</span> <span class="o">=</span> <span class="mi">250000</span>
+
+<span class="n">Z_prob_ruina</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(((</span><span class="n">capital_garantia</span><span class="o">/</span><span class="n">custo_consulta</span><span class="p">)</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="o">*</span><span class="n">n_theta</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_theta</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Z_</span><span class="se">{{</span><span class="s1">\epsilon</span><span class="se">}}</span><span class="s1"> = </span><span class="si">{</span><span class="n">Z_prob_ruina</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Z_{\epsilon} = 0.8082903768654761\]</div>
+</div>
+</div>
+<p>Econtrado o <span class="math notranslate nohighlight">\(Z_{\epsilon}\)</span>, podemos consultar qual a probabilidade de <span class="math notranslate nohighlight">\(P[Z \gt z_{\epsilon}]\)</span> correspondente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prob_ruina</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">Z_prob_ruina</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;\epsilon = </span><span class="si">{</span><span class="n">prob_ruina</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\epsilon = 0.20946172047319145\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-devera-ser-a-comissao-de-corretagem-a-ser-adotada-se-for-desejada-a-probabilidade-de-ruina-de-0-025">
+<h3>9. Se for adotado um capital de garantia igual a R$ 250.000,00 e se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual deverá ser a comissão de corretagem a ser adotada se for desejada a probabilidade de ruína de 0,025?<a class="headerlink" href="#se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-devera-ser-a-comissao-de-corretagem-a-ser-adotada-se-for-desejada-a-probabilidade-de-ruina-de-0-025" title="Link permanente para este título">¶</a></h3>
+<p>Para encontrar a comissão de corretagem CC, devemos primeiramente recalcular a carga de segurança a fim de encontrar o novo prêmio puro que por sua vez, nos permitirá calcular o novo prêmio comercial:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{-\frac{U_{o}}{c} + Z_{\epsilon}\sqrt{N\theta}}{N\theta}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prob_ruina</span> <span class="o">=</span> <span class="mf">.025</span>
+<span class="n">capital_garantia</span> <span class="o">=</span> <span class="mi">250000</span>
+
+<span class="n">Z_prob_ruina</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob_ruina</span><span class="p">)</span>
+<span class="n">n_theta</span> <span class="o">=</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="n">parametro_poisson</span>
+
+<span class="n">carga_seguranca</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">capital_garantia</span><span class="o">/</span><span class="n">custo_consulta</span> <span class="o">+</span> <span class="n">Z_prob_ruina</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_theta</span><span class="p">))</span> <span class="p">)</span><span class="o">/</span> <span class="n">n_theta</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;\lambda = </span><span class="si">{</span><span class="n">carga_seguranca</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\lambda = -0.07201747599257162\]</div>
+</div>
+</div>
+<p>Aplicando a carga de segurança, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_puro</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="p">)</span><span class="o">*</span><span class="n">premio_de_risco</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PP = R\$ </span><span class="si">{</span><span class="n">premio_puro</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[PP = R\$ 2783947.5720222853\]</div>
+</div>
+</div>
+<p>Já o prêmio comercial <span class="math notranslate nohighlight">\(PC\)</span> para um <span class="math notranslate nohighlight">\(PC_{i_{mensal}} = R\$38,00\)</span> temos do ítem 7:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_comercial_individual_mensal</span> <span class="o">=</span> <span class="mi">38</span>
+<span class="n">premio_comercial_individual</span> <span class="o">=</span> <span class="n">premio_comercial_individual_mensal</span> <span class="o">*</span> <span class="mi">12</span>
+<span class="n">premio_comercial</span> <span class="o">=</span> <span class="n">premio_comercial_individual</span> <span class="o">*</span> <span class="n">numero_segurados</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PC = R\$ </span><span class="si">{</span><span class="n">premio_comercial</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[PC = R\$ 4560000\]</div>
+</div>
+</div>
+<p>Logo, isolando a comissão de corretagem na fórmula do PC, temos:</p>
+<div class="math notranslate nohighlight">
+\[
+CC = 1 - DA - L - \frac{PP}{PC}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comissao_corretagem</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">despesas_administrativas</span> <span class="o">-</span> <span class="n">margem_lucro</span> <span class="o">-</span> <span class="n">premio_puro</span><span class="o">/</span><span class="n">premio_comercial</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;CC = </span><span class="si">{</span><span class="n">comissao_corretagem</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[CC = 0.1895\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ii-considere-uma-carteira-composta-por-4000-segurados-onde-cada-um-tem-um-veiculo-cujo-valor-corresponde-a-r-20-000-00-o-contrato-feito-entre-o-segurado-e-a-seguradora-declara-que-so-e-coberto-o-evento-de-perda-total-sabe-se-que-a-probabilidade-de-um-veiculo-ter-sinistro-de-perda-total-no-periodo-de-um-ano-e-igual-a-0-02-a-seguradora-admite-uma-probabilidade-de-ruina-igual-a-0-05-e-adota-como-carregamento-para-despesas-administrativas-comissao-de-corretagem-e-margem-de-lucro-respectivamente-os-percentuais-de-15-20-e-10-o-periodo-do-contrato-de-seguro-e-de-um-ano-com-base-nestas-informacoes-responda-as-questoes-abaixo">
+<h2><strong>II-</strong> Considere uma carteira composta por 4000 segurados, onde cada um tem um veículo cujo valor corresponde a R$ 20.000,00. O contrato feito entre o segurado e a seguradora declara que só é coberto o evento de perda total. Sabe-se que a probabilidade de um veículo ter sinistro de perda total no período de um ano é igual a 0,02. A seguradora admite uma probabilidade de ruína igual a 0,05 e adota como carregamento para despesas administrativas, comissão de corretagem e margem de lucro, respectivamente os percentuais de 15%, 20% e 10%. O período do contrato de seguro é de um ano. Com base nestas informações responda as questões abaixo:<a class="headerlink" href="#ii-considere-uma-carteira-composta-por-4000-segurados-onde-cada-um-tem-um-veiculo-cujo-valor-corresponde-a-r-20-000-00-o-contrato-feito-entre-o-segurado-e-a-seguradora-declara-que-so-e-coberto-o-evento-de-perda-total-sabe-se-que-a-probabilidade-de-um-veiculo-ter-sinistro-de-perda-total-no-periodo-de-um-ano-e-igual-a-0-02-a-seguradora-admite-uma-probabilidade-de-ruina-igual-a-0-05-e-adota-como-carregamento-para-despesas-administrativas-comissao-de-corretagem-e-margem-de-lucro-respectivamente-os-percentuais-de-15-20-e-10-o-periodo-do-contrato-de-seguro-e-de-um-ano-com-base-nestas-informacoes-responda-as-questoes-abaixo" title="Link permanente para este título">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero_segurados</span> <span class="o">=</span> <span class="mi">4000</span>
+<span class="n">custo_perda_total</span> <span class="o">=</span> <span class="mi">20000</span>
+<span class="n">prob_sinistro</span> <span class="o">=</span> <span class="mf">.02</span>
+<span class="n">prob_ruina</span> <span class="o">=</span> <span class="mf">.05</span>
+<span class="n">despesas_administrativas</span> <span class="o">=</span> <span class="mf">.15</span>
+<span class="n">comissao_corretagem</span> <span class="o">=</span> <span class="mf">.20</span>
+<span class="n">margem_lucro</span> <span class="o">=</span> <span class="mf">.1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="a-qual-o-premio-de-risco-p-da-carteira-no-periodo-de-um-ano">
+<h3>a. Qual o prêmio de risco (P) da carteira no período de um ano?<a class="headerlink" href="#a-qual-o-premio-de-risco-p-da-carteira-no-periodo-de-um-ano" title="Link permanente para este título">¶</a></h3>
+<p>A probabilidade de sinistro de cada segurado <span class="math notranslate nohighlight">\(X_{i}\)</span> segue uma Bernoulli(p), assim a soma das <span class="math notranslate nohighlight">\(N\)</span> probabilidades individuais de seguro <span class="math notranslate nohighlight">\(Y\)</span> segue uma Binomial(N, p), logo:</p>
+<div class="math notranslate nohighlight">
+\[
+P = E[cX_{1} + cX_{2} + ... + cX_{n}] = cE[Y] = cNp
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_de_risco</span> <span class="o">=</span> <span class="n">custo_perda_total</span> <span class="o">*</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="n">prob_sinistro</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;P = R\$ </span><span class="si">{</span><span class="n">premio_de_risco</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[P = R\$ 1600000.00\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="b-com-a-probabilidade-de-ruina-adotada-qual-o-premio-puro-a-ser-praticado-pp">
+<h3>b. Com a probabilidade de ruína adotada qual o prêmio puro a ser praticado (PP)?<a class="headerlink" href="#b-com-a-probabilidade-de-ruina-adotada-qual-o-premio-puro-a-ser-praticado-pp" title="Link permanente para este título">¶</a></h3>
+<p>Assim como na questão 1 ítem 5, o prêmio puro PP da carteira é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PP = (1 + \lambda)P
+\]</div>
+<p>O prêmio de risco P é conhecido do ítem anterior e a carga de segurança <span class="math notranslate nohighlight">\(\lambda\)</span> pode ser encontrada uma vez que sabemos probabilidade de ruína adotada. Como o capital de garantia não foi revelado até aqui, segue que <span class="math notranslate nohighlight">\(U_{o} = 0\)</span></p>
+<p>Utilizando o Teorema Central do Limite para isolar <span class="math notranslate nohighlight">\(\lambda\)</span> no cálculo da probabilidade de ruína <span class="math notranslate nohighlight">\(P[U_{t} \lt 0] = \epsilon\)</span>, temos:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{-\frac{U_{o}}{c} + Z_{\epsilon}\sqrt{Np(1-p)}}{Np}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_prob_ruina</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob_ruina</span><span class="p">)</span>
+<span class="n">capital_garantia</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n_p</span> <span class="o">=</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="n">prob_sinistro</span>
+
+<span class="n">carga_seguranca</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">capital_garantia</span><span class="o">/</span><span class="n">custo_perda_total</span> <span class="o">+</span> <span class="n">Z_prob_ruina</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_p</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">prob_sinistro</span><span class="p">)))</span> <span class="p">)</span><span class="o">/</span> <span class="n">n_p</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;\lambda = </span><span class="si">{</span><span class="n">carga_seguranca</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\lambda = 0.18205193575644507\]</div>
+</div>
+</div>
+<p>Logo, calculando o PP temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_puro</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="p">)</span> <span class="o">*</span> <span class="n">premio_de_risco</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;P = R\$ </span><span class="si">{</span><span class="n">premio_puro</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[P = R\$ 1891283.10\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="c-se-for-adotado-um-carregamento-de-seguranca-igual-a-0-07-7-qual-o-premio-puro-praticado-e-qual-a-probabilidade-de-ruina-associada-a-esta-pratica">
+<h3>c. Se for adotado um carregamento de segurança igual a 0,07 (7%) qual o prêmio puro praticado e qual a probabilidade de ruína associada a esta prática?<a class="headerlink" href="#c-se-for-adotado-um-carregamento-de-seguranca-igual-a-0-07-7-qual-o-premio-puro-praticado-e-qual-a-probabilidade-de-ruina-associada-a-esta-pratica" title="Link permanente para este título">¶</a></h3>
+<p>Seja o prêmio puro PP dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PP = (1 + \lambda)P
+\]</div>
+<p>Temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">carga_seguranca</span> <span class="o">=</span> <span class="mf">.07</span>
+<span class="n">premio_puro</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="p">)</span> <span class="o">*</span> <span class="n">premio_de_risco</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;P = R\$ </span><span class="si">{</span><span class="n">premio_puro</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[P = R\$ 1712000.00\]</div>
+</div>
+</div>
+<p>Isolando <span class="math notranslate nohighlight">\(Z_{\epsilon}\)</span>, temos:</p>
+<div class="math notranslate nohighlight">
+\[
+Z_{\epsilon} = \frac{\frac{U_{o}}{c} + \lambda Np}{\sqrt{Np(1-p)}}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z_prob_ruina</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(((</span><span class="n">capital_garantia</span><span class="o">/</span><span class="n">custo_perda_total</span><span class="p">)</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="o">*</span><span class="n">n_p</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_p</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">prob_sinistro</span><span class="p">)))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Z_</span><span class="se">{{</span><span class="s1">\epsilon</span><span class="se">}}</span><span class="s1"> = </span><span class="si">{</span><span class="n">Z_prob_ruina</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Z_{\epsilon} = 0.6324555320336759\]</div>
+</div>
+</div>
+<p>Econtrado o <span class="math notranslate nohighlight">\(Z_{\epsilon}\)</span>, podemos consultar qual a probabilidade de <span class="math notranslate nohighlight">\(P[Z \gt z_{\epsilon}]\)</span> correspondente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prob_ruina</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">Z_prob_ruina</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;\epsilon = </span><span class="si">{</span><span class="n">prob_ruina</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\epsilon = 0.26354462843276905\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="d-com-a-pratica-do-carregamento-de-seguranca-de-7-qual-devera-ser-o-capital-de-garantia-u-0-a-ser-adotado-de-forma-que-se-mantenha-a-probabilidade-de-ruina-igual-a-0-05">
+<h3>d. Com a prática do carregamento de segurança de 7% qual deverá ser o capital de garantia (<span class="math notranslate nohighlight">\(U_{0}\)</span>) a ser adotado de forma que se mantenha a probabilidade de ruína igual a 0,05?<a class="headerlink" href="#d-com-a-pratica-do-carregamento-de-seguranca-de-7-qual-devera-ser-o-capital-de-garantia-u-0-a-ser-adotado-de-forma-que-se-mantenha-a-probabilidade-de-ruina-igual-a-0-05" title="Link permanente para este título">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+U_{0} = c(Z_{\epsilon}\sqrt{Np(1-p)} - \lambda Np)
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prob_ruina</span> <span class="o">=</span> <span class="mf">.05</span>
+<span class="n">Z_prob_ruina</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">prob_ruina</span><span class="p">)</span>
+
+<span class="n">capital_garantia</span> <span class="o">=</span> <span class="n">custo_perda_total</span> <span class="o">*</span> <span class="p">(</span><span class="n">Z_prob_ruina</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_p</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">prob_sinistro</span><span class="p">))</span> <span class="o">-</span> <span class="n">carga_seguranca</span> <span class="o">*</span> <span class="n">n_p</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;U_</span><span class="se">{{</span><span class="s1">0</span><span class="se">}}</span><span class="s1"> = R\$ </span><span class="si">{</span><span class="n">capital_garantia</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[U_{0} = R\$ 179283.10\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="e-com-as-condicoes-definidas-anteriormente-qual-o-premio-comercial-pc-praticado-na-carteira-como-um-todo">
+<h3>e. Com as condições definidas anteriormente, qual o prêmio comercial (PC) praticado na carteira como um todo?<a class="headerlink" href="#e-com-as-condicoes-definidas-anteriormente-qual-o-premio-comercial-pc-praticado-na-carteira-como-um-todo" title="Link permanente para este título">¶</a></h3>
+<p>Com as condições definidas anteriormente (carga de segurança = 7%), temos que o prêmio comercial PC é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC = \frac{PP}{1-(DA + CC + L)}
+\]</div>
+<p>Temos que o prêmio comercial individual <span class="math notranslate nohighlight">\(PC_{i}\)</span> é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC_{i} = PC/N
+\]</div>
+<p>Como os prêmios até aqui foram calculados para o período de 1 ano, o prêmio comercial individual mensal <span class="math notranslate nohighlight">\(PC_{i_{mensal}}\)</span> é dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC_{i_{mensal}} = PC_{i}/12
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">carga_seguranca</span> <span class="o">=</span> <span class="mf">.07</span>
+<span class="n">premio_puro</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="p">)</span> <span class="o">*</span> <span class="n">premio_de_risco</span>
+
+<span class="n">premio_comercial</span> <span class="o">=</span> <span class="n">premio_puro</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">despesas_administrativas</span> <span class="o">+</span> <span class="n">comissao_corretagem</span> <span class="o">+</span> <span class="n">margem_lucro</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PC = R\$ </span><span class="si">{</span><span class="n">premio_comercial</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[PC = R\$ 3112727.27\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="f-adotando-se-um-parcelamento-em-12-vezes-sem-juros-qual-sera-o-premio-comercial-individual-por-parcela">
+<h3>f. Adotando-se um parcelamento em 12 vezes sem juros, qual será o prêmio comercial individual por parcela?<a class="headerlink" href="#f-adotando-se-um-parcelamento-em-12-vezes-sem-juros-qual-sera-o-premio-comercial-individual-por-parcela" title="Link permanente para este título">¶</a></h3>
+<p>Inicialmente, calculamos o prêmio comercial individual <span class="math notranslate nohighlight">\(PC_{i}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+PC_{i} = PC/N
+\]</div>
+<p>Assim, temos que em um cenário de parcelamento em 12 vezes, o valor da parcela será dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC_{i_{parcela}} = PC_{i}/12
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_comercial_individual</span> <span class="o">=</span> <span class="n">premio_comercial</span> <span class="o">/</span> <span class="n">numero_segurados</span>
+
+<span class="n">premio_comercial_individual_parcela</span> <span class="o">=</span> <span class="n">premio_comercial_individual</span> <span class="o">/</span> <span class="mi">12</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PC_</span><span class="se">{{</span><span class="s1">i_</span><span class="se">{{</span><span class="s1">parcela</span><span class="se">}}}}</span><span class="s1"> = R\$ </span><span class="si">{</span><span class="n">premio_comercial_individual_parcela</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[PC_{i_{parcela}} = R\$ 64.85\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="g-se-a-area-comercial-desejar-praticar-um-premio-individual-por-parcela-igual-a-r-60-00-em-vez-de-um-carregamento-de-margem-de-lucro-igual-a-10-qual-devera-ser-o-carregamento-de-margem-de-lucro-a-ser-adotado">
+<h3>g. Se a área comercial desejar praticar um prêmio individual por parcela igual a R$ 60,00, em vez de um carregamento de margem de lucro igual a 10%, qual deverá ser o carregamento de margem de lucro a ser adotado?<a class="headerlink" href="#g-se-a-area-comercial-desejar-praticar-um-premio-individual-por-parcela-igual-a-r-60-00-em-vez-de-um-carregamento-de-margem-de-lucro-igual-a-10-qual-devera-ser-o-carregamento-de-margem-de-lucro-a-ser-adotado" title="Link permanente para este título">¶</a></h3>
+<p>Definindo o prêmio comercial individual por parcela em R$ 60,00, calculamos o prêmio comercial como:</p>
+<div class="math notranslate nohighlight">
+\[
+PC = N(12PC_{i_{parcela}})
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">premio_comercial_individual_parcela</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">premio_comercial</span> <span class="o">=</span> <span class="n">numero_segurados</span> <span class="o">*</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">premio_comercial_individual_parcela</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PC = R\$ </span><span class="si">{</span><span class="n">premio_comercial</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[PC = R\$ 2880000.00\]</div>
+</div>
+</div>
+<p>Para manter a equação equilibrada sem alterar o prêmio puro, isolamos a margem de lucro L da equação do ítem E:</p>
+<div class="math notranslate nohighlight">
+\[
+L = 1 - DA - CC - \frac{PP}{PC}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">margem_lucro</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">despesas_administrativas</span> <span class="o">-</span> <span class="n">comissao_corretagem</span> <span class="o">-</span> <span class="n">premio_puro</span><span class="o">/</span><span class="n">premio_comercial</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;L = </span><span class="si">{</span><span class="n">margem_lucro</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[L = 0.0556\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="h-para-qual-tamanho-de-carteira-poderiamos-manter-o-premio-comercial-individual-por-parcela-igual-a-r-60-00-adotando-uma-probabilidade-de-ruina-igual-a-0-05-uma-margem-de-lucro-igual-a-10-uma-comissao-de-corretagem-igual-a-20-e-uma-despesa-administrativa-igual-a-15-sem-a-adocao-de-capital-de-garantia">
+<h3>h. Para qual tamanho de carteira poderíamos manter o prêmio comercial individual por parcela igual a R$ 60,00, adotando uma probabilidade de ruína igual a 0,05, uma margem de lucro igual a 10%, uma comissão de corretagem igual a 20% e uma despesa administrativa igual a 15%, sem a adoção de capital de garantia?<a class="headerlink" href="#h-para-qual-tamanho-de-carteira-poderiamos-manter-o-premio-comercial-individual-por-parcela-igual-a-r-60-00-adotando-uma-probabilidade-de-ruina-igual-a-0-05-uma-margem-de-lucro-igual-a-10-uma-comissao-de-corretagem-igual-a-20-e-uma-despesa-administrativa-igual-a-15-sem-a-adocao-de-capital-de-garantia" title="Link permanente para este título">¶</a></h3>
+<p>Seja o prêmio de risco <span class="math notranslate nohighlight">\(P = cNp\)</span> e o prêmio puro <span class="math notranslate nohighlight">\(PP = (1 + \lambda)P = (1 + \lambda)cNp\)</span>, temos o prêmio comercial PC dado por:</p>
+<div class="math notranslate nohighlight">
+\[
+PC = \frac{(1 + \lambda) cNp}{1- (DA + CC + L)}
+\]</div>
+<p>Assim, utilizando o PC calculado do ítem G e os valores para DA + CC + L, além dos já conhecidos custo e probabilidade de sinistro, podemos isolar o número de segurados N:</p>
+<div class="math notranslate nohighlight">
+\[
+N = \frac{PC(1 - (DA + CC + L))}{(1 + \lambda)cp}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">margem_lucro</span> <span class="o">=</span> <span class="mf">.1</span>
+<span class="n">comissao_corretagem</span> <span class="o">=</span> <span class="mf">.2</span>
+<span class="n">despesas_administrativas</span> <span class="o">=</span> <span class="mf">.15</span>
+<span class="n">carga_seguranca</span> <span class="o">=</span> <span class="mf">.07</span>
+
+<span class="n">numero_segurados</span> <span class="o">=</span> <span class="n">premio_comercial</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">despesas_administrativas</span> <span class="o">+</span> <span class="n">comissao_corretagem</span> <span class="o">+</span> <span class="n">margem_lucro</span><span class="p">))</span> <span class="o">/</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">carga_seguranca</span><span class="p">)</span> <span class="o">*</span> <span class="n">custo_perda_total</span> <span class="o">*</span> <span class="n">prob_sinistro</span><span class="p">)</span>
+<span class="n">numero_segurados</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">numero_segurados</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;N = </span><span class="si">{</span><span class="n">numero_segurados</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[N = 3701\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="i-com-o-capital-de-garantia-adotado-na-questao-d-qual-sera-a-probabilidade-de-lucro-com-a-subscricao">
+<h3>i. Com o capital de garantia adotado na questão d) qual será a probabilidade de lucro com a subscrição?<a class="headerlink" href="#i-com-o-capital-de-garantia-adotado-na-questao-d-qual-sera-a-probabilidade-de-lucro-com-a-subscricao" title="Link permanente para este título">¶</a></h3>
+<p>Para que a carteira tenha lucro, é preciso encontrar o valor do PC sem a variável que representa o lucro seja maior que 0:</p>
+<div class="math notranslate nohighlight">
+\[
+L = 1 - DA - CC - \frac{PP}{PC} \rightarrow 1 - DA - CC - \frac{PP}{PC} \gt 0
+\]</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./teoria_do_risco"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="atividade1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Atividade 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../visualizacao_de_dados/intro.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Sobre</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
