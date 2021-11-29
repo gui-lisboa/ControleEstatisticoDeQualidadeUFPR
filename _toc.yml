@@ -31,9 +31,15 @@ parts:
   chapters:
   - file: teoria_do_risco/intro
   - file: teoria_do_risco/atividade1
+  - file: teoria_do_risco/atividade2
 
 - caption: Visualização de Dados
   chapters:
   - file: visualizacao_de_dados/intro
   - file: visualizacao_de_dados/desafio1
   - file: visualizacao_de_dados/avaliacao1
+
+- caption: Processos Estocásticos
+  chapters:
+  - file: processos_estocasticos/intro
+  #- file: processos_estocasticos/trabalho
