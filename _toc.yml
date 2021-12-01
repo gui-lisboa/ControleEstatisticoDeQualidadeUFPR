@@ -42,4 +42,4 @@ parts:
 - caption: Processos Estocásticos
   chapters:
   - file: processos_estocasticos/intro
-  #- file: processos_estocasticos/trabalho
+  - file: processos_estocasticos/trabalho
