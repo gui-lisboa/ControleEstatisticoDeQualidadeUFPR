@@ -348,7 +348,7 @@
 <h1>Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água<a class="headerlink" href="#modelo-aberto-de-jackson-aplicado-a-uma-estacao-de-tratamento-de-agua" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="objetivo">
 <h2>Objetivo<a class="headerlink" href="#objetivo" title="Link permanente para este título">¶</a></h2>
-<p>Criar um modelo que descreva o comportamento de uma estação de tratamento de água composta por 4 tratamentos: A, B, C e D. As etapadas estão dispostas conforme o diagrama a seguir:</p>
+<p>Criar um modelo que descreva o comportamento de uma estação de tratamento de água composta por 4 tratamentos: A, B, C e D. As etapas estão dispostas conforme o diagrama a seguir:</p>
 <p><img alt="Quadro" src="processos_estocasticos/imagens/Diagrama_Porto.PNG" /></p>
 <p>O fluxo de água é discretizado em volumes de 1 milhão de litros e a distribuição das chegadas seguem Poissons de parâmetro <span class="math notranslate nohighlight">\(\lambda_{j}\)</span>. O regime de serviço de cada unidade segue uma Exponencial de parâmetro <span class="math notranslate nohighlight">\(\mu_{i}\)</span> com disciplina FIFO (First In First Out).</p>
 <p>Cada unidade de tratamento possui 4 propriedades:</p>
@@ -389,7 +389,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17723</span><span class="o">/</span><span class="mf">2866308138.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17804</span><span class="o">/</span><span class="mf">2866308138.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="bp">self</span><span class="o">.</span><span class="n">tipo</span> <span class="o">=</span> <span class="n">tipo</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> 
 <span class="ne">---&gt; </span><span class="mi">17</span> <span class="k">def</span> <span class="nf">criar_tratamentos_df</span><span class="p">(</span><span class="n">tratamentos</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Tratamento</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -503,7 +503,7 @@
 <li><p>Todos os nós da rede poderão receber usuários externos de forma direta ou indireta;</p></li>
 <li><p>O usuário servido em tem probabilidade positiva de sair da rede em uma ou mais etapas;</p></li>
 </ol>
-<p>É adicionado ao sistema de equações um nó artificial J+1 que representa o exterior da rede. Neste trabalho o nó aritifical recebeu o índice 0.</p>
+<p>É adicionado ao sistema de equações um nó artificial J+1 que representa o exterior da rede. Neste trabalho o nó artificial recebeu o índice 0.</p>
 </div>
 <div class="section" id="calculo-das-probabilidades-p-ij">
 <h3>Cálculo das Probabilidades <span class="math notranslate nohighlight">\(P_{ij}\)</span><a class="headerlink" href="#calculo-das-probabilidades-p-ij" title="Link permanente para este título">¶</a></h3>
@@ -816,7 +816,7 @@
 </div>
 <div class="section" id="medidas-de-desempenho">
 <h2>Medidas de Desempenho<a class="headerlink" href="#medidas-de-desempenho" title="Link permanente para este título">¶</a></h2>
-<p>As medidas de desempenho de interesse são o volume de água no sistema e o tempo em espera por tratamento. Cada unidade de tratamento <span class="math notranslate nohighlight">\(i\)</span> funciona como um serviço M/M/1, assim, o volume de água <span class="math notranslate nohighlight">\(L_{i}\)</span> na unidade e o tempo em espera <span class="math notranslate nohighlight">\(W_{i}\)</span> podem ser calculados por:</p>
+<p>As medidas de desempenho de interesse são o volume de água no sistema e o tempo necessário para aplicar todos os tratamentos. Cada unidade de tratamento <span class="math notranslate nohighlight">\(i\)</span> funciona como um serviço M/M/1, assim, o volume de água <span class="math notranslate nohighlight">\(L_{i}\)</span> na estação e o tempo <span class="math notranslate nohighlight">\(W_{i}\)</span> podem ser calculados por:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 L_{i} = \frac{\lambda_{i}}{\mu_{i} - \lambda_{i}} \\
