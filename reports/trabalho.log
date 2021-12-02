@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/jupyter_cache/executors/utils.py", line 56, in single_nb_execution
+    record_timing=False,
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 560, in async_execute
+    cell, index, execution_count=self.code_cells_executed + 1
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+
+from enum import Enum
+import pandas as pd
+
+class TiposTratamento(Enum):
+    A = 1
+    B = 2
+    C = 3
+    D = 4
+
+class Tratamento:
+    def __init__(self, taxa_chegada: float, taxa_servico: float, tipo: TiposTratamento):
+        self.taxa_chegada = taxa_chegada
+        self.taxa_servico = taxa_servico
+        self.taxa_ocupacao = taxa_chegada/taxa_servico
+        self.tipo = tipo
+
+def criar_tratamentos_df(tratamentos: list[Tratamento]) -> pd.DataFrame:
+    df = pd.DataFrame({
+            'tipo': [tratamento.tipo.name for tratamento in tratamentos],
+            'taxas_chegada': [tratamento.taxa_chegada for tratamento in tratamentos],
+            'taxas_servico': [tratamento.taxa_servico for tratamento in tratamentos],
+            'taxas_ocupacao': [tratamento.taxa_ocupacao for tratamento in tratamentos]})
+    df.index += 1
+    return df
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+[0;32m/tmp/ipykernel_17723/2866308138.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     15[0m         [0mself[0m[0;34m.[0m[0mtipo[0m [0;34m=[0m [0mtipo[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     16[0m [0;34m[0m[0m
+[0;32m---> 17[0;31m [0;32mdef[0m [0mcriar_tratamentos_df[0m[0;34m([0m[0mtratamentos[0m[0;34m:[0m [0mlist[0m[0;34m[[0m[0mTratamento[0m[0;34m][0m[0;34m)[0m [0;34m->[0m [0mpd[0m[0;34m.[0m[0mDataFrame[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     18[0m     df = pd.DataFrame({
+[1;32m     19[0m             [0;34m'tipo'[0m[0;34m:[0m [0;34m[[0m[0mtratamento[0m[0;34m.[0m[0mtipo[0m[0;34m.[0m[0mname[0m [0;32mfor[0m [0mtratamento[0m [0;32min[0m [0mtratamentos[0m[0;34m][0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mTypeError[0m: 'type' object is not subscriptable
+TypeError: 'type' object is not subscriptable
+
