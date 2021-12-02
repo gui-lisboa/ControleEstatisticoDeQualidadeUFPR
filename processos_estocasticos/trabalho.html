@@ -389,7 +389,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17740</span><span class="o">/</span><span class="mf">2866308138.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_17755</span><span class="o">/</span><span class="mf">2866308138.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="bp">self</span><span class="o">.</span><span class="n">tipo</span> <span class="o">=</span> <span class="n">tipo</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> 
 <span class="ne">---&gt; </span><span class="mi">17</span> <span class="k">def</span> <span class="nf">criar_tratamentos_df</span><span class="p">(</span><span class="n">tratamentos</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Tratamento</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -820,12 +820,13 @@
 <div class="math notranslate nohighlight">
 \[\begin{split}
 L_{i} = \frac{\lambda_{i}}{\mu_{i} - \lambda_{i}} \\
-W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
+W_{i} = \frac{\rho^{2}}{(1 - \rho) \lambda} + \frac{1}{\mu}
 \end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tratamentos_df</span><span class="p">[</span><span class="s1">&#39;volume_esperado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span> <span class="o">/</span> <span class="p">(</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_servico</span> <span class="o">-</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span><span class="p">)</span>
-<span class="n">tratamentos_df</span><span class="p">[</span><span class="s1">&#39;tempo_esperado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_servico</span> <span class="o">-</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span><span class="p">)</span>
+<span class="n">tratamentos_df</span><span class="p">[</span><span class="s1">&#39;tempo_esperado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_ocupacao</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_ocupacao</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span><span class="p">)</span> <span class="o">+</span> \
+                                    <span class="mi">1</span><span class="o">/</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_servico</span>
 
 <span class="n">tratamentos_df</span>
 </pre></div>
@@ -866,7 +867,7 @@ W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
       <td>11</td>
       <td>0.909091</td>
       <td>10.0</td>
-      <td>1.0</td>
+      <td>0.567100</td>
     </tr>
     <tr>
       <th>2</th>
@@ -875,7 +876,7 @@ W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
       <td>7</td>
       <td>0.714286</td>
       <td>2.5</td>
-      <td>0.5</td>
+      <td>0.351190</td>
     </tr>
     <tr>
       <th>3</th>
@@ -884,7 +885,7 @@ W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
       <td>8</td>
       <td>0.750000</td>
       <td>3.0</td>
-      <td>0.5</td>
+      <td>0.339286</td>
     </tr>
     <tr>
       <th>4</th>
@@ -893,7 +894,7 @@ W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
       <td>7</td>
       <td>0.714286</td>
       <td>2.5</td>
-      <td>0.5</td>
+      <td>0.351190</td>
     </tr>
     <tr>
       <th>5</th>
@@ -902,7 +903,7 @@ W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
       <td>10</td>
       <td>0.800000</td>
       <td>4.0</td>
-      <td>0.5</td>
+      <td>0.322222</td>
     </tr>
     <tr>
       <th>6</th>
@@ -911,7 +912,7 @@ W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
       <td>11</td>
       <td>0.909091</td>
       <td>10.0</td>
-      <td>1.0</td>
+      <td>0.567100</td>
     </tr>
   </tbody>
 </table>
@@ -921,7 +922,7 @@ W_{i} = \frac{1}{\mu_{i} - \lambda_{i}}
 <div class="math notranslate nohighlight">
 \[\begin{split}
 L = \sum_{i=1}^{N} L_{i} \\
-W = \sum_{i=1}^{N} L_{i}
+W = \sum_{i=1}^{N} W_{i}
 \end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -940,13 +941,13 @@ W = \sum_{i=1}^{N} L_{i}
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">tempo_esperado</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;W = </span><span class="si">{</span><span class="n">W</span><span class="si">}</span><span class="s1"> </span><span class="se">\\</span><span class="s1">quad </span><span class="se">\\</span><span class="s1">text</span><span class="se">{{</span><span class="s1">horas</span><span class="se">}}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;W = </span><span class="si">{</span><span class="n">W</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> </span><span class="se">\\</span><span class="s1">quad </span><span class="se">\\</span><span class="s1">text</span><span class="se">{{</span><span class="s1">horas</span><span class="se">}}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[W = 4.0 \quad \text{horas}\]</div>
+\[W = 2.50 \quad \text{horas}\]</div>
 </div>
 </div>
 <p>É possível avaliar como mudanças observadas no sistema impactam nas medidas de desempenho. Por exemplo, diminuindo as taxas de serviço para <span class="math notranslate nohighlight">\(\mu_{j} = \lambda_{j} + 1\)</span>:</p>
@@ -963,7 +964,8 @@ W = \sum_{i=1}^{N} L_{i}
 
 <span class="n">tratamentos_df</span> <span class="o">=</span> <span class="n">criar_tratamentos_df</span><span class="p">(</span><span class="n">tratamentos</span><span class="p">)</span>
 <span class="n">tratamentos_df</span><span class="p">[</span><span class="s1">&#39;volume_esperado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span> <span class="o">/</span> <span class="p">(</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_servico</span> <span class="o">-</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span><span class="p">)</span>
-<span class="n">tratamentos_df</span><span class="p">[</span><span class="s1">&#39;tempo_esperado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_servico</span> <span class="o">-</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span><span class="p">)</span>
+<span class="n">tratamentos_df</span><span class="p">[</span><span class="s1">&#39;tempo_esperado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_ocupacao</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_ocupacao</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_chegada</span><span class="p">)</span> <span class="o">+</span> \
+                                    <span class="mi">1</span><span class="o">/</span><span class="n">tratamentos_df</span><span class="o">.</span><span class="n">taxas_servico</span>
 
 <span class="n">tratamentos_df</span>
 </pre></div>
@@ -1004,7 +1006,7 @@ W = \sum_{i=1}^{N} L_{i}
       <td>11</td>
       <td>0.909091</td>
       <td>10.0</td>
-      <td>1.0</td>
+      <td>0.567100</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1013,7 +1015,7 @@ W = \sum_{i=1}^{N} L_{i}
       <td>6</td>
       <td>0.833333</td>
       <td>5.0</td>
-      <td>1.0</td>
+      <td>0.621212</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1022,7 +1024,7 @@ W = \sum_{i=1}^{N} L_{i}
       <td>7</td>
       <td>0.857143</td>
       <td>6.0</td>
-      <td>1.0</td>
+      <td>0.604396</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1031,7 +1033,7 @@ W = \sum_{i=1}^{N} L_{i}
       <td>6</td>
       <td>0.833333</td>
       <td>5.0</td>
-      <td>1.0</td>
+      <td>0.621212</td>
     </tr>
     <tr>
       <th>5</th>
@@ -1040,7 +1042,7 @@ W = \sum_{i=1}^{N} L_{i}
       <td>9</td>
       <td>0.888889</td>
       <td>8.0</td>
-      <td>1.0</td>
+      <td>0.581699</td>
     </tr>
     <tr>
       <th>6</th>
@@ -1049,7 +1051,7 @@ W = \sum_{i=1}^{N} L_{i}
       <td>11</td>
       <td>0.909091</td>
       <td>10.0</td>
-      <td>1.0</td>
+      <td>0.567100</td>
     </tr>
   </tbody>
 </table>
@@ -1064,14 +1066,14 @@ W = \sum_{i=1}^{N} L_{i}
 <span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\begin</span><span class="si">{gather}</span><span class="s1">&#39;</span> <span class="o">+</span>
     <span class="sa">f</span><span class="s1">&#39;L = </span><span class="si">{</span><span class="n">L</span><span class="si">}</span><span class="s1"> </span><span class="se">\\</span><span class="s1">quad </span><span class="se">\\</span><span class="s1">text</span><span class="se">{{</span><span class="s1">milhões de litros</span><span class="se">}}</span><span class="s1">&#39;</span> <span class="o">+</span>
     <span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span> <span class="o">+</span>
-    <span class="sa">f</span><span class="s1">&#39;W = </span><span class="si">{</span><span class="n">W</span><span class="si">}</span><span class="s1"> </span><span class="se">\\</span><span class="s1">quad </span><span class="se">\\</span><span class="s1">text</span><span class="se">{{</span><span class="s1">horas</span><span class="se">}}</span><span class="s1">&#39;</span> <span class="o">+</span>
+    <span class="sa">f</span><span class="s1">&#39;W = </span><span class="si">{</span><span class="n">W</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> </span><span class="se">\\</span><span class="s1">quad </span><span class="se">\\</span><span class="s1">text</span><span class="se">{{</span><span class="s1">horas</span><span class="se">}}</span><span class="s1">&#39;</span> <span class="o">+</span>
     <span class="sa">r</span><span class="s1">&#39;\end</span><span class="si">{gather}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\begin{split}\begin{gather}L = 44.0 \quad \text{milhões de litros}\\W = 6.0 \quad \text{horas}\end{gather}\end{split}\]</div>
+\[\begin{split}\begin{gather}L = 44.0 \quad \text{milhões de litros}\\W = 3.56 \quad \text{horas}\end{gather}\end{split}\]</div>
 </div>
 </div>
 </div>
