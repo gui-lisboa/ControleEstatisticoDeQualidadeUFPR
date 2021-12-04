@@ -4,5 +4,4 @@ IRkernel::installspec()
 
 install.packages("ggplot2")
 install.packages("ggthemes")
-install.packages("plotly")
 install.packages("dplyr")
