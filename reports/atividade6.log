@@ -17,29 +17,24 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import numpy as np
-import pandas as pd
-import scipy.stats as scypy_stats
+dataset = pd.read_table(
+    'http://leg.ufpr.br/~walmes/data/business_economics_dataset/EXAMPLES/DELINQUE.DAT',
+    header=None,
+    sep='\s+',
+    names=['dollars', 'groups'],
+    usecols=[0,1])
 
-from IPython.display import display, Markdown
-from utils import read_cameras_dataset
-
-cameras_dataframe = read_cameras_dataset()
+sns.scatterplot(data=dataset, x='groups', y='dollars');
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mConnectionResetError[0m                      Traceback (most recent call last)
-[0;32m/tmp/ipykernel_22168/4086868882.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      6[0m [0;32mfrom[0m [0mutils[0m [0;32mimport[0m [0mread_cameras_dataset[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      7[0m [0;34m[0m[0m
-[0;32m----> 8[0;31m [0mcameras_dataframe[0m [0;34m=[0m [0mread_cameras_dataset[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m~/work/estatisticaufpr/estatisticaufpr/analise_de_regressao_linear/utils/read_cameras_dataset.py[0m in [0;36mread_cameras_dataset[0;34m()[0m
-[1;32m      5[0m     [0mwarnings[0m[0;34m.[0m[0mfilterwarnings[0m[0;34m([0m[0;34m'ignore'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      6[0m     [0mcolunas_data[0m [0;34m=[0m [0;34m[[0m[0;34m'last_update'[0m[0;34m,[0m [0;34m'release_date'[0m[0;34m,[0m [0;34m'release_month'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 7[0;31m     [0mdataset[0m [0;34m=[0m [0mpandas[0m[0;34m.[0m[0mread_table[0m[0;34m([0m[0;34m"http://leg.ufpr.br/~walmes/data/digital-cameras.txt"[0m[0;34m,[0m [0mcomment[0m[0;34m=[0m[0;34m"#"[0m[0;34m,[0m [0mparse_dates[0m[0;34m=[0m[0mcolunas_data[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      8[0m     [0mdataset[0m [0;34m=[0m [0mdataset[0m[0;34m.[0m[0mconvert_dtypes[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      9[0m     [0;32mreturn[0m [0mdataset[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/tmp/ipykernel_22222/124495789.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      4[0m     [0msep[0m[0;34m=[0m[0;34m'\s+'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m     [0mnames[0m[0;34m=[0m[0;34m[[0m[0;34m'dollars'[0m[0;34m,[0m [0;34m'groups'[0m[0;34m][0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 6[0;31m     usecols=[0,1])
+[0m[1;32m      7[0m [0;34m[0m[0m
+[1;32m      8[0m [0msns[0m[0;34m.[0m[0mscatterplot[0m[0;34m([0m[0mdata[0m[0;34m=[0m[0mdataset[0m[0;34m,[0m [0mx[0m[0;34m=[0m[0;34m'groups'[0m[0;34m,[0m [0my[0m[0;34m=[0m[0;34m'dollars'[0m[0;34m)[0m[0;34m;[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/pandas/util/_decorators.py[0m in [0;36mwrapper[0;34m(*args, **kwargs)[0m
 [1;32m    309[0m                     [0mstacklevel[0m[0;34m=[0m[0mstacklevel[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m

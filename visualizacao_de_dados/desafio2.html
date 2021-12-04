@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 2 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../processos_estocasticos/intro.html" />
+    <link rel="prev" title="Avaliação 1" href="avaliacao1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Desafio 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/visualizacao_de_dados/desafio2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diagrama-de-gantt">
+   Diagrama de Gantt
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#desafio-popularidade-dos-presidentes-do-brasil-1987-2016">
+   Desafio: Popularidade dos Presidentes do Brasil (1987 - 2016)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Refêrencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="desafio-2">
+<h1>Desafio 2<a class="headerlink" href="#desafio-2" title="Link permanente para este título">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Desafio</p>
+<p>Com um conjunto de dados da sua escolha, crie um gráfico não simplista e ainda não visto na disciplina utilizando em ggplot2.
+Gráficos já contruídos na avaliação 1 não poderão ser utilizados.</p>
+</div>
+<div class="section" id="diagrama-de-gantt">
+<h2>Diagrama de Gantt<a class="headerlink" href="#diagrama-de-gantt" title="Link permanente para este título">¶</a></h2>
+<p>Gráfico eficiente para mostrar a realização de atividades ou eventos em função do tempo. Cada item é inserido como uma barra que cobre o ponto incial até o ponto final e de forma bastante direta mostra qual a duração da atividade ou quais atividades ocorrem em um determinado intervalo.</p>
+</div>
+<div class="section" id="desafio-popularidade-dos-presidentes-do-brasil-1987-2016">
+<h2>Desafio: Popularidade dos Presidentes do Brasil (1987 - 2016)<a class="headerlink" href="#desafio-popularidade-dos-presidentes-do-brasil-1987-2016" title="Link permanente para este título">¶</a></h2>
+<p>O diagrama construído para este desafio mostra a duração dos mandatos dos presidentes do Brasil de 1987 a 2016, adicionando um gradiente a cor de cada barra que mostra a evolução da popularidade em função do percentual da população que avaliou o mandato como Ótimo ou Bom.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggthemes</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+
+<span class="n">presidentes_ordem</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Dilma&quot;</span><span class="p">,</span> <span class="s">&quot;Lula&quot;</span><span class="p">,</span> <span class="s">&quot;FHC&quot;</span><span class="p">,</span> <span class="s">&quot;Itamar&quot;</span><span class="p">,</span> <span class="s">&quot;Collor&quot;</span><span class="p">,</span> <span class="s">&quot;Sarney&quot;</span><span class="p">)</span>
+<span class="n">presidentes</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">presidentes_ordem</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">presidentes_ordem</span><span class="p">)</span>
+
+<span class="n">presidentes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘dplyr’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:stats’:
+
+    filter, lag
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+</pre></div>
+</div>
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>Dilma</li><li>Lula</li><li>FHC</li><li>Itamar</li><li>Collor</li><li>Sarney</li></ol>
+
+<details>
+	<summary style=display:list-item;cursor:pointer>
+		<strong>Levels</strong>:
+	</summary>
+	<style>
+	.list-inline {list-style: none; margin:0; padding: 0}
+	.list-inline>li {display: inline-block}
+	.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+	</style>
+	<ol class=list-inline><li>'Dilma'</li><li>'Lula'</li><li>'FHC'</li><li>'Itamar'</li><li>'Collor'</li><li>'Sarney'</li></ol>
+</details></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">popularidades_df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
+    <span class="n">Presidente</span> <span class="o">=</span> <span class="nf">character</span><span class="p">(),</span>
+    <span class="n">Data</span> <span class="o">=</span> <span class="nf">as.Date</span><span class="p">(</span><span class="nf">character</span><span class="p">()),</span>
+    <span class="n">FimData</span> <span class="o">=</span> <span class="nf">as.Date</span><span class="p">(</span><span class="nf">character</span><span class="p">()),</span>
+    <span class="n">OtimoBom</span> <span class="o">=</span> <span class="nf">integer</span><span class="p">(),</span>
+    <span class="n">Regular</span> <span class="o">=</span> <span class="nf">integer</span><span class="p">(),</span>
+    <span class="n">RuimPessimo</span> <span class="o">=</span> <span class="nf">integer</span><span class="p">(),</span>
+    <span class="n">NaoSabe</span> <span class="o">=</span> <span class="nf">integer</span><span class="p">())</span>
+
+<span class="nf">for</span><span class="p">(</span><span class="n">presidente</span> <span class="n">in</span> <span class="n">presidentes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">popularidade</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;./dados/popularidade_&quot;</span><span class="p">,</span>
+                                     <span class="n">presidente</span><span class="p">,</span>
+                                     <span class="s">&quot;.txt&quot;</span><span class="p">,</span>
+                                     <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">),</span>
+                                <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+    <span class="n">popularidade</span><span class="o">$</span><span class="n">Data</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="n">popularidade</span><span class="o">$</span><span class="n">Data</span><span class="p">,</span> <span class="s">&quot;%d.%m.%Y&quot;</span><span class="p">)</span>
+    <span class="n">popularidade</span><span class="o">$</span><span class="n">Presidente</span> <span class="o">&lt;-</span> <span class="nf">rep</span><span class="p">(</span><span class="n">presidente</span><span class="p">,</span> <span class="nf">nrow</span><span class="p">(</span><span class="n">popularidade</span><span class="p">))</span>
+    <span class="n">popularidades_df</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">popularidades_df</span><span class="p">,</span> <span class="n">popularidade</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">popularidades_df</span><span class="o">$</span><span class="n">FimData</span> <span class="o">&lt;-</span> <span class="nf">lag</span><span class="p">(</span><span class="n">popularidades_df</span><span class="o">$</span><span class="n">Data</span><span class="p">)</span>
+<span class="n">popularidades_df</span><span class="o">$</span><span class="n">Presidente</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">popularidades_df</span><span class="o">$</span><span class="n">Presidente</span><span class="p">,</span>
+                                      <span class="n">levels</span> <span class="o">=</span> <span class="n">presidentes</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">popularidades_df</span><span class="p">)</span>
+<span class="nf">tail</span><span class="p">(</span><span class="n">popularidades_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in file(file, &quot;rt&quot;):
+“cannot open file &#39;./dados/popularidade_Dilma.txt&#39;: No such file or directory”
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">):</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">connection</span>
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">paste</span><span class="p">(</span><span class="s2">&quot;./dados/popularidade_&quot;</span><span class="p">,</span> <span class="n">presidente</span><span class="p">,</span> <span class="s2">&quot;.txt&quot;</span><span class="p">,</span> 
+ <span class="o">.</span>     <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="n">header</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ggplot</span><span class="p">(</span><span class="n">popularidades_df</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_segment</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">12</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">Data</span><span class="p">,</span>
+                            <span class="n">xend</span> <span class="o">=</span> <span class="n">FimData</span><span class="p">,</span>
+                            <span class="n">y</span> <span class="o">=</span> <span class="n">Presidente</span><span class="p">,</span>
+                            <span class="n">yend</span> <span class="o">=</span> <span class="n">Presidente</span><span class="p">,</span>
+                            <span class="n">color</span> <span class="o">=</span> <span class="n">OtimoBom</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">scale_color_gradient2</span><span class="p">(</span><span class="n">low</span> <span class="o">=</span> <span class="s">&quot;red&quot;</span><span class="p">,</span>
+                      <span class="n">mid</span> <span class="o">=</span> <span class="s">&quot;yellow&quot;</span><span class="p">,</span>
+                      <span class="n">high</span> <span class="o">=</span> <span class="s">&quot;green&quot;</span><span class="p">,</span>
+                      <span class="n">midpoint</span> <span class="o">=</span> <span class="m">33</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s">&quot;Popularidade&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;Período&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Presidente&quot;</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">theme_wsj</span><span class="p">()</span> <span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span><span class="n">axis.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message:
+&quot;Removed 1 rows containing missing values (geom_segment).&quot;
+</pre></div>
+</div>
+<img alt="../_images/desafio2_3_1.png" src="../_images/desafio2_3_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Refêrencias<a class="headerlink" href="#referencias" title="Link permanente para este título">¶</a></h2>
+<p>Dados: <a class="reference external" href="https://github.com/gui-lisboa/estatisticaufpr/tree/main/visualizacao_de_dados/dados">Tabelas popularidade_&lt;nome_presidente&gt;.txt</a></p>
+<p>Fonte dos dados: <a class="reference external" href="https://www.poder360.com.br/arquivo/">Acervo Antigo, Poder360</a></p>
+<p>Tutorial de referência: <a class="reference external" href="https://www.statology.org/gantt-chart-r-ggplot2/">How to Create a Gantt Chart in R Using ggplot2</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./visualizacao_de_dados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="avaliacao1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Avaliação 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../processos_estocasticos/intro.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Sobre</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
