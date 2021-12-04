@@ -41,7 +41,6 @@ popularidades_df$FimData <- lag(popularidades_df$Data)
 popularidades_df$Presidente <- factor(popularidades_df$Presidente,
                                       levels = presidentes)
 
-head(popularidades_df)
 tail(popularidades_df)
 ------------------
 

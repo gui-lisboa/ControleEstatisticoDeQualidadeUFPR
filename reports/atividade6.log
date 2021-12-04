@@ -29,7 +29,7 @@ sns.scatterplot(data=dataset, x='groups', y='dollars');
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mConnectionResetError[0m                      Traceback (most recent call last)
-[0;32m/tmp/ipykernel_22222/124495789.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_20446/124495789.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      4[0m     [0msep[0m[0;34m=[0m[0;34m'\s+'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      5[0m     [0mnames[0m[0;34m=[0m[0;34m[[0m[0;34m'dollars'[0m[0;34m,[0m [0;34m'groups'[0m[0;34m][0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 6[0;31m     usecols=[0,1])
