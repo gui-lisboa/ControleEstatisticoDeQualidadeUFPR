@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Sobre" href="../controle_estatistico_de_qualidade/intro.html" />
+    <link rel="next" title="Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19" href="projeto_final.html" />
     <link rel="prev" title="Atividade 6" href="atividade6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
@@ -126,6 +126,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
   </a>
  </li>
 </ul>
@@ -738,33 +743,33 @@ H1: \beta_{1} \ne 0
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.618239</td>
-      <td>2913.737197</td>
-      <td>76.130176</td>
+      <td>1.750433</td>
+      <td>1792.926949</td>
+      <td>76.471129</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.505485</td>
-      <td>1432.857205</td>
-      <td>69.336268</td>
+      <td>1.569354</td>
+      <td>1590.012621</td>
+      <td>74.759695</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.938092</td>
-      <td>2100.981750</td>
-      <td>75.758895</td>
+      <td>2.082890</td>
+      <td>1731.768547</td>
+      <td>90.556538</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.615904</td>
-      <td>1365.079233</td>
-      <td>69.687079</td>
+      <td>1.867331</td>
+      <td>2419.701233</td>
+      <td>76.837494</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.237283</td>
-      <td>1794.979555</td>
-      <td>60.602911</td>
+      <td>1.180491</td>
+      <td>1582.198132</td>
+      <td>57.077627</td>
     </tr>
     <tr>
       <th>...</th>
@@ -774,33 +779,33 @@ H1: \beta_{1} \ne 0
     </tr>
     <tr>
       <th>95</th>
-      <td>1.493772</td>
-      <td>1020.673924</td>
-      <td>65.351620</td>
+      <td>1.954653</td>
+      <td>2060.082186</td>
+      <td>78.271741</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>1.648622</td>
-      <td>1545.521251</td>
-      <td>79.312174</td>
+      <td>1.849718</td>
+      <td>2450.403938</td>
+      <td>77.872693</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>1.938735</td>
-      <td>1687.944709</td>
-      <td>88.587181</td>
+      <td>1.601445</td>
+      <td>1727.043626</td>
+      <td>65.955648</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>1.421373</td>
-      <td>1239.038636</td>
-      <td>63.121907</td>
+      <td>1.155891</td>
+      <td>2280.688952</td>
+      <td>58.391448</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>1.328452</td>
-      <td>1266.583649</td>
-      <td>59.399729</td>
+      <td>2.021321</td>
+      <td>1547.935548</td>
+      <td>81.270092</td>
     </tr>
   </tbody>
 </table>
@@ -829,25 +834,25 @@ H1: \beta_{1} \ne 0
 <div class="output text_html"><table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tr>
-  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.717</td>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.711</td>
 </tr>
 <tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.711</td>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.705</td>
 </tr>
 <tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   122.7</td>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   119.2</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sat, 04 Dec 2021</td> <th>  Prob (F-statistic):</th> <td>2.73e-27</td>
+  <th>Date:</th>             <td>Sat, 11 Dec 2021</td> <th>  Prob (F-statistic):</th> <td>7.41e-27</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>20:43:02</td>     <th>  Log-Likelihood:    </th> <td> -309.35</td>
+  <th>Time:</th>                 <td>01:55:28</td>     <th>  Log-Likelihood:    </th> <td> -312.98</td>
 </tr>
 <tr>
-  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   624.7</td>
+  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   632.0</td>
 </tr>
 <tr>
-  <th>Df Residuals:</th>          <td>    97</td>      <th>  BIC:               </th> <td>   632.5</td>
+  <th>Df Residuals:</th>          <td>    97</td>      <th>  BIC:               </th> <td>   639.8</td>
 </tr>
 <tr>
   <th>Df Model:</th>              <td>     2</td>      <th>                     </th>     <td> </td>   
@@ -861,29 +866,29 @@ H1: \beta_{1} \ne 0
     <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>const</th> <td>   21.2573</td> <td>    3.851</td> <td>    5.520</td> <td> 0.000</td> <td>   13.615</td> <td>   28.900</td>
+  <th>const</th> <td>   21.8967</td> <td>    4.110</td> <td>    5.327</td> <td> 0.000</td> <td>   13.739</td> <td>   30.055</td>
 </tr>
 <tr>
-  <th>x1</th>    <td>   28.3973</td> <td>    1.828</td> <td>   15.533</td> <td> 0.000</td> <td>   24.769</td> <td>   32.026</td>
+  <th>x1</th>    <td>   28.1638</td> <td>    1.825</td> <td>   15.433</td> <td> 0.000</td> <td>   24.542</td> <td>   31.786</td>
 </tr>
 <tr>
-  <th>x2</th>    <td>    0.0028</td> <td>    0.001</td> <td>    2.578</td> <td> 0.011</td> <td>    0.001</td> <td>    0.005</td>
+  <th>x2</th>    <td>    0.0022</td> <td>    0.001</td> <td>    1.841</td> <td> 0.069</td> <td>   -0.000</td> <td>    0.005</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Omnibus:</th>       <td> 0.236</td> <th>  Durbin-Watson:     </th> <td>   1.963</td>
+  <th>Omnibus:</th>       <td> 2.820</td> <th>  Durbin-Watson:     </th> <td>   2.104</td>
 </tr>
 <tr>
-  <th>Prob(Omnibus):</th> <td> 0.889</td> <th>  Jarque-Bera (JB):  </th> <td>   0.347</td>
+  <th>Prob(Omnibus):</th> <td> 0.244</td> <th>  Jarque-Bera (JB):  </th> <td>   2.236</td>
 </tr>
 <tr>
-  <th>Skew:</th>          <td> 0.107</td> <th>  Prob(JB):          </th> <td>   0.841</td>
+  <th>Skew:</th>          <td>-0.246</td> <th>  Prob(JB):          </th> <td>   0.327</td>
 </tr>
 <tr>
-  <th>Kurtosis:</th>      <td> 2.806</td> <th>  Cond. No.          </th> <td>1.59e+04</td>
+  <th>Kurtosis:</th>      <td> 3.543</td> <th>  Cond. No.          </th> <td>1.56e+04</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.59e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.56e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
 </div>
 </div>
 </div>
@@ -921,10 +926,10 @@ H1: \beta_{1} \ne 0
             <p class="prev-next-title">Atividade 6</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../controle_estatistico_de_qualidade/intro.html" title="próximo page">
+    <a class='right-next' id="next-link" href="projeto_final.html" title="próximo page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Sobre</p>
+        <p class="prev-next-title">Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

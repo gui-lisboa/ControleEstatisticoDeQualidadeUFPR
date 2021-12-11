@@ -127,6 +127,11 @@
    Avaliação 1
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -394,7 +399,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_20608</span><span class="o">/</span><span class="mf">2866308138.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_20891</span><span class="o">/</span><span class="mf">2866308138.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="bp">self</span><span class="o">.</span><span class="n">tipo</span> <span class="o">=</span> <span class="n">tipo</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> 
 <span class="ne">---&gt; </span><span class="mi">17</span> <span class="k">def</span> <span class="nf">criar_tratamentos_df</span><span class="p">(</span><span class="n">tratamentos</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Tratamento</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -517,22 +522,22 @@
 \[
 \lambda_{j} = \lambda_{0j} + \sum_{i=i}^{N} \mu_{i}P_{ij}, \quad j=1,2,3...N
 \]</div>
-<p>Exemplo: <span class="math notranslate nohighlight">\(\lambda_{1}\)</span>: chegada na Barra</p>
+<p>Exemplo: <span class="math notranslate nohighlight">\(\lambda_{1}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \lambda_{1} = \lambda_{01} + \sum_{i=i}^{N} \mu_{i}P_{i1}, \quad i=1,2,3,4,5,6
 \]</div>
-<p><span class="math notranslate nohighlight">\(\lambda_{01} = 10\)</span>, porém pelo diagrama pode-se notar que <span class="math notranslate nohighlight">\(P_{i1} = 0\)</span> para qualquer <span class="math notranslate nohighlight">\(i\)</span>, pois a Barra não recebe navios vindo das próximas etapas. Portanto,</p>
+<p><span class="math notranslate nohighlight">\(\lambda_{01} = 10\)</span>, porém pelo diagrama pode-se notar que <span class="math notranslate nohighlight">\(P_{i1} = 0\)</span> para qualquer <span class="math notranslate nohighlight">\(i\)</span>, pois o nó 1 não recebe volumes de água vindo das próximas etapas. Portanto,</p>
 <div class="math notranslate nohighlight">
 \[
 \lambda_{1} = \lambda_{01} = 10
 \]</div>
-<p>Exemplo: <span class="math notranslate nohighlight">\(\lambda_{5}\)</span>: chegada no Cais 2</p>
+<p>Exemplo: <span class="math notranslate nohighlight">\(\lambda_{5}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \lambda_{5} = \lambda_{05} + \sum_{i=i}^{N} \mu_{i}P_{i5}, \quad i=1,2,3,4,5,6
 \]</div>
-<p>Como apenas a Barra recebe navios de fora do sistema, <span class="math notranslate nohighlight">\(\lambda_{05} = 0\)</span>. O Cais 2 recebe apenas navios vindos dos nós de Manobras, ou seja, <span class="math notranslate nohighlight">\(i = \{2,3\}\)</span>. Para qualquer outro valor de <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(P_{i5} = 0\)</span></p>
+<p>Como apenas o nó 1 recebe volumes de água de fora do sistema, <span class="math notranslate nohighlight">\(\lambda_{05} = 0\)</span>. O nó 5 recebe apenas volumes de água dos nós 2 e 3, ou seja, <span class="math notranslate nohighlight">\(i = \{2,3\}\)</span>. Para qualquer outro valor de <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(P_{i5} = 0\)</span></p>
 <div class="math notranslate nohighlight">
 \[
 \lambda_{5} = \mu_{2}p_{25} + \mu_{3}P_{35}
@@ -546,7 +551,7 @@
 \lambda_{5} = \mu_{2} P_{25} + \mu_{3} P_{35} \\
 \lambda_{6} = \mu_{4} P_{46} + \mu_{5} P_{56} \\
 \end{split}\]</div>
-<p>Como o objetivo é encontrar as probabilidades de um navio partir de um nó <span class="math notranslate nohighlight">\(i\)</span> para outro nó <span class="math notranslate nohighlight">\(j\)</span>, precisamos de mais equações para formar o sistema possível e determinado. Para isso, usamos as taxas de serviço dos nós que são o resultado da soma das probabilidades dos caminhos que os navios podem tomar, ou seja:</p>
+<p>Como o objetivo é encontrar as probabilidades de um volume de água partir de um nó <span class="math notranslate nohighlight">\(i\)</span> para outro nó <span class="math notranslate nohighlight">\(j\)</span>, precisamos de mais equações para formar o sistema possível e determinado. Para isso, usamos as taxas de serviço dos nós que são o resultado da soma das probabilidades dos caminhos que os volumes de água podem tomar, ou seja:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \mu_{1} = \mu_{1} P_{12} + \mu_{1} P_{13} \\

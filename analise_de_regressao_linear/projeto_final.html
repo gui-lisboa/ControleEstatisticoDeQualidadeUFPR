@@ -1,0 +1,1666 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../controle_estatistico_de_qualidade/intro.html" />
+    <link rel="prev" title="Avaliação 1" href="prova1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analise_de_regressao_linear/projeto_final.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introducao">
+   Introdução
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#material-e-metodos">
+   Material e Métodos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-e-bibliotecas">
+     Python e bibliotecas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conjunto-de-dados">
+     Conjunto de dados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-de-regressao">
+     Modelo de regressão
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagnosticos-do-modelo">
+     Diagnósticos do modelo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#residuo-vs-ajustado">
+       Resíduo vs Ajustado
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dispercao-media">
+       Disperção Média
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#grafico-qunantil-quantil">
+       Gráfico Qunantil-Quantil
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#grafico-de-alavancagem">
+       Gráfico de Alavancagem
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correcoes">
+     Correções
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusao">
+   Conclusão
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="projeto-final-modelo-de-regressao-linear-para-taxa-de-vacinacao-contra-covid-19">
+<h1>Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19<a class="headerlink" href="#projeto-final-modelo-de-regressao-linear-para-taxa-de-vacinacao-contra-covid-19" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="introducao">
+<h2>Introdução<a class="headerlink" href="#introducao" title="Link permanente para este título">¶</a></h2>
+<p>Após o desenvolvimento de vacinas contra a Covid-19, iniciou-se uma corrida para imunizar a população mundial. Já era esperado que países mais ricos tomassem a dianteira, mas passado quase um ano das primeiras aplicações, alguns países parecem estagnados e outros ainda muito aquém do esperado. O objetivo deste trabalho é buscar variáveis explicativas que ajudem a entender quais motivos podem influênciar na taxa de vacinação de um país.</p>
+<p>Entre várias razões que podem explicar o objeto em estudo, focamos nas seguintes hipóteses:</p>
+<ol class="simple">
+<li><p><strong>PIB per capita é proporcional a taxa de vacinação</strong>: Como mencionado no paragráfo anterior, é esperado que países ricos imunizem a sua população com maior agilidade.</p></li>
+<li><p><strong>Baixa vacinação entre jovens</strong>: É apresentado no conjunto de dados a mediana de idade de cada país. A hipótese a ser testada é a de que quanto maior a proporção de idosos em um país, maior será a sua taxa de vacinação.</p></li>
+<li><p><strong>Total de óbitos leva a uma maior adesão da população</strong>: Também como parte dos dados, utilizamos o Total de Mortes por Milhão. Inicialmente, espera-se que o número de óbitos impacte na percepção da gravidade da doença, levando assim a mais pessoas aos centros de vacinação.</p></li>
+<li><p><strong>Acesso a informações de qualidade impacta positivamente no número de vacinados</strong>: Em países com restrições a jornalistas… TODO</p></li>
+<li><p><strong>Diferenças regionais</strong>: A fim de entender se há diferenças contidas em cada continente</p></li>
+</ol>
+</div>
+<div class="section" id="material-e-metodos">
+<h2>Material e Métodos<a class="headerlink" href="#material-e-metodos" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="python-e-bibliotecas">
+<h3>Python e bibliotecas<a class="headerlink" href="#python-e-bibliotecas" title="Link permanente para este título">¶</a></h3>
+<p>O trabalho foi desenvolvido em python e estruturado na forma de Notebook. As bibliotecas usadas são as seguintes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+<span class="kn">from</span> <span class="nn">statsmodels.graphics.gofplots</span> <span class="kn">import</span> <span class="n">ProbPlot</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para melhorar a qualidade dos gráficos, o estilo padrão será o usado pelo Seaborn (mesmo quando construido pelo Matplotlib). Avisos de saída serão escondidos para manter o conteúdo mais enxuto.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="conjunto-de-dados">
+<h3>Conjunto de dados<a class="headerlink" href="#conjunto-de-dados" title="Link permanente para este título">¶</a></h3>
+<p>Os dados de liberdade de imprensa foram retirados do portal <a class="reference external" href="https://rsf.org/en/ranking">Reporters Without Borders</a> e estão disponíveis no formato CSV no repositório do trabalho no <a class="reference external" href="https://github.com/gui-lisboa/estatisticaufpr/tree/main/analise_de_regressao_linear/dados">Github</a>. Quanto maior o índice, maiores as restrições impostas a jornalistas.</p>
+<p>Foram utilizadas a colunas «ISO» (renomeada para «iso_code») e «Score 2020» (renomeada para «press_freedom_score»). As mudanças de nome são necessárias para anexar esse conjunto de dados aos dados da covid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DADOS_LIBERDADE_IMPRENSA_CSV</span> <span class="o">=</span> <span class="s1">&#39;./dados/press-freedom-ranking.csv&#39;</span>
+<span class="n">COLUNAS_DE_INTERESSE</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ISO&#39;</span><span class="p">,</span><span class="s1">&#39;Score 2020&#39;</span><span class="p">]</span>
+
+<span class="n">dados_liberdade_imprensa</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DADOS_LIBERDADE_IMPRENSA_CSV</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">COLUNAS_DE_INTERESSE</span><span class="p">)</span>
+<span class="n">dados_liberdade_imprensa</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;ISO&#39;</span><span class="p">:</span> <span class="s1">&#39;iso_code&#39;</span><span class="p">,</span> <span class="s2">&quot;Score 2020&quot;</span><span class="p">:</span> <span class="s2">&quot;press_freedom_score&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">refatora_decimal_com_virgula_para_float64</span><span class="p">(</span><span class="n">serie</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">valor</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">))</span> <span class="k">for</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">serie</span><span class="p">]</span>
+
+<span class="n">dados_liberdade_imprensa</span><span class="o">.</span><span class="n">press_freedom_score</span> <span class="o">=</span> <span class="n">refatora_decimal_com_virgula_para_float64</span><span class="p">(</span><span class="n">dados_liberdade_imprensa</span><span class="o">.</span><span class="n">press_freedom_score</span><span class="p">)</span>
+
+<span class="n">dados_liberdade_imprensa</span> <span class="o">=</span> <span class="n">dados_liberdade_imprensa</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;iso_code&#39;</span><span class="p">)</span>
+<span class="n">dados_liberdade_imprensa</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>press_freedom_score</th>
+    </tr>
+    <tr>
+      <th>iso_code</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AFG</th>
+      <td>40.19</td>
+    </tr>
+    <tr>
+      <th>AGO</th>
+      <td>34.06</td>
+    </tr>
+    <tr>
+      <th>ALB</th>
+      <td>30.59</td>
+    </tr>
+    <tr>
+      <th>AND</th>
+      <td>23.32</td>
+    </tr>
+    <tr>
+      <th>ARE</th>
+      <td>43.13</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>XKO</th>
+      <td>30.32</td>
+    </tr>
+    <tr>
+      <th>YEM</th>
+      <td>62.35</td>
+    </tr>
+    <tr>
+      <th>ZAF</th>
+      <td>21.59</td>
+    </tr>
+    <tr>
+      <th>ZMB</th>
+      <td>38.21</td>
+    </tr>
+    <tr>
+      <th>ZWE</th>
+      <td>43.12</td>
+    </tr>
+  </tbody>
+</table>
+<p>180 rows × 1 columns</p>
+</div></div></div>
+</div>
+<p>Já os dados sobre a COVID-19 tem como fonte o site Our World In Data, que disponibiliza os dados que alimentam o site no repositório <a class="reference external" href="https://github.com/owid/covid-19-data/blob/master/public/data/latest">covid-19-data</a>. O arquivo utilizado também está no repositório deste trabalho.</p>
+<p>Neste conjunto foi necessário retirar linhas de países agrupados, estas linhas tem um prefixo «OWID_».</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DADOS_COVID_ATUAL_CSV</span> <span class="o">=</span> <span class="s1">&#39;./dados/owid-covid-latest.csv&#39;</span>
+<span class="n">COLUNAS_DE_INTERESSE</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;iso_code&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;location&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;continent&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;people_fully_vaccinated_per_hundred&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;total_deaths_per_million&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;median_age&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;gdp_per_capita&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;extreme_poverty&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;stringency_index&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">dados_covid_atual</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DADOS_COVID_ATUAL_CSV</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">COLUNAS_DE_INTERESSE</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">remove_linhas_agrupadas_por_OWID</span><span class="p">(</span><span class="n">dataframe</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">dataframe</span><span class="p">[</span><span class="o">~</span><span class="n">dataframe</span><span class="o">.</span><span class="n">iso_code</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;OWID_&#39;</span><span class="p">)]</span>
+
+<span class="n">dados_covid_atual</span> <span class="o">=</span> <span class="n">remove_linhas_agrupadas_por_OWID</span><span class="p">(</span><span class="n">dados_covid_atual</span><span class="p">)</span>
+<span class="n">dados_covid_atual</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_code</th>
+      <th>continent</th>
+      <th>location</th>
+      <th>total_deaths_per_million</th>
+      <th>people_fully_vaccinated_per_hundred</th>
+      <th>stringency_index</th>
+      <th>median_age</th>
+      <th>gdp_per_capita</th>
+      <th>extreme_poverty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFG</td>
+      <td>Asia</td>
+      <td>Afghanistan</td>
+      <td>183.781</td>
+      <td>8.95</td>
+      <td>27.78</td>
+      <td>18.6</td>
+      <td>1803.987</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALB</td>
+      <td>Europe</td>
+      <td>Albania</td>
+      <td>1088.782</td>
+      <td>34.20</td>
+      <td>NaN</td>
+      <td>38.0</td>
+      <td>11803.431</td>
+      <td>1.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>DZA</td>
+      <td>Africa</td>
+      <td>Algeria</td>
+      <td>137.303</td>
+      <td>12.08</td>
+      <td>39.81</td>
+      <td>29.1</td>
+      <td>13913.839</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AND</td>
+      <td>Europe</td>
+      <td>Andorra</td>
+      <td>1719.368</td>
+      <td>65.07</td>
+      <td>48.15</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>AGO</td>
+      <td>Africa</td>
+      <td>Angola</td>
+      <td>51.159</td>
+      <td>9.77</td>
+      <td>NaN</td>
+      <td>16.8</td>
+      <td>5819.495</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>VNM</td>
+      <td>Asia</td>
+      <td>Vietnam</td>
+      <td>276.931</td>
+      <td>56.97</td>
+      <td>NaN</td>
+      <td>32.6</td>
+      <td>6171.884</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>218</th>
+      <td>WLF</td>
+      <td>Oceania</td>
+      <td>Wallis and Futuna</td>
+      <td>NaN</td>
+      <td>53.39</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>YEM</td>
+      <td>Asia</td>
+      <td>Yemen</td>
+      <td>64.184</td>
+      <td>1.20</td>
+      <td>12.04</td>
+      <td>20.3</td>
+      <td>1479.147</td>
+      <td>18.8</td>
+    </tr>
+    <tr>
+      <th>221</th>
+      <td>ZMB</td>
+      <td>Africa</td>
+      <td>Zambia</td>
+      <td>193.862</td>
+      <td>4.17</td>
+      <td>43.52</td>
+      <td>17.7</td>
+      <td>3689.251</td>
+      <td>57.5</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>ZWE</td>
+      <td>Africa</td>
+      <td>Zimbabwe</td>
+      <td>312.944</td>
+      <td>19.39</td>
+      <td>49.07</td>
+      <td>19.6</td>
+      <td>1899.775</td>
+      <td>21.4</td>
+    </tr>
+  </tbody>
+</table>
+<p>208 rows × 9 columns</p>
+</div></div></div>
+</div>
+<p>Assim, juntando os dois conjuntos, retirando linhas com dados incompletos e reconstruíndo o índice, temos o dataframe que será usado no decorrer do trabalho.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados</span> <span class="o">=</span> <span class="n">dados_covid_atual</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dados_liberdade_imprensa</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;iso_code&#39;</span><span class="p">)</span>
+<span class="n">dados</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dados</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dados</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_code</th>
+      <th>continent</th>
+      <th>location</th>
+      <th>total_deaths_per_million</th>
+      <th>people_fully_vaccinated_per_hundred</th>
+      <th>stringency_index</th>
+      <th>median_age</th>
+      <th>gdp_per_capita</th>
+      <th>extreme_poverty</th>
+      <th>press_freedom_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>DZA</td>
+      <td>Africa</td>
+      <td>Algeria</td>
+      <td>137.303</td>
+      <td>12.08</td>
+      <td>39.81</td>
+      <td>29.1</td>
+      <td>13913.839</td>
+      <td>0.5</td>
+      <td>47.26</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ARG</td>
+      <td>South America</td>
+      <td>Argentina</td>
+      <td>2559.300</td>
+      <td>67.18</td>
+      <td>42.59</td>
+      <td>31.9</td>
+      <td>18933.907</td>
+      <td>0.6</td>
+      <td>28.99</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AUS</td>
+      <td>Oceania</td>
+      <td>Australia</td>
+      <td>80.812</td>
+      <td>74.44</td>
+      <td>72.69</td>
+      <td>37.9</td>
+      <td>44648.710</td>
+      <td>0.5</td>
+      <td>19.79</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AUT</td>
+      <td>Europe</td>
+      <td>Austria</td>
+      <td>1438.781</td>
+      <td>67.50</td>
+      <td>73.15</td>
+      <td>44.4</td>
+      <td>45436.686</td>
+      <td>0.7</td>
+      <td>16.34</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BGD</td>
+      <td>Asia</td>
+      <td>Bangladesh</td>
+      <td>168.463</td>
+      <td>24.50</td>
+      <td>44.44</td>
+      <td>27.5</td>
+      <td>3523.984</td>
+      <td>14.8</td>
+      <td>49.71</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>USA</td>
+      <td>North America</td>
+      <td>United States</td>
+      <td>2386.942</td>
+      <td>59.99</td>
+      <td>50.46</td>
+      <td>38.3</td>
+      <td>54225.446</td>
+      <td>1.2</td>
+      <td>23.93</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>URY</td>
+      <td>South America</td>
+      <td>Uruguay</td>
+      <td>1761.760</td>
+      <td>76.43</td>
+      <td>31.48</td>
+      <td>35.6</td>
+      <td>20551.409</td>
+      <td>0.1</td>
+      <td>16.38</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>YEM</td>
+      <td>Asia</td>
+      <td>Yemen</td>
+      <td>64.184</td>
+      <td>1.20</td>
+      <td>12.04</td>
+      <td>20.3</td>
+      <td>1479.147</td>
+      <td>18.8</td>
+      <td>62.35</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>ZMB</td>
+      <td>Africa</td>
+      <td>Zambia</td>
+      <td>193.862</td>
+      <td>4.17</td>
+      <td>43.52</td>
+      <td>17.7</td>
+      <td>3689.251</td>
+      <td>57.5</td>
+      <td>38.21</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>ZWE</td>
+      <td>Africa</td>
+      <td>Zimbabwe</td>
+      <td>312.944</td>
+      <td>19.39</td>
+      <td>49.07</td>
+      <td>19.6</td>
+      <td>1899.775</td>
+      <td>21.4</td>
+      <td>43.12</td>
+    </tr>
+  </tbody>
+</table>
+<p>94 rows × 10 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="modelo-de-regressao">
+<h3>Modelo de regressão<a class="headerlink" href="#modelo-de-regressao" title="Link permanente para este título">¶</a></h3>
+<p>O modelo escolhido foi um modelo de regressão linear com efeitos aditivos. As variáveis explicativas escolhidas foram:</p>
+<ol class="simple">
+<li><p>Raíz Quadrada PIB per Capita (gdp_per_capita)</p></li>
+<li><p>Idade Mediana (median_age)</p></li>
+<li><p>Raíz Quadrada Total de Mortes por Milhão (total_deaths_per_million)</p></li>
+<li><p>Índice de Liberdade de Imprensa (press_freedom_score)</p></li>
+<li><p>Continentes (continent) como variável categórica</p></li>
+</ol>
+<p>A transformação do PIB e Morte/Milhão em raízes serve para achatar possíveis diferenças muito grandes que impactam na estimação do modelo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FORMULA_DO_MODELO</span> <span class="o">=</span> <span class="s1">&#39;people_fully_vaccinated_per_hundred ~ &#39;</span> \
+                    <span class="s1">&#39;np.sqrt(gdp_per_capita) + median_age + np.sqrt(total_deaths_per_million) + press_freedom_score +&#39;</span> \
+                    <span class="s1">&#39;C(continent)&#39;</span>
+<span class="n">modelo</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="n">FORMULA_DO_MODELO</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>    <td>people_fully_vaccinated_per_hundred</td> <th>  R-squared:         </th> <td>   0.819</td>
+</tr>
+<tr>
+  <th>Model:</th>                            <td>OLS</td>                 <th>  Adj. R-squared:    </th> <td>   0.800</td>
+</tr>
+<tr>
+  <th>Method:</th>                      <td>Least Squares</td>            <th>  F-statistic:       </th> <td>   42.28</td>
+</tr>
+<tr>
+  <th>Date:</th>                      <td>Sat, 11 Dec 2021</td>           <th>  Prob (F-statistic):</th> <td>1.60e-27</td>
+</tr>
+<tr>
+  <th>Time:</th>                          <td>01:55:25</td>               <th>  Log-Likelihood:    </th> <td> -363.33</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>               <td>    94</td>                <th>  AIC:               </th> <td>   746.7</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>                   <td>    84</td>                <th>  BIC:               </th> <td>   772.1</td>
+</tr>
+<tr>
+  <th>Df Model:</th>                       <td>     9</td>                <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>               <td>nonrobust</td>              <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+                  <td></td>                     <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>                         <td>  -23.1797</td> <td>    7.876</td> <td>   -2.943</td> <td> 0.004</td> <td>  -38.843</td> <td>   -7.517</td>
+</tr>
+<tr>
+  <th>C(continent)[T.Asia]</th>              <td>   12.9123</td> <td>    4.208</td> <td>    3.069</td> <td> 0.003</td> <td>    4.545</td> <td>   21.280</td>
+</tr>
+<tr>
+  <th>C(continent)[T.Europe]</th>            <td>   -7.1164</td> <td>    6.556</td> <td>   -1.086</td> <td> 0.281</td> <td>  -20.153</td> <td>    5.920</td>
+</tr>
+<tr>
+  <th>C(continent)[T.North America]</th>     <td>   11.3772</td> <td>    5.842</td> <td>    1.948</td> <td> 0.055</td> <td>   -0.240</td> <td>   22.994</td>
+</tr>
+<tr>
+  <th>C(continent)[T.Oceania]</th>           <td>   -1.4562</td> <td>   13.520</td> <td>   -0.108</td> <td> 0.914</td> <td>  -28.342</td> <td>   25.429</td>
+</tr>
+<tr>
+  <th>C(continent)[T.South America]</th>     <td>   27.1527</td> <td>    6.331</td> <td>    4.289</td> <td> 0.000</td> <td>   14.562</td> <td>   39.743</td>
+</tr>
+<tr>
+  <th>np.sqrt(gdp_per_capita)</th>           <td>    0.1779</td> <td>    0.039</td> <td>    4.507</td> <td> 0.000</td> <td>    0.099</td> <td>    0.256</td>
+</tr>
+<tr>
+  <th>median_age</th>                        <td>    1.8080</td> <td>    0.341</td> <td>    5.305</td> <td> 0.000</td> <td>    1.130</td> <td>    2.486</td>
+</tr>
+<tr>
+  <th>np.sqrt(total_deaths_per_million)</th> <td>   -0.2745</td> <td>    0.115</td> <td>   -2.385</td> <td> 0.019</td> <td>   -0.503</td> <td>   -0.046</td>
+</tr>
+<tr>
+  <th>press_freedom_score</th>               <td>   -0.2311</td> <td>    0.125</td> <td>   -1.844</td> <td> 0.069</td> <td>   -0.480</td> <td>    0.018</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 0.268</td> <th>  Durbin-Watson:     </th> <td>   1.904</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.874</td> <th>  Jarque-Bera (JB):  </th> <td>   0.256</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.119</td> <th>  Prob(JB):          </th> <td>   0.880</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 2.908</td> <th>  Cond. No.          </th> <td>1.59e+03</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.59e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</div>
+</div>
+<div class="section" id="diagnosticos-do-modelo">
+<h3>Diagnósticos do modelo<a class="headerlink" href="#diagnosticos-do-modelo" title="Link permanente para este título">¶</a></h3>
+<p>Para criar os gráficos usados no diagnóstico do modelo, retiramos as seguintes informações do modelo ajustado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_ajustados</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">fittedvalues</span>
+<span class="n">residuos</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">resid</span>
+<span class="n">residuos_modulo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">residuos</span><span class="p">)</span>
+<span class="n">residuos_normalizados</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">get_influence</span><span class="p">()</span><span class="o">.</span><span class="n">resid_studentized_internal</span>
+<span class="n">residuos_normalizados_modulo_raizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">residuos_normalizados</span><span class="p">))</span>
+<span class="n">alavancagens</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">get_influence</span><span class="p">()</span><span class="o">.</span><span class="n">hat_matrix_diag</span>
+<span class="n">distancias_cook</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">get_influence</span><span class="p">()</span><span class="o">.</span><span class="n">cooks_distance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="residuo-vs-ajustado">
+<h4>Resíduo vs Ajustado<a class="headerlink" href="#residuo-vs-ajustado" title="Link permanente para este título">¶</a></h4>
+<p>Valores ajustados bem dispersos centrados em 0, padrão de aumento da diferença para países com taxa de vacinação acima de 80%</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grafico_residuos_vs_estimados</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">grafico_residuos_vs_estimados</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">residplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y_ajustados</span><span class="p">,</span>
+                                                      <span class="n">y</span><span class="o">=</span><span class="n">dados</span><span class="o">.</span><span class="n">people_fully_vaccinated_per_hundred</span><span class="p">,</span>
+                                                      <span class="n">lowess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                                      <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+                                                      <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">})</span>
+
+<span class="n">grafico_residuos_vs_estimados</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Resíduos vs Estimados&#39;</span><span class="p">)</span>
+<span class="n">grafico_residuos_vs_estimados</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Valores ajustados&#39;</span><span class="p">)</span>
+<span class="n">grafico_residuos_vs_estimados</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Resíduos&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/projeto_final_15_0.png" src="../_images/projeto_final_15_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="dispercao-media">
+<h4>Disperção Média<a class="headerlink" href="#dispercao-media" title="Link permanente para este título">¶</a></h4>
+<p>Valores bastante dispersos, mas sem formação de padrão que indique problemas no modelo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grafico_lm_3</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y_ajustados</span><span class="p">,</span> <span class="n">residuos_normalizados_modulo_raizes</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">);</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">y_ajustados</span><span class="p">,</span> <span class="n">residuos_normalizados_modulo_raizes</span><span class="p">,</span>
+            <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">ci</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">lowess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">});</span>
+<span class="n">grafico_lm_3</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Scale-Location&#39;</span><span class="p">)</span>
+<span class="n">grafico_lm_3</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Valores Ajustados&#39;</span><span class="p">)</span>
+<span class="n">grafico_lm_3</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$\sqrt{Resíduos Padronizados}$&#39;</span><span class="p">);</span>
+
+<span class="n">maiores_residuos_normalizados_modulo_raizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">residuos_normalizados_modulo_raizes</span><span class="p">),</span> <span class="mi">0</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">maiores_residuos_normalizados_modulo_raizes</span><span class="p">:</span>
+  <span class="n">grafico_lm_3</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">i</span><span class="p">,</span>
+                            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">y_ajustados</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                            <span class="n">residuos_normalizados_modulo_raizes</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+
+<span class="n">dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">maiores_residuos_normalizados_modulo_raizes</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_code</th>
+      <th>continent</th>
+      <th>location</th>
+      <th>total_deaths_per_million</th>
+      <th>people_fully_vaccinated_per_hundred</th>
+      <th>stringency_index</th>
+      <th>median_age</th>
+      <th>gdp_per_capita</th>
+      <th>extreme_poverty</th>
+      <th>press_freedom_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>AUS</td>
+      <td>Oceania</td>
+      <td>Australia</td>
+      <td>80.812</td>
+      <td>74.44</td>
+      <td>72.69</td>
+      <td>37.9</td>
+      <td>44648.710</td>
+      <td>0.5</td>
+      <td>19.79</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>GEO</td>
+      <td>Asia</td>
+      <td>Georgia</td>
+      <td>3161.487</td>
+      <td>25.97</td>
+      <td>46.30</td>
+      <td>38.7</td>
+      <td>9745.079</td>
+      <td>4.2</td>
+      <td>28.64</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>MAR</td>
+      <td>Africa</td>
+      <td>Morocco</td>
+      <td>396.146</td>
+      <td>61.17</td>
+      <td>67.59</td>
+      <td>29.6</td>
+      <td>7485.013</td>
+      <td>1.0</td>
+      <td>43.94</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>SYC</td>
+      <td>Africa</td>
+      <td>Seychelles</td>
+      <td>1304.216</td>
+      <td>78.81</td>
+      <td>69.44</td>
+      <td>36.2</td>
+      <td>26382.287</td>
+      <td>1.1</td>
+      <td>25.66</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>DZA</td>
+      <td>Africa</td>
+      <td>Algeria</td>
+      <td>137.303</td>
+      <td>12.08</td>
+      <td>39.81</td>
+      <td>29.1</td>
+      <td>13913.839</td>
+      <td>0.5</td>
+      <td>47.26</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/projeto_final_17_1.png" src="../_images/projeto_final_17_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="grafico-qunantil-quantil">
+<h4>Gráfico Qunantil-Quantil<a class="headerlink" href="#grafico-qunantil-quantil" title="Link permanente para este título">¶</a></h4>
+<p>Há principalmente dois países muito longe da reta QQ: Gabão e Geórgia. Os demais parecem adequados</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">QQ</span> <span class="o">=</span> <span class="n">ProbPlot</span><span class="p">(</span><span class="n">residuos_normalizados</span><span class="p">)</span>
+<span class="n">grafico_qq</span> <span class="o">=</span> <span class="n">QQ</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">line</span><span class="o">=</span><span class="s1">&#39;45&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">grafico_qq</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Normal Q-Q&#39;</span><span class="p">)</span>
+<span class="n">grafico_qq</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Theoretical Quantiles&#39;</span><span class="p">)</span>
+<span class="n">grafico_qq</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Resíduos Padronizados&#39;</span><span class="p">);</span>
+
+<span class="n">maiores_residuos_padronizados</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">residuos_normalizados</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">maiores_residuos_padronizados</span><span class="p">):</span>
+    <span class="n">grafico_qq</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">i</span><span class="p">,</span>
+                               <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">QQ</span><span class="o">.</span><span class="n">theoretical_quantiles</span><span class="p">,</span> <span class="mi">0</span><span class="p">)[</span><span class="n">r</span><span class="p">],</span>
+                                   <span class="n">residuos_normalizados</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+
+<span class="n">dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">maiores_residuos_padronizados</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_code</th>
+      <th>continent</th>
+      <th>location</th>
+      <th>total_deaths_per_million</th>
+      <th>people_fully_vaccinated_per_hundred</th>
+      <th>stringency_index</th>
+      <th>median_age</th>
+      <th>gdp_per_capita</th>
+      <th>extreme_poverty</th>
+      <th>press_freedom_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>AUS</td>
+      <td>Oceania</td>
+      <td>Australia</td>
+      <td>80.812</td>
+      <td>74.44</td>
+      <td>72.69</td>
+      <td>37.9</td>
+      <td>44648.710</td>
+      <td>0.5</td>
+      <td>19.79</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>GEO</td>
+      <td>Asia</td>
+      <td>Georgia</td>
+      <td>3161.487</td>
+      <td>25.97</td>
+      <td>46.30</td>
+      <td>38.7</td>
+      <td>9745.079</td>
+      <td>4.2</td>
+      <td>28.64</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>MAR</td>
+      <td>Africa</td>
+      <td>Morocco</td>
+      <td>396.146</td>
+      <td>61.17</td>
+      <td>67.59</td>
+      <td>29.6</td>
+      <td>7485.013</td>
+      <td>1.0</td>
+      <td>43.94</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>SYC</td>
+      <td>Africa</td>
+      <td>Seychelles</td>
+      <td>1304.216</td>
+      <td>78.81</td>
+      <td>69.44</td>
+      <td>36.2</td>
+      <td>26382.287</td>
+      <td>1.1</td>
+      <td>25.66</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>DZA</td>
+      <td>Africa</td>
+      <td>Algeria</td>
+      <td>137.303</td>
+      <td>12.08</td>
+      <td>39.81</td>
+      <td>29.1</td>
+      <td>13913.839</td>
+      <td>0.5</td>
+      <td>47.26</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/projeto_final_19_1.png" src="../_images/projeto_final_19_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="grafico-de-alavancagem">
+<h4>Gráfico de Alavancagem<a class="headerlink" href="#grafico-de-alavancagem" title="Link permanente para este título">¶</a></h4>
+<p>Austrália muito longe dos demais, provavelmente pelo peso que tem na Oceania, usada como variável categórica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grafico_alavancagens</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">alavancagens</span><span class="p">,</span> <span class="n">residuos_normalizados</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">);</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">alavancagens</span><span class="p">,</span> <span class="n">residuos_normalizados</span><span class="p">,</span>
+            <span class="n">scatter</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">ci</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">lowess</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;lw&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">});</span>
+<span class="n">grafico_alavancagens</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">alavancagens</span><span class="p">)</span><span class="o">+</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">grafico_alavancagens</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">grafico_alavancagens</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Resíduos vs Alavancagem&#39;</span><span class="p">)</span>
+<span class="n">grafico_alavancagens</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Alavancagem&#39;</span><span class="p">)</span>
+<span class="n">grafico_alavancagens</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Resíduos Padronizados&#39;</span><span class="p">);</span>
+
+<span class="n">maiores_alavancagens</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">distancias_cook</span><span class="p">),</span> <span class="mi">0</span><span class="p">)[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">maiores_alavancagens</span><span class="p">:</span>
+    <span class="n">grafico_alavancagens</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">i</span><span class="p">,</span>
+                               <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">alavancagens</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                               <span class="n">residuos_normalizados</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+
+<span class="n">dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">maiores_alavancagens</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>iso_code</th>
+      <th>continent</th>
+      <th>location</th>
+      <th>total_deaths_per_million</th>
+      <th>people_fully_vaccinated_per_hundred</th>
+      <th>stringency_index</th>
+      <th>median_age</th>
+      <th>gdp_per_capita</th>
+      <th>extreme_poverty</th>
+      <th>press_freedom_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>AUS</td>
+      <td>Oceania</td>
+      <td>Australia</td>
+      <td>80.812</td>
+      <td>74.44</td>
+      <td>72.69</td>
+      <td>37.9</td>
+      <td>44648.710</td>
+      <td>0.5</td>
+      <td>19.79</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>GEO</td>
+      <td>Asia</td>
+      <td>Georgia</td>
+      <td>3161.487</td>
+      <td>25.97</td>
+      <td>46.30</td>
+      <td>38.7</td>
+      <td>9745.079</td>
+      <td>4.2</td>
+      <td>28.64</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>CHN</td>
+      <td>Asia</td>
+      <td>China</td>
+      <td>3.210</td>
+      <td>77.90</td>
+      <td>59.72</td>
+      <td>38.7</td>
+      <td>15308.712</td>
+      <td>0.7</td>
+      <td>78.72</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>SYC</td>
+      <td>Africa</td>
+      <td>Seychelles</td>
+      <td>1304.216</td>
+      <td>78.81</td>
+      <td>69.44</td>
+      <td>36.2</td>
+      <td>26382.287</td>
+      <td>1.1</td>
+      <td>25.66</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>USA</td>
+      <td>North America</td>
+      <td>United States</td>
+      <td>2386.942</td>
+      <td>59.99</td>
+      <td>50.46</td>
+      <td>38.3</td>
+      <td>54225.446</td>
+      <td>1.2</td>
+      <td>23.93</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/projeto_final_21_1.png" src="../_images/projeto_final_21_1.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="correcoes">
+<h3>Correções<a class="headerlink" href="#correcoes" title="Link permanente para este título">¶</a></h3>
+<p>Pelos gráficos acima, podemos fazer algumas correções a fim de melhorar o modelo. Pela análise dos resíduos, os países que se destacam tem pouca liberdade de imprensa (press_freedom_index alto), isso pode ter influênciado os registros de mortes por COVID.</p>
+<p>Retirando estes países por terem dados não confiáveis, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modelo_corrigido</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="n">FORMULA_DO_MODELO</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">maiores_residuos_normalizados_modulo_raizes</span><span class="p">))</span>
+<span class="n">fit_corrigido</span> <span class="o">=</span> <span class="n">modelo_corrigido</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fit_corrigido</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>    <td>people_fully_vaccinated_per_hundred</td> <th>  R-squared:         </th> <td>   0.856</td>
+</tr>
+<tr>
+  <th>Model:</th>                            <td>OLS</td>                 <th>  Adj. R-squared:    </th> <td>   0.841</td>
+</tr>
+<tr>
+  <th>Method:</th>                      <td>Least Squares</td>            <th>  F-statistic:       </th> <td>   59.29</td>
+</tr>
+<tr>
+  <th>Date:</th>                      <td>Sat, 11 Dec 2021</td>           <th>  Prob (F-statistic):</th> <td>1.84e-30</td>
+</tr>
+<tr>
+  <th>Time:</th>                          <td>01:55:26</td>               <th>  Log-Likelihood:    </th> <td> -333.82</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>               <td>    89</td>                <th>  AIC:               </th> <td>   685.6</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>                   <td>    80</td>                <th>  BIC:               </th> <td>   708.0</td>
+</tr>
+<tr>
+  <th>Df Model:</th>                       <td>     8</td>                <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>               <td>nonrobust</td>              <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+                  <td></td>                     <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>                         <td>  -20.8914</td> <td>    7.272</td> <td>   -2.873</td> <td> 0.005</td> <td>  -35.363</td> <td>   -6.420</td>
+</tr>
+<tr>
+  <th>C(continent)[T.Asia]</th>              <td>   16.8754</td> <td>    4.138</td> <td>    4.079</td> <td> 0.000</td> <td>    8.641</td> <td>   25.109</td>
+</tr>
+<tr>
+  <th>C(continent)[T.Europe]</th>            <td>   -4.3193</td> <td>    6.741</td> <td>   -0.641</td> <td> 0.523</td> <td>  -17.733</td> <td>    9.095</td>
+</tr>
+<tr>
+  <th>C(continent)[T.North America]</th>     <td>   13.4114</td> <td>    5.591</td> <td>    2.399</td> <td> 0.019</td> <td>    2.285</td> <td>   24.538</td>
+</tr>
+<tr>
+  <th>C(continent)[T.South America]</th>     <td>   28.3661</td> <td>    6.068</td> <td>    4.675</td> <td> 0.000</td> <td>   16.290</td> <td>   40.442</td>
+</tr>
+<tr>
+  <th>np.sqrt(gdp_per_capita)</th>           <td>    0.1618</td> <td>    0.036</td> <td>    4.496</td> <td> 0.000</td> <td>    0.090</td> <td>    0.233</td>
+</tr>
+<tr>
+  <th>median_age</th>                        <td>    1.7463</td> <td>    0.322</td> <td>    5.429</td> <td> 0.000</td> <td>    1.106</td> <td>    2.386</td>
+</tr>
+<tr>
+  <th>np.sqrt(total_deaths_per_million)</th> <td>   -0.2390</td> <td>    0.107</td> <td>   -2.243</td> <td> 0.028</td> <td>   -0.451</td> <td>   -0.027</td>
+</tr>
+<tr>
+  <th>press_freedom_score</th>               <td>   -0.2788</td> <td>    0.116</td> <td>   -2.408</td> <td> 0.018</td> <td>   -0.509</td> <td>   -0.048</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 1.245</td> <th>  Durbin-Watson:     </th> <td>   1.960</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.537</td> <th>  Jarque-Bera (JB):  </th> <td>   1.188</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.146</td> <th>  Prob(JB):          </th> <td>   0.552</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 2.516</td> <th>  Cond. No.          </th> <td>1.25e+03</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.25e+03. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</div>
+<p>Comparando os valores de <span class="math notranslate nohighlight">\(R^{2}\)</span> e da estatística F, notamos a melhora do modelo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comparacao</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Modelo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Modelo Inicial&#39;</span><span class="p">,</span> <span class="s1">&#39;Modelo Corrigido&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;RQuadrado&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">fit</span><span class="o">.</span><span class="n">rsquared</span><span class="p">,</span> <span class="n">fit_corrigido</span><span class="o">.</span><span class="n">rsquared</span><span class="p">],</span>
+    <span class="s1">&#39;EstatisticaF&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">fit</span><span class="o">.</span><span class="n">fvalue</span><span class="p">,</span> <span class="n">fit_corrigido</span><span class="o">.</span><span class="n">fvalue</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">comparacao</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Modelo</th>
+      <th>RQuadrado</th>
+      <th>EstatisticaF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Modelo Inicial</td>
+      <td>0.819174</td>
+      <td>42.281654</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Modelo Corrigido</td>
+      <td>0.855689</td>
+      <td>59.294970</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="conclusao">
+<h2>Conclusão<a class="headerlink" href="#conclusao" title="Link permanente para este título">¶</a></h2>
+<p>É significativa a influência do PIB per capita e da idade da população, estes fatores geram um coeficiente positivo quando estimamos a taxa de vacinação.</p>
+<p>Algo que pode ser revisto é a influência negativa que o total de mortes por milhão causa na variável resposta, uma vez que foi assumido na introdução que a expectativa era de uma melhor resposta frente a alta letalidade do virus no país.</p>
+<p>A falta de liberdade de imprensa também impacta negativamente na taxa de vacinação. Lembrando que quanto maior o índice, menor a liberdade para jornalistas e portanto, o coeficiente negativo mostra que a restrição diminui o valor esperado da resposta.</p>
+<p>Apesar do continent Africano (intercepto do modelo) estar muito aquém nos índices de vacinação, é curioso ver que para condições iguais não há p-valor baixo o suficiente que descarte a hipótese de um país possuir a mesma taxa de vacinação da Europa ou Oceania (majoritariamente, Australia como vimos pela alavancagem) quando as demais variáveis são mantidas. Já os países asiáticos e das américas tem respondido melhor a vacinação.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analise_de_regressao_linear"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="prova1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Avaliação 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../controle_estatistico_de_qualidade/intro.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Sobre</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          De Guilherme L Oliveira<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
