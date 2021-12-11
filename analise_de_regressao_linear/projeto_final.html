@@ -393,13 +393,13 @@
 <h1>Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19<a class="headerlink" href="#projeto-final-modelo-de-regressao-linear-para-taxa-de-vacinacao-contra-covid-19" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="introducao">
 <h2>Introdução<a class="headerlink" href="#introducao" title="Link permanente para este título">¶</a></h2>
-<p>Após o desenvolvimento de vacinas contra a Covid-19, iniciou-se uma corrida para imunizar a população mundial. Já era esperado que países mais ricos tomassem a dianteira, mas passado quase um ano das primeiras aplicações, alguns países parecem estagnados e outros ainda muito aquém do esperado. O objetivo deste trabalho é buscar variáveis explicativas que ajudem a entender quais motivos podem influênciar na taxa de vacinação de um país.</p>
+<p>Após o desenvolvimento de vacinas contra a Covid-19, iniciou-se uma corrida para imunizar a população mundial. Já era esperado que países mais ricos tomassem a dianteira, mas passado quase um ano das primeiras aplicações, alguns países parecem estagnados e outros ainda muito aquém do esperado. O objetivo deste trabalho é buscar variáveis explicativas que ajudem a entender quais motivos podem influenciar na taxa de vacinação de um país.</p>
 <p>Entre várias razões que podem explicar o objeto em estudo, focamos nas seguintes hipóteses:</p>
 <ol class="simple">
-<li><p><strong>PIB per capita é proporcional a taxa de vacinação</strong>: Como mencionado no paragráfo anterior, é esperado que países ricos imunizem a sua população com maior agilidade.</p></li>
+<li><p><strong>PIB per capita é proporcional a taxa de vacinação</strong>: Como mencionado no parágrafo anterior, é esperado que países ricos imunizem a sua população com maior agilidade.</p></li>
 <li><p><strong>Baixa vacinação entre jovens</strong>: É apresentado no conjunto de dados a mediana de idade de cada país. A hipótese a ser testada é a de que quanto maior a proporção de idosos em um país, maior será a sua taxa de vacinação.</p></li>
 <li><p><strong>Total de óbitos leva a uma maior adesão da população</strong>: Também como parte dos dados, utilizamos o Total de Mortes por Milhão. Inicialmente, espera-se que o número de óbitos impacte na percepção da gravidade da doença, levando assim a mais pessoas aos centros de vacinação.</p></li>
-<li><p><strong>Acesso a informações de qualidade impacta positivamente no número de vacinados</strong>: Em países com restrições a jornalistas… TODO</p></li>
+<li><p><strong>Acesso a informações de qualidade impacta positivamente no número de vacinados</strong>: Em países com restrições a jornalistas, é esperado uma resposta mais lenta ou até negacionista do governo.</p></li>
 <li><p><strong>Diferenças regionais</strong>: A fim de entender se há diferenças contidas em cada continente</p></li>
 </ol>
 </div>
@@ -726,7 +726,7 @@
 <p>208 rows × 9 columns</p>
 </div></div></div>
 </div>
-<p>Assim, juntando os dois conjuntos, retirando linhas com dados incompletos e reconstruíndo o índice, temos o dataframe que será usado no decorrer do trabalho.</p>
+<p>Assim, juntando os dois conjuntos, retirando linhas com dados incompletos e reconstruindo o índice, temos o dataframe que será usado no decorrer do trabalho.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados</span> <span class="o">=</span> <span class="n">dados_covid_atual</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dados_liberdade_imprensa</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;iso_code&#39;</span><span class="p">)</span>
@@ -921,7 +921,7 @@
 <h3>Modelo de regressão<a class="headerlink" href="#modelo-de-regressao" title="Link permanente para este título">¶</a></h3>
 <p>O modelo escolhido foi um modelo de regressão linear com efeitos aditivos. As variáveis explicativas escolhidas foram:</p>
 <ol class="simple">
-<li><p>Raíz Quadrada PIB per Capita (gdp_per_capita)</p></li>
+<li><p>Raiz Quadrada PIB per Capita (gdp_per_capita)</p></li>
 <li><p>Idade Mediana (median_age)</p></li>
 <li><p>Raíz Quadrada Total de Mortes por Milhão (total_deaths_per_million)</p></li>
 <li><p>Índice de Liberdade de Imprensa (press_freedom_score)</p></li>
@@ -956,7 +956,7 @@
   <th>Date:</th>                      <td>Sat, 11 Dec 2021</td>           <th>  Prob (F-statistic):</th> <td>1.60e-27</td>
 </tr>
 <tr>
-  <th>Time:</th>                          <td>01:55:25</td>               <th>  Log-Likelihood:    </th> <td> -363.33</td>
+  <th>Time:</th>                          <td>02:45:27</td>               <th>  Log-Likelihood:    </th> <td> -363.33</td>
 </tr>
 <tr>
   <th>No. Observations:</th>               <td>    94</td>                <th>  AIC:               </th> <td>   746.7</td>
@@ -1475,7 +1475,7 @@
   <th>Date:</th>                      <td>Sat, 11 Dec 2021</td>           <th>  Prob (F-statistic):</th> <td>1.84e-30</td>
 </tr>
 <tr>
-  <th>Time:</th>                          <td>01:55:26</td>               <th>  Log-Likelihood:    </th> <td> -333.82</td>
+  <th>Time:</th>                          <td>02:45:28</td>               <th>  Log-Likelihood:    </th> <td> -333.82</td>
 </tr>
 <tr>
   <th>No. Observations:</th>               <td>    89</td>                <th>  AIC:               </th> <td>   685.6</td>
