@@ -13,6 +13,7 @@ parts:
   - file: analise_de_regressao_linear/atividade4
   - file: analise_de_regressao_linear/atividade6
   - file: analise_de_regressao_linear/prova1
+  - file: analise_de_regressao_linear/projeto_final
 
 - caption: Controle Estatístico de Qualidade
   chapters:
