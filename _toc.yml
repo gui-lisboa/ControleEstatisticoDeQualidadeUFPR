@@ -40,6 +40,7 @@ parts:
   - file: visualizacao_de_dados/desafio1
   - file: visualizacao_de_dados/avaliacao1
   - file: visualizacao_de_dados/desafio2
+  - file: visualizacao_de_dados/avaliacao2
 
 - caption: Processos Estocásticos
   chapters:
