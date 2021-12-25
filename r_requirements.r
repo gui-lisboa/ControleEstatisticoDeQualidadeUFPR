@@ -2,6 +2,7 @@
 install.packages("IRkernel")
 IRkernel::installspec()
 
+install.packages("curl")
 install.packages("remotes")
 install.packages("ggplot2")
 install.packages("ggthemes")
