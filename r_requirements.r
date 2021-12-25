@@ -7,4 +7,5 @@ install.packages("ggplot2")
 install.packages("ggthemes")
 install.packages("dplyr")
 
-remotes::install_github("davidsjoberg/ggsankey")
+install.packages("devtools")
+devtools::install_github("davidsjoberg/ggsankey")
