@@ -25,10 +25,6 @@ jobs:
       with:
         python-version: 3.7
 
-    - name: Install core dependencies
-      run: |
-        pip install -r core_requirements.txt
-
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
