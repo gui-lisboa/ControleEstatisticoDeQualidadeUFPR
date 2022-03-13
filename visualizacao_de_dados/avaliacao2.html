@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avaliação 2 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Exame" href="exame.html" />
+    <link rel="prev" title="Desafio 2" href="desafio2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/visualizacao_de_dados/avaliacao2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Avaliação 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="avaliacao-2">
+<h1>Avaliação 2<a class="headerlink" href="#avaliacao-2" title="Link permanente para este título">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Instruções</p>
+<p>Os exercícios abaixo devem ser resolvidos e entregues em um arquivo único em formato PDF. Insira os
+códigos que utilizar como anexo do mesmo arquivo PDF.</p>
+</div>
+<p><strong>Exercício 1 (1 ponto):</strong> Defina os seguintes termos e dê exemplos:</p>
+<p>a. Gramática dos Gráficos</p>
+<p>A gramática dos gráficos é uma estrutura usada para construir visualizações. Esta estrutura tem como base os dados, a estética da apresentação, transformações de escala, formas geométricas, estatísticas, subconjuntos da visualização e o sistema de coordenadas. O objetivo é usar cada camada de forma sobreposta, fazendo com que cada camada possa conter uma ou mais dimensões. O exemplo visto durante o curso é o ggplot2 que tem funções de estética <strong>aes()</strong> para definir quais valores devem ser usados como eixos ou cor, funções para aplicar formas geométricas <strong>geom_()</strong> . Outro exemplo é a biblioteca Vega (https://vega.github.io/vega/) que tem uma abordagem declarativa usando JSON, a estética do gráfico é declarada na propriedade <strong>axes</strong> e as formas geométricas em <strong>marks</strong></p>
+<p>b. Dashboard</p>
+<p>Um Dashboard é um painel composto por visualizações que, geralmente, fornecem informações amplas sobre um assunto ou estado, separando métricas em visualizações independentes que tem sentido individual, mas em conjunto podem ajudar o observador a entender o comportamento dos dados. Um exemplo é o painel de um carro onde cada item fornece uma informação sobre o estado atual do carro como velocidade e RPM do motor.</p>
+<p><strong>Exercício 2 (3,0 pontos):</strong> Dados sobre habitação e mercado imobiliário são de extrema relevância em diversos tipos de pesquisa. Considere um conjunto de dados sobre 506 setores censitários da cidade de Boston/EUA, no censo de 1970. Acesse-o em R via require(mlbench); data(BostonHousing); BostonHousing . Construa uma visualização de dados estática e de tamanho A4 sobre este conjunto de dados, sendo totalmente construída por meio de script (a visualização deve ser um output de um script). Considere os princípios de Excelência Gráfica de Tufte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+
+<span class="c1"># carrega o dataset e cria o dataframe</span>
+<span class="n">boston_dataset</span> <span class="o">=</span> <span class="n">load_boston</span><span class="p">()</span>
+<span class="n">colunas</span> <span class="o">=</span> <span class="n">boston_dataset</span><span class="o">.</span><span class="n">feature_names</span>
+
+<span class="c1">#seleciona colunas</span>
+<span class="n">var_resposta</span> <span class="o">=</span> <span class="s1">&#39;MEDV&#39;</span>
+<span class="n">var_categorica_cor</span> <span class="o">=</span> <span class="s1">&#39;CHAS&#39;</span>
+<span class="n">var_quantitativas</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">colunas</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">var_resposta</span><span class="p">,</span> <span class="n">var_categorica_cor</span><span class="p">]]</span>
+
+<span class="c1">#cria dataframe</span>
+<span class="n">boston_housing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">boston_dataset</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">colunas</span><span class="p">)</span>
+<span class="n">boston_housing</span><span class="p">[</span><span class="n">var_resposta</span><span class="p">]</span> <span class="o">=</span> <span class="n">boston_dataset</span><span class="o">.</span><span class="n">target</span>
+<span class="n">boston_housing</span><span class="p">[</span><span class="s1">&#39;CHAS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">boston_housing</span><span class="p">[</span><span class="s1">&#39;CHAS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+
+<span class="c1"># cria painel 12x1</span>
+<span class="n">painel</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">var_quantitativas</span><span class="p">),</span>
+                       <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                       <span class="n">print_grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                       <span class="n">shared_xaxes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                       <span class="n">vertical_spacing</span><span class="o">=</span><span class="mf">.005</span><span class="p">,</span>
+                       <span class="n">x_title</span><span class="o">=</span><span class="s1">&#39;Variável Resposta - MEDV&#39;</span><span class="p">)</span>
+
+<span class="c1"># para cada var quantitativa, cria gráfico e adiciona ao painel</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">variavel</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">var_quantitativas</span><span class="p">):</span>
+    <span class="n">grafico</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">boston_housing</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">var_resposta</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">variavel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">var_categorica_cor</span><span class="p">,</span> <span class="n">marginal_y</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">trendline</span><span class="o">=</span><span class="s1">&#39;ols&#39;</span><span class="p">)</span>
+    <span class="n">tracos</span> <span class="o">=</span> <span class="p">[</span><span class="n">grafico</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="n">dimensao</span><span class="p">]</span> <span class="k">for</span> <span class="n">dimensao</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">grafico</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]))]</span>
+    <span class="p">[</span><span class="n">painel</span><span class="o">.</span><span class="n">append_trace</span><span class="p">(</span><span class="n">traco</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">traco</span> <span class="ow">in</span> <span class="n">tracos</span><span class="p">]</span>
+    <span class="n">painel</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="sa">f</span><span class="s1">&#39;yaxis</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">:</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">variavel</span><span class="p">)})</span>
+
+<span class="c1"># arruma aparência do painel</span>
+<span class="n">painel</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">1900</span><span class="p">,</span>
+                     <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+                     <span class="n">title_text</span><span class="o">=</span><span class="s2">&quot;Boston Housing Dataset&quot;</span><span class="p">,</span>
+                     <span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&quot;CHAS&quot;</span><span class="p">,</span> <span class="n">itemsizing</span><span class="o">=</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="n">yanchor</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">xanchor</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">painel</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+<span class="n">names</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">painel</span><span class="o">.</span><span class="n">for_each_trace</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">trace</span><span class="p">:</span>
+        <span class="n">trace</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">trace</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">)</span> <span class="k">else</span> <span class="n">names</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">trace</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+
+<span class="c1"># mostra painel</span>
+<span class="n">painel</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_boston</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;plotly&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercício 3 (3,0 pontos):</strong> Crie um conjunto de dados sobre as 399 cidades do Paraná, relativo a qualquer temática (estatísticas por município sobre Saúde, Economia, Educação, Covid-19 etc). Crie mapas informativos sobre esse conjunto de dados e complemente-os com outros gráficos tradicionais. Algumas fontes de dados possíveis: localizasus.saude.gov.br, www.ipea.gov.br, cidades.ibge.gov.br, www.inep.gov.br, www.atlasbrasil.org.br.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">GEOJSON_PARANA</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-41-mun.json&#39;</span>
+<span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">GEOJSON_PARANA</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+    <span class="n">cidades_geo</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+<span class="n">populacao_estimada</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/populacao_estimada.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">pib</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/pib.csv&#39;</span><span class="p">)</span>
+<span class="n">cidades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">populacao_estimada</span><span class="p">,</span> <span class="n">pib</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Cidade&#39;</span><span class="p">)</span>
+<span class="n">cidades</span><span class="p">[</span><span class="s1">&#39;PIB_per_capita&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cidades</span><span class="o">.</span><span class="n">PIB</span><span class="o">/</span><span class="n">cidades</span><span class="o">.</span><span class="n">Populacao</span>
+
+<span class="k">def</span> <span class="nf">criar_mapa</span><span class="p">(</span><span class="n">cor</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">escala_cor</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">choropleth_mapbox</span><span class="p">(</span><span class="n">cidades</span><span class="p">,</span> <span class="n">geojson</span><span class="o">=</span><span class="n">cidades_geo</span><span class="p">,</span>
+                               <span class="n">locations</span><span class="o">=</span><span class="s1">&#39;Codigo&#39;</span><span class="p">,</span> <span class="n">featureidkey</span><span class="o">=</span><span class="s2">&quot;properties.id&quot;</span><span class="p">,</span>
+                               <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">escala_cor</span><span class="p">,</span>
+                               <span class="n">mapbox_style</span><span class="o">=</span><span class="s2">&quot;white-bg&quot;</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mf">5.9</span><span class="p">,</span> <span class="n">center</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">24.5</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">51.4</span><span class="p">},</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;r&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;t&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;l&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">fig</span>
+
+<span class="n">mapa_populacao</span> <span class="o">=</span> <span class="n">criar_mapa</span><span class="p">(</span><span class="s1">&#39;Populacao&#39;</span><span class="p">,</span> <span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
+<span class="n">mapa_populacao</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s2">&quot;./imagens/mapa_parana_pop.png&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;./imagens/mapa_parana_pop.png&#39;</span><span class="p">))</span>
+<span class="c1">#mapa_populacao.show()</span>
+
+<span class="n">mapa_PIB_per_capita</span> <span class="o">=</span> <span class="n">criar_mapa</span><span class="p">(</span><span class="s1">&#39;PIB_per_capita&#39;</span><span class="p">,</span> <span class="s1">&#39;Reds&#39;</span><span class="p">)</span>
+<span class="n">mapa_PIB_per_capita</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s2">&quot;./imagens/mapa_parana_pib_capita.png&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;./imagens/mapa_parana_pib_capita.png&#39;</span><span class="p">))</span>
+<span class="c1">#mapa_PIB_per_capita.show()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/avaliacao2_5_0.png" src="../_images/avaliacao2_5_0.png" />
+<img alt="../_images/avaliacao2_5_1.png" src="../_images/avaliacao2_5_1.png" />
+</div>
+</div>
+<p><strong>Exercício 4 (3,0 pontos):</strong> Os Diagramas de Sankey representam o fluxo proporcional de informações através de um sistema. Isso também pode ser visto como uma espécie de guia informativo de como as categorias das variáveis de um conjunto de dados estão conectadas. Abaixo são exibidos dois exemplos destes diagramas. Escolha um conjunto de dados de seu interesse e crie um Diagrama de Sankey utilizando ggplot2. Interprete-o.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span> <span class="o">=</span> <span class="nf">ls</span><span class="p">())</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggsankey</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+
+<span class="n">mtcars</span> <span class="o">&lt;-</span> <span class="n">mtcars</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">vs</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">vs</span> <span class="o">==</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;Em V&quot;</span><span class="p">,</span> <span class="s">&quot;Em Linha&quot;</span><span class="p">))</span>
+<span class="n">mtcars</span> <span class="o">&lt;-</span> <span class="n">mtcars</span> <span class="o">%&gt;%</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">am</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">am</span> <span class="o">==</span> <span class="m">0</span><span class="p">,</span> <span class="s">&quot;Automático&quot;</span><span class="p">,</span> <span class="s">&quot;Manual&quot;</span><span class="p">))</span>
+
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">mtcars</span> <span class="o">%&gt;%</span>
+  <span class="nf">make_long</span><span class="p">(</span><span class="n">cyl</span><span class="p">,</span> <span class="n">vs</span><span class="p">,</span> <span class="n">am</span><span class="p">,</span> <span class="n">gear</span><span class="p">)</span>
+
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span>
+               <span class="n">next_x</span> <span class="o">=</span> <span class="n">next_x</span><span class="p">,</span>
+               <span class="n">node</span> <span class="o">=</span> <span class="n">node</span><span class="p">,</span>
+               <span class="n">next_node</span> <span class="o">=</span> <span class="n">next_node</span><span class="p">,</span>
+               <span class="n">fill</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">node</span><span class="p">),</span>
+               <span class="n">label</span> <span class="o">=</span> <span class="n">node</span><span class="p">))</span> <span class="o">+</span>
+<span class="nf">geom_sankey</span><span class="p">(</span><span class="n">flow.alpha</span> <span class="o">=</span> <span class="m">0.5</span><span class="p">,</span> <span class="n">node.color</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">scale_fill_viridis_d</span><span class="p">(</span><span class="n">option</span> <span class="o">=</span> <span class="s">&quot;D&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="m">0.95</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">geom_sankey_label</span><span class="p">()</span> <span class="o">+</span>
+<span class="nf">theme_sankey</span><span class="p">()</span>
+<span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;./imagens/Sankey.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s2">&quot;./imagens/Sankey.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/avaliacao2_7_0.png" src="../_images/avaliacao2_7_0.png" />
+</div>
+</div>
+<p>O gráfico acima mostra a relação entre variáveis do pacote <em><strong>mtcars</strong></em>.</p>
+<p>A primeira faixa (<em><strong>cyl</strong></em>) representa o número de cilindros (4, 6, 8). É possível notar que há mais carros equipados com motores de 8 cilindros se comparados com 4 ou 6 cilindros. Seguindo o fluxo, percebe-se que todos os carros com motores e 8 cilindros tem motor em V, já os carros de 6 cilindros se dividem entre motores em V e em linha. Os motores de 4 cilindros são majoritariamente construídos em linha, mas há motores em V.</p>
+<p>Seguindo o diagrama, temos a divisão entre câmbios automáticos e manuais. Os carros com motores em V são na sua maioria automáticos, já os em linha tem uma divisão equilibrada entre câmbios manuais e automáticos.</p>
+<p>O próximo passo analisa a quantidade de marchas (excluindo a marcha ré). Os carros automáticos têm na sua maioria 3 marchas, alguns com 4 e não há carros automáticos com 5. Já entre manuais não há veículos com 3 marchas, apenas opções com 4 ou 5 marchas.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./visualizacao_de_dados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="desafio2.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Desafio 2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="exame.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Exame</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

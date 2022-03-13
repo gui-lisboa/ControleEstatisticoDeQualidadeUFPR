@@ -37,21 +37,24 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19" href="projeto_final.html" />
@@ -160,6 +163,11 @@
    Atividade 4
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -226,6 +234,16 @@
    Desafio 2
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -241,6 +259,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../processos_estocasticos/trabalho.html">
    Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
   </a>
  </li>
 </ul>
@@ -289,7 +319,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -307,7 +337,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Conteúdo
@@ -432,7 +462,135 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Avaliação 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#considere-o-modelo-de-regressao-linear-simples-com-a-variavel-independente-x-centrada">
+   1. Considere o modelo de regressão linear simples com a variável independente x centrada:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-qual-a-interpretacao-dos-parametros-0-e-1-justifique">
+     a. Qual a interpretação dos parâmetros β0 e β1? Justifique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-derive-os-estimadores-de-minimos-quadrados-de-0-e-1-nao-e-necessario-provar-que-a-solucao-encontrada-corresponde-a-um-ponto-de-minimo">
+     b. Derive os estimadores de mínimos quadrados de β0 e β1. Não é necessário provar que a solução encontrada corresponde a um ponto de mínimo.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-qual-a-relacao-matematica-entre-os-estimadores-de-0-e-1-encontrados-em-relacao-aos-correspondentes-estimadores-do-modelo-de-regressao-linear-simples-usual-definido-por-y-i-beta-0-beta-1-x-i-epsilon-i">
+     c. Qual a relação matemática entre os estimadores de β0 e β1 encontrados em relação aos correspondentes estimadores do modelo de regressão linear simples usual, definido por
+     <span class="math notranslate nohighlight">
+      \(y_{i} = \beta_{0} + \beta_{1}x_{i} + \epsilon_{i}\)
+     </span>
+     ?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-discuta-em-que-tipos-de-situacao-pode-ser-preferivel-usar-o-modelo-centrado-ao-inves-do-modelo-usual">
+     d. Discuta em que tipos de situação pode ser preferível usar o modelo centrado ao invés do modelo usual.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-figura-seguinte-representa-os-resultados-de-n-100-realizacoes-de-uma-reacao-quimica-o-objetivo-e-ajustar-um-modelo-de-regressao-capaz-de-explicar-a-velocidade-da-reacao-y-em-funcao-da-quantidade-utilizada-de-certo-reagente-x">
+   2. A figura seguinte representa os resultados de
+   <span class="math notranslate nohighlight">
+    \(n = 100\)
+   </span>
+   realizações de uma reação química. O objetivo é ajustar um modelo de regressão capaz de explicar a velocidade da reação (
+   <span class="math notranslate nohighlight">
+    \(y\)
+   </span>
+   ) em função da quantidade utilizada de certo reagente (
+   <span class="math notranslate nohighlight">
+    \(x\)
+   </span>
+   ).
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-o-modelo-especificado-configura-um-modelo-de-regressao-linear-justifique">
+     a) O modelo especificado configura um modelo de regressão linear? Justifique.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-apresente-a-expressao-do-modelo-ajustado-qual-a-estimativa-da-velocidade-media-de-reacao-para-quantidade-de-reagente-igual-a-1-5-considere-a-saida-do-modelo-seguinte">
+     b )Apresente a expressão do modelo ajustado. Qual a estimativa da velocidade média de reação para quantidade de reagente igual a 1.5? Considere a saída do modelo seguinte
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-complete-o-quadro-de-analise-de-variancia-e-forneca-uma-estimativa-para-sigma-2">
+     c) Complete o quadro de análise de variância e forneça uma estimativa para
+     <span class="math notranslate nohighlight">
+      \(\sigma^{2}\)
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-descreve-as-hipoteses-nula-e-alternativa-da-anova-e-conclua-o-teste-interprete-o-resultado-no-contexto-do-exercicio">
+     d) Descreve as hipóteses nula e alternativa da ANOVA e conclua o teste. Interprete o resultado no contexto do exercício.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-calcule-e-interprete-o-valor-do-coeficiente-de-determinacao-r2">
+     e) Calcule e interprete o valor do coeficiente de determinação (R2).
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-qualidade-do-vinho-pinot-noir-e-supostamente-relacionada-as-seguintes-propriedades-sensoriais-clareza-aroma-consistencia-sabor-e-textura-trinta-e-oito-marcas-de-vinho-pinot-noir-foram-avaliadas-as-seis-primeiras-linhas-da-base-de-dados-resultante-sao-apresentadas-na-sequencia">
+   3. A qualidade do vinho Pinot Noir é supostamente relacionada às seguintes propriedades sensoriais: clareza, aroma, consistência, sabor e textura. Trinta e oito marcas de vinho Pinot Noir foram avaliadas. As seis primeiras linhas da base de dados resultante são apresentadas na sequência.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crie-uma-situacao-em-que-um-modelo-de-regressao-linear-multipla-seja-adequado-explique-qual-e-a-variavel-resposta-e-as-covariaveis-use-duas-covariaveis">
+   4. Crie uma situação em que um modelo de regressão linear múltipla seja adequado. Explique qual é a variável resposta e as covariáveis (use duas covariáveis).
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-descreva-e-explique-quais-suposicoes-voce-deve-fazer-para-que-o-modelo-de-regressao-linear-multipla-seja-adequado-e-discuta-como-elas-se-aplicam-no-contexto-que-voce-criou">
+     a) Descreva e explique quais suposições você deve fazer para que o modelo de regressão linear múltipla seja adequado. E discuta como elas se aplicam no contexto que você criou.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-escreva-a-equacao-do-modelo-e-interprete-os-coeficientes-de-regressao-no-contexto-do-problema-que-voce-criou">
+     b) Escreva a equação do modelo e interprete os coeficientes de regressão no contexto do problema que você criou.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-simule-um-conjunto-de-dados-de-tamanho-100-lembre-se-para-isto-voce-deve-especificar-os-coeficientes-de-regressao-e-o-valor-das-covariaveis">
+     c)  Simule um conjunto de dados de tamanho 100. Lembre-se para isto você deve especificar os coeficientes de regressão e o valor das covariáveis.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-estime-os-parametros-do-modelo-seus-erros-padroes-e-faca-teste-de-hipoteses-adequados-explique-quais-sao-os-testes-e-de-a-sua-conclusao-com-95-de-confianca-voce-pode-usar-as-funcoes-residentes-do-r-para-estas-tarefas">
+     d. Estime os parâmetros do modelo, seus erros padrões e faça teste de hipóteses adequados. Explique quais são os testes e dê a sua conclusão com 95% de confiança. Você pode usar as funções residentes do R para estas tarefas.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="avaliacao-1">
@@ -467,6 +625,9 @@ y_{i} = \beta_{0} + \beta_{1}(x_{i} − \bar{x}) + \epsilon_{i} \quad , i = 1, .
 </div>
 <div class="section" id="b-apresente-a-expressao-do-modelo-ajustado-qual-a-estimativa-da-velocidade-media-de-reacao-para-quantidade-de-reagente-igual-a-1-5-considere-a-saida-do-modelo-seguinte">
 <h3>b )Apresente a expressão do modelo ajustado. Qual a estimativa da velocidade média de reação para quantidade de reagente igual a 1.5? Considere a saída do modelo seguinte<a class="headerlink" href="#b-apresente-a-expressao-do-modelo-ajustado-qual-a-estimativa-da-velocidade-media-de-reacao-para-quantidade-de-reagente-igual-a-1-5-considere-a-saida-do-modelo-seguinte" title="Link permanente para este título">¶</a></h3>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span> <span class="o">~</span> <span class="nf">I</span><span class="p">(</span><span class="m">1</span><span class="o">/</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -743,33 +904,33 @@ H1: \beta_{1} \ne 0
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.542464</td>
-      <td>2500.325216</td>
-      <td>72.721161</td>
+      <td>1.386851</td>
+      <td>2512.810665</td>
+      <td>59.176073</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.517784</td>
-      <td>2694.928672</td>
-      <td>71.283014</td>
+      <td>1.993015</td>
+      <td>1952.889109</td>
+      <td>89.097257</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.901568</td>
-      <td>2941.354366</td>
-      <td>82.430620</td>
+      <td>1.816871</td>
+      <td>2214.318107</td>
+      <td>83.764475</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.940583</td>
-      <td>3720.284741</td>
-      <td>79.690674</td>
+      <td>1.444948</td>
+      <td>1960.208195</td>
+      <td>60.457970</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.562188</td>
-      <td>2513.704765</td>
-      <td>62.889395</td>
+      <td>1.191514</td>
+      <td>2137.427214</td>
+      <td>59.649552</td>
     </tr>
     <tr>
       <th>...</th>
@@ -779,33 +940,33 @@ H1: \beta_{1} \ne 0
     </tr>
     <tr>
       <th>95</th>
-      <td>1.076514</td>
-      <td>884.667657</td>
-      <td>54.806107</td>
+      <td>1.357141</td>
+      <td>2012.692185</td>
+      <td>72.897663</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>1.666005</td>
-      <td>1738.029406</td>
-      <td>74.346934</td>
+      <td>1.242089</td>
+      <td>806.088528</td>
+      <td>59.233061</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>1.645098</td>
-      <td>1765.122527</td>
-      <td>67.503276</td>
+      <td>1.725118</td>
+      <td>2728.676044</td>
+      <td>79.379176</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>1.840951</td>
-      <td>2913.480883</td>
-      <td>92.192879</td>
+      <td>1.912143</td>
+      <td>2054.812720</td>
+      <td>75.325695</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>1.750980</td>
-      <td>1950.546658</td>
-      <td>69.149920</td>
+      <td>2.092032</td>
+      <td>1686.194302</td>
+      <td>91.256532</td>
     </tr>
   </tbody>
 </table>
@@ -834,25 +995,25 @@ H1: \beta_{1} \ne 0
 <div class="output text_html"><table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tr>
-  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.800</td>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.764</td>
 </tr>
 <tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.796</td>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.759</td>
 </tr>
 <tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   194.3</td>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   157.0</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sat, 11 Dec 2021</td> <th>  Prob (F-statistic):</th> <td>1.18e-34</td>
+  <th>Date:</th>             <td>Sun, 13 Mar 2022</td> <th>  Prob (F-statistic):</th> <td>3.87e-31</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>02:45:33</td>     <th>  Log-Likelihood:    </th> <td> -301.47</td>
+  <th>Time:</th>                 <td>01:12:44</td>     <th>  Log-Likelihood:    </th> <td> -305.20</td>
 </tr>
 <tr>
-  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   608.9</td>
+  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   616.4</td>
 </tr>
 <tr>
-  <th>Df Residuals:</th>          <td>    97</td>      <th>  BIC:               </th> <td>   616.8</td>
+  <th>Df Residuals:</th>          <td>    97</td>      <th>  BIC:               </th> <td>   624.2</td>
 </tr>
 <tr>
   <th>Df Model:</th>              <td>     2</td>      <th>                     </th>     <td> </td>   
@@ -866,29 +1027,29 @@ H1: \beta_{1} \ne 0
     <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>const</th> <td>   18.8951</td> <td>    3.329</td> <td>    5.676</td> <td> 0.000</td> <td>   12.289</td> <td>   25.502</td>
+  <th>const</th> <td>   15.3647</td> <td>    3.681</td> <td>    4.174</td> <td> 0.000</td> <td>    8.060</td> <td>   22.670</td>
 </tr>
 <tr>
-  <th>x1</th>    <td>   30.8244</td> <td>    1.571</td> <td>   19.616</td> <td> 0.000</td> <td>   27.706</td> <td>   33.943</td>
+  <th>x1</th>    <td>   33.7965</td> <td>    1.934</td> <td>   17.474</td> <td> 0.000</td> <td>   29.958</td> <td>   37.635</td>
 </tr>
 <tr>
-  <th>x2</th>    <td>    0.0019</td> <td>    0.001</td> <td>    2.121</td> <td> 0.036</td> <td>    0.000</td> <td>    0.004</td>
+  <th>x2</th>    <td>    0.0018</td> <td>    0.001</td> <td>    1.758</td> <td> 0.082</td> <td>   -0.000</td> <td>    0.004</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Omnibus:</th>       <td> 1.412</td> <th>  Durbin-Watson:     </th> <td>   2.266</td>
+  <th>Omnibus:</th>       <td> 0.030</td> <th>  Durbin-Watson:     </th> <td>   2.072</td>
 </tr>
 <tr>
-  <th>Prob(Omnibus):</th> <td> 0.494</td> <th>  Jarque-Bera (JB):  </th> <td>   0.879</td>
+  <th>Prob(Omnibus):</th> <td> 0.985</td> <th>  Jarque-Bera (JB):  </th> <td>   0.165</td>
 </tr>
 <tr>
-  <th>Skew:</th>          <td>-0.136</td> <th>  Prob(JB):          </th> <td>   0.644</td>
+  <th>Skew:</th>          <td> 0.022</td> <th>  Prob(JB):          </th> <td>   0.921</td>
 </tr>
 <tr>
-  <th>Kurtosis:</th>      <td> 3.370</td> <th>  Cond. No.          </th> <td>1.52e+04</td>
+  <th>Kurtosis:</th>      <td> 2.806</td> <th>  Cond. No.          </th> <td>1.57e+04</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.52e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.57e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
 </div>
 </div>
 </div>
@@ -916,8 +1077,8 @@ H1: \beta_{1} \ne 0
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="atividade6.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
@@ -934,18 +1095,16 @@ H1: \beta_{1} \ne 0
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          De Guilherme L Oliveira<br/>
-        
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
 </main>
 
 

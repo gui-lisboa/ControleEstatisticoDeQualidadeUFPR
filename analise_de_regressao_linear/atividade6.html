@@ -37,19 +37,22 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Avaliação 1" href="prova1.html" />
@@ -158,6 +161,11 @@
    Atividade 4
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -224,6 +232,16 @@
    Desafio 2
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -239,6 +257,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../processos_estocasticos/trabalho.html">
    Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
   </a>
  </li>
 </ul>
@@ -287,7 +317,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -305,7 +335,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Conteúdo
@@ -335,7 +365,40 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Atividade 6</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-1">
+   Exercício 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-2">
+   Exercício 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-3">
+   Exercício 3
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="atividade-6">
@@ -395,10 +458,10 @@
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   3.482</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sat, 11 Dec 2021</td> <th>  Prob (F-statistic):</th>  <td>0.0452</td> 
+  <th>Date:</th>             <td>Sun, 13 Mar 2022</td> <th>  Prob (F-statistic):</th>  <td>0.0452</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>02:45:23</td>     <th>  Log-Likelihood:    </th> <td> -194.88</td>
+  <th>Time:</th>                 <td>01:12:38</td>     <th>  Log-Likelihood:    </th> <td> -194.88</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    30</td>      <th>  AIC:               </th> <td>   395.8</td>
@@ -471,8 +534,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages/scipy/stats/stats.py:1542: UserWarning: kurtosistest only valid for n&gt;=20 ... continuing anyway, n=14
-  &quot;anyway, n=%i&quot; % int(n))
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.2/x64/lib/python3.10/site-packages/scipy/stats/_stats_py.py:1477: UserWarning: kurtosistest only valid for n&gt;=20 ... continuing anyway, n=14
+  warnings.warn(&quot;kurtosistest only valid for n&gt;=20 ... continuing &quot;
 </pre></div>
 </div>
 <div class="output text_html"><table class="simpletable">
@@ -487,10 +550,10 @@
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td> 0.05770</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sat, 11 Dec 2021</td> <th>  Prob (F-statistic):</th>  <td> 0.814</td> 
+  <th>Date:</th>             <td>Sun, 13 Mar 2022</td> <th>  Prob (F-statistic):</th>  <td> 0.814</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>02:45:24</td>     <th>  Log-Likelihood:    </th> <td> -16.370</td>
+  <th>Time:</th>                 <td>01:12:38</td>     <th>  Log-Likelihood:    </th> <td> -16.370</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    14</td>      <th>  AIC:               </th> <td>   36.74</td>
@@ -572,10 +635,10 @@
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   1.236</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sat, 11 Dec 2021</td> <th>  Prob (F-statistic):</th>  <td> 0.296</td> 
+  <th>Date:</th>             <td>Sun, 13 Mar 2022</td> <th>  Prob (F-statistic):</th>  <td> 0.296</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>02:45:24</td>     <th>  Log-Likelihood:    </th> <td> -861.46</td>
+  <th>Time:</th>                 <td>01:12:39</td>     <th>  Log-Likelihood:    </th> <td> -861.46</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   144</td>      <th>  AIC:               </th> <td>   1735.</td>
@@ -653,8 +716,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="atividade4.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
@@ -671,18 +734,16 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          De Guilherme L Oliveira<br/>
-        
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
 </main>
 
 

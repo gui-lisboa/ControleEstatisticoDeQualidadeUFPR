@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exame &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Sobre" href="../processos_estocasticos/intro.html" />
+    <link rel="prev" title="Avaliação 2" href="avaliacao2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/visualizacao_de_dados/exame.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#construa-um-dashboard-para-esta-base-de-dados-utilizando-r-shiny">
+   Construa um dashboard para esta base de dados utilizando r-shiny
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#construa-um-dashboard-semelhante-ao-do-item-a-utilizando-outra-ferramenta-de-sua-preferencia-powerbi-kibana-google-data-studio-tableau-etc">
+   Construa um dashboard semelhante ao do item a. utilizando outra ferramenta de sua preferência (PowerBI, Kibana, Google Data Studio, Tableau etc.)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compare-os-dois-e-interprete-os">
+   Compare os dois e interprete-os
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparacao">
+     Comparação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretacao">
+     Interpretação
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exame</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#construa-um-dashboard-para-esta-base-de-dados-utilizando-r-shiny">
+   Construa um dashboard para esta base de dados utilizando r-shiny
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#construa-um-dashboard-semelhante-ao-do-item-a-utilizando-outra-ferramenta-de-sua-preferencia-powerbi-kibana-google-data-studio-tableau-etc">
+   Construa um dashboard semelhante ao do item a. utilizando outra ferramenta de sua preferência (PowerBI, Kibana, Google Data Studio, Tableau etc.)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compare-os-dois-e-interprete-os">
+   Compare os dois e interprete-os
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparacao">
+     Comparação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretacao">
+     Interpretação
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="exame">
+<h1>Exame<a class="headerlink" href="#exame" title="Link permanente para este título">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Exercício</p>
+<p>Dados sobre habitação e mercado imobiliário são de extrema relevância em diversos tipos de pesquisa. Considere um conjunto de dados sobre 506 setores censitários da cidade de Boston/EUA, no censo de 1970. Acesse-o em R via require(mlbench); data(BostonHousing); BostonHousing.</p>
+</div>
+<p>Repositório para os dashboards: <a class="reference external" href="https://github.com/gui-lisboa/BostonHousing_Shiny_vs_Dash">https://github.com/gui-lisboa/BostonHousing_Shiny_vs_Dash</a></p>
+<p>Link para os dashboards:</p>
+<ul class="simple">
+<li><p>Shiny: <a class="reference external" href="https://guilisboa.shinyapps.io/BostonHousing">https://guilisboa.shinyapps.io/BostonHousing</a></p></li>
+<li><p>Dash: <a class="reference external" href="https://bostonhousing-vizdados.herokuapp.com">https://bostonhousing-vizdados.herokuapp.com</a></p></li>
+</ul>
+<div class="section" id="construa-um-dashboard-para-esta-base-de-dados-utilizando-r-shiny">
+<h2>Construa um dashboard para esta base de dados utilizando r-shiny<a class="headerlink" href="#construa-um-dashboard-para-esta-base-de-dados-utilizando-r-shiny" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../_images/exame-shiny.PNG" src="../_images/exame-shiny.PNG" />
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Dashboard em Shiny</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">shiny</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">plyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">rjson</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+
+<span class="nf">require</span><span class="p">(</span><span class="n">mlbench</span><span class="p">)</span>
+<span class="nf">data</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">)</span>
+<span class="n">bostonHousingMetaData</span> <span class="o">&lt;-</span> <span class="nf">fromJSON</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&quot;./boston-housing-meta.json&quot;</span><span class="p">)</span>
+
+<span class="n">ui</span> <span class="o">&lt;-</span> <span class="nf">fluidPage</span><span class="p">(</span>
+  
+  <span class="nf">titlePanel</span><span class="p">(</span><span class="s">&quot;Boston Housing - Painel criado com Shiny&quot;</span><span class="p">),</span>
+  
+  <span class="nf">sidebarLayout</span><span class="p">(</span>
+    
+    <span class="nf">sidebarPanel</span><span class="p">(</span>
+      <span class="nf">h3</span><span class="p">(</span><span class="s">&quot;Variáveis&quot;</span><span class="p">),</span>
+      <span class="nf">selectInput</span><span class="p">(</span><span class="n">inputId</span> <span class="o">=</span> <span class="s">&quot;variavel&quot;</span><span class="p">,</span>
+                  <span class="n">label</span> <span class="o">=</span> <span class="s">&quot;Opções&quot;</span><span class="p">,</span>
+                  <span class="n">choices</span> <span class="o">=</span> <span class="nf">names</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">),</span>
+                  <span class="n">multiple</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">),</span>
+      <span class="nf">plotOutput</span><span class="p">(</span><span class="n">outputId</span> <span class="o">=</span> <span class="s">&quot;graficoResumo&quot;</span><span class="p">),</span>
+      <span class="nf">h4</span><span class="p">(</span><span class="s">&quot;Estrutura&quot;</span><span class="p">),</span>
+      <span class="nf">verbatimTextOutput</span><span class="p">(</span><span class="n">outputId</span> <span class="o">=</span> <span class="s">&quot;estrutura&quot;</span><span class="p">),</span>
+      <span class="nf">h4</span><span class="p">(</span><span class="s">&quot;Sobre&quot;</span><span class="p">),</span>
+      <span class="nf">textOutput</span><span class="p">(</span><span class="s">&quot;sobre&quot;</span><span class="p">),</span>
+      <span class="n">width</span> <span class="o">=</span> <span class="m">3</span>
+    <span class="p">),</span>
+    
+    <span class="nf">mainPanel</span><span class="p">(</span>
+      <span class="nf">h3</span><span class="p">(</span><span class="s">&quot;Relação com MEDV&quot;</span><span class="p">),</span>
+      <span class="nf">plotOutput</span><span class="p">(</span><span class="n">outputId</span> <span class="o">=</span> <span class="s">&quot;graficoRegressao&quot;</span><span class="p">),</span>
+      <span class="nf">h3</span><span class="p">(</span><span class="s">&quot;Mapa de Densidade&quot;</span><span class="p">),</span>
+      <span class="nf">selectInput</span><span class="p">(</span><span class="n">inputId</span> <span class="o">=</span> <span class="s">&quot;variavelMapa&quot;</span><span class="p">,</span>
+                  <span class="n">label</span> <span class="o">=</span> <span class="s">&quot;Opções&quot;</span><span class="p">,</span>
+                  <span class="n">choices</span> <span class="o">=</span> <span class="nf">names</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">),</span>
+                  <span class="n">multiple</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">),</span>
+      <span class="nf">plotOutput</span><span class="p">(</span><span class="n">outputId</span> <span class="o">=</span> <span class="s">&quot;mapaDensidade&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+  <span class="p">)</span>
+  
+<span class="p">)</span>
+
+<span class="n">server</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">output</span><span class="p">){</span>
+  
+  <span class="n">output</span><span class="o">$</span><span class="n">graficoResumo</span> <span class="o">&lt;-</span> <span class="nf">renderPlot</span><span class="p">({</span>
+    <span class="nf">if</span><span class="p">(</span><span class="nf">is.factor</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">[[</span><span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">]]))</span> <span class="p">{</span>
+      <span class="n">coluna</span> <span class="o">&lt;-</span> <span class="n">BostonHousing</span><span class="p">[[</span><span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">]]</span>
+      <span class="n">data</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
+        <span class="n">categoria</span> <span class="o">=</span> <span class="nf">levels</span><span class="p">(</span><span class="n">coluna</span><span class="p">),</span>
+        <span class="n">freq</span> <span class="o">=</span> <span class="nf">count</span><span class="p">(</span><span class="n">coluna</span><span class="p">)[</span><span class="m">2</span><span class="p">]</span>
+      <span class="p">)</span>
+      <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">freq</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">categoria</span><span class="p">))</span> <span class="o">+</span>
+      <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
+      <span class="nf">coord_polar</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="m">0</span><span class="p">)</span> <span class="o">+</span>
+      <span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Contagem de &quot;</span><span class="p">,</span> <span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">))</span> <span class="o">+</span>
+      <span class="nf">theme_void</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="n">else</span> <span class="p">{</span>
+      <span class="nf">ggplot</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">,</span> <span class="nf">aes_string</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">))</span> <span class="o">+</span>
+      <span class="nf">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
+      <span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Boxplot de &quot;</span><span class="p">,</span> <span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">))</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+  
+  <span class="n">output</span><span class="o">$</span><span class="n">estrutura</span> <span class="o">&lt;-</span> <span class="nf">renderPrint</span><span class="p">({</span>
+    <span class="nf">str</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">[[</span><span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">]])</span>
+  <span class="p">})</span>
+  
+  <span class="n">output</span><span class="o">$</span><span class="n">sobre</span> <span class="o">&lt;-</span> <span class="nf">renderPrint</span><span class="p">({</span>
+    <span class="n">bostonHousingMetaData</span><span class="p">[[</span><span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">]]</span>
+  <span class="p">})</span>
+  
+  <span class="n">output</span><span class="o">$</span><span class="n">graficoRegressao</span> <span class="o">&lt;-</span> <span class="nf">renderPlot</span><span class="p">({</span>
+    <span class="nf">ggplot</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">,</span> <span class="nf">aes_string</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s">&quot;medv&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="nf">geom_smooth</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">lm</span><span class="p">)</span>
+  <span class="p">})</span>
+  
+  <span class="n">output</span><span class="o">$</span><span class="n">mapaDensidade</span> <span class="o">&lt;-</span> <span class="nf">renderPlot</span><span class="p">({</span>
+    <span class="nf">ggplot</span><span class="p">(</span><span class="n">BostonHousing</span><span class="p">,</span> <span class="nf">aes_string</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">input</span><span class="o">$</span><span class="n">variavelMapa</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">input</span><span class="o">$</span><span class="n">variavel</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">stat_density2d</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">fill</span> <span class="o">=</span> <span class="n">..density..</span><span class="p">),</span> <span class="n">geom</span> <span class="o">=</span> <span class="s">&#39;tile&#39;</span><span class="p">,</span> <span class="n">contour</span> <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+  <span class="p">})</span>
+  
+<span class="p">}</span>
+
+<span class="nf">shinyApp</span><span class="p">(</span><span class="n">ui</span> <span class="o">=</span> <span class="n">ui</span><span class="p">,</span> <span class="n">server</span> <span class="o">=</span> <span class="n">server</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="construa-um-dashboard-semelhante-ao-do-item-a-utilizando-outra-ferramenta-de-sua-preferencia-powerbi-kibana-google-data-studio-tableau-etc">
+<h2>Construa um dashboard semelhante ao do item a. utilizando outra ferramenta de sua preferência (PowerBI, Kibana, Google Data Studio, Tableau etc.)<a class="headerlink" href="#construa-um-dashboard-semelhante-ao-do-item-a-utilizando-outra-ferramenta-de-sua-preferencia-powerbi-kibana-google-data-studio-tableau-etc" title="Link permanente para este título">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="../_images/exame-dash.PNG" src="../_images/exame-dash.PNG" />
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Dashboard usando Dash</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">html</span>
+<span class="kn">from</span> <span class="nn">dash.dependencies</span> <span class="kn">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+<span class="kn">from</span> <span class="nn">dash.exceptions</span> <span class="kn">import</span> <span class="n">PreventUpdate</span>
+<span class="kn">import</span> <span class="nn">dash_bootstrap_components</span> <span class="k">as</span> <span class="nn">dbc</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">BARRA_LATERAL_SHINY</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;min-height&quot;</span><span class="p">:</span> <span class="s2">&quot;20px&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;padding&quot;</span><span class="p">:</span> <span class="s2">&quot;19px&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;margin-bottom&quot;</span><span class="p">:</span> <span class="s2">&quot;20px&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;background-color&quot;</span><span class="p">:</span> <span class="s2">&quot;#f5f5f5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;border&quot;</span><span class="p">:</span> <span class="s2">&quot;1px solid #e3e3e3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;border-radius&quot;</span><span class="p">:</span> <span class="s2">&quot;4px&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-webkit-box-shadow&quot;</span><span class="p">:</span> <span class="s2">&quot;inset 0 1px 1px rgb(0 0 0 / 5%)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;box-shadow&quot;</span><span class="p">:</span> <span class="s2">&quot;inset 0 1px 1px rgb(0 0 0 / 5%)&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./boston-housing-meta.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+    <span class="n">boston_housing_metadata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
+
+<span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/scikit-learn/scikit-learn/0d378913be6d7e485b792ea36e9268be31ed52d0/sklearn/datasets/data/boston_house_prices.csv&quot;</span>
+<span class="n">boston_housing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">boston_housing</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">boston_housing_metadata</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Dash</span><span class="p">(</span><span class="n">external_stylesheets</span><span class="o">=</span><span class="p">[</span><span class="n">dbc</span><span class="o">.</span><span class="n">themes</span><span class="o">.</span><span class="n">BOOTSTRAP</span><span class="p">])</span>
+
+<span class="n">barra_lateral</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">H3</span><span class="p">(</span><span class="s2">&quot;Variáveis&quot;</span><span class="p">),</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;variavel&quot;</span><span class="p">,</span>
+            <span class="n">options</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">column</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">column</span><span class="p">}</span> <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">boston_housing</span><span class="o">.</span><span class="n">columns</span>
+            <span class="p">],</span>
+        <span class="p">),</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;graficoResumo&quot;</span><span class="p">),</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">H4</span><span class="p">(</span><span class="s2">&quot;Estrutura&quot;</span><span class="p">),</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;estrutura&quot;</span><span class="p">),</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">H4</span><span class="p">(</span><span class="s2">&quot;Sobre&quot;</span><span class="p">),</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">P</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;sobre&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+    <span class="n">className</span><span class="o">=</span><span class="s2">&quot;col-sm-3&quot;</span><span class="p">,</span>
+    <span class="n">style</span><span class="o">=</span><span class="n">BARRA_LATERAL_SHINY</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">principal</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">H3</span><span class="p">(</span><span class="s2">&quot;Relação com MEDV&quot;</span><span class="p">),</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;graficoRegressao&quot;</span><span class="p">),</span>
+        <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="n">html</span><span class="o">.</span><span class="n">H3</span><span class="p">(</span><span class="s2">&quot;Mapa de Densidade&quot;</span><span class="p">),</span>
+                <span class="n">dcc</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;variavelMapa&quot;</span><span class="p">,</span>
+                    <span class="n">options</span><span class="o">=</span><span class="p">[</span>
+                        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">column</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">column</span><span class="p">}</span>
+                        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">boston_housing</span><span class="o">.</span><span class="n">columns</span>
+                    <span class="p">],</span>
+                <span class="p">),</span>
+            <span class="p">],</span>
+            <span class="n">className</span><span class="o">=</span><span class="s2">&quot;row&quot;</span>
+        <span class="p">),</span>
+        <span class="n">dcc</span><span class="o">.</span><span class="n">Graph</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;mapaDensidade&quot;</span><span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">className</span><span class="o">=</span><span class="s2">&quot;col-sm-8&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">titulo</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">H1</span><span class="p">(</span><span class="s2">&quot;Boston Housing - Painel criado com Dash&quot;</span><span class="p">,</span> <span class="n">className</span><span class="o">=</span><span class="s2">&quot;row&quot;</span><span class="p">)</span>
+<span class="n">painel</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span><span class="n">barra_lateral</span><span class="p">,</span> <span class="n">principal</span><span class="p">],</span> <span class="n">className</span><span class="o">=</span><span class="s2">&quot;row&quot;</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">Div</span><span class="p">([</span><span class="n">titulo</span><span class="p">,</span> <span class="n">painel</span><span class="p">],</span> <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;padding-left&quot;</span><span class="p">:</span> <span class="s2">&quot;10px&quot;</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="s2">&quot;100vh&quot;</span><span class="p">})</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">server</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;graficoResumo&quot;</span><span class="p">,</span> <span class="s2">&quot;figure&quot;</span><span class="p">),</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;estrutura&quot;</span><span class="p">,</span> <span class="s2">&quot;children&quot;</span><span class="p">),</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;sobre&quot;</span><span class="p">,</span> <span class="s2">&quot;children&quot;</span><span class="p">),</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;graficoRegressao&quot;</span><span class="p">,</span> <span class="s2">&quot;figure&quot;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s2">&quot;variavel&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">atualizar</span><span class="p">(</span><span class="n">variavel</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">variavel</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">PreventUpdate</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">variavel</span> <span class="o">==</span> <span class="s2">&quot;chas&quot;</span><span class="p">):</span>
+        <span class="n">contagem</span> <span class="o">=</span> <span class="n">boston_housing</span><span class="p">[</span><span class="n">variavel</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+        <span class="n">graficoResumo</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">names</span><span class="o">=</span><span class="n">contagem</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">contagem</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">graficoResumo</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">boston_housing</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">variavel</span><span class="p">)</span>
+    <span class="n">estrutura</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">boston_housing</span><span class="p">[</span><span class="n">variavel</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">sobre</span> <span class="o">=</span> <span class="n">boston_housing_metadata</span><span class="p">[</span><span class="n">variavel</span><span class="p">]</span>
+    <span class="n">graficoRegressao</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">boston_housing</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">variavel</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;medv&quot;</span><span class="p">,</span> <span class="n">trendline</span><span class="o">=</span><span class="s2">&quot;ols&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">graficoResumo</span><span class="p">,</span> <span class="n">estrutura</span><span class="p">,</span> <span class="n">sobre</span><span class="p">,</span> <span class="n">graficoRegressao</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span>
+    <span class="n">Output</span><span class="p">(</span><span class="s2">&quot;mapaDensidade&quot;</span><span class="p">,</span> <span class="s2">&quot;figure&quot;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s2">&quot;variavelMapa&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span>
+    <span class="n">Input</span><span class="p">(</span><span class="s2">&quot;variavel&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">atualizar</span><span class="p">(</span><span class="n">variavelMapa</span><span class="p">,</span> <span class="n">variavel</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">variavel</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">variavelMapa</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">PreventUpdate</span>
+    <span class="n">mapaDensidade</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">density_heatmap</span><span class="p">(</span><span class="n">boston_housing</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">variavel</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">variavelMapa</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mapaDensidade</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run_server</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="compare-os-dois-e-interprete-os">
+<h2>Compare os dois e interprete-os<a class="headerlink" href="#compare-os-dois-e-interprete-os" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="comparacao">
+<h3>Comparação<a class="headerlink" href="#comparacao" title="Link permanente para este título">¶</a></h3>
+<p>A barra lateral com a caixa para seleção da variável ficou muito semelhante entre as duas bibliotecas. Foi tomado como referência o padrão do Shiny, por isso foi necessário adicionar um CSS a fim de espelhar o estilo. A disposição dos elementos na DOM é mais direta usando componentes do Shiny, para replicar a aparência com Dash é preciso ter uma base melhor de CSS ou utilizar bibliotecas de componentes (como Dash Bootrap Components usado no exemplo). Caso o desenvolvedor opte por não seguir o padrão do Shiny, me pareceu mais trabalhoso adicionar customizações.</p>
+<p>Já a criação dos gráficos principais, o Shiny baseado em R e na biblioteca ggplot2 foi mais eficiente para criar a reta do modelo de regressão linear entre a variável escolhida e MEDV, uma vez que é muito simples adicionar o intervalo da reta. Entretanto o mapa de calor foi muito mais direto com o Dash, o algoritmo que divide as regiões é menos granular que o padrão do stat_density2d do ggplot, mas o efeito pareceu mais agradável para os valores do Boston Housing.</p>
+<p>A interatividade é mais direta e escalável no Dash. Poder decorar funções com Outputs e Inputs é mais interessante caso haja muitos elementos e fique enviável manter todo código em um único arquivo.</p>
+</div>
+<div class="section" id="interpretacao">
+<h3>Interpretação<a class="headerlink" href="#interpretacao" title="Link permanente para este título">¶</a></h3>
+<p>Dois principais fatores parecem influênciar o preço dos imóveis (MEDV). De forma positiva, a quantidade de quartos (RM).</p>
+<div class="figure align-center" id="id3">
+<img alt="../_images/exame-dash-rm-vs-medv.PNG" src="../_images/exame-dash-rm-vs-medv.PNG" />
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Relação entre RM e MEDV</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Já a poluição (NOX) exerce uma pressão negativa no preço dos imóveis.</p>
+<div class="figure align-center" id="id4">
+<img alt="../_images/exame-dash-nox-vs-medv.PNG" src="../_images/exame-dash-nox-vs-medv.PNG" />
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Relação entre NOX e MEDV</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Também é possível notar que os imóveis mais antigos estão expostos a mais poluição.</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/exame-dash-nox-age.PNG" src="../_images/exame-dash-nox-age.PNG" />
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Relação entre RM e MEDV</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./visualizacao_de_dados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="avaliacao2.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Avaliação 2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../processos_estocasticos/intro.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Sobre</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

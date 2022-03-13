@@ -37,21 +37,24 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Sobre" href="../visualizacao_de_dados/intro.html" />
@@ -160,6 +163,11 @@
    Atividade 4
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -226,6 +234,16 @@
    Desafio 2
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -241,6 +259,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../processos_estocasticos/trabalho.html">
    Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
   </a>
  </li>
 </ul>
@@ -289,7 +319,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -307,7 +337,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Conteúdo
@@ -436,7 +466,139 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Atividade 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#i-considere-que-se-deseja-estabelecer-a-tarifa-de-um-plano-de-seguros-que-cobre-consultas-medicas-o-numero-de-consultas-medicas-de-cada-segurado-por-ano-segue-uma-distribuicao-de-poisson-com-parametro-3-e-o-custo-de-cada-consulta-e-igual-a-r-100-00-o-plano-de-seguro-esta-sendo-prospectado-para-uma-carteira-com-10-000-segurados-no-estabelecimento-do-premio-tem-se-como-condicao-uma-probabilidade-de-ruina-igual-a-0-025-e-os-carregamentos-comerciais-dados-por">
+   <strong>
+    I-
+   </strong>
+   Considere que se deseja estabelecer a tarifa de um plano de seguros que cobre consultas médicas. O número de consultas médicas de cada segurado por ano segue uma distribuição de Poisson com parâmetro 3 e o custo de cada consulta é igual a R$ 100,00. O plano de seguro está sendo prospectado para uma carteira com 10.000 segurados. No estabelecimento do prêmio tem-se como condição uma probabilidade de ruína igual a 0,025 e os carregamentos comerciais dados por:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determine-o-numero-esperado-de-consultas-por-ano-na-carteira">
+     1. Determine o número esperado de consultas por ano na carteira
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qual-a-probabilidade-de-um-segurado-ter-nenhuma-consulta-no-periodo-de-1-ano">
+     2. Qual a probabilidade de um segurado ter nenhuma consulta no período de 1 ano
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qual-o-numero-esperado-de-segurados-com-nenhuma-consulta-no-periodo-de-1-ano">
+     3. Qual o número esperado de segurados com nenhuma consulta no período de 1 ano
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qual-o-premio-de-risco-da-carteira">
+     4. Qual o prêmio de risco da carteira?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#considerando-a-probabilidade-de-ruina-adotada-qual-o-premio-de-puro-da-carteira-dado-que-nao-se-use-capital-de-garantia">
+     5. Considerando a probabilidade de ruína adotada qual o prêmio de puro da carteira, dado que não se use capital de garantia?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determine-o-premio-comercial-individual-mensal">
+     6. Determine o prêmio comercial individual mensal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mantendo-a-probabilidade-de-ruina-adotada-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-deve-ser-o-capital-de-garantia-a-ser-adotado">
+     7. Mantendo a probabilidade de ruína adotada, se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual deve ser o capital de garantia a ser adotado?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-sera-a-probabilidade-de-ruina-que-a-seguradora-estara-incorrendo">
+     8. Se for adotado um capital de garantia igual a R$ 250.000,00 e se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual será a probabilidade de ruína que a seguradora estará incorrendo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#se-for-adotado-um-capital-de-garantia-igual-a-r-250-000-00-e-se-for-cobrado-um-premio-comercial-individual-mensal-igual-a-r-38-00-qual-devera-ser-a-comissao-de-corretagem-a-ser-adotada-se-for-desejada-a-probabilidade-de-ruina-de-0-025">
+     9. Se for adotado um capital de garantia igual a R$ 250.000,00 e se for cobrado um prêmio comercial individual mensal igual a R$ 38,00 qual deverá ser a comissão de corretagem a ser adotada se for desejada a probabilidade de ruína de 0,025?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ii-considere-uma-carteira-composta-por-4000-segurados-onde-cada-um-tem-um-veiculo-cujo-valor-corresponde-a-r-20-000-00-o-contrato-feito-entre-o-segurado-e-a-seguradora-declara-que-so-e-coberto-o-evento-de-perda-total-sabe-se-que-a-probabilidade-de-um-veiculo-ter-sinistro-de-perda-total-no-periodo-de-um-ano-e-igual-a-0-02-a-seguradora-admite-uma-probabilidade-de-ruina-igual-a-0-05-e-adota-como-carregamento-para-despesas-administrativas-comissao-de-corretagem-e-margem-de-lucro-respectivamente-os-percentuais-de-15-20-e-10-o-periodo-do-contrato-de-seguro-e-de-um-ano-com-base-nestas-informacoes-responda-as-questoes-abaixo">
+   <strong>
+    II-
+   </strong>
+   Considere uma carteira composta por 4000 segurados, onde cada um tem um veículo cujo valor corresponde a R$ 20.000,00. O contrato feito entre o segurado e a seguradora declara que só é coberto o evento de perda total. Sabe-se que a probabilidade de um veículo ter sinistro de perda total no período de um ano é igual a 0,02. A seguradora admite uma probabilidade de ruína igual a 0,05 e adota como carregamento para despesas administrativas, comissão de corretagem e margem de lucro, respectivamente os percentuais de 15%, 20% e 10%. O período do contrato de seguro é de um ano. Com base nestas informações responda as questões abaixo:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-qual-o-premio-de-risco-p-da-carteira-no-periodo-de-um-ano">
+     a. Qual o prêmio de risco (P) da carteira no período de um ano?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-com-a-probabilidade-de-ruina-adotada-qual-o-premio-puro-a-ser-praticado-pp">
+     b. Com a probabilidade de ruína adotada qual o prêmio puro a ser praticado (PP)?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-se-for-adotado-um-carregamento-de-seguranca-igual-a-0-07-7-qual-o-premio-puro-praticado-e-qual-a-probabilidade-de-ruina-associada-a-esta-pratica">
+     c. Se for adotado um carregamento de segurança igual a 0,07 (7%) qual o prêmio puro praticado e qual a probabilidade de ruína associada a esta prática?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-com-a-pratica-do-carregamento-de-seguranca-de-7-qual-devera-ser-o-capital-de-garantia-u-0-a-ser-adotado-de-forma-que-se-mantenha-a-probabilidade-de-ruina-igual-a-0-05">
+     d. Com a prática do carregamento de segurança de 7% qual deverá ser o capital de garantia (
+     <span class="math notranslate nohighlight">
+      \(U_{0}\)
+     </span>
+     ) a ser adotado de forma que se mantenha a probabilidade de ruína igual a 0,05?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-com-as-condicoes-definidas-anteriormente-qual-o-premio-comercial-pc-praticado-na-carteira-como-um-todo">
+     e. Com as condições definidas anteriormente, qual o prêmio comercial (PC) praticado na carteira como um todo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-adotando-se-um-parcelamento-em-12-vezes-sem-juros-qual-sera-o-premio-comercial-individual-por-parcela">
+     f. Adotando-se um parcelamento em 12 vezes sem juros, qual será o prêmio comercial individual por parcela?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#g-se-a-area-comercial-desejar-praticar-um-premio-individual-por-parcela-igual-a-r-60-00-em-vez-de-um-carregamento-de-margem-de-lucro-igual-a-10-qual-devera-ser-o-carregamento-de-margem-de-lucro-a-ser-adotado">
+     g. Se a área comercial desejar praticar um prêmio individual por parcela igual a R$ 60,00, em vez de um carregamento de margem de lucro igual a 10%, qual deverá ser o carregamento de margem de lucro a ser adotado?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#h-para-qual-tamanho-de-carteira-poderiamos-manter-o-premio-comercial-individual-por-parcela-igual-a-r-60-00-adotando-uma-probabilidade-de-ruina-igual-a-0-05-uma-margem-de-lucro-igual-a-10-uma-comissao-de-corretagem-igual-a-20-e-uma-despesa-administrativa-igual-a-15-sem-a-adocao-de-capital-de-garantia">
+     h. Para qual tamanho de carteira poderíamos manter o prêmio comercial individual por parcela igual a R$ 60,00, adotando uma probabilidade de ruína igual a 0,05, uma margem de lucro igual a 10%, uma comissão de corretagem igual a 20% e uma despesa administrativa igual a 15%, sem a adoção de capital de garantia?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#i-com-o-capital-de-garantia-adotado-na-questao-d-qual-sera-a-probabilidade-de-lucro-com-a-subscricao">
+     i. Com o capital de garantia adotado na questão d) qual será a probabilidade de lucro com a subscrição?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="atividade-2">
@@ -1102,8 +1264,8 @@ L = 1 - DA - CC - \frac{PP}{PC} \rightarrow 1 - DA - CC - \frac{PP}{PC} \gt 0
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="atividade1.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
@@ -1120,18 +1282,16 @@ L = 1 - DA - CC - \frac{PP}{PC} \rightarrow 1 - DA - CC - \frac{PP}{PC} \gt 0
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          De Guilherme L Oliveira<br/>
-        
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
 </main>
 
 
