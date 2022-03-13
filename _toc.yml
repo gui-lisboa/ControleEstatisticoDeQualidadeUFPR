@@ -47,3 +47,7 @@ parts:
   chapters:
   - file: processos_estocasticos/intro
   - file: processos_estocasticos/trabalho
+
+- caption: Estatística Não Paramétrica
+  chapters:
+  - file: nao_parametrica/desafio_1
