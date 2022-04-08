@@ -1,0 +1,1881 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1º Lista de Exercícios &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Trabalho No. 2" href="../modelos_lineares_generalizados/lista_2.html" />
+    <link rel="prev" title="Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra" href="../nao_parametrica/desafio_1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analise_de_dados_categoricos/lista_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>1º Lista de Exercícios</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="o-lista-de-exercicios">
+<h1>1º Lista de Exercícios<a class="headerlink" href="#o-lista-de-exercicios" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Disciplina: Análise de Dados Categóricos</p></li>
+<li><p>Professora: Nívea da Silva Matuda Machado</p></li>
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questao-1 admonition">
+<p class="admonition-title">Questão 1</p>
+<p>Defina duas formas distintas de mensurar/observar cada uma das variáveis listadas a seguir; em seguida, da forma mais adequada, classifique as variáveis como dicotômica, politômica (nominal ou ordinal) ou quantitativa (contínua ou discreta):</p>
+<p><strong>a)</strong> Partido político;</p>
+<p><strong>b)</strong> Escolaridade;</p>
+<p><strong>c)</strong> Tempo de sobrevida do paciente;</p>
+<p><strong>d)</strong> Condição clínica do paciente;</p>
+<p><strong>e)</strong> Salário.</p>
+<p>Observação: a distinção não podem ser só pela troca da unidade de medida, por exemplo, de dias para anos; de reais para dólares; etc.</p>
+</div>
+<p>(a) Partido político:</p>
+<ul class="simple">
+<li><p>Ideologia</p>
+<ul>
+<li><p>Possíveis valores: Esquerda, Direita</p></li>
+<li><p>Classificação da variável: Dicotômica</p></li>
+</ul>
+</li>
+<li><p>Presença no congresso</p>
+<ul>
+<li><p>Possíveis valores: inteiros de 0 até o número de vagas para deputados federais</p></li>
+<li><p>Classificação da variável: Quantitativa Discreta</p></li>
+</ul>
+</li>
+</ul>
+<p>(b) Escolaridade:</p>
+<ul class="simple">
+<li><p>Grau de escolaridade</p>
+<ul>
+<li><p>Possíveis valores: Analfabeto, Fundamental Incompleto, Fundamental Completo, Médio Incompleto, Médio Completo, Superior Incompleto, Superior Completo, Mestrado, Doutorado</p></li>
+<li><p>Classificação da variável: Politômica Ordinal</p></li>
+</ul>
+</li>
+<li><p>Tempo matrículado em uma instituição de ensino</p>
+<ul>
+<li><p>Possíveis valores: valores contínuos a partir de 0</p></li>
+<li><p>Classificação da variável: Quantitativa Contínua</p></li>
+</ul>
+</li>
+</ul>
+<p>(c) Tempo de sobrevida do paciente:</p>
+<ul class="simple">
+<li><p>Acima ou abaixo do esperado</p>
+<ul>
+<li><p>Possíveis valores: Acima, Abaixo</p></li>
+<li><p>Classificação da variável: Dicotômica</p></li>
+</ul>
+</li>
+<li><p>Tempo de sobrevida a partir do diagnóstico</p>
+<ul>
+<li><p>Possíveis valores: valores contínuos a partir de 0</p></li>
+<li><p>Classificação da variável: Quantitativa Contínua</p></li>
+</ul>
+</li>
+</ul>
+<p>(d) Condição clínica do paciente:</p>
+<ul class="simple">
+<li><p>Sintomas</p>
+<ul>
+<li><p>Possíveis valores: Apresenta, Não Apresenta</p></li>
+<li><p>Classificação da variável: Dicotômica</p></li>
+</ul>
+</li>
+<li><p>Severidade</p>
+<ul>
+<li><p>Possíveis valores: Baixa, Média, Alta</p></li>
+<li><p>Classificação da variável: Politômica Ordinal</p></li>
+</ul>
+</li>
+</ul>
+<p>(e) Salário:</p>
+<ul class="simple">
+<li><p>Valor</p>
+<ul>
+<li><p>Possíveis valores: valores contínuos a partir de 0</p></li>
+<li><p>Classificação da variável: Quantitativa Contínua</p></li>
+</ul>
+</li>
+<li><p>Em comparação com média nacional</p>
+<ul>
+<li><p>Possíveis valores: Abaixo ou na média, Acima da média</p></li>
+<li><p>Classificação da variável: Dicotômica</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition-questao-2 admonition">
+<p class="admonition-title">Questão 2</p>
+<p>A abordagem adotada para tratar os problemas apresentados nesta disciplina, de forma geral, envolve os seguintes passos:</p>
+<p><strong>a)</strong> Destacar as questões de interesse;</p>
+<p><strong>b)</strong> Identificar o delineamento amostral ou experimental usado para obteção dos dados;</p>
+<p><strong>c)</strong> Escolher o modelo associado aos dados, de acordo com o delineamento especificado em (b);</p>
+<p><strong>d)</strong> Traduzir as questões de interesse em termos dos parâmetros do modelo escolhido;</p>
+<p><strong>e)</strong> Analisar adequadamente os dados;</p>
+<p><strong>f)</strong> Converter as conclusões em termos das questões originais</p>
+<p>Diante da importância do item (b) relate de forma resumida, os delineamentos que foram estudados. Descreva, com suas palavras, as diferenças entre eles, com relação a obtenção dos dados.</p>
+</div>
+<p>Os delineamentos estudados diferem quanto a quais valores marginais são fixados. Em estudos onde as marginais linhas (<span class="math notranslate nohighlight">\(n_{i+}\)</span>) são fixadas, já é conhecida a separação das observações em função da variável explicativa, restando saber qual será a proporção de observações sob as categorias da variável resposta (<span class="math notranslate nohighlight">\(N_{+j}\)</span>) e associar probabilidades para <span class="math notranslate nohighlight">\(N_{ij}\)</span>. Exemplos de estudos que seguem este delineamento são os estudos de coorte e ensaios clínicos aleatorizados.</p>
+<p>De maneira análoga, é possível fixar valores observados em cada categoria da variável resposta (<span class="math notranslate nohighlight">\(n_{+j}\)</span>), buscando assim identificar como a amostra se distribui entre as categorias da variável explicativa sugerida. Este delineamento é seugido por estudos de caso-controle.</p>
+<p>Em estudos transversais, não é possível fixar as marginais linhas ou colunas, apenas o total de observações (<span class="math notranslate nohighlight">\(n\)</span>), assim, mesmo as marginais são tratadas como variáveis aleatórias.</p>
+<p>Ainda existe a possibilidade de o estudo coletar dados em um intervalo de tempo conhecido, mas apenas após a coleta conhecer o total de observações (<span class="math notranslate nohighlight">\(n\)</span>) e como estas se dividem entre linhas e colunas na tabela de contingência.</p>
+<p>Diferenças em relação aos modelos estatísticos:</p>
+<p>Caso as marginais fixadas pelo pesquisador sejam as marginais linha, opta-se pelo modelo produto de binomiais (Y dicotômica) ou produto de multinomiais (Y politômica). Caso o valor fixado seja o total de ensaios, fazendo com que as marginais sejam tratadas também como variáveis aleatórias, faz-se o uso do modelo multinomial. Há ainda a possibilidade de não ter qualquer valor fixado, ficando este sujeito a um intervalo de tempo para captação das observações. Nestes casos, utiliza-se o modelo produto de distribuições de Poisson.</p>
+<div class="admonition-questao-3 admonition">
+<p class="admonition-title">Questão 3</p>
+<p>Selecione 3 dos delineamentos relatados na Questão 2 e apresente o modelo associado a cada dos 3 delineamentos selecionados. Dentre estes 3, escolha um delineamento e formule a hipótese nula, <span class="math notranslate nohighlight">\(H_0\)</span>, de ausência de associação, em termos dos parâmetros do modelo associado.</p>
+</div>
+<ul class="simple">
+<li><p>Delineamento com marginais linhas fixados: modelo produto de binomiais independentes</p></li>
+<li><p>Delineamento com total de observações fixado: modelo multinomial</p></li>
+<li><p>Delineamento com intervalo de tempo para coleta de observações fixado: modelo produto de distribuições Poisson</p></li>
+</ul>
+<p>Modelo escolhido para formulação de <span class="math notranslate nohighlight">\(H_0\)</span>: modelo produto de binomiais independentes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+    H_0: p_{(1)1} = p_{(2)1}    \\
+    H_A: p_{(1)1} \neq p_{(2)1} \\
+\end{cases}
+\end{split}\]</div>
+<div class="admonition-questao-4 admonition">
+<p class="admonition-title">Questão 4</p>
+<p>Completar os Exercícios 2 e 4 do Capítulo 2 (livro texto), resolvidos parcialmente em aula. Ou seja: é solicitado, nos dois exercícios, voltar para os Exercícios 4 a 8 do Capítulo 1; para completar os exercícios, você deve voltar aos Exercícios 6 a 8 do Capítulo 1, da mesma forma como voltamos aos Exercícios 4 e 5 do Capítulo 1 em aula.</p>
+<p><strong>Exercício 2, Capítulo 2</strong>: Faça o mesmo (identificar o modelo probabilístico associado ao estudo) para os estudos dos exercícios 4 a 8 do capítulo 1.</p>
+<p><strong>Exercício 4, Capítulo 2</strong>: Faça o mesmo (representar graficamente os dados do estudo descrito) para os estudos dos exercícios 4 a 8 do capítulo 1.</p>
+</div>
+<p><em><strong>Exercício 4, Capítulo 1</strong></em>: Com o objetivo de investigar a associação entre tabaco e câncer de pulmão, 2000 pessoas (800 fumantes e 1200 não fumantes) foram acompanhadas por 20 anos obtendo-se os dados da Tabela 1.10:</p>
+<p><img alt="Tabela 1.10" src="../_images/tabela_exercicio_4_capitulo_1.PNG" /></p>
+<p>Como o estudo foi planejado de modo que a população alvo foi dividida entre fumantes e não fumantes e amostradas após um longo período, isso caracteriza um estudo de coorte que, como tem marginais linhas fixadas, tem como modelo associado o produto de binomiais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;ggplot&quot;</span><span class="p">)</span>
+
+<span class="n">tabela1_10_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Sim&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="s2">&quot;Não&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">710</span><span class="p">,</span> <span class="mi">1190</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Fumante&quot;</span><span class="p">,</span> <span class="s2">&quot;Não Fumante&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">tabela1_10_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_10_proporcoes</span><span class="p">)</span>
+
+<span class="n">grafico</span> <span class="o">=</span> <span class="n">tabela1_10_proporcoes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grafico</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ocorrência Câncer de Pulmão&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">grafico</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fumante</th>
+      <td>0.112500</td>
+      <td>0.887500</td>
+    </tr>
+    <tr>
+      <th>Não Fumante</th>
+      <td>0.008333</td>
+      <td>0.991667</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/lista_1_9_1.png" src="../_images/lista_1_9_1.png" />
+</div>
+</div>
+<p><em><strong>Exercício 5, Capítulo 1</strong></em>: Com o objetivo de investigar se o histórico familiar é fator de risco para o câncer de mama, dois grupos de mulheres (um com a doença e outro sem) foram comparados. Os dados estão na Tabela 1.11:</p>
+<p><img alt="Tabela 1.11" src="../_images/tabela_exercicio_5_capitulo_1.PNG" /></p>
+<p>Estudo caso-controle com modelo produto de binomiais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_11_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Sim&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="s2">&quot;Não&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">102</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Com Histórico&quot;</span><span class="p">,</span> <span class="s2">&quot;Sem Histórico&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">tabela1_11_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_11_proporcoes</span><span class="p">)</span>
+
+<span class="n">grafico</span> <span class="o">=</span> <span class="n">tabela1_11_proporcoes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grafico</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Ocorrência Câncer de Mama&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">grafico</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Com Histórico</th>
+      <td>0.320755</td>
+      <td>0.679245</td>
+    </tr>
+    <tr>
+      <th>Sem Histórico</th>
+      <td>0.072727</td>
+      <td>0.927273</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/lista_1_11_1.png" src="../_images/lista_1_11_1.png" />
+</div>
+</div>
+<p><em><strong>Exercício 6, Capítulo 1</strong></em>: Um estudo conduzido para investigar o efeito da vitamina C em uma desordem renal genética (denominada nephropathic cystosis) produzziu os dados mostrados na Tabela 1.12:</p>
+<p><img alt="Tabela 1.12" src="../_images/tabela_exercicio_6_capitulo_1.PNG" /></p>
+<p>Ensaio clínico aleatorizado - produto de binomiais</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_12_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Melhora&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span> <span class="s2">&quot;Não Melhora&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Vitamica C&quot;</span><span class="p">,</span> <span class="s2">&quot;Sem Vitamina C&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">tabela1_12_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_12_proporcoes</span><span class="p">)</span>
+
+<span class="n">grafico</span> <span class="o">=</span> <span class="n">tabela1_12_proporcoes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grafico</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Melhora Clínica&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">grafico</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Melhora</th>
+      <th>Não Melhora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Vitamica C</th>
+      <td>0.75000</td>
+      <td>0.25000</td>
+    </tr>
+    <tr>
+      <th>Sem Vitamina C</th>
+      <td>0.90625</td>
+      <td>0.09375</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/lista_1_13_1.png" src="../_images/lista_1_13_1.png" />
+</div>
+</div>
+<p><em><strong>Exercício 7, Capítulo 1</strong></em>: Os dados exibidos na Tabela 1.13 são de um estudo realizado para investigar a associação entre câncer de esôfago e consumo de álcool:</p>
+<p><img alt="Tabela 1.13" src="../_images/tabela_exercicio_7_capitulo_1.PNG" /></p>
+<p>Caso-controle - produto de binomiais</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_13_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Sim&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">96</span><span class="p">,</span> <span class="mi">104</span><span class="p">],</span> <span class="s2">&quot;Não&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">109</span><span class="p">,</span> <span class="mi">666</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Consome Álcool&quot;</span><span class="p">,</span> <span class="s2">&quot;Não Consome Álcool&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">tabela1_13_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_13_proporcoes</span><span class="p">)</span>
+
+<span class="n">grafico</span> <span class="o">=</span> <span class="n">tabela1_13_proporcoes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grafico</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Câncer de Esôfago&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">grafico</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consome Álcool</th>
+      <td>0.468293</td>
+      <td>0.531707</td>
+    </tr>
+    <tr>
+      <th>Não Consome Álcool</th>
+      <td>0.135065</td>
+      <td>0.864935</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/lista_1_15_1.png" src="../_images/lista_1_15_1.png" />
+</div>
+</div>
+<p><em><strong>Exercício 8, Capítulo 1</strong></em>: Uma pesquisa foi conduzida para avaliar a opinião de homens e mulheres a respeito da legalização do aborto. Os dados dos 1.100 entrevistados estão na Tabela 1.14:</p>
+<p><img alt="Tabela 1.14" src="../_images/tabela_exercicio_8_capitulo_1.PNG" /></p>
+<p>Estudo aleatorizado - multinomial</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_14_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Sim&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">309</span><span class="p">,</span> <span class="mi">319</span><span class="p">],</span> <span class="s2">&quot;Não&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">191</span><span class="p">,</span> <span class="mi">281</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Mulheres&quot;</span><span class="p">,</span> <span class="s2">&quot;Homens&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">tabela1_14_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_14_proporcoes</span><span class="p">)</span>
+
+<span class="n">grafico</span> <span class="o">=</span> <span class="n">tabela1_14_proporcoes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">grafico</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Favorável à Legalização&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">grafico</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Mulheres</th>
+      <td>0.618000</td>
+      <td>0.382000</td>
+    </tr>
+    <tr>
+      <th>Homens</th>
+      <td>0.531667</td>
+      <td>0.468333</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/lista_1_17_1.png" src="../_images/lista_1_17_1.png" />
+</div>
+</div>
+<div class="admonition-questao-5 admonition">
+<p class="admonition-title">Questão 5</p>
+<p>Ao trocar de posição as linhas de uma tabela de contingência com duas variáveis nominais, o que acontece com o valor de <span class="math notranslate nohighlight">\(Q_p\)</span> , a estatística qui-quadrado de Pearson: muda com certeza, possivelmente muda ou permanece igual? Por que?</p>
+</div>
+<p>Permanece igual, porque as esperanças <span class="math notranslate nohighlight">\(E(N_{ij})\)</span> são obtidas de forma idêntica à dos estudos com totais marginais-linha fixos. (ver p44 [59]).</p>
+<div class="admonition-questao-6 admonition">
+<p class="admonition-title">Questão 6</p>
+<p>Os dados da Tabela 1, são de um estudo caso-controle sobre associação entre o consumo de pimenta e desenvolvimento de câncer gástrico, realizado no México.</p>
+<p><strong>a)</strong> Podemos usar a medida Risco Relativo neste estudo? Justifique sua resposta.</p>
+<p><strong>b)</strong> Calcule a odds ratio a favor de casos entre pessoas que consomem pimenta e a favor de casos entre pessoas que não consomem pimenta.</p>
+<p><strong>c)</strong> Qual possui interpretação mais conveniente, a do item (a) ou do item (b)?</p>
+<p><strong>d)</strong> Discuta os resultados sobre possível associação entre as variáveis, com base na conclusão do teste e da interpretação do intervalo de confiança da medida mais adequada.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Consumo de pimenta</p></th>
+<th class="text-align:center head"><p>Casos</p></th>
+<th class="text-align:center head"><p>Controle</p></th>
+<th class="text-align:center head"><p>Totais</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Sim</p></td>
+<td class="text-align:center"><p>211</p></td>
+<td class="text-align:center"><p>607</p></td>
+<td class="text-align:center"><p>818</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Não</p></td>
+<td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>145</p></td>
+<td class="text-align:center"><p>154</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Totais</p></td>
+<td class="text-align:center"><p>220</p></td>
+<td class="text-align:center"><p>752</p></td>
+<td class="text-align:center"><p>972</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>a)</strong> Sim, pois há sentido em buscar saber qual o risco de desenvolver câncer gástrico dado o consumo ou não de pimenta.</p>
+<p>Abaixo, seguem funções para calcular o risco relativo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+
+
+<span class="k">def</span> <span class="nf">estimador_p_i_j</span><span class="p">(</span><span class="n">N_i_j</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">soma_linha_i</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">N_i_j</span> <span class="o">/</span> <span class="n">soma_linha_i</span>
+
+
+<span class="k">def</span> <span class="nf">estimador_risco_relativo</span><span class="p">(</span>
+    <span class="n">estimador_p_i_j</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">estimador_p_i2_j</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">estimador_p_i_j</span> <span class="o">/</span> <span class="n">estimador_p_i2_j</span>
+
+
+<span class="k">def</span> <span class="nf">f_risco_relativo</span><span class="p">(</span><span class="n">estimador_risco_relativo</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">estimador_risco_relativo</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">variancia_f_risco_relativo</span><span class="p">(</span>
+    <span class="n">estimador_p_i_j</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">soma_linha_i</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">estimador_p_i2_j</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">soma_linha_i2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="n">termo_p_i_j</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">estimador_p_i_j</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">soma_linha_i</span> <span class="o">*</span> <span class="n">estimador_p_i_j</span><span class="p">)</span>
+    <span class="n">termo_p_i2_j</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">estimador_p_i2_j</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">soma_linha_i2</span> <span class="o">*</span> <span class="n">estimador_p_i2_j</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">termo_p_i_j</span> <span class="o">+</span> <span class="n">termo_p_i2_j</span>
+
+
+<span class="k">def</span> <span class="nf">intervalo_confianca_risco_relativo</span><span class="p">(</span>
+    <span class="n">f_risco_relativo</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">variancia_f_risco_relativo</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">]:</span>
+    <span class="n">z_score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">limite_inferior</span> <span class="o">=</span> <span class="n">f_risco_relativo</span> <span class="o">-</span> <span class="n">z_score</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variancia_f_risco_relativo</span><span class="p">)</span>
+    <span class="n">limite_superior</span> <span class="o">=</span> <span class="n">f_risco_relativo</span> <span class="o">+</span> <span class="n">z_score</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variancia_f_risco_relativo</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">([</span><span class="n">limite_inferior</span><span class="p">,</span> <span class="n">limite_superior</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aplicando os dados, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Latex</span>
+
+<span class="n">q6_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Casos&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">211</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="s2">&quot;Controle&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">607</span><span class="p">,</span> <span class="mi">145</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Sim&quot;</span><span class="p">,</span> <span class="s2">&quot;Nao&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">soma_consumo_sim</span> <span class="o">=</span> <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sim&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">soma_consumo_nao</span> <span class="o">=</span> <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Nao&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">casos_consumo_sim</span> <span class="o">=</span> <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sim&quot;</span><span class="p">][</span><span class="s2">&quot;Casos&quot;</span><span class="p">]</span>
+<span class="n">casos_consumo_nao</span> <span class="o">=</span> <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Nao&quot;</span><span class="p">][</span><span class="s2">&quot;Casos&quot;</span><span class="p">]</span>
+<span class="n">p_estimado_caso_consumo_sim</span> <span class="o">=</span> <span class="n">estimador_p_i_j</span><span class="p">(</span><span class="n">casos_consumo_sim</span><span class="p">,</span> <span class="n">soma_consumo_sim</span><span class="p">)</span>
+<span class="n">p_estimado_caso_consumo_nao</span> <span class="o">=</span> <span class="n">estimador_p_i_j</span><span class="p">(</span><span class="n">casos_consumo_nao</span><span class="p">,</span> <span class="n">soma_consumo_nao</span><span class="p">)</span>
+
+<span class="n">risco_relativo_estimado</span> <span class="o">=</span> <span class="n">estimador_risco_relativo</span><span class="p">(</span>
+    <span class="n">p_estimado_caso_consumo_sim</span><span class="p">,</span> <span class="n">p_estimado_caso_consumo_nao</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{RR}</span><span class="s2">_{Consome | Não Consome} = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">risco_relativo_estimado</span><span class="p">)))</span>
+
+<span class="n">risco_relativo_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_risco_relativo</span><span class="p">(</span>
+    <span class="n">f_risco_relativo</span><span class="p">(</span><span class="n">risco_relativo_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_risco_relativo</span><span class="p">(</span>
+        <span class="n">p_estimado_caso_consumo_sim</span><span class="p">,</span>
+        <span class="n">soma_consumo_sim</span><span class="p">,</span>
+        <span class="n">p_estimado_caso_consumo_nao</span><span class="p">,</span>
+        <span class="n">soma_consumo_nao</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(RR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">risco_relativo_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">risco_relativo_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{RR}_{Consome | Não Consome} = 4.41374626460201\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(RR)_{95\%} = (2.3168607273527075; 8.408427773967997)\]</div>
+</div>
+</div>
+<p><strong>b)</strong> Abaixo, seguem as funções para calcular o <em><strong>odds ratio</strong></em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">odds_ratio</span><span class="p">(</span>
+    <span class="n">N_i1_j1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">N_i1_j2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">N_i2_j1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">N_i2_j2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">N_i1_j1</span> <span class="o">*</span> <span class="n">N_i2_j2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">N_i2_j1</span> <span class="o">*</span> <span class="n">N_i1_j2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">f_odds_ratio</span><span class="p">(</span><span class="n">odds_ratio_estimado</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">odds_ratio_estimado</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">variancia_f_odds_ratio</span><span class="p">(</span>
+    <span class="n">n_i1_j1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">n_i1_j2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">n_i2_j1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">n_i2_j2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">n_i1_j1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">n_i1_j2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">n_i2_j1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">n_i2_j2</span>
+
+
+<span class="k">def</span> <span class="nf">intervalo_confianca_odds_ratio</span><span class="p">(</span>
+    <span class="n">f_odds_ratio</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">variancia_f_odds_ratio</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">]:</span>
+    <span class="n">z_score</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">limite_inferior</span> <span class="o">=</span> <span class="n">f_odds_ratio</span> <span class="o">-</span> <span class="n">z_score</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variancia_f_odds_ratio</span><span class="p">)</span>
+    <span class="n">limite_superior</span> <span class="o">=</span> <span class="n">f_odds_ratio</span> <span class="o">+</span> <span class="n">z_score</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variancia_f_odds_ratio</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">([</span><span class="n">limite_inferior</span><span class="p">,</span> <span class="n">limite_superior</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aplicando os dados, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odds_ratio_estimado</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">(</span>
+    <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sim&quot;</span><span class="p">][</span><span class="s2">&quot;Casos&quot;</span><span class="p">],</span>
+    <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sim&quot;</span><span class="p">][</span><span class="s2">&quot;Controle&quot;</span><span class="p">],</span>
+    <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Nao&quot;</span><span class="p">][</span><span class="s2">&quot;Casos&quot;</span><span class="p">],</span>
+    <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Nao&quot;</span><span class="p">][</span><span class="s2">&quot;Controle&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{OR}</span><span class="s2"> = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">odds_ratio_estimado</span><span class="p">)))</span>
+
+<span class="n">odds_ratio_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_odds_ratio</span><span class="p">(</span>
+    <span class="n">f_odds_ratio</span><span class="p">(</span><span class="n">odds_ratio_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_odds_ratio</span><span class="p">(</span>
+        <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sim&quot;</span><span class="p">][</span><span class="s2">&quot;Casos&quot;</span><span class="p">],</span>
+        <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sim&quot;</span><span class="p">][</span><span class="s2">&quot;Controle&quot;</span><span class="p">],</span>
+        <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Nao&quot;</span><span class="p">][</span><span class="s2">&quot;Casos&quot;</span><span class="p">],</span>
+        <span class="n">q6_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Nao&quot;</span><span class="p">][</span><span class="s2">&quot;Controle&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(OR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">odds_ratio_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">odds_ratio_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{OR} = 5.600402709134175\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(OR)_{95\%} = (2.805458862354059; 11.179814797982623)\]</div>
+</div>
+</div>
+<p><strong>c)</strong> A que possuí interpetração mais conveniente é a odds ratio, pois faz mas sentido buscar entender a razão entre as proporções de expostos e desenvolver ou não a doença, uma vez que o desenvolvimento da doença as as ocorrências de exposição já aconteceram no passado.</p>
+<p><strong>d)</strong> Como <span class="math notranslate nohighlight">\(\hat{OR} \gt 1\)</span> e 1 não pertencer ao <span class="math notranslate nohighlight">\(IC(OR)_{95\%}\)</span>, podemos afirmar que o estudo indica que o consumo de pimenta é um fator de risco para o desenvolvimento de câncer gástrico.</p>
+<div class="admonition-questao-7 admonition">
+<p class="admonition-title">Questão 7</p>
+<p>Em um estudo, 104 crianças assistiram a dois tipos de comerciais de TV sobre cereais para café da manhã. Após a exposição à propaganda, foi solicitado que cada criança indicasse qual comercial ela gostou mais. O que se deseja saber é se a escolha do comercial está relacionado ao sexo biológico da criança, pois suspeita-se de que o fato de ser menino ou menina pode estar influenciando na escolha do comercial preferido. Os dados do estudo são apresentados na Tabela 2. Realize um teste apropriado para verificar essa suspeita.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Sexo biológico</p></th>
+<th class="text-align:center head"><p>Comercial A</p></th>
+<th class="text-align:center head"><p>Comercial B</p></th>
+<th class="text-align:center head"><p>Totais</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Masculino</p></td>
+<td class="text-align:center"><p>30</p></td>
+<td class="text-align:center"><p>29</p></td>
+<td class="text-align:center"><p>59</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Feminino</p></td>
+<td class="text-align:center"><p>12</p></td>
+<td class="text-align:center"><p>33</p></td>
+<td class="text-align:center"><p>45</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Totais</p></td>
+<td class="text-align:center"><p>42</p></td>
+<td class="text-align:center"><p>62</p></td>
+<td class="text-align:center"><p>104</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>a)</strong> Defina primeiramente, com suas palavras e depois em função de parâmetros, qual é a hipótese a ser testada.</p>
+<p><strong>b)</strong> Calcule as estatísticas de teste; baseado no p-valor discorra sobre suas conclusões.</p>
+<p><strong>c)</strong> Relacione as restrições quanto ao uso das estatísticas de teste. Qual a alternativa, caso estas não sejam satisfeitas?</p>
+</div>
+<p><strong>a)</strong> A hipótese a ser testada é se a escolha do comercial independe do sexo biológico da criança, ou seja, a probabilidade de um menino escolher o comercial A é igual a probabilidade de uma menina escolher A. Escrevendo em função do parâmetros, temos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+    H_0: p_{(1)1} = p_{(2)1}   \\
+    H_A: p_{(1)1} \neq p_{(2)1} \\
+\end{cases}
+\end{split}\]</div>
+<p><strong>b)</strong> Para calcular as estatísticas de teste, usamos as seguintes funções:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">esperanca_ij</span><span class="p">(</span>
+    <span class="n">soma_linha_i</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">soma_coluna_j</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">n_total</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">soma_linha_i</span> <span class="o">*</span> <span class="n">soma_coluna_j</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_total</span>
+
+
+<span class="k">def</span> <span class="nf">estatistica_Qp</span><span class="p">(</span><span class="n">matriz_tabela_contingencia</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="n">n_total</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">soma_Qp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">n_ij</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndenumerate</span><span class="p">(</span><span class="n">matriz_tabela_contingencia</span><span class="p">):</span>
+        <span class="n">soma_linha_i</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">soma_coluna_j</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">e_ij</span> <span class="o">=</span> <span class="n">esperanca_ij</span><span class="p">(</span><span class="n">soma_linha_i</span><span class="p">,</span> <span class="n">soma_coluna_j</span><span class="p">,</span> <span class="n">n_total</span><span class="p">)</span>
+        <span class="n">soma_Qp</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">n_ij</span> <span class="o">-</span> <span class="n">e_ij</span><span class="p">)</span> <span class="o">/</span> <span class="n">e_ij</span>
+    <span class="k">return</span> <span class="n">soma_Qp</span>
+
+
+<span class="k">def</span> <span class="nf">estatistica_Ql</span><span class="p">(</span><span class="n">matriz_tabela_contingencia</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="n">n_total</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">soma_Ql</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">n_ij</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndenumerate</span><span class="p">(</span><span class="n">matriz_tabela_contingencia</span><span class="p">):</span>
+        <span class="n">soma_linha_i</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">soma_coluna_j</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">e_ij</span> <span class="o">=</span> <span class="n">esperanca_ij</span><span class="p">(</span><span class="n">soma_linha_i</span><span class="p">,</span> <span class="n">soma_coluna_j</span><span class="p">,</span> <span class="n">n_total</span><span class="p">)</span>
+        <span class="n">soma_Ql</span> <span class="o">+=</span> <span class="n">n_ij</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n_ij</span> <span class="o">/</span> <span class="n">e_ij</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">soma_Ql</span>
+
+
+<span class="k">def</span> <span class="nf">estatistica_Qn</span><span class="p">(</span><span class="n">matriz_tabela_contingencia</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="n">n_total</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">soma_Qn</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">n_ij</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndenumerate</span><span class="p">(</span><span class="n">matriz_tabela_contingencia</span><span class="p">):</span>
+        <span class="n">soma_linha_i</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">soma_coluna_j</span> <span class="o">=</span> <span class="n">matriz_tabela_contingencia</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">e_ij</span> <span class="o">=</span> <span class="n">esperanca_ij</span><span class="p">(</span><span class="n">soma_linha_i</span><span class="p">,</span> <span class="n">soma_coluna_j</span><span class="p">,</span> <span class="n">n_total</span><span class="p">)</span>
+        <span class="n">soma_Qn</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">n_ij</span> <span class="o">-</span> <span class="n">e_ij</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_ij</span>
+    <span class="k">return</span> <span class="n">soma_Qn</span>
+
+
+<span class="k">def</span> <span class="nf">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">estatistica</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span> <span class="n">graus_liberdade</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">st</span><span class="o">.</span><span class="n">chi2</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">estatistica</span><span class="p">,</span> <span class="n">graus_liberdade</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aplicando os dados, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q7_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="s2">&quot;Nao&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Masculino&quot;</span><span class="p">,</span> <span class="s2">&quot;Feminino&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">q7_matriz_tabela_contingencia</span> <span class="o">=</span> <span class="n">q7_dados</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+<span class="n">Qp</span> <span class="o">=</span> <span class="n">estatistica_Qp</span><span class="p">(</span><span class="n">q7_matriz_tabela_contingencia</span><span class="p">)</span>
+<span class="n">p_valor_Qp</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_P = </span><span class="si">{</span><span class="n">Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">p_valor_Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+<span class="n">Ql</span> <span class="o">=</span> <span class="n">estatistica_Ql</span><span class="p">(</span><span class="n">q7_matriz_tabela_contingencia</span><span class="p">)</span>
+<span class="n">p_valor_Ql</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Ql</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_L = </span><span class="si">{</span><span class="n">Ql</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">p_valor_Ql</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+
+<span class="n">Qn</span> <span class="o">=</span> <span class="n">estatistica_Qn</span><span class="p">(</span><span class="n">q7_matriz_tabela_contingencia</span><span class="p">)</span>
+<span class="n">p_valor_Qn</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qn</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_N = </span><span class="si">{</span><span class="n">Qn</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">p_valor_Qn</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Q_P = 6.2001 \rightarrow pvalor = 0.0128\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Q_L = 6.3376 \rightarrow pvalor = 0.0118\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[Q_N = 6.9146 \rightarrow pvalor = 0.0085\]</div>
+</div>
+</div>
+<p>Portanto, dado o baixo pvalor em todos os testes, devemos rejeitar a hipóstese nula de que a escolha entre os comerciais A e B é independente do sexo biológico da criança.</p>
+<p><strong>c)</strong> Os testes apresentados tem como limitações a necessidade de amostras maiores, além de não fornecer a força da associação entre variável resposta e explicativa. Para resolver o problema de amostras pequenas, pode ser utlizado o teste exato de Fisher, já para obter um teste que indique a força de associação entre as variáveis, deve-se utilizar medidas de associação.</p>
+<div class="admonition-questao-8 admonition">
+<p class="admonition-title">Questão 8</p>
+<p>Para uma comunidade rural nordestina, em um determinado ano, a população suscetível ao sarampo pertencente ao grupo etário recomendável para a vacinação anti-sarampo era de 2.000 crianças. No início daquele mesmo ano, foi instituída uma campanha geral de vacinação contra essa doença que resultou em 1.500 crianças vacinadas na comunidade. Durante o ano constataram-se 240 casos de sarampo, dos quais 160 ocorreram em crianças não vacinadas.</p>
+<p><strong>a)</strong> Calcule a incidência de sarampo nos vacinados e interprete;</p>
+<p><strong>b)</strong> Qual a diferença entre incidência e prevalência?</p>
+</div>
+<p><strong>a)</strong> Construindo a tabela de contingência, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q8_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;CasoSarampo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">160</span><span class="p">],</span> <span class="s2">&quot;LivreSarampo&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1500</span> <span class="o">-</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">500</span> <span class="o">-</span> <span class="mi">160</span><span class="p">]},</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Vacinada&quot;</span><span class="p">,</span> <span class="s2">&quot;NaoVacinada&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">incidencia_vacinadas_sarampo</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">q8_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Vacinada&quot;</span><span class="p">][</span><span class="s2">&quot;CasoSarampo&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">q8_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Vacinada&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">incidencia_nao_vacinadas_sarampo</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">q8_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;NaoVacinada&quot;</span><span class="p">][</span><span class="s2">&quot;CasoSarampo&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">q8_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;NaoVacinada&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;\text{Incidência em Vacinadas} = &quot;</span>
+    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">incidencia_vacinadas_sarampo</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot; </span><span class="se">\\</span><span class="s2"> \text{Incidência em Não Vacinadas} = &quot;</span>
+    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">incidencia_nao_vacinadas_sarampo</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\text{Incidência em Vacinadas} = 0.0533 \\ \text{Incidência em Não Vacinadas} = 0.3200\end{split}\]</div>
+</div>
+</div>
+<p>Dada que a incidência de sarampo em crianças não vacinadas é aproximadamente seis vezes maior, o estudo indica que pode haver associação entre a vacina aplicada e imunidade a doença, cabendo ainda o cálculo de estatísticas de testes e medidas de associação.</p>
+<p><strong>b)</strong> Incidência é a razão entre novos casos no período de seguimento e o total de indíviduos no início do estudo, indicando a proporção de <strong>novos casos</strong> no população. Já a prevalência mede a proporção de casos em um ponto específico do tempo em relação ao total de indivíduos. Em estudos caso-controle onde os totais de casos e de controles são estabelecidos na fase de planejamento, não faz sentido mensurar incidência ou prevalência.</p>
+<div class="admonition-questao-9 admonition">
+<p class="admonition-title">Questão 9</p>
+<p>A Tabela 3 apresenta o resultado de um estudo com o objetivo de verificar se o desempenho dos alunos na disciplina de Matemática (baixo ou médio; alto) estava associado a participação dos pais (ativa; fraca) nas atividades extracurriculares promovidas pela escola. No planejamento do estudo foi definido que seriam analisados 100 alunos com participação ativa dos pais e 200 alunos com participação fraca dos pais. Será que o nível de participação dos pais influencia no desempenho do filho? Responda esta pergunta com base nas análises dos itens (a) e (b).</p>
+<p><strong>a)</strong> Realize um teste adequado para responder a pergunta (detalhar todos os elementos do teste);</p>
+<p><strong>b)</strong> Usando a medida apropriada, estime a força de associação entre as variáveis.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Participação dos pais</p></th>
+<th class="text-align:center head"><p>Desempenho Baixo ou Médio</p></th>
+<th class="text-align:center head"><p>Desempenho Alto</p></th>
+<th class="text-align:center head"><p>Totais</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Ativa</p></td>
+<td class="text-align:center"><p>30</p></td>
+<td class="text-align:center"><p>70</p></td>
+<td class="text-align:center"><p>100</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Fraca</p></td>
+<td class="text-align:center"><p>170</p></td>
+<td class="text-align:center"><p>30</p></td>
+<td class="text-align:center"><p>200</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Totais</p></td>
+<td class="text-align:center"><p>200</p></td>
+<td class="text-align:center"><p>100</p></td>
+<td class="text-align:center"><p>300</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>a)</strong> Utilizando a função que calcula <span class="math notranslate nohighlight">\(Q_P\)</span> descrita na questão 7 (detalhes encontrados na implementação da função), temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q9_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s2">&quot;Baixo ou Médio&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">170</span><span class="p">],</span> <span class="s2">&quot;Alto&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">30</span><span class="p">]},</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Ativa&quot;</span><span class="p">,</span> <span class="s2">&quot;Fraca&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">Qp</span> <span class="o">=</span> <span class="n">estatistica_Qp</span><span class="p">(</span><span class="n">q9_dados</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_N = </span><span class="si">{</span><span class="n">Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Q_N = 90.7500 \rightarrow pvalor = 0.0000\]</div>
+</div>
+</div>
+<p>Dada a estatística <span class="math notranslate nohighlight">\(Q_P\)</span> muito alta, deve-se rejeitar a hipótese nula de que o rendimento dos alunos é independente da participação do pais.</p>
+<p><strong>b)</strong> Uma medida apropriada é a Razão de Chances (odds ratio). Utilizando as funções descritas no item B da questão 6, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">or_estimado</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">(</span>
+    <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Ativa&quot;</span><span class="p">][</span><span class="s2">&quot;Baixo ou Médio&quot;</span><span class="p">],</span>
+    <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Ativa&quot;</span><span class="p">][</span><span class="s2">&quot;Alto&quot;</span><span class="p">],</span>
+    <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Fraca&quot;</span><span class="p">][</span><span class="s2">&quot;Baixo ou Médio&quot;</span><span class="p">],</span>
+    <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Fraca&quot;</span><span class="p">][</span><span class="s2">&quot;Alto&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{OR}</span><span class="s2"> = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">)))</span>
+
+<span class="n">or_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_odds_ratio</span><span class="p">(</span>
+    <span class="n">f_odds_ratio</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_odds_ratio</span><span class="p">(</span>
+        <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Ativa&quot;</span><span class="p">][</span><span class="s2">&quot;Baixo ou Médio&quot;</span><span class="p">],</span>
+        <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Ativa&quot;</span><span class="p">][</span><span class="s2">&quot;Alto&quot;</span><span class="p">],</span>
+        <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Fraca&quot;</span><span class="p">][</span><span class="s2">&quot;Baixo ou Médio&quot;</span><span class="p">],</span>
+        <span class="n">q9_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Fraca&quot;</span><span class="p">][</span><span class="s2">&quot;Alto&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(OR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{OR} = 0.07563025210084033\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(OR)_{95\%} = (0.04244883177946018; 0.13474893873532656)\]</div>
+</div>
+</div>
+<p>Considerando <span class="math notranslate nohighlight">\(\hat{OR}\)</span> e o intervalo de confiaça muito abaixo de 1, o estudo indica que a participação ativa dos pais, utilizando um termo comum em análises na área de saúde, protege os os alunos de um desempenho baixo ou médio.</p>
+<div class="admonition-questao-10 admonition">
+<p class="admonition-title">Questão 10</p>
+<p>Exercício 1 do Capítulo 3 (livro texto), voltando para os Exercícios 4 a 8 do Capítulo 1.</p>
+<p><strong>Exercício 1, Capítulo 3</strong>: Para os dados apresentados nos exercícios 3 a 8 do Cap ́ıtulo 1:</p>
+<p>a) Forneça as proporções amostrais e as frequências esperadas.</p>
+<p>b) Estabeleça as hipóteses de interesse e teste-as.</p>
+<p>c) Obtenha uma medida de associação apropriada, bem como seu respectivo intervalo de 95% de confiança.</p>
+</div>
+<p><strong>Exercício 4</strong></p>
+<p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+
+<span class="n">tabela1_10_total</span> <span class="o">=</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">tabela1_10_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_10_total</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Proporções:**&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_10_proporcoes</span><span class="p">)</span>
+
+<span class="n">tabela1_10_teste_Qp</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Frequências esperadas:**&quot;</span><span class="p">))</span>
+<span class="n">tabela1_10_freq_esperadas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">tabela1_10_teste_Qp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_10_freq_esperadas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Proporções:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fumante</th>
+      <td>0.045</td>
+      <td>0.355</td>
+    </tr>
+    <tr>
+      <th>Não Fumante</th>
+      <td>0.005</td>
+      <td>0.595</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p><strong>Frequências esperadas:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fumante</th>
+      <td>40.0</td>
+      <td>760.0</td>
+    </tr>
+    <tr>
+      <th>Não Fumante</th>
+      <td>60.0</td>
+      <td>1140.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b)</strong> Hipótese de interesse:</p>
+<p><strong>c)</strong> Medida de associação: Risco Relativo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soma_fumantes</span> <span class="o">=</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Fumante&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">soma_nao_fumantes</span> <span class="o">=</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Não Fumante&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">cancer_fumantes</span> <span class="o">=</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Fumante&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">]</span>
+<span class="n">cancer_nao_fumantes</span> <span class="o">=</span> <span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Não Fumante&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">]</span>
+<span class="n">p_estimado_cancer_fumantes</span> <span class="o">=</span> <span class="n">estimador_p_i_j</span><span class="p">(</span><span class="n">cancer_fumantes</span><span class="p">,</span> <span class="n">soma_fumantes</span><span class="p">)</span>
+<span class="n">p_estimado_cancer_nao_fumantes</span> <span class="o">=</span> <span class="n">estimador_p_i_j</span><span class="p">(</span><span class="n">cancer_nao_fumantes</span><span class="p">,</span> <span class="n">soma_nao_fumantes</span><span class="p">)</span>
+
+<span class="n">risco_relativo_estimado</span> <span class="o">=</span> <span class="n">estimador_risco_relativo</span><span class="p">(</span>
+    <span class="n">p_estimado_cancer_fumantes</span><span class="p">,</span> <span class="n">p_estimado_cancer_nao_fumantes</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{RR}</span><span class="s2">_{Fumante | Não Fumante} = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">risco_relativo_estimado</span><span class="p">)))</span>
+
+<span class="n">risco_relativo_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_risco_relativo</span><span class="p">(</span>
+    <span class="n">f_risco_relativo</span><span class="p">(</span><span class="n">risco_relativo_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_risco_relativo</span><span class="p">(</span>
+        <span class="n">p_estimado_cancer_fumantes</span><span class="p">,</span>
+        <span class="n">soma_fumantes</span><span class="p">,</span>
+        <span class="n">p_estimado_cancer_nao_fumantes</span><span class="p">,</span>
+        <span class="n">soma_nao_fumantes</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(RR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">risco_relativo_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">risco_relativo_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{RR}_{Fumante | Não Fumante} = 13.5\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(RR)_{95\%} = (7.0676089597571785; 25.786655860238984)\]</div>
+</div>
+</div>
+<p><strong>Exercício 5</strong></p>
+<p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_11_total</span> <span class="o">=</span> <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">tabela1_11_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_11_total</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Proporções:**&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_11_proporcoes</span><span class="p">)</span>
+
+<span class="n">tabela1_11_teste_Qp</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Frequências esperadas:**&quot;</span><span class="p">))</span>
+<span class="n">tabela1_11_freq_esperadas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">tabela1_11_teste_Qp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_11_freq_esperadas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Proporções:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Com Histórico</th>
+      <td>0.104294</td>
+      <td>0.220859</td>
+    </tr>
+    <tr>
+      <th>Sem Histórico</th>
+      <td>0.049080</td>
+      <td>0.625767</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p><strong>Frequências esperadas:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Com Histórico</th>
+      <td>8.128834</td>
+      <td>44.871166</td>
+    </tr>
+    <tr>
+      <th>Sem Histórico</th>
+      <td>16.871166</td>
+      <td>93.128834</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b)</strong> Hipótese de interesse:</p>
+<p><strong>c)</strong> Medida de associação:</p>
+<p><strong>Exercício 6</strong></p>
+<p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_12_total</span> <span class="o">=</span> <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">tabela1_12_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_12_total</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Proporções:**&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_12_proporcoes</span><span class="p">)</span>
+
+<span class="n">tabela1_12_teste_Qp</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Frequências esperadas:**&quot;</span><span class="p">))</span>
+<span class="n">tabela1_12_freq_esperadas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">tabela1_12_teste_Qp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_12_freq_esperadas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Proporções:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Melhora</th>
+      <th>Não Melhora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Vitamica C</th>
+      <td>0.375000</td>
+      <td>0.125000</td>
+    </tr>
+    <tr>
+      <th>Sem Vitamina C</th>
+      <td>0.453125</td>
+      <td>0.046875</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p><strong>Frequências esperadas:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Melhora</th>
+      <th>Não Melhora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Vitamica C</th>
+      <td>26.5</td>
+      <td>5.5</td>
+    </tr>
+    <tr>
+      <th>Sem Vitamina C</th>
+      <td>26.5</td>
+      <td>5.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b)</strong> Hipótese de interesse:</p>
+<p><strong>c)</strong> Medida de associação:</p>
+<p><strong>Exercício 7</strong></p>
+<p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_13_total</span> <span class="o">=</span> <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">tabela1_13_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_13_total</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Proporções:**&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_13_proporcoes</span><span class="p">)</span>
+
+<span class="n">tabela1_13_teste_Qp</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Frequências esperadas:**&quot;</span><span class="p">))</span>
+<span class="n">tabela1_13_freq_esperadas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">tabela1_13_teste_Qp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_13_freq_esperadas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Proporções:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consome Álcool</th>
+      <td>0.098462</td>
+      <td>0.111795</td>
+    </tr>
+    <tr>
+      <th>Não Consome Álcool</th>
+      <td>0.106667</td>
+      <td>0.683077</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p><strong>Frequências esperadas:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consome Álcool</th>
+      <td>42.051282</td>
+      <td>162.948718</td>
+    </tr>
+    <tr>
+      <th>Não Consome Álcool</th>
+      <td>157.948718</td>
+      <td>612.051282</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b)</strong> Hipótese de interesse:</p>
+<p><strong>c)</strong> Medida de associação:</p>
+<p><strong>Exercício 8</strong></p>
+<p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_14_total</span> <span class="o">=</span> <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">tabela1_14_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_14_total</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Proporções:**&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_14_proporcoes</span><span class="p">)</span>
+
+<span class="n">tabela1_14_teste_Qp</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">correction</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;**Frequências esperadas:**&quot;</span><span class="p">))</span>
+<span class="n">tabela1_14_freq_esperadas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">tabela1_14_teste_Qp</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabela1_14_freq_esperadas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Proporções:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Mulheres</th>
+      <td>0.280909</td>
+      <td>0.173636</td>
+    </tr>
+    <tr>
+      <th>Homens</th>
+      <td>0.290000</td>
+      <td>0.255455</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p><strong>Frequências esperadas:</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sim</th>
+      <th>Não</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Mulheres</th>
+      <td>285.454545</td>
+      <td>214.545455</td>
+    </tr>
+    <tr>
+      <th>Homens</th>
+      <td>342.545455</td>
+      <td>257.454545</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b)</strong> Hipótese de interesse:</p>
+<p><strong>c)</strong> Medida de associação:</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analise_de_dados_categoricos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../nao_parametrica/desafio_1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../modelos_lineares_generalizados/lista_2.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Trabalho No. 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
