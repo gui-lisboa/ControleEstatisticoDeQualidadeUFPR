@@ -51,3 +51,11 @@ parts:
 - caption: Estatística Não Paramétrica
   chapters:
   - file: nao_parametrica/desafio_1
+
+- caption: Análise de Dados Categóricos
+  chapters:
+  - file: analise_de_dados_categoricos/lista_1
+
+- caption: Modelos Lineares Generalizados
+  chapters:
+  - file: modelos_lineares_generalizados/lista_2
