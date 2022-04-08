@@ -640,7 +640,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela1_12_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-    <span class="p">{</span><span class="s2">&quot;Melhora&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span> <span class="s2">&quot;Não Melhora&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Vitamica C&quot;</span><span class="p">,</span> <span class="s2">&quot;Sem Vitamina C&quot;</span><span class="p">]</span>
+    <span class="p">{</span><span class="s2">&quot;Melhora&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span> <span class="s2">&quot;Não Melhora&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Vitamina C&quot;</span><span class="p">,</span> <span class="s2">&quot;Sem Vitamina C&quot;</span><span class="p">]</span>
 <span class="p">)</span>
 
 <span class="n">tabela1_12_proporcoes</span> <span class="o">=</span> <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
@@ -678,7 +678,7 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th>Vitamica C</th>
+      <th>Vitamina C</th>
       <td>0.75000</td>
       <td>0.25000</td>
     </tr>
@@ -1378,6 +1378,21 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 <p><strong>b)</strong> Hipótese de interesse:</p>
+<p><span class="math notranslate nohighlight">\(H_0: p_{(1)1} = p_{(2)1}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_A: p_{(1)1} \neq p_{(2)1}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Qp</span> <span class="o">=</span> <span class="n">estatistica_Qp</span><span class="p">(</span><span class="n">tabela1_10_dados</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_N = </span><span class="si">{</span><span class="n">Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Q_N = 109.6491 \rightarrow pvalor = 0.0000\]</div>
+</div>
+</div>
 <p><strong>c)</strong> Medida de associação: Risco Relativo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1519,7 +1534,60 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 <p><strong>b)</strong> Hipótese de interesse:</p>
+<p><span class="math notranslate nohighlight">\(H_0: p_{1(1)} = p_{2(1)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_A: p_{1(1)} \neq p_{2(1)}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Qp</span> <span class="o">=</span> <span class="n">estatistica_Qp</span><span class="p">(</span><span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_N = </span><span class="si">{</span><span class="n">Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Q_N = 16.9448 \rightarrow pvalor = 0.0000\]</div>
+</div>
+</div>
 <p><strong>c)</strong> Medida de associação:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">or_estimado</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">(</span>
+    <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Com Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Com Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{OR}</span><span class="s2"> = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">)))</span>
+
+<span class="n">or_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_odds_ratio</span><span class="p">(</span>
+    <span class="n">f_odds_ratio</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_odds_ratio</span><span class="p">(</span>
+        <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Com Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Com Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_11_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Histórico&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(OR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{OR} = 6.020833333333333\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(OR)_{95\%} = (2.394057846046132; 15.141837148023217)\]</div>
+</div>
+</div>
 <p><strong>Exercício 6</strong></p>
 <p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
 <div class="cell docutils container">
@@ -1568,7 +1636,7 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th>Vitamica C</th>
+      <th>Vitamina C</th>
       <td>0.375000</td>
       <td>0.125000</td>
     </tr>
@@ -1604,7 +1672,7 @@ const thebe_selector_output = ".output, .cell_output"
   </thead>
   <tbody>
     <tr>
-      <th>Vitamica C</th>
+      <th>Vitamina C</th>
       <td>26.5</td>
       <td>5.5</td>
     </tr>
@@ -1618,7 +1686,60 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 <p><strong>b)</strong> Hipótese de interesse:</p>
+<p><span class="math notranslate nohighlight">\(H_0: p_{(1)1} = p_{(2)1}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_A: p_{(1)1} \neq p_{(2)1}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Qp</span> <span class="o">=</span> <span class="n">estatistica_Qp</span><span class="p">(</span><span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_N = </span><span class="si">{</span><span class="n">Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Q_N = 2.7444 \rightarrow pvalor = 0.0976\]</div>
+</div>
+</div>
 <p><strong>c)</strong> Medida de associação:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">or_estimado</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">(</span>
+    <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Melhora&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Não Melhora&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Melhora&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Não Melhora&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{OR}</span><span class="s2"> = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">)))</span>
+
+<span class="n">or_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_odds_ratio</span><span class="p">(</span>
+    <span class="n">f_odds_ratio</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_odds_ratio</span><span class="p">(</span>
+        <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Melhora&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Não Melhora&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Melhora&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_12_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Sem Vitamina C&quot;</span><span class="p">][</span><span class="s2">&quot;Não Melhora&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(OR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{OR} = 0.3103448275862069\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(OR)_{95\%} = (0.07405345022128196; 1.3005999277780198)\]</div>
+</div>
+</div>
 <p><strong>Exercício 7</strong></p>
 <p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
 <div class="cell docutils container">
@@ -1717,7 +1838,60 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 <p><strong>b)</strong> Hipótese de interesse:</p>
+<p><span class="math notranslate nohighlight">\(H_0: p_{1(1)} = p_{2(1)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_A: p_{1(1)} \neq p_{2(1)}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Qp</span> <span class="o">=</span> <span class="n">estatistica_Qp</span><span class="p">(</span><span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_N = </span><span class="si">{</span><span class="n">Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Q_N = 110.2554 \rightarrow pvalor = 0.0000\]</div>
+</div>
+</div>
 <p><strong>c)</strong> Medida de associação:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">or_estimado</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">(</span>
+    <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Não Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Não Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{OR}</span><span class="s2"> = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">)))</span>
+
+<span class="n">or_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_odds_ratio</span><span class="p">(</span>
+    <span class="n">f_odds_ratio</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_odds_ratio</span><span class="p">(</span>
+        <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Não Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_13_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Não Consome Álcool&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(OR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{OR} = 5.6400846859562455\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(OR)_{95\%} = (4.000589250771749; 7.951467464104598)\]</div>
+</div>
+</div>
 <p><strong>Exercício 8</strong></p>
 <p><strong>a)</strong> Proporções amostras e frequências esperadas:</p>
 <div class="cell docutils container">
@@ -1816,7 +1990,60 @@ const thebe_selector_output = ".output, .cell_output"
 </div></div></div>
 </div>
 <p><strong>b)</strong> Hipótese de interesse:</p>
+<p><span class="math notranslate nohighlight">\(H_0: p_{ij} = (p_{i+})(p_{j+})\)</span></p>
+<p><span class="math notranslate nohighlight">\(H_A: p_{ij} \neq (p_{i+})(p_{j+})\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Qp</span> <span class="o">=</span> <span class="n">estatistica_Qp</span><span class="p">(</span><span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">())</span>
+<span class="n">pvalor</span> <span class="o">=</span> <span class="n">p_valor_qui_quadrado</span><span class="p">(</span><span class="n">Qp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q_N = </span><span class="si">{</span><span class="n">Qp</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> </span><span class="se">\\</span><span class="s2">rightarrow pvalor = </span><span class="si">{</span><span class="n">pvalor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[Q_N = 8.2979 \rightarrow pvalor = 0.0040\]</div>
+</div>
+</div>
 <p><strong>c)</strong> Medida de associação:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">or_estimado</span> <span class="o">=</span> <span class="n">odds_ratio</span><span class="p">(</span>
+    <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Mulheres&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Mulheres&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Homens&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+    <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Homens&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\hat</span><span class="si">{OR}</span><span class="s2"> = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">)))</span>
+
+<span class="n">or_intervalo_confianca</span> <span class="o">=</span> <span class="n">intervalo_confianca_odds_ratio</span><span class="p">(</span>
+    <span class="n">f_odds_ratio</span><span class="p">(</span><span class="n">or_estimado</span><span class="p">),</span>
+    <span class="n">variancia_f_odds_ratio</span><span class="p">(</span>
+        <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Mulheres&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Mulheres&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Homens&quot;</span><span class="p">][</span><span class="s2">&quot;Sim&quot;</span><span class="p">],</span>
+        <span class="n">tabela1_14_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Homens&quot;</span><span class="p">][</span><span class="s2">&quot;Não&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">Latex</span><span class="p">(</span>
+    <span class="sa">r</span><span class="s2">&quot;IC(OR)_{95\%} = (&quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="o">+</span> <span class="s2">&quot;; &quot;</span>
+    <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">or_intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="o">+</span> <span class="sa">r</span><span class="s2">&quot;)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\hat{OR} = 1.425084934924256\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[IC(OR)_{95\%} = (1.1194822502452113; 1.814112793037344)\]</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
