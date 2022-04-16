@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparação de poder dos testes Z e Binomial. &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="1º Lista de Exercícios" href="../analise_de_dados_categoricos/lista_1.html" />
+    <link rel="prev" title="Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra" href="desafio_1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/nao_parametrica/desafio_3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#poder-de-um-teste">
+   Poder de um teste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teste-z">
+   Teste Z
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teste-binomial">
+   Teste Binomial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculo-do-poder-de-teste-z-e-binomial">
+   Cálculo do poder de teste Z e Binomial
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#poder-teste-z">
+     Poder teste Z
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#poder-teste-binomial">
+     Poder teste Binomial
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparacao-tamanho-da-amostra">
+   Comparação: tamanho da amostra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparacao-diferenca-suposicoes-h-0-e-h-1">
+   Comparação: diferença suposições
+   <span class="math notranslate nohighlight">
+    \(H_0\)
+   </span>
+   e
+   <span class="math notranslate nohighlight">
+    \(H_1\)
+   </span>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Comparação de poder dos testes Z e Binomial.</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#poder-de-um-teste">
+   Poder de um teste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teste-z">
+   Teste Z
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#teste-binomial">
+   Teste Binomial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculo-do-poder-de-teste-z-e-binomial">
+   Cálculo do poder de teste Z e Binomial
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#poder-teste-z">
+     Poder teste Z
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#poder-teste-binomial">
+     Poder teste Binomial
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparacao-tamanho-da-amostra">
+   Comparação: tamanho da amostra
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparacao-diferenca-suposicoes-h-0-e-h-1">
+   Comparação: diferença suposições
+   <span class="math notranslate nohighlight">
+    \(H_0\)
+   </span>
+   e
+   <span class="math notranslate nohighlight">
+    \(H_1\)
+   </span>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="comparacao-de-poder-dos-testes-z-e-binomial">
+<h1>Comparação de poder dos testes Z e Binomial.<a class="headerlink" href="#comparacao-de-poder-dos-testes-z-e-binomial" title="Link permanente para este título">¶</a></h1>
+<p>Alunos: Guilherme Lisboa (GRR20170414), Felipe Heron Queluz (GRR20170400), Rodrigo Alves Silva (GRR20214488) e Wu Hsuan Yi (GRR20170415)</p>
+<div class="section" id="poder-de-um-teste">
+<h2>Poder de um teste<a class="headerlink" href="#poder-de-um-teste" title="Link permanente para este título">¶</a></h2>
+<p>O poder um teste é a probabilidade de rejeitar <span class="math notranslate nohighlight">\(H_0\)</span> quando <span class="math notranslate nohighlight">\(H_1\)</span> é verdadeira, ou seja: <span class="math notranslate nohighlight">\(Poder = P(Rejeitar H_0 | H_1 verdadeira)\)</span>. Para calcular esta probabilidade, serão utilizados os valores de <span class="math notranslate nohighlight">\(\alpha\)</span> e <span class="math notranslate nohighlight">\(\beta\)</span>, respectivamente, probabilidades dos erros tipo I e II. Assim, temos as seguintes definições envolvidas no cálculo do poder de um teste:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gather}
+    \alpha = P(Reiejtar H_0 | H_0 verdadeira) = P(Erro Tipo I) \\
+    \beta = P(Aceitar H_0 | H_1 verdadeira) = P(Erro Tipo II) \\
+    Poder = P(Reiejtar H_0 | H_1 verdadeira) = 1 - \beta \\
+\end{gather}
+\end{split}\]</div>
+<p>Gráficamente, é possível vizualisar como estas probabilidades se sobrepõem. Seja a curva verde uma distribuição que segue uma Normal(0, 1) para <span class="math notranslate nohighlight">\(H_0\)</span> verdadeira e a curva azul uma Normal(2, 1) para <span class="math notranslate nohighlight">\(H_1\)</span> verdadeira, temos:</p>
+<p><img alt="Areas Alfa, Beta e Poder" src="../_images/desafio_3_areas_poder.PNG" />
+Fonte: http://labtrop.ib.usp.br/lib/exe/fetch.php?media=cursos:planeco:planeco:material:PowerAnalysisSampleSize.pdf</p>
+</div>
+<div class="section" id="teste-z">
+<h2>Teste Z<a class="headerlink" href="#teste-z" title="Link permanente para este título">¶</a></h2>
+<p>O teste Z poder ser aplicado quando a estatística de teste sob a hipótese nula segue uma distribuição Normal~(<span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(\sigma^2\)</span>).
+Assim, seguindo o procedimento usual, temos as seguintes etapas:</p>
+<ul class="simple">
+<li><p>Estimar <span class="math notranslate nohighlight">\(\mu\)</span> e <span class="math notranslate nohighlight">\(\sigma\)</span> sob <span class="math notranslate nohighlight">\(H_0\)</span></p></li>
+<li><p>Definir a hipótese <span class="math notranslate nohighlight">\(H_1\)</span> como bilateral ou unilateral</p></li>
+<li><p>Calcular o escore Z, dado por <span class="math notranslate nohighlight">\(Z_{calc} = \frac{\bar{X} - \mu_0}{\sigma}\)</span></p></li>
+<li><p>Comparar o escore calculado <span class="math notranslate nohighlight">\(Z_{calc}\)</span> com o escore Z correspondente ao <span class="math notranslate nohighlight">\(\alpha\)</span> pré-determinado como limite para rejeição de <span class="math notranslate nohighlight">\(H_0\)</span>:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(Z_{calc}\)</span> &lt; <span class="math notranslate nohighlight">\(Z_{\alpha}\)</span>: rejeitar <span class="math notranslate nohighlight">\(H_0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Z_{calc}\)</span> &gt; <span class="math notranslate nohighlight">\(Z_{\alpha}\)</span>: não rejeitar <span class="math notranslate nohighlight">\(H_0\)</span></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="teste-binomial">
+<h2>Teste Binomial<a class="headerlink" href="#teste-binomial" title="Link permanente para este título">¶</a></h2>
+<p>O teste Binomial poder ser aplicado quando a estatística de teste é a proporção de sucessos de <span class="math notranslate nohighlight">\(n\)</span> repetições de um experimento dicotômico. Assim, testamos se sob <span class="math notranslate nohighlight">\(H_0\)</span> a estatística de teste segue uma Binomial~(n, p) realizando, usualmente, as seguintes etapas:</p>
+<ul class="simple">
+<li><p>definir a probabilidade esperada de sucessos (<span class="math notranslate nohighlight">\(\pi_0\)</span>) sob <span class="math notranslate nohighlight">\(H_0\)</span>.</p></li>
+<li><p>calcular a probabilidade <span class="math notranslate nohighlight">\(P(X = k)\)</span>, onde <span class="math notranslate nohighlight">\(k\)</span> é o número de sucessos esperado sob <span class="math notranslate nohighlight">\(H_0\)</span>, ou seja, <span class="math notranslate nohighlight">\(n\pi_0\)</span></p></li>
+<li><p>comparar <span class="math notranslate nohighlight">\(P(X = k)\)</span> anterior com o valor esperado para o <span class="math notranslate nohighlight">\(\alpha\)</span> pré-determinado</p></li>
+</ul>
+</div>
+<div class="section" id="calculo-do-poder-de-teste-z-e-binomial">
+<h2>Cálculo do poder de teste Z e Binomial<a class="headerlink" href="#calculo-do-poder-de-teste-z-e-binomial" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="poder-teste-z">
+<h3>Poder teste Z<a class="headerlink" href="#poder-teste-z" title="Link permanente para este título">¶</a></h3>
+<p>O poder do teste Z é calculado dado um <span class="math notranslate nohighlight">\(\alpha\)</span> pré-determinado, usado para encontrar o intervalo de confiança. Então, deslocamos o intervalo de confiança para o valor esperado caso <span class="math notranslate nohighlight">\(H_1\)</span> seja verdadeiro e calculamos <span class="math notranslate nohighlight">\(\beta\)</span>. Por fim, temos que o Poder do teste é dado por <span class="math notranslate nohighlight">\(1 - \beta\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span> <span class="k">as</span> <span class="n">Normal</span>
+
+
+<span class="k">def</span> <span class="nf">calcular_poder_do_teste_z</span><span class="p">(</span>
+    <span class="n">valor_esperado_h0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">valor_esperado_h1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">desvio_padrao</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">n</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">alfa</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="n">desvio_padrao_sobre_raiz_n</span> <span class="o">=</span> <span class="n">desvio_padrao</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">erro</span> <span class="o">=</span> <span class="n">Normal</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alfa</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">desvio_padrao_sobre_raiz_n</span>
+    <span class="n">intervalo_confianca</span> <span class="o">=</span> <span class="p">(</span><span class="n">valor_esperado_h0</span> <span class="o">-</span> <span class="n">erro</span><span class="p">,</span> <span class="n">valor_esperado_h0</span> <span class="o">+</span> <span class="n">erro</span><span class="p">)</span>
+
+    <span class="n">intervalo_esperado_h1</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">intervalo_confianca</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">valor_esperado_h1</span><span class="p">)</span> <span class="o">/</span> <span class="n">desvio_padrao_sobre_raiz_n</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">intervalo_confianca</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">valor_esperado_h1</span><span class="p">)</span> <span class="o">/</span> <span class="n">desvio_padrao_sobre_raiz_n</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">p_beta</span> <span class="o">=</span> <span class="n">Normal</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">intervalo_esperado_h1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">Normal</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">intervalo_esperado_h1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">p_beta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="poder-teste-binomial">
+<h3>Poder teste Binomial<a class="headerlink" href="#poder-teste-binomial" title="Link permanente para este título">¶</a></h3>
+<p>Como a distribuição Binomial é discreta, devemos encontrar o intervalo de valores críticos para <span class="math notranslate nohighlight">\(k\)</span> (número de sucessos) cuja soma de probabilidade não ultrapasse <span class="math notranslate nohighlight">\(\alpha\)</span>.
+O valor crítico inferior é a probabilidade de encontrarmos <span class="math notranslate nohighlight">\(k \leq c_{inferior}\)</span> caso <span class="math notranslate nohighlight">\(H_1\)</span> seja verdadeira, já o valor crítico superior é a probabilidade de encontrarmos <span class="math notranslate nohighlight">\(k \ge c_{superior}\)</span>. Estamos probabilidade somadas nos dão a probabilidade de rejeitar <span class="math notranslate nohighlight">\(H_0\)</span> sob a <span class="math notranslate nohighlight">\(H_1\)</span> verdadeira, ou seja, o poder do teste.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span> <span class="k">as</span> <span class="n">Binomial</span>
+
+
+<span class="k">def</span> <span class="nf">calcular_poder_do_teste_binomial</span><span class="p">(</span>
+    <span class="n">p_h0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">p_h1</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">n</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+    <span class="n">alfa</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">:</span>
+    <span class="n">valor_critico_inferior</span> <span class="o">=</span> <span class="n">Binomial</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">alfa</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p_h0</span><span class="p">)</span>
+    <span class="n">poder_inferior</span> <span class="o">=</span> <span class="n">Binomial</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">valor_critico_inferior</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p_h1</span><span class="p">)</span>
+
+    <span class="n">valor_critico_superior</span> <span class="o">=</span> <span class="n">Binomial</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alfa</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p_h0</span><span class="p">)</span>
+    <span class="n">poder_superior</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">Binomial</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">valor_critico_superior</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p_h1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">poder_inferior</span> <span class="o">+</span> <span class="n">poder_superior</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="comparacao-tamanho-da-amostra">
+<h2>Comparação: tamanho da amostra<a class="headerlink" href="#comparacao-tamanho-da-amostra" title="Link permanente para este título">¶</a></h2>
+<p>A seguir, vemos o comportamento dos testes conforme o número de amostras cresce, de <span class="math notranslate nohighlight">\(n = 2\)</span> até <span class="math notranslate nohighlight">\(n = 100\)</span>. Os demais parâmetros são fixos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intervalo_n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">alfa</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="n">media_esperada_h0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">media_esperada_h1</span> <span class="o">=</span> <span class="n">media_esperada_h0</span> <span class="o">+</span> <span class="n">desvio_padrao</span>
+
+<span class="n">p_h0</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">p_h1</span> <span class="o">=</span> <span class="n">p_h0</span> <span class="o">+</span> <span class="n">p_h0</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p_h0</span><span class="p">)</span>
+
+
+<span class="n">poder_teste_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">intervalo_n</span><span class="p">))</span>
+<span class="n">poder_teste_binomial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">intervalo_n</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">intervalo_n</span><span class="p">):</span>
+    <span class="n">poder_teste_z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcular_poder_do_teste_z</span><span class="p">(</span>
+        <span class="n">media_esperada_h0</span><span class="p">,</span> <span class="n">media_esperada_h1</span><span class="p">,</span> <span class="n">desvio_padrao</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">alfa</span>
+    <span class="p">)</span>
+    <span class="n">poder_teste_binomial</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcular_poder_do_teste_binomial</span><span class="p">(</span><span class="n">p_h0</span><span class="p">,</span> <span class="n">p_h1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">alfa</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Fazendo o gráfico da evolução do poder dos testes em função do tamanho da amostra, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;ggplot&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;n&quot;</span><span class="p">:</span> <span class="n">intervalo_n</span><span class="p">,</span>
+        <span class="s2">&quot;Teste Z&quot;</span><span class="p">:</span> <span class="n">poder_teste_z</span><span class="p">,</span>
+        <span class="s2">&quot;Teste Binomial&quot;</span><span class="p">:</span> <span class="n">poder_teste_binomial</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">resultado</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Teste&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Poder&quot;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">resultado</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Poder&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Teste&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/desafio_3_11_0.png" src="../_images/desafio_3_11_0.png" />
+</div>
+</div>
+<p>Assim, é possível notar que pelo fato da Binomial ser discreta, os valores críticos inferior e superior fazem com que que haja uma queda no poder do teste até um valor <span class="math notranslate nohighlight">\(n\)</span> que permita considerar novos valores críticos. O intervalo entre estes picos no poder do teste diminui conforme <span class="math notranslate nohighlight">\(n\)</span> aumenta, fazendo com que a estatística de teste tenha um valor aproximadamente contínuo.</p>
+</div>
+<div class="section" id="comparacao-diferenca-suposicoes-h-0-e-h-1">
+<h2>Comparação: diferença suposições <span class="math notranslate nohighlight">\(H_0\)</span> e <span class="math notranslate nohighlight">\(H_1\)</span><a class="headerlink" href="#comparacao-diferenca-suposicoes-h-0-e-h-1" title="Link permanente para este título">¶</a></h2>
+<p>Como vimos na comparação anterior que para <span class="math notranslate nohighlight">\(n \gt 65\)</span> o poder dos testes é similar, comparamos então qual a resposta em função da diferença entre o valor suposto como verdadeiro em <span class="math notranslate nohighlight">\(H_0\)</span> com o valor suposto em <span class="math notranslate nohighlight">\(H_1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intervalo_diferenca</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">alfa</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="n">media_esperada_h0</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">media_esperada_h1</span><span class="p">(</span><span class="n">media_esperada_h0</span><span class="p">,</span> <span class="n">desvio_padrao</span><span class="p">,</span> <span class="n">diferenca</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">media_esperada_h0</span> <span class="o">+</span> <span class="n">desvio_padrao</span> <span class="o">*</span> <span class="n">diferenca</span>
+
+
+<span class="n">p_h0</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+
+<span class="k">def</span> <span class="nf">p_h1</span><span class="p">(</span><span class="n">p_h0</span><span class="p">,</span> <span class="n">diferenca</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">p_h0</span> <span class="o">+</span> <span class="n">p_h0</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p_h0</span><span class="p">)</span> <span class="o">*</span> <span class="n">diferenca</span>
+
+
+<span class="n">poder_teste_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">intervalo_diferenca</span><span class="p">))</span>
+<span class="n">poder_teste_binomial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">intervalo_diferenca</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">diferenca</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">intervalo_diferenca</span><span class="p">):</span>
+    <span class="n">poder_teste_z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcular_poder_do_teste_z</span><span class="p">(</span>
+        <span class="n">media_esperada_h0</span><span class="p">,</span>
+        <span class="n">media_esperada_h1</span><span class="p">(</span><span class="n">media_esperada_h0</span><span class="p">,</span> <span class="n">desvio_padrao</span><span class="p">,</span> <span class="n">diferenca</span><span class="p">),</span>
+        <span class="n">desvio_padrao</span><span class="p">,</span>
+        <span class="n">n</span><span class="p">,</span>
+        <span class="n">alfa</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">poder_teste_binomial</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcular_poder_do_teste_binomial</span><span class="p">(</span>
+        <span class="n">p_h0</span><span class="p">,</span> <span class="n">p_h1</span><span class="p">(</span><span class="n">p_h0</span><span class="p">,</span> <span class="n">diferenca</span><span class="p">),</span> <span class="n">n</span><span class="p">,</span> <span class="n">alfa</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Fazendo o gráfico da evolução do poder dos testes em função da diferença entre as hipóteses <span class="math notranslate nohighlight">\(H_0\)</span> e <span class="math notranslate nohighlight">\(H_1\)</span>, temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resultado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Diferença&quot;</span><span class="p">:</span> <span class="n">intervalo_diferenca</span><span class="p">,</span>
+        <span class="s2">&quot;Teste Z&quot;</span><span class="p">:</span> <span class="n">poder_teste_z</span><span class="p">,</span>
+        <span class="s2">&quot;Teste Binomial&quot;</span><span class="p">:</span> <span class="n">poder_teste_binomial</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">resultado</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="s2">&quot;Diferença&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Teste&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Poder&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">resultado</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Diferença&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Poder&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Teste&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/desafio_3_16_0.png" src="../_images/desafio_3_16_0.png" />
+</div>
+</div>
+<p>Ambos os testes tem um poder baixo quando a diferença entre os valores testados sob <span class="math notranslate nohighlight">\(H_0\)</span> e <span class="math notranslate nohighlight">\(H_1\)</span> é pequena. O teste Z apresenta uma evolução mais rápida, passando de 0,8 já com uma diferença de aproximadamente 0,3<span class="math notranslate nohighlight">\(\sigma\)</span>. Já o teste binomial só passa a ter uma valor de poder acima de 0,8 para diferenças próximas de 0,6<span class="math notranslate nohighlight">\(\sigma\)</span></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./nao_parametrica"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="desafio_1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../analise_de_dados_categoricos/lista_1.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">1º Lista de Exercícios</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
