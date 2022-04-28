@@ -1,0 +1,1463 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho No. 3 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Trabalho No. 2" href="lista_2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_3.html">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Trabalho No. 3
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/modelos_lineares_generalizados/lista_3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trabalho No. 3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-3">
+<h1>Trabalho No. 3<a class="headerlink" href="#trabalho-no-3" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questao-1 admonition">
+<p class="admonition-title">Questão 1</p>
+<p>A Tabela 1 classifica 90 pacientes com câncer de mama de acordo com sua idade no momento da inscrição em um ensaio clínico e se elas haviam recebido ou não quimioterapia anterior. Pacientes que receberam quimioterapia anteriormente e, possivelmente falharam, têm uma resposta clínica diferente daqueles que nunca receberam quimioterapia.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Idade</p></th>
+<th class="text-align:center head"><p>Não quimioterapia</p></th>
+<th class="text-align:center head"><p>Sim quimioterapia</p></th>
+<th class="text-align:center head"><p>Total</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\lt\)</span>35</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>14</p></td>
+<td class="text-align:center"><p>14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>35-39</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>11</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>40-44</p></td>
+<td class="text-align:center"><p>11</p></td>
+<td class="text-align:center"><p>12</p></td>
+<td class="text-align:center"><p>23</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>45-49</p></td>
+<td class="text-align:center"><p>21</p></td>
+<td class="text-align:center"><p>13</p></td>
+<td class="text-align:center"><p>34</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\geq\)</span>50</p></td>
+<td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>8</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Total</p></td>
+<td class="text-align:center"><p>42</p></td>
+<td class="text-align:center"><p>48</p></td>
+<td class="text-align:center"><p>90</p></td>
+</tr>
+</tbody>
+</table>
+<p>Tabela 1: Pacientes com câncer de mama no estudo categorizados por idade e quimioterapia anterior.</p>
+<p>a. Use a regressão logística para mostrar que a probabilidade de uso anterior de quimioterapia em um paciente com câncer inscrito neste ensaio clínico está relacionado à sua idade.</p>
+<p>b. Explique essa descoberta e sugira dados adicionais que você precisa ver coletados para apoiar esta reivindicação.</p>
+</div>
+<p><strong>a.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">categorias_idade</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&lt;35&quot;</span><span class="p">,</span> <span class="s2">&quot;35-39&quot;</span><span class="p">,</span> <span class="s2">&quot;40-44&quot;</span><span class="p">,</span> <span class="s2">&quot;45-49&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;=50&quot;</span><span class="p">]</span>
+<span class="n">idades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">52</span><span class="p">]</span>
+
+<span class="n">q1_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;idade&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">categorias_idade</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="n">categorias_idade</span><span class="p">),</span>
+        <span class="s2">&quot;não_quimio&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+        <span class="s2">&quot;sim_quimio&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">q1_dados</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>idade</th>
+      <th>não_quimio</th>
+      <th>sim_quimio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>&lt;35</td>
+      <td>0</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35-39</td>
+      <td>2</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>40-44</td>
+      <td>11</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>45-49</td>
+      <td>21</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>&gt;=50</td>
+      <td>8</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Como o objetivo é definir a probabilidade de um paciente ter feito ou não quimioterapia, vamos expandir as observações resumidas na tabela de contigência para uma tabela completa dos dados, a coluna <strong>resultado</strong> indica se o paciente foi submetido ao tratamento. A coluna <strong>categoria_idade</strong> trata idade como dado categórico ordinal, já a coluna <strong>idade</strong> será utilizada como valor quantitativo. O objetivo é comparar a qualidade dos modelos que tem cada uma destas colunas como variável explicativa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">total_observacoes</span> <span class="o">=</span> <span class="n">q1_dados</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">observacoes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="n">total_observacoes</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+<span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">q1_dados</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">n_sucessos</span> <span class="o">=</span> <span class="n">q1_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;sim_quimio&quot;</span><span class="p">]</span>
+    <span class="n">n_tentativas</span> <span class="o">=</span> <span class="n">q1_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">categoria_idade</span> <span class="o">=</span> <span class="n">q1_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span>
+    <span class="n">idade</span> <span class="o">=</span> <span class="n">idades</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="n">observacoes</span><span class="p">[</span><span class="n">offset</span> <span class="p">:</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">n_sucessos</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">categoria_idade</span><span class="p">,</span> <span class="n">idade</span><span class="p">]</span>
+    <span class="n">observacoes</span><span class="p">[</span><span class="n">offset</span> <span class="o">+</span> <span class="n">n_sucessos</span> <span class="p">:</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">n_tentativas</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="mi">0</span><span class="p">,</span>
+        <span class="n">categoria_idade</span><span class="p">,</span>
+        <span class="n">idade</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="n">offset</span> <span class="o">+=</span> <span class="n">n_tentativas</span>
+
+
+<span class="n">q1_dados_expandidos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">observacoes</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;resultado&quot;</span><span class="p">,</span> <span class="s2">&quot;categoria_idade&quot;</span><span class="p">,</span> <span class="s2">&quot;idade&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">q1_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;resultado&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">q1_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;resultado&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
+<span class="n">q1_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;categoria_idade&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">q1_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;categoria_idade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+    <span class="n">q1_dados</span><span class="p">[</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span>
+<span class="p">)</span>
+<span class="n">q1_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">q1_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
+
+<span class="n">q1_dados_expandidos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>resultado</th>
+      <th>categoria_idade</th>
+      <th>idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>&lt;35</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>&lt;35</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>&lt;35</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>&lt;35</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>&lt;35</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>0</td>
+      <td>&gt;=50</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>0</td>
+      <td>&gt;=50</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>0</td>
+      <td>&gt;=50</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>0</td>
+      <td>&gt;=50</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>0</td>
+      <td>&gt;=50</td>
+      <td>52</td>
+    </tr>
+  </tbody>
+</table>
+<p>90 rows × 3 columns</p>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>Modelo resultado ~ idade:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+
+<span class="n">modelo_idade</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+    <span class="s2">&quot;resultado ~ idade&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">q1_dados_expandidos</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="n">fit_modelo_idade</span> <span class="o">=</span> <span class="n">modelo_idade</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fit_modelo_idade</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+        <td>Model:</td>               <td>GLM</td>            <td>AIC:</td>        <td>96.4665</td> 
+</tr>
+<tr>
+    <td>Link Function:</td>          <td>Logit</td>           <td>BIC:</td>       <td>-303.5168</td>
+</tr>
+<tr>
+  <td>Dependent Variable:</td>     <td>resultado</td>    <td>Log-Likelihood:</td>  <td>-46.233</td> 
+</tr>
+<tr>
+         <td>Date:</td>        <td>2022-04-28 12:33</td>    <td>LL-Null:</td>      <td>-62.183</td> 
+</tr>
+<tr>
+   <td>No. Observations:</td>         <td>90</td>           <td>Deviance:</td>     <td>92.466</td>  
+</tr>
+<tr>
+       <td>Df Model:</td>              <td>1</td>         <td>Pearson chi2:</td>    <td>78.5</td>   
+</tr>
+<tr>
+     <td>Df Residuals:</td>           <td>88</td>            <td>Scale:</td>       <td>1.0000</td>  
+</tr>
+<tr>
+        <td>Method:</td>             <td>IRLS</td>              <td></td>             <td></td>     
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>       <th>Coef.</th>  <th>Std.Err.</th>    <th>z</th>     <th>P>|z|</th> <th>[0.025</th>  <th>0.975]</th> 
+</tr>
+<tr>
+  <th>Intercept</th> <td>11.2502</td>  <td>2.5813</td>  <td>4.3584</td>  <td>0.0000</td> <td>6.1910</td>  <td>16.3094</td>
+</tr>
+<tr>
+  <th>idade</th>     <td>-0.2570</td>  <td>0.0584</td>  <td>-4.3996</td> <td>0.0000</td> <td>-0.3715</td> <td>-0.1425</td>
+</tr>
+</table></div></div>
+</div>
+<ul class="simple">
+<li><p>Modelo resultado ~ categoria_idade:</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modelo_categorico</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+    <span class="s2">&quot;resultado ~ 0 + categoria_idade&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">q1_dados_expandidos</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="n">fit_modelo_categorico</span> <span class="o">=</span> <span class="n">modelo_categorico</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fit_modelo_categorico</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+        <td>Model:</td>               <td>GLM</td>            <td>AIC:</td>        <td>97.5062</td> 
+</tr>
+<tr>
+    <td>Link Function:</td>          <td>Logit</td>           <td>BIC:</td>       <td>-294.9776</td>
+</tr>
+<tr>
+  <td>Dependent Variable:</td>     <td>resultado</td>    <td>Log-Likelihood:</td>  <td>-43.753</td> 
+</tr>
+<tr>
+         <td>Date:</td>        <td>2022-04-28 12:33</td>    <td>LL-Null:</td>      <td>-62.183</td> 
+</tr>
+<tr>
+   <td>No. Observations:</td>         <td>90</td>           <td>Deviance:</td>     <td>87.506</td>  
+</tr>
+<tr>
+       <td>Df Model:</td>              <td>4</td>         <td>Pearson chi2:</td>    <td>68.0</td>   
+</tr>
+<tr>
+     <td>Df Residuals:</td>           <td>85</td>            <td>Scale:</td>       <td>1.0000</td>  
+</tr>
+<tr>
+        <td>Method:</td>             <td>IRLS</td>              <td></td>             <td></td>     
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+             <td></td>              <th>Coef.</th>   <th>Std.Err.</th>     <th>z</th>     <th>P>|z|</th>   <th>[0.025</th>      <th>0.975]</th>  
+</tr>
+<tr>
+  <th>categoria_idade[<35]</th>    <td>23.5661</td> <td>21237.1184</td> <td>0.0011</td>  <td>0.9991</td> <td>-41600.4211</td> <td>41647.5533</td>
+</tr>
+<tr>
+  <th>categoria_idade[35-39]</th>  <td>1.5041</td>    <td>0.7817</td>   <td>1.9240</td>  <td>0.0544</td>   <td>-0.0281</td>     <td>3.0363</td>  
+</tr>
+<tr>
+  <th>categoria_idade[40-44]</th>  <td>0.0870</td>    <td>0.4174</td>   <td>0.2084</td>  <td>0.8349</td>   <td>-0.7311</td>     <td>0.9051</td>  
+</tr>
+<tr>
+  <th>categoria_idade[45-49]</th>  <td>-0.4796</td>   <td>0.3529</td>   <td>-1.3589</td> <td>0.1742</td>   <td>-1.1713</td>     <td>0.2121</td>  
+</tr>
+<tr>
+  <th>categoria_idade[>=50]</th>  <td>-23.5661</td> <td>28094.0613</td> <td>-0.0008</td> <td>0.9993</td> <td>-55086.9144</td> <td>55039.7822</td>
+</tr>
+</table></div></div>
+</div>
+<p>O modelo que utiliza a idade como dado categórico apresentou p-valores muito altos em todas as categorias e as categorias inicial e final, &lt;35 e <span class="math notranslate nohighlight">\(\geq\)</span>50, tiveram erros muito acima das demais também. Como o modelo que considera idade como dado quantitativo apresentou um p-valor muito baixo e um AIC melhor, este foi escolhido.</p>
+<p>Portanto, baseando-se no modelo escolhido, existe uma relação entre a idade do paciente e a probabilidade de ter realizado quimioterapia, sendo que quanto mais avançada a idade, menor a probabilidade de ter recebido o tratamento. Seguem abaixo os valores preditos para as idades usadas como variáveis quantitativas no ajuste do modelo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Idade&#39;</span><span class="p">:</span> <span class="n">idades</span><span class="p">,</span>
+    <span class="s1">&#39;p_predito&#39;</span><span class="p">:</span> <span class="n">fit_modelo_idade</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">idade</span><span class="o">=</span><span class="n">idades</span><span class="p">))</span>
+    <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Idade</th>
+      <th>p_predito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>32</td>
+      <td>0.953775</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>37</td>
+      <td>0.850944</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>42</td>
+      <td>0.612334</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>47</td>
+      <td>0.304120</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>52</td>
+      <td>0.107874</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b.</strong> Como o modelo que uiliza idade como dado quantitativo apresentou melhores resultados, seria necessário coletar a idade dos pacientes desta forma também. Caso seja apenas possível receber os dados de forma categória, as erros altos na categorias inicial e final indicam que seria interessante expandi-las, buscando obter algo como idades &lt;25, 25-30, 30-35 … 50-55, 55-60, <span class="math notranslate nohighlight">\(\geq\)</span>60.</p>
+<div class="admonition-questao-2 admonition">
+<p class="admonition-title">Questão 2</p>
+<p>As águias procuram salmão, mas sabem que é mais fácil roubar de outra águia. A Tabela2 abaixo relaciona o número de tentativas de pirataria e o número de tentativas bem-sucedidas em um estudo de observação de biólogos no Estado de Washington. Os tamanhos do pirata e da vítima são codificados como L = grande, S = pequeno. A idade do pirata ́e codificada como A = adulto, I = imaturo.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>No. de sucesssos <span class="math notranslate nohighlight">\(y_i\)</span></p></th>
+<th class="text-align:center head"><p>No. de tentativas <span class="math notranslate nohighlight">\(n_i\)</span></p></th>
+<th class="text-align:center head"><p>Tamanho Pirata</p></th>
+<th class="text-align:center head"><p>Idade Pirata</p></th>
+<th class="text-align:center head"><p>Tamanho Vítima</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>17</p></td>
+<td class="text-align:center"><p>24</p></td>
+<td class="text-align:center"><p>L</p></td>
+<td class="text-align:center"><p>A</p></td>
+<td class="text-align:center"><p>L</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>29</p></td>
+<td class="text-align:center"><p>29</p></td>
+<td class="text-align:center"><p>L</p></td>
+<td class="text-align:center"><p>A</p></td>
+<td class="text-align:center"><p>S</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>17</p></td>
+<td class="text-align:center"><p>27</p></td>
+<td class="text-align:center"><p>L</p></td>
+<td class="text-align:center"><p>I</p></td>
+<td class="text-align:center"><p>L</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>20</p></td>
+<td class="text-align:center"><p>20</p></td>
+<td class="text-align:center"><p>L</p></td>
+<td class="text-align:center"><p>I</p></td>
+<td class="text-align:center"><p>S</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>12</p></td>
+<td class="text-align:center"><p>S</p></td>
+<td class="text-align:center"><p>A</p></td>
+<td class="text-align:center"><p>L</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>15</p></td>
+<td class="text-align:center"><p>16</p></td>
+<td class="text-align:center"><p>S</p></td>
+<td class="text-align:center"><p>A</p></td>
+<td class="text-align:center"><p>S</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>28</p></td>
+<td class="text-align:center"><p>S</p></td>
+<td class="text-align:center"><p>I</p></td>
+<td class="text-align:center"><p>L</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>S</p></td>
+<td class="text-align:center"><p>I</p></td>
+<td class="text-align:center"><p>S</p></td>
+</tr>
+</tbody>
+</table>
+<p>Tabela 2: Tentativas de pirataria de águia. O tamanho é codificado como grande e pequeno; idade é codificada como adulta ou imatura.</p>
+<p>a. Use a regressão logística para mostrar que o tamanho do pirata, a idade e o tamanhoda vítima são fatores importantes para determinar se o pirata é bem-sucedido ou não. Mostre que o sinergismo da idade e do tamanho dos piratas também é importante.</p>
+<p>b. Mostre que nenhuma das interações entre as variáveis podem ser medidas devido à separação no modelo logístico.</p>
+</div>
+<p><strong>a.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2_dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;y_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="s2">&quot;n_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="s2">&quot;tamanho_pirata&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;idade_pirata&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;tamanho_vitima&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">],</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">q2_dados</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>y_i</th>
+      <th>n_i</th>
+      <th>tamanho_pirata</th>
+      <th>idade_pirata</th>
+      <th>tamanho_vitima</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17</td>
+      <td>24</td>
+      <td>L</td>
+      <td>A</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>29</td>
+      <td>29</td>
+      <td>L</td>
+      <td>A</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>17</td>
+      <td>27</td>
+      <td>L</td>
+      <td>I</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>20</td>
+      <td>20</td>
+      <td>L</td>
+      <td>I</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>12</td>
+      <td>S</td>
+      <td>A</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>15</td>
+      <td>16</td>
+      <td>S</td>
+      <td>A</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>28</td>
+      <td>S</td>
+      <td>I</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>4</td>
+      <td>S</td>
+      <td>I</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Assim como na questão anterior, vamos expandir a tabela e definir o <strong>resultado</strong> como uma variável dicotômica que indica se o pirata foi bem sucedido na observação.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observacoes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="n">q2_dados</span><span class="p">[</span><span class="s2">&quot;n_i&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+<span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">q2_dados</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">n_sucessos</span><span class="p">,</span> <span class="n">n_tentativas</span> <span class="o">=</span> <span class="n">q2_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][[</span><span class="s2">&quot;y_i&quot;</span><span class="p">,</span> <span class="s2">&quot;n_i&quot;</span><span class="p">]]</span>
+    <span class="n">categorias</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">q2_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]]</span>
+
+    <span class="n">observacoes</span><span class="p">[</span><span class="n">offset</span> <span class="p">:</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">n_sucessos</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">categorias</span><span class="p">]</span>
+    <span class="n">observacoes</span><span class="p">[</span><span class="n">offset</span> <span class="o">+</span> <span class="n">n_sucessos</span> <span class="p">:</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">n_tentativas</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">categorias</span><span class="p">]</span>
+
+    <span class="n">offset</span> <span class="o">+=</span> <span class="n">n_tentativas</span>
+
+
+<span class="n">q2_dados_expandidos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">observacoes</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;resultado&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">q2_dados</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]]</span>
+<span class="p">)</span>
+
+<span class="n">q2_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;resultado&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">q2_dados_expandidos</span><span class="p">[</span><span class="s2">&quot;resultado&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
+
+<span class="n">q2_dados_expandidos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>resultado</th>
+      <th>tamanho_pirata</th>
+      <th>idade_pirata</th>
+      <th>tamanho_vitima</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>L</td>
+      <td>A</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>L</td>
+      <td>A</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>L</td>
+      <td>A</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>L</td>
+      <td>A</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>L</td>
+      <td>A</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>0</td>
+      <td>S</td>
+      <td>I</td>
+      <td>L</td>
+    </tr>
+    <tr>
+      <th>156</th>
+      <td>1</td>
+      <td>S</td>
+      <td>I</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>157</th>
+      <td>0</td>
+      <td>S</td>
+      <td>I</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>158</th>
+      <td>0</td>
+      <td>S</td>
+      <td>I</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>159</th>
+      <td>0</td>
+      <td>S</td>
+      <td>I</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+<p>160 rows × 4 columns</p>
+</div></div></div>
+</div>
+<ul class="simple">
+<li><p>Modelo resultado ~ tamanho pirata + idade pirata + tamanho vitima</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modelo_soma</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+    <span class="s2">&quot;resultado ~ tamanho_pirata + idade_pirata + tamanho_vitima&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">q2_dados_expandidos</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="n">fit_modelo_soma</span> <span class="o">=</span> <span class="n">modelo_soma</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fit_modelo_soma</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+        <td>Model:</td>               <td>GLM</td>            <td>AIC:</td>        <td>98.3892</td> 
+</tr>
+<tr>
+    <td>Link Function:</td>          <td>Logit</td>           <td>BIC:</td>       <td>-701.3380</td>
+</tr>
+<tr>
+  <td>Dependent Variable:</td>     <td>resultado</td>    <td>Log-Likelihood:</td>  <td>-45.195</td> 
+</tr>
+<tr>
+         <td>Date:</td>        <td>2022-04-28 12:33</td>    <td>LL-Null:</td>      <td>-105.85</td> 
+</tr>
+<tr>
+   <td>No. Observations:</td>         <td>160</td>          <td>Deviance:</td>     <td>90.389</td>  
+</tr>
+<tr>
+       <td>Df Model:</td>              <td>3</td>         <td>Pearson chi2:</td>    <td>97.6</td>   
+</tr>
+<tr>
+     <td>Df Residuals:</td>           <td>156</td>           <td>Scale:</td>       <td>1.0000</td>  
+</tr>
+<tr>
+        <td>Method:</td>             <td>IRLS</td>              <td></td>             <td></td>     
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+           <td></td>            <th>Coef.</th>  <th>Std.Err.</th>    <th>z</th>     <th>P>|z|</th> <th>[0.025</th>  <th>0.975]</th> 
+</tr>
+<tr>
+  <th>Intercept</th>           <td>1.3416</td>   <td>0.4602</td>  <td>2.9151</td>  <td>0.0036</td> <td>0.4396</td>  <td>2.2436</td> 
+</tr>
+<tr>
+  <th>tamanho_pirata[T.S]</th> <td>-4.5570</td>  <td>1.0545</td>  <td>-4.3216</td> <td>0.0000</td> <td>-6.6236</td> <td>-2.4903</td>
+</tr>
+<tr>
+  <th>idade_pirata[T.I]</th>   <td>-1.0973</td>  <td>0.5465</td>  <td>-2.0080</td> <td>0.0446</td> <td>-2.1684</td> <td>-0.0262</td>
+</tr>
+<tr>
+  <th>tamanho_vitima[T.S]</th> <td>4.9331</td>   <td>1.1193</td>  <td>4.4074</td>  <td>0.0000</td> <td>2.7394</td>  <td>7.1269</td> 
+</tr>
+</table></div></div>
+</div>
+<ul class="simple">
+<li><p>Modelo resultado ~ tamanho pirata + idade pirata + tamanho vítima + interação tamanho e idade pirata</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modelo_soma_e_interacao</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+    <span class="s2">&quot;resultado ~ tamanho_pirata + idade_pirata + tamanho_vitima + tamanho_pirata:idade_pirata&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">q2_dados_expandidos</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="n">fit_modelo_soma_e_interacao</span> <span class="o">=</span> <span class="n">modelo_soma_e_interacao</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fit_modelo_soma_e_interacao</span><span class="o">.</span><span class="n">summary2</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+        <td>Model:</td>               <td>GLM</td>            <td>AIC:</td>        <td>93.7656</td> 
+</tr>
+<tr>
+    <td>Link Function:</td>          <td>Logit</td>           <td>BIC:</td>       <td>-702.8863</td>
+</tr>
+<tr>
+  <td>Dependent Variable:</td>     <td>resultado</td>    <td>Log-Likelihood:</td>  <td>-41.883</td> 
+</tr>
+<tr>
+         <td>Date:</td>        <td>2022-04-28 12:33</td>    <td>LL-Null:</td>      <td>-105.85</td> 
+</tr>
+<tr>
+   <td>No. Observations:</td>         <td>160</td>          <td>Deviance:</td>     <td>83.766</td>  
+</tr>
+<tr>
+       <td>Df Model:</td>              <td>4</td>         <td>Pearson chi2:</td>    <td>87.7</td>   
+</tr>
+<tr>
+     <td>Df Residuals:</td>           <td>155</td>           <td>Scale:</td>       <td>1.0000</td>  
+</tr>
+<tr>
+        <td>Method:</td>             <td>IRLS</td>              <td></td>             <td></td>     
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+                    <td></td>                     <th>Coef.</th>  <th>Std.Err.</th>    <th>z</th>     <th>P>|z|</th> <th>[0.025</th>  <th>0.975]</th> 
+</tr>
+<tr>
+  <th>Intercept</th>                             <td>0.8977</td>   <td>0.4480</td>  <td>2.0040</td>  <td>0.0451</td> <td>0.0197</td>  <td>1.7757</td> 
+</tr>
+<tr>
+  <th>tamanho_pirata[T.S]</th>                   <td>-3.4605</td>  <td>1.1287</td>  <td>-3.0661</td> <td>0.0022</td> <td>-5.6727</td> <td>-1.2484</td>
+</tr>
+<tr>
+  <th>idade_pirata[T.I]</th>                     <td>-0.3590</td>  <td>0.5986</td>  <td>-0.5997</td> <td>0.5487</td> <td>-1.5323</td> <td>0.8143</td> 
+</tr>
+<tr>
+  <th>tamanho_vitima[T.S]</th>                   <td>5.4324</td>   <td>1.3602</td>  <td>3.9938</td>  <td>0.0001</td> <td>2.7665</td>  <td>8.0983</td> 
+</tr>
+<tr>
+  <th>tamanho_pirata[T.S]:idade_pirata[T.I]</th> <td>-3.6614</td>  <td>1.6279</td>  <td>-2.2492</td> <td>0.0245</td> <td>-6.8521</td> <td>-0.4708</td>
+</tr>
+</table></div></div>
+</div>
+<p>Comparando o modelo com e sem interação, vemos que o modelo que inclui a interação apresenta AIC e Deviance menores. Além disso, a interação tem baixo pvalor mostrando que há uma queda considerável na probabilidade de sucesso do pirata quando o mesmo é pequeno e imaturo.</p>
+<p>Seguem abaixo valores preditos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2_dados</span><span class="p">[</span><span class="s2">&quot;p_predito&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit_modelo_soma_e_interacao</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+    <span class="n">exog</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">tamanho_pirata</span><span class="o">=</span><span class="n">q2_dados</span><span class="o">.</span><span class="n">tamanho_pirata</span><span class="p">,</span>
+        <span class="n">idade_pirata</span><span class="o">=</span><span class="n">q2_dados</span><span class="o">.</span><span class="n">idade_pirata</span><span class="p">,</span>
+        <span class="n">tamanho_vitima</span><span class="o">=</span><span class="n">q2_dados</span><span class="o">.</span><span class="n">tamanho_vitima</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">q2_dados</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>y_i</th>
+      <th>n_i</th>
+      <th>tamanho_pirata</th>
+      <th>idade_pirata</th>
+      <th>tamanho_vitima</th>
+      <th>p_predito</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17</td>
+      <td>24</td>
+      <td>L</td>
+      <td>A</td>
+      <td>L</td>
+      <td>0.710483</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>29</td>
+      <td>29</td>
+      <td>L</td>
+      <td>A</td>
+      <td>S</td>
+      <td>0.998221</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>17</td>
+      <td>27</td>
+      <td>L</td>
+      <td>I</td>
+      <td>L</td>
+      <td>0.631515</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>20</td>
+      <td>20</td>
+      <td>L</td>
+      <td>I</td>
+      <td>S</td>
+      <td>0.997455</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>12</td>
+      <td>S</td>
+      <td>A</td>
+      <td>L</td>
+      <td>0.071570</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>15</td>
+      <td>16</td>
+      <td>S</td>
+      <td>A</td>
+      <td>S</td>
+      <td>0.946322</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>28</td>
+      <td>S</td>
+      <td>I</td>
+      <td>L</td>
+      <td>0.001381</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>4</td>
+      <td>S</td>
+      <td>I</td>
+      <td>S</td>
+      <td>0.240330</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b.</strong> A separação das interações é prejudicada porque o fator tamanho_pirata quase define (separa) a probabilidade de sucesso: L tende a sucesso, S tende a fracasso. O mesmo acontece para tamanho_vitima de maneira oposta: S tende a sucesse, L a fracasso. As observações que distoam só acontecem quando o piara é imaturo, fazendo com que a probabilidade de sucesso seja reduzida.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./modelos_lineares_generalizados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="lista_2.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Trabalho No. 2</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
