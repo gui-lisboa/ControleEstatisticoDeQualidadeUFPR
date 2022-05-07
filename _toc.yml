@@ -61,3 +61,4 @@ parts:
   chapters:
   - file: modelos_lineares_generalizados/lista_2
   - file: modelos_lineares_generalizados/lista_3
+  - file: modelos_lineares_generalizados/lista_4
