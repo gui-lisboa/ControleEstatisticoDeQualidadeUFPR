@@ -56,6 +56,7 @@ parts:
 - caption: Análise de Dados Categóricos
   chapters:
   - file: analise_de_dados_categoricos/lista_1
+  - file: analise_de_dados_categoricos/lista_2
 
 - caption: Modelos Lineares Generalizados
   chapters:
