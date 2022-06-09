@@ -50,6 +50,7 @@ parts:
 
 - caption: Estatística Não Paramétrica
   chapters:
+  - file: nao_parametrica/anotacoes
   - file: nao_parametrica/desafio_1
   - file: nao_parametrica/desafio_3
 
