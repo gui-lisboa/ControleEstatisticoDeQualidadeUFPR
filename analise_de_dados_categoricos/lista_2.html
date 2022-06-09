@@ -1,0 +1,1051 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2º Lista de Exercícios &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Trabalho No. 2" href="../modelos_lineares_generalizados/lista_2.html" />
+    <link rel="prev" title="1º Lista de Exercícios" href="lista_1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/anotacoes.html">
+   Anotações para prova
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_3.html">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analise_de_dados_categoricos/lista_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>2º Lista de Exercícios</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="o-lista-de-exercicios">
+<h1>2º Lista de Exercícios<a class="headerlink" href="#o-lista-de-exercicios" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Disciplina: Análise de Dados Categóricos</p></li>
+<li><p>Professora: Nívea da Silva Matuda Machado</p></li>
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questao-1 admonition">
+<p class="admonition-title">Questão 1</p>
+<p>A Tabela 1 apresenta um estudo que coletou dados de 300 alunos sobre o desempenho na disciplina de Matemática (baixo, médio e alto) e sobre a participação dos pais (ativa e fraca) nas atividades extra-aulas promovidas pela escola.</p>
+<p><img alt="Tabela 1.10" src="../_images/lista_2_tabela_1.PNG" /></p>
+<p>a. Usando frequência relativa para estimar probabilidade, estime a probabilidade dos alunos, que possuem pais ativamente participantes, não apresentarem baixo desempenho? Qual é a probabilidade estimada dos alunos apresentarem alto desempenho em matemática sendo que os pais quase não participam das atividades extracurriculares? Comente os resultados.</p>
+<p>b. Qual estatística pode ser usada com mais eficácia neste tipo de tabela para testar a inexistência de associação? Porque? Realize o teste e tire uma conclusão;</p>
+<p>c. Complete o texto abaixo:</p>
+<p>Os valores totais, das colunas e das linhas, são chamados de totais _______________. Quando os ____________________________ e _________________________ variam livremente, o teste de associação é chamado de independência, e quando um dos conjuntos, linha ou coluna é fixado pelo pesquisador então é chamado de teste de _______________. A escolha de qual total fixar vai depender do _________________. Neste exemplo da área de educação, observemos que é muito mais fácil fixar o número de alunos em cada categoria da variável ___________________________________, do que fixar pela variável ________________________, que a princípio, deverá tornar mais complexa a realização do estudo devido à dificuldade de obter este tipo de informação.</p>
+</div>
+<p><strong>a.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+
+<span class="n">tabela_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Participação dos Pais&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ativa&#39;</span><span class="p">,</span> <span class="s1">&#39;Fraca&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Desempenho Baixo&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span>
+    <span class="s1">&#39;Desempenho Médio&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">75</span><span class="p">],</span>
+    <span class="s1">&#39;Desempenho Alto&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">70</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">tabela_1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Participação dos Pais</th>
+      <th>Desempenho Baixo</th>
+      <th>Desempenho Médio</th>
+      <th>Desempenho Alto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ativa</td>
+      <td>5</td>
+      <td>25</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Fraca</td>
+      <td>95</td>
+      <td>75</td>
+      <td>30</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Probabilidade de alunos não apresentarem desempenho baixo com pais ativamente participantes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linha_pais_participativos</span> <span class="o">=</span> <span class="n">tabela_1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">prob_relativa</span> <span class="o">=</span> <span class="n">linha_pais_participativos</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">linha_pais_participativos</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">prob_relativa</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.95
+</pre></div>
+</div>
+</div>
+</div>
+<p>Probabilidade de alunos apresentarem alto desempenho sendo que os pais não participam das atividades:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linha_pais_nao_participativos</span> <span class="o">=</span> <span class="n">tabela_1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">prob_relativa</span> <span class="o">=</span> <span class="n">linha_pais_nao_participativos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">linha_pais_nao_participativos</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">prob_relativa</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.15
+</pre></div>
+</div>
+</div>
+</div>
+<p>Os resultados indicam que a participação dos pais é um fator que aumenta o desempenho dos alunos de matemática</p>
+<p><strong>c.</strong> Os valores totais, das colunas e das linhas, são chamados de totais marginais. Quando os totais marginais-linha e totais marginais-coluna variam livremente, o teste de associação é chamado de independência, e quando um dos conjuntos, linha ou coluna é fixado pelo pesquisador então é chamado de teste de homogeneidade. A escolha de qual total fixar vai depender do delineamento. Neste exemplo da área de educação, observemos que é muito mais fácil fixar o número de alunos em cada categoria da variável resposta, do que fixar pela variável explicativa, que a princípio, deverá tornar mais complexa a realização do estudo devido à dificuldade de obter este tipo de informação.</p>
+<div class="admonition-questao-2 admonition">
+<p class="admonition-title">Questão 2</p>
+<p>A regressão logística tem como objetivo descrever a relação entre uma variável resposta (dicotômica ou politômica) e um conjunto de variáveis explicativas, mediante um modelo que tenha bom ajuste, seja plausível e obedeça ao princípio da parcimônia. Na análise estratificada tem-se também o propósito de descrever a relação entre as variáveis, mas as relações não são efetuadas simultaneamente, pois somente é possível obter a estimativa do OR para um único fator de cada vez, mantendo fixo o conjunto das demais variáveis explicativas. Abaixo segue um quadro comparando as duas estratégias de análise.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Regressão Logística</strong></p></th>
+<th class="head"><p><strong>Análise Estratificada</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Controla grande número de variáveis simultaneamente</p></td>
+<td><p>Simplicidade de execução, com facilidade de entendimento da análise pelo pesquisador</p></td>
+</tr>
+<tr class="row-odd"><td><p>É a técnica estatística apropriada quando a variável resposta é dicotômica ou politômica</p></td>
+<td><p>Dificuldade aumenta quando cresce o número de variáveis</p></td>
+</tr>
+<tr class="row-even"><td><p>Barreira entre o pesquisador e a análise</p></td>
+<td><p>Menor poder para exploração das variáveis</p></td>
+</tr>
+</tbody>
+</table>
+<p>As Tabelas 2 e 3 refere-se a um estudo caso-controle sobre câncer de esôfago. Foram comparados 85 casos de câncer de esôfago com 292 controles hospitalares, classificados segundo sexo biológico, idade e os hábitos de beber e fumar, entre outros.</p>
+<p>a. Em cada tabela apresentada, identifique a variável explicativa, a variável resposta e a variável usada para dividir os dados em estratos;</p>
+<p>b. Calcule, com base nas Tabelas 2 e 3, os valores estimados da OR ponderada de Mante-Haenszel (ORMH). Estes são significativos? Há confundimento ou efeito modificador?</p>
+<p>c. Descreva como seria o formato da planilha de dados para que o pacote estatístico utilizado possa lê-lo corretamente e ajustar um modelo de regressão logística adequado para estes dados.</p>
+<p>d. Apresente uma lista dos possíveis modelos de regressão logística com e sem interação.</p>
+<p><img alt="Tabela 1.10" src="../_images/lista_2_tabelas_2e3.PNG" /></p>
+</div>
+<p><strong>a.</strong></p>
+<ul class="simple">
+<li><p>Tabela 2:</p>
+<ul>
+<li><p>Variável resposta: incidência de câncer de esôfago</p></li>
+<li><p>Variável explicativa: hábito de beber</p></li>
+<li><p>Variável estratificadora: hábito de fumar</p></li>
+</ul>
+</li>
+<li><p>Tabela 3:</p>
+<ul>
+<li><p>Variável resposta: incidência de câncer de esôfago</p></li>
+<li><p>Variável explicativa: hábito de beber</p></li>
+<li><p>Variável estratificadora: sexo biológico</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>b.</strong> Valores <span class="math notranslate nohighlight">\(OR\)</span> ponderado dados por Pooled Odds e <span class="math notranslate nohighlight">\(OR_{MH}\)</span> dados por Test of OR=1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+
+<span class="n">tabela_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Estratos&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Não Fumante&#39;</span><span class="p">,</span> <span class="s1">&#39;Não Fumante&#39;</span><span class="p">,</span> <span class="s1">&#39;Fumante&#39;</span><span class="p">,</span> <span class="s1">&#39;Fumante&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Fatores&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Não Bebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Bebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Não Bebe&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Casos&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="s1">&#39;Controles&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">54</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">tabela_2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Estratos</th>
+      <th>Fatores</th>
+      <th>Casos</th>
+      <th>Controles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Não Fumante</td>
+      <td>Bebe</td>
+      <td>1</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Não Fumante</td>
+      <td>Não Bebe</td>
+      <td>5</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fumante</td>
+      <td>Bebe</td>
+      <td>74</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fumante</td>
+      <td>Não Bebe</td>
+      <td>5</td>
+      <td>54</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nao_fumantes</span> <span class="o">=</span> <span class="n">tabela_2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tabela_2</span><span class="o">.</span><span class="n">Estratos</span> <span class="o">==</span> <span class="s1">&#39;Não Fumante&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">fumantes</span> <span class="o">=</span> <span class="n">tabela_2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tabela_2</span><span class="o">.</span><span class="n">Estratos</span> <span class="o">==</span> <span class="s1">&#39;Fumante&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">tabela_2_estratificada</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">StratifiedTable</span><span class="p">([</span><span class="n">nao_fumantes</span><span class="p">,</span> <span class="n">fumantes</span><span class="p">])</span>
+
+<span class="n">tabela_2_estratificada</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+          <td></td>          <th>Estimate</th>    <th>LCB</th>    <th>UCB</th> 
+</tr>
+<tr>
+  <th>Pooled odds</th>           <td>4.503</td>   <td>2.069</td> <td>9.799</td>
+</tr>
+<tr>
+  <th>Pooled log odds</th>       <td>1.505</td>   <td>0.727</td> <td>2.282</td>
+</tr>
+<tr>
+  <th>Pooled risk ratio</th>     <td>3.483</td>        <td></td>      <td></td>
+</tr>
+<tr>
+  <th></th>                           <td></td>        <td></td>      <td></td>
+</tr>
+<tr>
+          <td></td>         <th>Statistic</th> <th>P-value</th> <th></th>
+</tr>
+<tr>
+  <th>Test of OR=1</th>        <td>15.123</td>   <td>0.000</td> <td></td>
+</tr>
+<tr>
+  <th>Test constant OR</th>     <td>5.621</td>   <td>0.018</td> <td></td>
+</tr>
+<tr>
+          <td></td>          <th></th>   <th></th> <th></th>
+</tr>
+<tr>
+  <th>Number of tables</th>   <td>2</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Min n</th>            <td>124</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Max n</th>            <td>253</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Avg n</th>            <td>188</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Total n</th>          <td>377</td> <td></td> <td></td>
+</tr>
+</table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tabela_3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Estratos&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Feminino&#39;</span><span class="p">,</span> <span class="s1">&#39;Feminino&#39;</span><span class="p">,</span> <span class="s1">&#39;Masculino&#39;</span><span class="p">,</span> <span class="s1">&#39;Masculino&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Fatores&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Não Bebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Bebe&#39;</span><span class="p">,</span> <span class="s1">&#39;Não Bebe&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Casos&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="s1">&#39;Controles&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">46</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="n">tabela_3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Estratos</th>
+      <th>Fatores</th>
+      <th>Casos</th>
+      <th>Controles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Feminino</td>
+      <td>Bebe</td>
+      <td>8</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Feminino</td>
+      <td>Não Bebe</td>
+      <td>8</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Masculino</td>
+      <td>Bebe</td>
+      <td>67</td>
+      <td>117</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Masculino</td>
+      <td>Não Bebe</td>
+      <td>2</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">femininos</span> <span class="o">=</span> <span class="n">tabela_3</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tabela_3</span><span class="o">.</span><span class="n">Estratos</span> <span class="o">==</span> <span class="s1">&#39;Feminino&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">masculinos</span> <span class="o">=</span> <span class="n">tabela_3</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tabela_3</span><span class="o">.</span><span class="n">Estratos</span> <span class="o">==</span> <span class="s1">&#39;Masculino&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">tabela_3_estratificada</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">StratifiedTable</span><span class="p">([</span><span class="n">femininos</span><span class="p">,</span> <span class="n">masculinos</span><span class="p">])</span>
+
+<span class="n">tabela_3_estratificada</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<tr>
+          <td></td>          <th>Estimate</th>    <th>LCB</th>     <th>UCB</th> 
+</tr>
+<tr>
+  <th>Pooled odds</th>           <td>6.283</td>   <td>2.788</td> <td>14.159</td>
+</tr>
+<tr>
+  <th>Pooled log odds</th>       <td>1.838</td>   <td>1.025</td>  <td>2.650</td>
+</tr>
+<tr>
+  <th>Pooled risk ratio</th>     <td>4.923</td>        <td></td>       <td></td>
+</tr>
+<tr>
+  <th></th>                           <td></td>        <td></td>       <td></td>
+</tr>
+<tr>
+          <td></td>         <th>Statistic</th> <th>P-value</th> <th></th>
+</tr>
+<tr>
+  <th>Test of OR=1</th>        <td>21.970</td>   <td>0.000</td> <td></td>
+</tr>
+<tr>
+  <th>Test constant OR</th>     <td>3.647</td>   <td>0.056</td> <td></td>
+</tr>
+<tr>
+          <td></td>          <th></th>   <th></th> <th></th>
+</tr>
+<tr>
+  <th>Number of tables</th>   <td>2</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Min n</th>            <td>145</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Max n</th>            <td>232</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Avg n</th>            <td>188</td> <td></td> <td></td>
+</tr>
+<tr>
+  <th>Total n</th>          <td>377</td> <td></td> <td></td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>c.</strong> O formato ideal para ajustar um modelo logístico seriam tabelas com total observado linhas e 3 colunas: uma para definir o estrado da observação, outra para o fator e uma terceira também dicotômica onde 1 significa Caso e 0 Controle.</p>
+<p><strong>d.</strong></p>
+<ul class="simple">
+<li><p>Sem interação: Caso ~ estrato + fator</p></li>
+<li><p>Com interação: Caso ~ estrato:fator</p></li>
+</ul>
+<div class="admonition-questao-3 admonition">
+<p class="admonition-title">Questão 3</p>
+<p>O que mede a estatística Kappa? É possível obter valores negativos como resultado para esta estatística? Se sim, quando isso ocorre?</p>
+</div>
+<p>A estatística Kappa é uma medida de concordância proposta por Cohen (1960) e é definida por:</p>
+<div class="math notranslate nohighlight">
+\[
+    \kappa = \frac{\Pi_0 - \Pi_e}{1 - \Pi_e}
+\]</div>
+<p>Sendo a probabilidade de concordância dada por <span class="math notranslate nohighlight">\(\Pi_0 = \sum_{i = 1}^{s}p_{ii}\)</span> e a probabilidade de concordância sob <span class="math notranslate nohighlight">\(H_0: p_{ij} = (p_i+)(p_+j)\)</span> (hipótese de independência das duas classificações) dada por <span class="math notranslate nohighlight">\(\Pi_e = \sum_{i = 1}^{s}(p_{i+})(p_{+i})\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(\kappa\)</span> assumirá o valor 1 quando exisitr concordância perfeita entre os avaliadores e 0 quando a concordância for a proposta sob <span class="math notranslate nohighlight">\(H_0\)</span>. Valores negativos para <span class="math notranslate nohighlight">\(\kappa\)</span> são possíveis quando há discordância acentuada entre os valores. Valores sugeridos por Landis e Koch (1977) tem a seguinte interpetração:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\leq\)</span> 0: sem concordância;</p></li>
+<li><p>0,01 a 0,20: muito fraca;</p></li>
+<li><p>0,21 a 0,40: fraca;</p></li>
+<li><p>0,41 a 0,60: moderada;</p></li>
+<li><p>0,61 a 0,80: substancial;</p></li>
+<li><p>0,81 a 1: excelente.</p></li>
+</ul>
+<div class="admonition-questao-4 admonition">
+<p class="admonition-title">Questão 4</p>
+<p>O arquivo dados_ex3 contem informações de 100 homens hospitalizados, quanto à idade (0, se <span class="math notranslate nohighlight">\(\leq\)</span> 55 anos; 1, se &gt;55 anos) e quanto à evidência de terem tido sinais de doença coronária, denotada por CHD (sim=1; não=0).</p>
+<p>a. Organize os dados em uma tabela de contingência 2 x 2;</p>
+<p>b. Parte do output computacional com os resultados da análise por regressão logística destes dados (SE = erro padrão) é apresentada a seguir. Escreva o modelo de regressão logística, considerando CHD como variável resposta e a idade como fator de exposição</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>SE</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>constante</p></td>
+<td><p>-0.841</p></td>
+<td><p>0.255</p></td>
+</tr>
+<tr class="row-odd"><td><p>Idade</p></td>
+<td><p>2.094</p></td>
+<td><p>0.529</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>a.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;./dados/dados_ex3.csv&#39;</span><span class="p">)</span>
+<span class="n">tabela_contingencia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">dados</span><span class="o">.</span><span class="n">idade</span><span class="p">,</span> <span class="n">dados</span><span class="o">.</span><span class="n">CHD</span><span class="p">)</span>
+
+<span class="n">tabela_contingencia</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>CHD</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+    <tr>
+      <th>idade</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>51</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>21</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+
+<span class="n">modelo_idade</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+    <span class="s2">&quot;CHD ~ idade&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="n">fit_modelo_idade</span> <span class="o">=</span> <span class="n">modelo_idade</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fit_modelo_idade</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>Generalized Linear Model Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>CHD</td>       <th>  No. Observations:  </th>  <td>   100</td> 
+</tr>
+<tr>
+  <th>Model:</th>                  <td>GLM</td>       <th>  Df Residuals:      </th>  <td>    98</td> 
+</tr>
+<tr>
+  <th>Model Family:</th>        <td>Binomial</td>     <th>  Df Model:          </th>  <td>     1</td> 
+</tr>
+<tr>
+  <th>Link Function:</th>         <td>Logit</td>      <th>  Scale:             </th> <td>  1.0000</td>
+</tr>
+<tr>
+  <th>Method:</th>                <td>IRLS</td>       <th>  Log-Likelihood:    </th> <td> -58.980</td>
+</tr>
+<tr>
+  <th>Date:</th>            <td>Thu, 09 Jun 2022</td> <th>  Deviance:          </th> <td>  117.96</td>
+</tr>
+<tr>
+  <th>Time:</th>                <td>18:28:15</td>     <th>  Pearson chi2:      </th>  <td>  100.</td> 
+</tr>
+<tr>
+  <th>No. Iterations:</th>          <td>4</td>        <th>  Pseudo R-squ. (CS):</th>  <td>0.1706</td> 
+</tr>
+<tr>
+  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th> <td>   -0.8408</td> <td>    0.255</td> <td>   -3.296</td> <td> 0.001</td> <td>   -1.341</td> <td>   -0.341</td>
+</tr>
+<tr>
+  <th>idade</th>     <td>    2.0935</td> <td>    0.529</td> <td>    3.961</td> <td> 0.000</td> <td>    1.058</td> <td>    3.129</td>
+</tr>
+</table></div></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analise_de_dados_categoricos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="lista_1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">1º Lista de Exercícios</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../modelos_lineares_generalizados/lista_2.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Trabalho No. 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

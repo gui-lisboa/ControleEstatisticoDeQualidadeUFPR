@@ -1,0 +1,1121 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho No. 4 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Trabalho No. 3" href="lista_3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/anotacoes.html">
+   Anotações para prova
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_3.html">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_2.html">
+   2º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lista_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/modelos_lineares_generalizados/lista_4.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importando-os-dados">
+   Importando os dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analise-exploratoria">
+   Análise exploratória
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelo">
+   Modelo
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trabalho No. 4</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importando-os-dados">
+   Importando os dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analise-exploratoria">
+   Análise exploratória
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelo">
+   Modelo
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-4">
+<h1>Trabalho No. 4<a class="headerlink" href="#trabalho-no-4" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questao admonition">
+<p class="admonition-title">Questão</p>
+<p>Utilize os dados no arquivo <strong>danishlc</strong>, os dados fornecem o número de casos de câncer de pulmão em quatro cidades dinamarquesas entre 1968 e 1971 inclusive. O arquivo de dados contêm 24 observações nas 4 variáveis a seguir:</p>
+<p><strong>Cases</strong> o número de casos de câncer de pulmão; um vetor numérico (resposta)</p>
+<p><strong>Popa</strong> população de cada faixa etária em cada cidade; um vetor numérico</p>
+<p><strong>Age</strong> a faixa etária; um fator com níveis 40-54, 55-59, 60-64, 65-69, 70-74 e &gt;74</p>
+<p><strong>City</strong> a cidade; um fator com os níveis Fredericia, Horsens, Kolding e Vejle</p>
+</div>
+<div class="section" id="importando-os-dados">
+<h2>Importando os dados<a class="headerlink" href="#importando-os-dados" title="Link permanente para este título">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;./danish.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">City</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">City</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">())</span>
+
+<span class="n">faixas_etarias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;40-54&quot;</span><span class="p">,</span> <span class="s2">&quot;55-59&quot;</span><span class="p">,</span> <span class="s2">&quot;60-64&quot;</span><span class="p">,</span> <span class="s2">&quot;65-69&quot;</span><span class="p">,</span> <span class="s2">&quot;70-74&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;74&quot;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">Age</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">faixas_etarias</span><span class="p">)</span>
+
+<span class="n">dataset</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cases</th>
+      <th>Pop</th>
+      <th>Age</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11</td>
+      <td>3059</td>
+      <td>40-54</td>
+      <td>Fredericia</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11</td>
+      <td>800</td>
+      <td>55-59</td>
+      <td>Fredericia</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>11</td>
+      <td>710</td>
+      <td>60-64</td>
+      <td>Fredericia</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10</td>
+      <td>581</td>
+      <td>65-69</td>
+      <td>Fredericia</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>11</td>
+      <td>509</td>
+      <td>70-74</td>
+      <td>Fredericia</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>10</td>
+      <td>605</td>
+      <td>&gt;74</td>
+      <td>Fredericia</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>13</td>
+      <td>2879</td>
+      <td>40-54</td>
+      <td>Horsens</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>6</td>
+      <td>1083</td>
+      <td>55-59</td>
+      <td>Horsens</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>15</td>
+      <td>923</td>
+      <td>60-64</td>
+      <td>Horsens</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>834</td>
+      <td>65-69</td>
+      <td>Horsens</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>12</td>
+      <td>634</td>
+      <td>70-74</td>
+      <td>Horsens</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2</td>
+      <td>782</td>
+      <td>&gt;74</td>
+      <td>Horsens</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4</td>
+      <td>3142</td>
+      <td>40-54</td>
+      <td>Kolding</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>8</td>
+      <td>1050</td>
+      <td>55-59</td>
+      <td>Kolding</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>7</td>
+      <td>895</td>
+      <td>60-64</td>
+      <td>Kolding</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>11</td>
+      <td>702</td>
+      <td>65-69</td>
+      <td>Kolding</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>9</td>
+      <td>535</td>
+      <td>70-74</td>
+      <td>Kolding</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>12</td>
+      <td>659</td>
+      <td>&gt;74</td>
+      <td>Kolding</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>5</td>
+      <td>2520</td>
+      <td>40-54</td>
+      <td>Vejle</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>7</td>
+      <td>878</td>
+      <td>55-59</td>
+      <td>Vejle</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>10</td>
+      <td>839</td>
+      <td>60-64</td>
+      <td>Vejle</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>14</td>
+      <td>631</td>
+      <td>65-69</td>
+      <td>Vejle</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>8</td>
+      <td>539</td>
+      <td>70-74</td>
+      <td>Vejle</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>7</td>
+      <td>619</td>
+      <td>&gt;74</td>
+      <td>Vejle</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="analise-exploratoria">
+<h2>Análise exploratória<a class="headerlink" href="#analise-exploratoria" title="Link permanente para este título">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">]})</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Cases&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;City&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;Pop&quot;</span><span class="p">,</span>
+    <span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;center left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+
+<span class="n">g</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lista_4_5_0.png" src="../_images/lista_4_5_0.png" />
+</div>
+</div>
+<p>Nota-se que a população descresce com o avanço da idade, assim, uma medida mais interessante é a taxa casos a cada 100 habitantes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span><span class="p">[</span><span class="s2">&quot;casos_por_100_habitantes&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">Cases</span> <span class="o">/</span> <span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">Pop</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;casos_por_100_habitantes&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;City&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">150</span>
+<span class="p">)</span>
+
+<span class="n">g</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lista_4_7_0.png" src="../_images/lista_4_7_0.png" />
+</div>
+</div>
+<p>Também pode ser interessante conectar os pontos de cada cidade e buscar vizualizar se alguma cidade está com taxas mais altas ou mais baixas conforme o avanço das faixas etárias. No gráfico abaixo, nota-se que Fredericia geralmente é a primeira ou a segunda cidade com as taxas mais altas. As demais, inicialmente, não apresentam um padrão claro em relação as demais.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;City&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;casos_por_100_habitantes&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;casos_por_100_habitantes&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">add_legend</span><span class="p">()</span>
+
+<span class="n">g</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lista_4_9_0.png" src="../_images/lista_4_9_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="modelo">
+<h2>Modelo<a class="headerlink" href="#modelo" title="Link permanente para este título">¶</a></h2>
+<p>O modelo escolhido é o linear generalizado da familia Poisson. Utilizando a População como offset, Idade e Cidade como variáveis explicativas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+
+<span class="n">offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">Pop</span><span class="p">)</span>
+
+<span class="n">modelo</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+    <span class="s2">&quot;Cases ~ Age + City&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Poisson</span><span class="p">(),</span>
+    <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ajuste</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ajuste</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>Generalized Linear Model Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>         <td>Cases</td>      <th>  No. Observations:  </th>  <td>    24</td> 
+</tr>
+<tr>
+  <th>Model:</th>                  <td>GLM</td>       <th>  Df Residuals:      </th>  <td>    15</td> 
+</tr>
+<tr>
+  <th>Model Family:</th>         <td>Poisson</td>     <th>  Df Model:          </th>  <td>     8</td> 
+</tr>
+<tr>
+  <th>Link Function:</th>          <td>Log</td>       <th>  Scale:             </th> <td>  1.0000</td>
+</tr>
+<tr>
+  <th>Method:</th>                <td>IRLS</td>       <th>  Log-Likelihood:    </th> <td> -59.918</td>
+</tr>
+<tr>
+  <th>Date:</th>            <td>Thu, 09 Jun 2022</td> <th>  Deviance:          </th> <td>  23.447</td>
+</tr>
+<tr>
+  <th>Time:</th>                <td>18:29:06</td>     <th>  Pearson chi2:      </th>  <td>  22.6</td> 
+</tr>
+<tr>
+  <th>No. Iterations:</th>          <td>4</td>        <th>  Pseudo R-squ. (CS):</th>  <td>0.9882</td> 
+</tr>
+<tr>
+  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+         <td></td>            <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>       <td>   -5.6321</td> <td>    0.200</td> <td>  -28.125</td> <td> 0.000</td> <td>   -6.025</td> <td>   -5.240</td>
+</tr>
+<tr>
+  <th>Age[T.55-59]</th>    <td>    1.1010</td> <td>    0.248</td> <td>    4.434</td> <td> 0.000</td> <td>    0.614</td> <td>    1.588</td>
+</tr>
+<tr>
+  <th>Age[T.60-64]</th>    <td>    1.5186</td> <td>    0.232</td> <td>    6.556</td> <td> 0.000</td> <td>    1.065</td> <td>    1.973</td>
+</tr>
+<tr>
+  <th>Age[T.65-69]</th>    <td>    1.7677</td> <td>    0.229</td> <td>    7.704</td> <td> 0.000</td> <td>    1.318</td> <td>    2.217</td>
+</tr>
+<tr>
+  <th>Age[T.70-74]</th>    <td>    1.8569</td> <td>    0.235</td> <td>    7.891</td> <td> 0.000</td> <td>    1.396</td> <td>    2.318</td>
+</tr>
+<tr>
+  <th>Age[T.>74]</th>      <td>    1.4197</td> <td>    0.250</td> <td>    5.672</td> <td> 0.000</td> <td>    0.929</td> <td>    1.910</td>
+</tr>
+<tr>
+  <th>City[T.Horsens]</th> <td>   -0.3301</td> <td>    0.182</td> <td>   -1.818</td> <td> 0.069</td> <td>   -0.686</td> <td>    0.026</td>
+</tr>
+<tr>
+  <th>City[T.Kolding]</th> <td>   -0.3715</td> <td>    0.188</td> <td>   -1.978</td> <td> 0.048</td> <td>   -0.740</td> <td>   -0.003</td>
+</tr>
+<tr>
+  <th>City[T.Vejle]</th>   <td>   -0.2723</td> <td>    0.188</td> <td>   -1.450</td> <td> 0.147</td> <td>   -0.641</td> <td>    0.096</td>
+</tr>
+</table></div></div>
+</div>
+<p>Nota-se que os coeficientes das Idades são determinates na predição do número casos. Já as cidades apresentaram p-valores mais altos, entretanto todas indicam que há uma redução no número de casos em relação a cidade de referência (intercept): Fredericia, conforme suspeita mencionada na análise exploratória.</p>
+<p>Abaixo temos os valores preditos pelo modelo para cada combinação de Idade e Cidade:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predicoes</span> <span class="o">=</span> <span class="n">ajuste</span><span class="o">.</span><span class="n">get_prediction</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">)</span>
+
+<span class="n">dataset</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">predicoes</span><span class="o">.</span><span class="n">summary_frame</span><span class="p">())</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cases</th>
+      <th>Pop</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>mean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11</td>
+      <td>3059</td>
+      <td>40-54</td>
+      <td>Fredericia</td>
+      <td>10.954812</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11</td>
+      <td>800</td>
+      <td>55-59</td>
+      <td>Fredericia</td>
+      <td>8.615485</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>11</td>
+      <td>710</td>
+      <td>60-64</td>
+      <td>Fredericia</td>
+      <td>11.609373</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10</td>
+      <td>581</td>
+      <td>65-69</td>
+      <td>Fredericia</td>
+      <td>12.187276</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>11</td>
+      <td>509</td>
+      <td>70-74</td>
+      <td>Fredericia</td>
+      <td>11.672630</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>10</td>
+      <td>605</td>
+      <td>&gt;74</td>
+      <td>Fredericia</td>
+      <td>8.960422</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>13</td>
+      <td>2879</td>
+      <td>40-54</td>
+      <td>Horsens</td>
+      <td>7.411803</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>6</td>
+      <td>1083</td>
+      <td>55-59</td>
+      <td>Horsens</td>
+      <td>8.384458</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>15</td>
+      <td>923</td>
+      <td>60-64</td>
+      <td>Horsens</td>
+      <td>10.849479</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>834</td>
+      <td>65-69</td>
+      <td>Horsens</td>
+      <td>12.576313</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>12</td>
+      <td>634</td>
+      <td>70-74</td>
+      <td>Horsens</td>
+      <td>10.451942</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2</td>
+      <td>782</td>
+      <td>&gt;74</td>
+      <td>Horsens</td>
+      <td>8.326004</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4</td>
+      <td>3142</td>
+      <td>40-54</td>
+      <td>Kolding</td>
+      <td>7.760169</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>8</td>
+      <td>1050</td>
+      <td>55-59</td>
+      <td>Kolding</td>
+      <td>7.798635</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>7</td>
+      <td>895</td>
+      <td>60-64</td>
+      <td>Kolding</td>
+      <td>10.092831</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>11</td>
+      <td>702</td>
+      <td>65-69</td>
+      <td>Kolding</td>
+      <td>10.155638</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>9</td>
+      <td>535</td>
+      <td>70-74</td>
+      <td>Kolding</td>
+      <td>8.461440</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>12</td>
+      <td>659</td>
+      <td>&gt;74</td>
+      <td>Kolding</td>
+      <td>6.731286</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>5</td>
+      <td>2520</td>
+      <td>40-54</td>
+      <td>Vejle</td>
+      <td>6.873215</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>7</td>
+      <td>878</td>
+      <td>55-59</td>
+      <td>Vejle</td>
+      <td>7.201421</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>10</td>
+      <td>839</td>
+      <td>60-64</td>
+      <td>Vejle</td>
+      <td>10.448316</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>14</td>
+      <td>631</td>
+      <td>65-69</td>
+      <td>Vejle</td>
+      <td>10.080773</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>8</td>
+      <td>539</td>
+      <td>70-74</td>
+      <td>Vejle</td>
+      <td>9.413988</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>7</td>
+      <td>619</td>
+      <td>&gt;74</td>
+      <td>Vejle</td>
+      <td>6.982287</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./modelos_lineares_generalizados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="lista_3.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Trabalho No. 3</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
