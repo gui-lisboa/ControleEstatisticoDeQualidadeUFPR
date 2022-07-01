@@ -1,0 +1,17 @@
+Estado Taxa
+"Schleswig-Holstein" 8.7
+"Hamburg" 9.8
+"Mecklenburg-Vorpommern" 17.3
+"Niedersachsen" 9.8
+"Bremen" 13.9
+"Nordrhein-Westfalen" 9.8
+"Hessen" 7.9
+"Rheinland-Pfalz" 7.7
+"Saarland" 10.4
+"Baden-WÃ¼rttemberg" 6.2
+"Bayern" 5.8
+"Berlin" 15.8
+"Brandenburg" 17.1
+"Sachsen-Anhalt" 19.9
+"ThÃ¼ringen" 15.1
+"Sachsen" 16.8
