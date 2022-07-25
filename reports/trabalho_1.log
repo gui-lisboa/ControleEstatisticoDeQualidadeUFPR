@@ -17,48 +17,37 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from urllib.request import urlopen
-from IPython.display import display, Image
-import json
-import pandas as pd
 import plotly.express as px
 
-GEOJSON_PARANA = 'https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-41-mun.json'
-with urlopen(GEOJSON_PARANA) as response:
-    cidades_geo = json.load(response)
+dados_carros = pd.read_table("./dados/CarData.txt", sep="\s+")
 
-populacao_estimada = pd.read_csv('./dados/populacao_estimada.csv', delimiter=';')
-pib = pd.read_csv('./dados/pib.csv')
-cidades = pd.merge(populacao_estimada, pib, on='Cidade')
-cidades['PIB_per_capita'] = cidades.PIB/cidades.Populacao
+colunas_linhas_paralelas = [
+    coluna for coluna in dados_carros.columns if coluna not in ["C", "Model"]
+]
 
-def criar_mapa(cor: str, escala_cor: str):
-    fig = px.choropleth_mapbox(cidades, geojson=cidades_geo,
-                               locations='Codigo', featureidkey="properties.id",
-                               color=cor, color_continuous_scale=escala_cor,
-                               mapbox_style="white-bg", zoom=5.9, center = {"lat": -24.5, "lon": -51.4}, opacity=0.5)
-    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-    return fig
+fig = px.parallel_coordinates(
+    dados_carros,
+    color="C",
+    dimensions=colunas_linhas_paralelas,
+    #color_continuous_scale=px.colors.diverging.RdYlBu,
+)
 
-mapa_populacao = criar_mapa('Populacao', 'Blues')
-mapa_populacao.write_image("./imagens/mapa_parana_pop.png")
-display(Image('./imagens/mapa_parana_pop.png'))
-#mapa_populacao.show()
-
-mapa_PIB_per_capita = criar_mapa('PIB_per_capita', 'Reds')
-mapa_PIB_per_capita.write_image("./imagens/mapa_parana_pib_capita.png")
-display(Image('./imagens/mapa_parana_pib_capita.png'))
-#mapa_PIB_per_capita.show()
+fig.write_image("./imagens/trabalho1_q9.png")
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-Input [0;32mIn [2][0m, in [0;36m<cell line: 25>[0;34m()[0m
-[1;32m     22[0m     [38;5;28;01mreturn[39;00m fig
-[1;32m     24[0m mapa_populacao [38;5;241m=[39m criar_mapa([38;5;124m'[39m[38;5;124mPopulacao[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mBlues[39m[38;5;124m'[39m)
-[0;32m---> 25[0m [43mmapa_populacao[49m[38;5;241;43m.[39;49m[43mwrite_image[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43m./imagens/mapa_parana_pop.png[39;49m[38;5;124;43m"[39;49m[43m)[49m
-[1;32m     26[0m display(Image([38;5;124m'[39m[38;5;124m./imagens/mapa_parana_pop.png[39m[38;5;124m'[39m))
-[1;32m     27[0m [38;5;66;03m#mapa_populacao.show()[39;00m
+Input [0;32mIn [4][0m, in [0;36m<cell line: 16>[0;34m()[0m
+[1;32m      5[0m colunas_linhas_paralelas [38;5;241m=[39m [
+[1;32m      6[0m     coluna [38;5;28;01mfor[39;00m coluna [38;5;129;01min[39;00m dados_carros[38;5;241m.[39mcolumns [38;5;28;01mif[39;00m coluna [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m [[38;5;124m"[39m[38;5;124mC[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mModel[39m[38;5;124m"[39m]
+[1;32m      7[0m ]
+[1;32m      9[0m fig [38;5;241m=[39m px[38;5;241m.[39mparallel_coordinates(
+[1;32m     10[0m     dados_carros,
+[1;32m     11[0m     color[38;5;241m=[39m[38;5;124m"[39m[38;5;124mC[39m[38;5;124m"[39m,
+[1;32m     12[0m     dimensions[38;5;241m=[39mcolunas_linhas_paralelas,
+[1;32m     13[0m     [38;5;66;03m#color_continuous_scale=px.colors.diverging.RdYlBu,[39;00m
+[1;32m     14[0m )
+[0;32m---> 16[0m [43mfig[49m[38;5;241;43m.[39;49m[43mwrite_image[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43m./imagens/trabalho1_q9.png[39;49m[38;5;124;43m"[39;49m[43m)[49m
 
 File [0;32m/opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/plotly/basedatatypes.py:3829[0m, in [0;36mBaseFigure.write_image[0;34m(self, *args, **kwargs)[0m
 [1;32m   3769[0m [38;5;124;03m"""[39;00m

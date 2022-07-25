@@ -1,0 +1,1275 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho No. 2 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Trabalho No. 1" href="trabalho_1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/anotacoes.html">
+   Anotações para prova
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_3.html">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_2.html">
+   2º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Estatísticos Multivariados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="trabalho_1.html">
+   Trabalho No. 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Trabalho No. 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/metodos_estatisticos_multivariados/trabalho_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-ii-7">
+   Seção II.7
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-1">
+     Questão 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-2">
+     Questão 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-iii-8">
+   Seção III.8
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-3">
+     Questão 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-16">
+     Questão 16
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-iv-9">
+   Seção IV.9
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Questão 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-5">
+     Questão 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-11">
+     Questão 11
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-x-6">
+   Seção X.6
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Questão 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trabalho No. 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-ii-7">
+   Seção II.7
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-1">
+     Questão 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-2">
+     Questão 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-iii-8">
+   Seção III.8
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-3">
+     Questão 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-16">
+     Questão 16
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-iv-9">
+   Seção IV.9
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Questão 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-5">
+     Questão 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#questao-11">
+     Questão 11
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secao-x-6">
+   Seção X.6
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Questão 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-2">
+<h1>Trabalho No. 2<a class="headerlink" href="#trabalho-no-2" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questoes admonition">
+<p class="admonition-title">Questões</p>
+<p>Questões: 1 e 2 na Seção II.7 Exercícios em http://leg.ufpr.br/~lucambio/MSM/MSM02.html#MSMII.7</p>
+<p>Questões: 3 e 16 na Seção III.8 Exercícios em http://leg.ufpr.br/~lucambio/MSM/MSM03.html#MSMIII.8</p>
+<p>Questões: 3, 5 e 11 na Seção IV.9 Exercícios em http://leg.ufpr.br/~lucambio/MSM/MSM04.html#MSMIV.9</p>
+<p>Questão: 3 na Seção X.6 Exercícios em http://leg.ufpr.br/~lucambio/MSM/MSM10.html#MSMX.6</p>
+</div>
+<div class="section" id="secao-ii-7">
+<h2>Seção II.7<a class="headerlink" href="#secao-ii-7" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="questao-1">
+<h3>Questão 1<a class="headerlink" href="#questao-1" title="Link permanente para este título">¶</a></h3>
+<p>Suponha que <span class="math notranslate nohighlight">\(|A|=0\)</span>. É possível que todos os valores próprios de A sejam positivos?</p>
+<p>Não, pois dado que <span class="math notranslate nohighlight">\(|A| = 0\)</span>, temos <span class="math notranslate nohighlight">\(|A| = |Λ|= \prod_{j=1}^{p}λ_j = 0\)</span>. Para que o produtório seja igual a 0, pelo menos um autovalor deve ser igual a 0, logo, não positivo.</p>
+</div>
+<div class="section" id="questao-2">
+<h3>Questão 2<a class="headerlink" href="#questao-2" title="Link permanente para este título">¶</a></h3>
+<p>Suponha que todos os valores próprios de alguma matriz (quadrada) A sejam diferentes de zero. A inversa <span class="math notranslate nohighlight">\(A^{−1}\)</span> existe?</p>
+<p>Para que a matrix quadrada admita inversa, <span class="math notranslate nohighlight">\(|A| \neq 0\)</span>. Como todos os autovalores são diferentes de 0, temos que <span class="math notranslate nohighlight">\(\prod_{j=1}^{p}λ_j \neq 0\)</span> e assim, <span class="math notranslate nohighlight">\(\prod_{j=1}^{p}λ_j = |Λ| = |A| \neq 0\)</span>, logo, a inversa <span class="math notranslate nohighlight">\(A^{-1}\)</span> existe.</p>
+</div>
+</div>
+<div class="section" id="secao-iii-8">
+<h2>Seção III.8<a class="headerlink" href="#secao-iii-8" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="questao-3">
+<h3>Questão 3<a class="headerlink" href="#questao-3" title="Link permanente para este título">¶</a></h3>
+<p>Observamos que, para duas variáveis aleatórias normais, a covariância zero implica independência. Por que essa observação não se aplica ao Exemplo III.4?</p>
+<p>Porque a relação de depedência de <span class="math notranslate nohighlight">\(Y\)</span> e <span class="math notranslate nohighlight">\(X\)</span> é expressa de forma quadrática: <span class="math notranslate nohighlight">\(Y = X^2\)</span>, portanto como a covariância avalia apenas relação linear e não há um termo linar na relação, <span class="math notranslate nohighlight">\(Cov(Y,X) = 0\)</span> apesar de <span class="math notranslate nohighlight">\(Y\)</span> depender de <span class="math notranslate nohighlight">\(X\)</span></p>
+</div>
+<div class="section" id="questao-16">
+<h3>Questão 16<a class="headerlink" href="#questao-16" title="Link permanente para este título">¶</a></h3>
+<p>Mostre que <span class="math notranslate nohighlight">\(posto(H)=tr(H)=n−1\)</span>.</p>
+<p>Seja <span class="math notranslate nohighlight">\(H = I_n - \frac{1}{n} 1_n 1_n^T\)</span>, temos que <span class="math notranslate nohighlight">\(1_n 1_n^T = n\)</span>,</p>
+<p>Reescrevendo <span class="math notranslate nohighlight">\(H\)</span>, temos: <span class="math notranslate nohighlight">\(H = I_n - [\frac{n}{n}\)</span>]</p>
+<p>Como <span class="math notranslate nohighlight">\(\frac{n}{n} = 1\)</span>, temos <span class="math notranslate nohighlight">\(H = I_n - [1]\)</span></p>
+<p>Como <span class="math notranslate nohighlight">\(tr(A + B) = tr(A) + tr(B)\)</span>, temos: <span class="math notranslate nohighlight">\(tr(H) = tr(I_n) - tr([1])\)</span></p>
+<p>Como o traço é a soma da diagonal, para uma matriz identidade com <span class="math notranslate nohighlight">\(n\)</span> linhas o traço é igual a <span class="math notranslate nohighlight">\(n\)</span>, logo:</p>
+<p><span class="math notranslate nohighlight">\(tr(H) = n - 1\)</span></p>
+</div>
+</div>
+<div class="section" id="secao-iv-9">
+<h2>Seção IV.9<a class="headerlink" href="#secao-iv-9" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="id1">
+<h3>Questão 3<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
+<p>Encontre os momentos condicionais <span class="math notranslate nohighlight">\(E(X_2|x_1)\)</span> e <span class="math notranslate nohighlight">\(E(X_1|x_2)\)</span> para a função de densidade no Exemplo IV.5.</p>
+<p><span class="math notranslate nohighlight">\(E(X_2|x_1)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+E(X_2|x_1) = \int_{0}^{1} x_2 f(x_2|x_1) dx_2 \\
+E(X_2|x_1) = \int_{0}^{1} x_2 \frac{\frac{1}{2}x_1 + \frac{3}{2}x_2}{\frac{1}{2}x_1 + \frac{3}{4}} dx_2 \\
+E(X_2|x_1) = \frac{x_1}{3 + 2x_1} + \frac{2}{3 + 2x_1} = \frac{x_1 + 2}{3 + 2x_1}
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(E(X_1|x_2)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+E(X_1|x_2) = \int_{0}^{1} x_1 f(x_1|x_2) dx_1 \\
+E(X_1|x_2) = \int_{0}^{1} x_1 \frac{\frac{1}{2}x_1 + \frac{3}{2}x_2}{\frac{3}{2}x_2 + \frac{1}{4}} dx_1 \\
+E(X_1|x_2) = \frac{2}{3(6x_2 + 1)} + \frac{3x_2}{1 + 6x_2} = \frac{2 + 9x_2}{3(6x_2 + 1)}
+\end{split}\]</div>
+</div>
+<div class="section" id="questao-5">
+<h3>Questão 5<a class="headerlink" href="#questao-5" title="Link permanente para este título">¶</a></h3>
+<p>Uma montadora européia testou um novo modelo e relata a consumo de gasolina <span class="math notranslate nohighlight">\(X_1\)</span> e de óleo <span class="math notranslate nohighlight">\(X_2\)</span>. O consumo previsto de gasolina é de 8 litros por 100 km (<span class="math notranslate nohighlight">\(μ_1\)</span>) e o consumo esperado de óleo é de 1 litro por 10.000 km (<span class="math notranslate nohighlight">\(μ_2\)</span>). O consumo medido de gasolina é de 8.1 litros por 100 km (<span class="math notranslate nohighlight">\(\bar{x_1}\)</span>) e o consumo medido de óleo é de 1.1 litros por 10.000 km (<span class="math notranslate nohighlight">\(\bar{x_2}\)</span>). A distribuição assintótica de:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gather}
+    \sqrt{n} (
+    \begin{bmatrix} \bar{x_1} \\ \bar{x_2} \end{bmatrix} 
+    −
+    \begin{bmatrix} \mu_1 \\ \mu_2 \end{bmatrix} )
+    ∼ N_2 (
+    \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+    − 
+    \begin{bmatrix} 0.1 &amp; 0.05 \\ 0.05 &amp; 0.1 \end{bmatrix} )
+\end{gather}
+\end{split}\]</div>
+<p>Para o mercado americano as unidades básicas de medição são milhas (1 milha 1.6 km) e galões (1 galão 3.8 l). Os consumos de gasolina <span class="math notranslate nohighlight">\(Y_1\)</span> e óleo <span class="math notranslate nohighlight">\(Y_2\)</span> são geralmente informados em milhas por galão. Você pode expressar <span class="math notranslate nohighlight">\(\bar{y_1}\)</span> e <span class="math notranslate nohighlight">\(\bar{y_2}\)</span> em termos de <span class="math notranslate nohighlight">\(\bar{x_1}\)</span> e <span class="math notranslate nohighlight">\(\bar{x_2}\)</span>? Recalcule a distribuição assintótica para o mercado americano.</p>
+</div>
+<div class="section" id="questao-11">
+<h3>Questão 11<a class="headerlink" href="#questao-11" title="Link permanente para este título">¶</a></h3>
+<p>Considere a função de densidade <span class="math notranslate nohighlight">\(f(x_1,x_2) = \frac{1}{8x_2} exp(−(\frac{x_1}{2x_2} + \frac{x_2}{4}))\)</span>, <span class="math notranslate nohighlight">\(x1,x2 \gt 0\)</span>.
+Encontre <span class="math notranslate nohighlight">\(f(x_2)\)</span> e <span class="math notranslate nohighlight">\(f(x_1|x_2)\)</span>. Encontre também a melhor aproximação de <span class="math notranslate nohighlight">\(X_1\)</span> por uma função de <span class="math notranslate nohighlight">\(X_2\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(f_{X_2}(x_2)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f_{X_2}(x_2) = \int_{0}^{\infty} f(x_1, x_2) dx_1 \\
+f_{X_2}(x_2) = \int_{0}^{\infty} \frac{1}{8x_2} exp(−(\frac{x_1}{2x_2} + \frac{x_2}{4}) dx_1 \\
+f_{X_2}(x_2) = \frac{1}{4} exp(-\frac{x_2}{4})
+\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(f_(x_1|x_2)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f_(x_1|x_2) = \frac{f(x_1, x_2)}{f_{X_2}(x_2)} \\
+f_(x_1|x_2) = \frac{\frac{1}{8x_2} exp(−(\frac{x_1}{2x_2} + \frac{x_2}{4}))}{\frac{1}{4} exp(-\frac{x_2}{4})} \\
+f_(x_1|x_2) = \frac{1}{2x_2 exp(\frac{x_1}{2x_2})}
+\end{split}\]</div>
+<p>Aproximação de <span class="math notranslate nohighlight">\(X_1\)</span> por <span class="math notranslate nohighlight">\(X_2\)</span></p>
+<p>Seja <span class="math notranslate nohighlight">\(E(X_1 | X_2)\)</span> a melhor aproximação de <span class="math notranslate nohighlight">\(X_1\)</span> por <span class="math notranslate nohighlight">\(f(x_2) = \frac{1}{4} exp(-\frac{x_2}{4})\)</span> de <span class="math notranslate nohighlight">\(X_2\)</span> (Exponencial(<span class="math notranslate nohighlight">\(\lambda = \frac{1}{4}\)</span>) ), temos:</p>
+<div class="math notranslate nohighlight">
+\[
+E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
+\]</div>
+</div>
+</div>
+<div class="section" id="secao-x-6">
+<h2>Seção X.6<a class="headerlink" href="#secao-x-6" title="Link permanente para este título">¶</a></h2>
+<div class="section" id="id2">
+<h3>Questão 3<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h3>
+<p>Aplicar as técnicas fatoriais ao conjunto de dados: Time Budget Data ou dados temporais de orçamento em In Volle (1985). Nestes arquivo de dados, 28 indivíduos identificados de acordo com o sexo, país onde vivem, atividade profissional e estado civil, indicando o tempo que cada pessoa gastou em 10 categorias de atividades ao longo de 100 dias, 100×24h = 2400 horas total em cada linha, em 1976.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">)})</span>
+
+<span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;./dados/time_budget_data.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">matriz_correlação</span> <span class="o">=</span> <span class="n">dados</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">heatmap</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">matriz_correlação</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_10_0.png" src="../_images/trabalho_2_10_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dados</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">),</span> <span class="n">fill_value</span><span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(((</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">dados</span><span class="o">.</span><span class="n">cov</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">)))</span>
+
+<span class="n">X1</span> <span class="o">=</span> <span class="n">H</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="n">auto_valores</span><span class="p">,</span> <span class="n">auto_vetores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">X1</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X1</span><span class="p">))</span>
+
+<span class="c1"># arruma para fator próximo de 0 que assume valor negativo</span>
+<span class="n">auto_valores</span> <span class="o">=</span> <span class="n">auto_valores</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">auto_valores</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 4.58866886,  2.11984257,  1.32097835,  1.19525506,  0.46841052,
+        0.19904742, -0.        ,  0.02391893,  0.0370651 ,  0.04681319])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">soma_auto_valores</span> <span class="o">=</span> <span class="n">auto_valores</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">dominância</span> <span class="o">=</span> <span class="n">auto_valores</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">/</span><span class="n">soma_auto_valores</span>
+
+<span class="n">dominância</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;fator&quot;</span><span class="p">:</span> <span class="n">dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="s2">&quot;dominancia&quot;</span><span class="p">:</span> <span class="n">dominância</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">dominância</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fator</th>
+      <th>dominancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>prof</td>
+      <td>0.458867</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>tran</td>
+      <td>0.670851</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>hous</td>
+      <td>0.802949</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>kids</td>
+      <td>0.922474</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>shop</td>
+      <td>0.969316</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>pers</td>
+      <td>0.989220</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>eat</td>
+      <td>0.989220</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>slee</td>
+      <td>0.991612</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>tele</td>
+      <td>0.995319</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>leis</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">auto_valores</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">auto_vetores</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="n">W</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">dados</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="n">W</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>prof</th>
+      <th>tran</th>
+      <th>hous</th>
+      <th>kids</th>
+      <th>shop</th>
+      <th>pers</th>
+      <th>eat</th>
+      <th>slee</th>
+      <th>tele</th>
+      <th>leis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>prof</th>
+      <td>-0.977173</td>
+      <td>-0.665943</td>
+      <td>0.482837</td>
+      <td>0.445095</td>
+      <td>0.180067</td>
+      <td>0.016560</td>
+      <td>-0.0</td>
+      <td>0.046509</td>
+      <td>0.008937</td>
+      <td>0.009310</td>
+    </tr>
+    <tr>
+      <th>tran</th>
+      <td>-0.178091</td>
+      <td>0.058116</td>
+      <td>0.017881</td>
+      <td>0.134089</td>
+      <td>0.357542</td>
+      <td>0.250686</td>
+      <td>0.0</td>
+      <td>-0.060473</td>
+      <td>0.025533</td>
+      <td>0.016384</td>
+    </tr>
+    <tr>
+      <th>hous</th>
+      <td>0.157632</td>
+      <td>0.010633</td>
+      <td>-0.362434</td>
+      <td>-0.079647</td>
+      <td>0.002715</td>
+      <td>0.117293</td>
+      <td>-0.0</td>
+      <td>0.025682</td>
+      <td>0.155790</td>
+      <td>-0.005689</td>
+    </tr>
+    <tr>
+      <th>kids</th>
+      <td>0.131168</td>
+      <td>0.060667</td>
+      <td>0.225149</td>
+      <td>0.294447</td>
+      <td>-0.075771</td>
+      <td>-0.025934</td>
+      <td>-0.0</td>
+      <td>-0.044206</td>
+      <td>0.026634</td>
+      <td>-0.189483</td>
+    </tr>
+    <tr>
+      <th>shop</th>
+      <td>0.300600</td>
+      <td>-0.236259</td>
+      <td>0.006982</td>
+      <td>-0.303439</td>
+      <td>-0.085248</td>
+      <td>0.292344</td>
+      <td>-0.0</td>
+      <td>0.070744</td>
+      <td>-0.067759</td>
+      <td>-0.068044</td>
+    </tr>
+    <tr>
+      <th>pers</th>
+      <td>-0.087076</td>
+      <td>0.027594</td>
+      <td>0.112249</td>
+      <td>-0.625076</td>
+      <td>0.417702</td>
+      <td>-0.161713</td>
+      <td>0.0</td>
+      <td>0.037727</td>
+      <td>0.018907</td>
+      <td>-0.059458</td>
+    </tr>
+    <tr>
+      <th>eat</th>
+      <td>-1.517321</td>
+      <td>-0.218441</td>
+      <td>-0.713118</td>
+      <td>-0.103989</td>
+      <td>-0.069589</td>
+      <td>-0.016048</td>
+      <td>0.0</td>
+      <td>-0.014375</td>
+      <td>-0.023694</td>
+      <td>-0.043219</td>
+    </tr>
+    <tr>
+      <th>slee</th>
+      <td>-0.204184</td>
+      <td>0.996888</td>
+      <td>-0.175076</td>
+      <td>0.265395</td>
+      <td>0.235796</td>
+      <td>0.041848</td>
+      <td>-0.0</td>
+      <td>0.016433</td>
+      <td>-0.057730</td>
+      <td>-0.012680</td>
+    </tr>
+    <tr>
+      <th>tele</th>
+      <td>-1.047705</td>
+      <td>0.611890</td>
+      <td>0.590000</td>
+      <td>-0.403714</td>
+      <td>-0.230748</td>
+      <td>0.075181</td>
+      <td>0.0</td>
+      <td>-0.012518</td>
+      <td>0.033576</td>
+      <td>0.015672</td>
+    </tr>
+    <tr>
+      <th>leis</th>
+      <td>-0.142996</td>
+      <td>0.443509</td>
+      <td>-0.074424</td>
+      <td>0.398867</td>
+      <td>-0.083503</td>
+      <td>-0.047145</td>
+      <td>0.0</td>
+      <td>0.091781</td>
+      <td>0.037192</td>
+      <td>-0.009067</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">)})</span>
+<span class="n">scatter</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;prof&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;tran&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">W</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">scatter</span><span class="o">.</span><span class="n">axvline</span><span class="p">()</span>
+<span class="n">scatter</span><span class="o">.</span><span class="n">axhline</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+    <span class="n">scatter</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">W</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">+</span> <span class="mf">.01</span><span class="p">)</span>
+
+<span class="n">W</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>prof</th>
+      <th>tran</th>
+      <th>hous</th>
+      <th>kids</th>
+      <th>shop</th>
+      <th>pers</th>
+      <th>eat</th>
+      <th>slee</th>
+      <th>tele</th>
+      <th>leis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>prof</th>
+      <td>-0.977173</td>
+      <td>-0.665943</td>
+      <td>0.482837</td>
+      <td>0.445095</td>
+      <td>0.180067</td>
+      <td>0.016560</td>
+      <td>-0.0</td>
+      <td>0.046509</td>
+      <td>0.008937</td>
+      <td>0.009310</td>
+    </tr>
+    <tr>
+      <th>tran</th>
+      <td>-0.178091</td>
+      <td>0.058116</td>
+      <td>0.017881</td>
+      <td>0.134089</td>
+      <td>0.357542</td>
+      <td>0.250686</td>
+      <td>0.0</td>
+      <td>-0.060473</td>
+      <td>0.025533</td>
+      <td>0.016384</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../_images/trabalho_2_14_1.png" src="../_images/trabalho_2_14_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Z</span> <span class="o">=</span> <span class="n">X1</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">auto_vetores</span><span class="p">)</span>
+
+<span class="n">Z</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">dados</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">dados</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="n">Z</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>prof</th>
+      <th>tran</th>
+      <th>hous</th>
+      <th>kids</th>
+      <th>shop</th>
+      <th>pers</th>
+      <th>eat</th>
+      <th>slee</th>
+      <th>tele</th>
+      <th>leis</th>
+    </tr>
+    <tr>
+      <th>ind</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>maus</th>
+      <td>-0.335054</td>
+      <td>0.129652</td>
+      <td>0.353636</td>
+      <td>0.108694</td>
+      <td>-0.161464</td>
+      <td>0.125790</td>
+      <td>1.606093e-16</td>
+      <td>0.020331</td>
+      <td>0.020168</td>
+      <td>-0.002055</td>
+    </tr>
+    <tr>
+      <th>waus</th>
+      <td>-0.032427</td>
+      <td>0.418656</td>
+      <td>0.124873</td>
+      <td>0.082690</td>
+      <td>0.236541</td>
+      <td>0.009103</td>
+      <td>2.533893e-17</td>
+      <td>0.025320</td>
+      <td>0.009486</td>
+      <td>-0.011220</td>
+    </tr>
+    <tr>
+      <th>wnus</th>
+      <td>0.766020</td>
+      <td>0.430446</td>
+      <td>0.200419</td>
+      <td>-0.098330</td>
+      <td>-0.195981</td>
+      <td>-0.170411</td>
+      <td>-5.190507e-16</td>
+      <td>-0.030467</td>
+      <td>-0.042020</td>
+      <td>0.002719</td>
+    </tr>
+    <tr>
+      <th>mmus</th>
+      <td>-0.336270</td>
+      <td>0.055310</td>
+      <td>0.356258</td>
+      <td>0.138518</td>
+      <td>-0.196244</td>
+      <td>0.156888</td>
+      <td>1.849335e-16</td>
+      <td>-0.000953</td>
+      <td>0.015927</td>
+      <td>0.034947</td>
+    </tr>
+    <tr>
+      <th>wmus</th>
+      <td>0.494048</td>
+      <td>0.431881</td>
+      <td>0.150662</td>
+      <td>0.020335</td>
+      <td>-0.070052</td>
+      <td>-0.108334</td>
+      <td>-3.919741e-16</td>
+      <td>-0.012986</td>
+      <td>-0.044897</td>
+      <td>-0.011610</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)})</span>
+<span class="n">scatter</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;prof&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;tran&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Z</span><span class="p">)</span>
+<span class="n">scatter</span><span class="o">.</span><span class="n">axvline</span><span class="p">()</span>
+<span class="n">scatter</span><span class="o">.</span><span class="n">axhline</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+    <span class="n">scatter</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">Z</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span> <span class="o">+</span> <span class="mf">.01</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_16_0.png" src="../_images/trabalho_2_16_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./metodos_estatisticos_multivariados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="trabalho_1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Trabalho No. 1</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

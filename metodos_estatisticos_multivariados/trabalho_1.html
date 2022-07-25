@@ -1,0 +1,848 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho No. 1 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Trabalho No. 2" href="trabalho_2.html" />
+    <link rel="prev" title="Trabalho No. 4" href="../modelos_lineares_generalizados/lista_4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/anotacoes.html">
+   Anotações para prova
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_3.html">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_2.html">
+   2º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Estatísticos Multivariados
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Trabalho No. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trabalho_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/metodos_estatisticos_multivariados/trabalho_1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-1">
+   Questão 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-7">
+   Questão 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-8">
+   Questão 8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-9">
+   Questão 9
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-14">
+   Questão 14
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-15">
+   Questão 15
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trabalho No. 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-1">
+   Questão 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-7">
+   Questão 7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-8">
+   Questão 8
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-9">
+   Questão 9
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-14">
+   Questão 14
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#questao-15">
+   Questão 15
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-1">
+<h1>Trabalho No. 1<a class="headerlink" href="#trabalho-no-1" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questoes admonition">
+<p class="admonition-title">Questões</p>
+<p>Questões: 1, 7, 8, 9, 14 e 15 na Seção I.10 Exercícios em
+http://leg.ufpr.br/~lucambio/MSM/MSM01.htm</p>
+</div>
+<div class="section" id="questao-1">
+<h2>Questão 1<a class="headerlink" href="#questao-1" title="Link permanente para este título">¶</a></h2>
+<p>No gráfico boxplot, o extremo superior é sempre um outlier?</p>
+<p>Não, uma observação apenas será considerada um outlier caso ela seja maior que <span class="math notranslate nohighlight">\(F_U + 1,5 d_F\)</span> ou menor que <span class="math notranslate nohighlight">\(F_L - 1,5 d_F\)</span></p>
+</div>
+<div class="section" id="questao-7">
+<h2>Questão 7<a class="headerlink" href="#questao-7" title="Link permanente para este título">¶</a></h2>
+<p>Faça o histograma para a variável de milhagem (quilometragem) do Exemplo I.2, o exemplo dos carros. Faça o mesmo para os três grupos (EUA, Japão e Europa). Você obtém uma conclusão semelhante à do boxplot para esses dados?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="s2">&quot;notebook&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">]})</span>
+
+<span class="n">dados_carros</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;./dados/CarData.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;\s+&quot;</span><span class="p">)</span>
+<span class="n">sedes</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;U.S.&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Japan&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;EU&quot;</span><span class="p">}</span>
+<span class="n">dados_carros</span><span class="o">.</span><span class="n">C</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">sedes</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">dados_carros</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_5_0.png" src="../_images/trabalho_1_5_0.png" />
+</div>
+</div>
+<p>Fica claro que os carros japoneses são, de maneira geral, mais eficientes que os norte americanos. Pelos histogramas, notamos que não há modelos japones com consumo pior que 20 milhas/galão, enquanto existem vários modelos abaixo de 20 milhas/galão de marcas estaunidenses. Já a comparação entre modelos europeus fica um pouco confusa, isso porque existem modelos abaixo de 20 milhas/galão, mas existe uma concentração em modelos entre 20 e 30 milhas/galão, o que pode confundir com a concentração de modelos japones na faixa de 20 milhas/galão.</p>
+<p>A detecção de oulier é mais explícita no boxplot. Nota-se no histograma dos modelos europeus que existe uma barra separada das demais (VW-Rabbit Golf Diesel), apontando a observação como possível outlier. Entretanto no histograma dos carros de marcars americanas não fica claro se existem ouliers.</p>
+<p>Enfim, para visualizar a distribuição do consumo em função do país de origem da sede, os histogramas me parecem mais adequados. Já caso o objetivo seja comparar o consumo e/ou detectar ouliers, os boxplots facilitaram visualizar principalmente a diferença entre os modelos japoneses e europeus e a presença de outlier nos modelos americanos.</p>
+</div>
+<div class="section" id="questao-8">
+<h2>Questão 8<a class="headerlink" href="#questao-8" title="Link permanente para este título">¶</a></h2>
+<p>Use algum critério de seleção de largura de banda para calcular a largura de banda h escolhida de forma ótima para a variável Diagonal das cédulas. Seria melhor ter uma largura de banda para os dois grupos?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">notas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/banknotes.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># métodos da metodologia de suavização (Härdle, Müller, Sperlich, &amp; Werwatz, 2004)</span>
+<span class="n">banda_otima</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">n</span> <span class="p">:</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">notas_banda_diagonal</span> <span class="o">=</span> <span class="n">banda_otima</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+
+<span class="n">notas_banda_diagonal</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5969235696880233
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">notas</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Diagonal&#39;</span><span class="p">,</span> <span class="n">binwidth</span><span class="o">=</span><span class="n">notas_banda_diagonal</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_9_0.png" src="../_images/trabalho_1_9_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="questao-9">
+<h2>Questão 9<a class="headerlink" href="#questao-9" title="Link permanente para este título">¶</a></h2>
+<p>Faça um gráfico de coordenadas paralelas para os dados dos carros (Exemplo I.2).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">dados_carros</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;./dados/CarData.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;\s+&quot;</span><span class="p">)</span>
+
+<span class="n">colunas_linhas_paralelas</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">coluna</span> <span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">dados_carros</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">coluna</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;Model&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">parallel_coordinates</span><span class="p">(</span>
+    <span class="n">dados_carros</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span>
+    <span class="n">dimensions</span><span class="o">=</span><span class="n">colunas_linhas_paralelas</span><span class="p">,</span>
+    <span class="c1">#color_continuous_scale=px.colors.diverging.RdYlBu,</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s2">&quot;./imagens/trabalho1_q9.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Input In [4], in &lt;cell line: 16&gt;()
+      5 colunas_linhas_paralelas = [
+      6     coluna for coluna in dados_carros.columns if coluna not in [&quot;C&quot;, &quot;Model&quot;]
+      7 ]
+      9 fig = px.parallel_coordinates(
+     10     dados_carros,
+     11     color=&quot;C&quot;,
+     12     dimensions=colunas_linhas_paralelas,
+     13     #color_continuous_scale=px.colors.diverging.RdYlBu,
+     14 )
+---&gt; 16 fig.write_image(&quot;./imagens/trabalho1_q9.png&quot;)
+
+File /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/plotly/basedatatypes.py:3829, in BaseFigure.write_image(self, *args, **kwargs)
+   3769 &quot;&quot;&quot;
+   3770 Convert a figure to a static image and write it to a file or writeable
+   3771 object
+   (...)
+   3825 None
+   3826 &quot;&quot;&quot;
+   3827 import plotly.io as pio
+-&gt; 3829 return pio.write_image(self, *args, **kwargs)
+
+File /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:268, in write_image(fig, file, format, scale, width, height, validate, engine)
+    252             raise ValueError(
+    253                 &quot;&quot;&quot;
+    254 Cannot infer image type from output path &#39;{file}&#39;.
+   (...)
+    262                 )
+    263             )
+    265     # Request image
+    266     # -------------
+    267     # Do this first so we don&#39;t create a file if image conversion fails
+--&gt; 268     img_data = to_image(
+    269         fig,
+    270         format=format,
+    271         scale=scale,
+    272         width=width,
+    273         height=height,
+    274         validate=validate,
+    275         engine=engine,
+    276     )
+    278     # Open file
+    279     # ---------
+    280     if path is None:
+    281         # We previously failed to make sense of `file` as a pathlib object.
+    282         # Attempt to write to `file` as an open file descriptor.
+
+File /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:134, in to_image(fig, format, width, height, scale, validate, engine)
+    132     # Raise informative error message if Kaleido is not installed
+    133     if scope is None:
+--&gt; 134         raise ValueError(
+    135             &quot;&quot;&quot;
+    136 Image export using the &quot;kaleido&quot; engine requires the kaleido package,
+    137 which can be installed using pip:
+    138     $ pip install -U kaleido
+    139 &quot;&quot;&quot;
+    140         )
+    142     # Validate figure
+    143     # ---------------
+    144     fig_dict = validate_coerce_fig_to_dict(fig, validate)
+
+ValueError: 
+Image export using the &quot;kaleido&quot; engine requires the kaleido package,
+which can be installed using pip:
+    $ pip install -U kaleido
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Quadro" src="../_images/trabalho1_q9.png" /></p>
+</div>
+<div class="section" id="questao-14">
+<h2>Questão 14<a class="headerlink" href="#questao-14" title="Link permanente para este título">¶</a></h2>
+<p>Descreva os dados do desemprego (leitura abaixo) que contêm taxas de desemprego de todos os estados federais alemães usando várias técnicas descritivas.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taxas de desemprego em todos os estados federais da Alemanha em setembro de 1999.</span>
+<span class="n">dados</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;http://leg.ufpr.br/~lucambio/MSM/desemprego.txt&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+<span class="c1">##                   Estado Taxa</span>
+<span class="c1">## 1     Schleswig-Holstein  8.7</span>
+<span class="c1">## 2                Hamburg  9.8</span>
+<span class="c1">## 3 Mecklenburg-Vorpommern 17.3</span>
+<span class="c1">## 4          Niedersachsen  9.8</span>
+<span class="c1">## 5                 Bremen 13.9</span>
+<span class="c1">## 6    Nordrhein-Westfalen  9.8</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_desemprego</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;./dados/desemprego.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;\s+&#39;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados_desemprego</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_14_0.png" src="../_images/trabalho_1_14_0.png" />
+</div>
+</div>
+<p>Pelo boxplot, vemos que não há outliers nos dados de desemprego. Além disso, notamos que há uma concentração no segundo quartil (aproximadamente na marca de 9%). Para entender melhor em quais faixas estão distribuídas as observações, usamos um histograma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados_desemprego</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_16_0.png" src="../_images/trabalho_1_16_0.png" />
+</div>
+</div>
+<p>Pelo histograma, vemos que há dois perfis de cidades em relação ao desemprego. Há um grupo com índices relativamente mais baixos, entre 6% e 10%. Já outro grupo com índices altos, entre 14% e 20%. Considerando o contexto da pesquisa, a distribuição mostra os efeitos da separação da alemanha, mesmo uma década após a reunificação.</p>
+<p>Apenas por curiosidade, mesmo nos anos 2010 ainda há diferenças entre as taxas de emprego entre as regiões: https://www.pewresearch.org/fact-tank/2019/11/06/east-germany-has-narrowed-economic-gap-with-west-germany-since-fall-of-communism-but-still-lags/</p>
+</div>
+<div class="section" id="questao-15">
+<h2>Questão 15<a class="headerlink" href="#questao-15" title="Link permanente para este título">¶</a></h2>
+<p>Usando dados anuais da população (leitura abaixo) e gerar:</p>
+<ol class="simple">
+<li><p>Um boxplot, escolha uma das variáveis.</p></li>
+<li><p>Uma curva de Andrew escolhendo dez pontos de dados.</p></li>
+<li><p>Um gráfico de dispersão.</p></li>
+<li><p>Um histograma, escolha uma das variáveis.</p></li>
+</ol>
+<p>Os dados mostram taxas populacionais médias anuais para o antigo território da República Federal da Alemanha, inclunindo Berlim-West, dados em 1.000 habitantes.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taxas de desemprego em todos os estados federais da Alemanha em setembro de 1999.</span>
+<span class="n">dados</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;http://leg.ufpr.br/~lucambio/MSM/population.txt&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+<span class="c1">##   Year Inhabitants Unemployed</span>
+<span class="c1">## 1 1960       55433        271</span>
+<span class="c1">## 2 1961       56158        181</span>
+<span class="c1">## 3 1962       56837        155</span>
+<span class="c1">## 4 1963       57389        186</span>
+<span class="c1">## 5 1964       57971        169</span>
+<span class="c1">## 6 1965       58619        147</span>
+</pre></div>
+</div>
+<p>O que esses gráficos dizem sobre os dados e a estrutura deles?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dados_populacao</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;./dados/population.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;\s+&#39;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados_populacao</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Unemployed&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_19_0.png" src="../_images/trabalho_1_19_0.png" />
+</div>
+</div>
+<p>Pelo boxplot vemos que a mediana é 1000, não há nenhum ano com um registro de desemprego considerado outlier e que há uma concentração de observações em torno de 200 a 300.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">andrews_curves</span><span class="p">(</span><span class="n">dados_populacao</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span> <span class="s1">&#39;Year&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_21_0.png" src="../_images/trabalho_1_21_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados_populacao</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Unemployed&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s1">&#39;Inhabitants&#39;</span><span class="p">,</span> <span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">250</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_22_0.png" src="../_images/trabalho_1_22_0.png" />
+</div>
+</div>
+<p>Já o gráfico de disperção mostra a variação ao passar dos anos, com períodos de alta no desemprego (1966, 1974 a 75, começos dos anos 80 e logo após a reunificação). A queda no desempro mais clara aconteceu na segunda metade dos anos 80 até o ínicio dos 90.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados_populacao</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Unemployed&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_1_24_0.png" src="../_images/trabalho_1_24_0.png" />
+</div>
+</div>
+<p>Como podemos observar no boxplot, o histograma também aponta uma concentração de observações abaixo de 500, entretanto vemos que a faixa de 1500 teve poucas observações, reflexo das variações vistas no gráfico de disperção, quando o Alemanha alternava períodos de baixo desemprego (observações &lt; 1000) com subidas bastante íngremes nas taxas em momentos de instabilidade política (observações &gt; 2000).</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./metodos_estatisticos_multivariados"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../modelos_lineares_generalizados/lista_4.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Trabalho No. 4</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="trabalho_2.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Trabalho No. 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
