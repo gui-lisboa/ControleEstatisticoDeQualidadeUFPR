@@ -68,3 +68,4 @@ parts:
 - caption: Modelos Estatísticos Multivariados
   chapters:
   - file: metodos_estatisticos_multivariados/trabalho_1
+  - file: metodos_estatisticos_multivariados/trabalho_2
