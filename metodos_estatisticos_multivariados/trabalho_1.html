@@ -350,6 +350,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Extensões de Modelos de Regressão
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
+   Gala dataset
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -625,7 +637,7 @@ Input In [4], in &lt;cell line: 16&gt;()
      14 )
 ---&gt; 16 fig.write_image(&quot;./imagens/trabalho1_q9.png&quot;)
 
-File /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/plotly/basedatatypes.py:3829, in BaseFigure.write_image(self, *args, **kwargs)
+File /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/plotly/basedatatypes.py:3829, in BaseFigure.write_image(self, *args, **kwargs)
    3769 &quot;&quot;&quot;
    3770 Convert a figure to a static image and write it to a file or writeable
    3771 object
@@ -635,7 +647,7 @@ File /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/plotly/
    3827 import plotly.io as pio
 -&gt; 3829 return pio.write_image(self, *args, **kwargs)
 
-File /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:268, in write_image(fig, file, format, scale, width, height, validate, engine)
+File /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:268, in write_image(fig, file, format, scale, width, height, validate, engine)
     252             raise ValueError(
     253                 &quot;&quot;&quot;
     254 Cannot infer image type from output path &#39;{file}&#39;.
@@ -660,7 +672,7 @@ File /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/plotly/
     281         # We previously failed to make sense of `file` as a pathlib object.
     282         # Attempt to write to `file` as an open file descriptor.
 
-File /opt/hostedtoolcache/Python/3.10.6/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:134, in to_image(fig, format, width, height, scale, validate, engine)
+File /opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:134, in to_image(fig, format, width, height, scale, validate, engine)
     132     # Raise informative error message if Kaleido is not installed
     133     if scope is None:
 --&gt; 134         raise ValueError(

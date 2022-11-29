@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atividade 4 &#8212; Estatística - UFPR</title>
+    <title>Gala dataset &#8212; Estatística - UFPR</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,13 +52,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Atividade 6" href="atividade6.html" />
-    <link rel="prev" title="Atividade 2" href="atividade2.html" />
+    <link rel="prev" title="Trabalho No. 4" href="../metodos_estatisticos_multivariados/trabalho_4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -100,39 +97,39 @@ const thebe_selector_output = ".output, .cell_output"
   Análise de Regressão Linear
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
    Sobre
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="atividade1.html">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
    Atividade 1
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="atividade2.html">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
    Atividade 2
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
    Atividade 4
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="atividade6.html">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
    Atividade 6
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="prova1.html">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
    Avaliação 1
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="projeto_final.html">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
    Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
   </a>
  </li>
@@ -355,9 +352,9 @@ const thebe_selector_output = ".output, .cell_output"
   Extensões de Modelos de Regressão
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Gala dataset
   </a>
  </li>
@@ -402,7 +399,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/analise_de_regressao_linear/atividade4.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/extensoes_modelos_regressao/gala.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -427,6 +424,29 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importando-os-dados">
+   Importando os dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajustando-modelo-poisson-com-offset">
+   Ajustando modelo Poisson com offset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analise-dos-residuos">
+   Análise dos resíduos
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -434,56 +454,53 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Atividade 4</h1>
+                <h1>Gala dataset</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importando-os-dados">
+   Importando os dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajustando-modelo-poisson-com-offset">
+   Ajustando modelo Poisson com offset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analise-dos-residuos">
+   Análise dos resíduos
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="atividade-4">
-<h1>Atividade 4<a class="headerlink" href="#atividade-4" title="Link permanente para este título">¶</a></h1>
-<div class="admonition-atividade admonition">
-<p class="admonition-title">Atividade</p>
-<p>Continue usando o conjunto de dados disponibilizado na primeira semana de aula.</p>
-<p>Considerando as três covariáveis que vc usou semana passada faça:</p>
-<ol class="simple">
-<li><p>Implemente o modelo de regressão linear múltipla utilizando operações com vetores e matrizes (não use a função lm).</p></li>
-<li><p>Obtenha a matriz de variâncias e covariâncias dos coeficientes de regressão.</p></li>
-<li><p>Obtenha a variância e o desvio padrão para cada coeficiente de regressão.</p></li>
-<li><p>Obtenha a estatística t para cada coeficiente de regressão (exceto para o intercepto) e intereprete as estimativas e o teste. Quais covariáveis são importantes para descrever a variabilidade da variável resposta?</p></li>
-<li><p>Para o modelo considerando as três covariáveis que você usou semana passado obtenha o coeficiente de determinação.</p></li>
-</ol>
-<p>Usando os resultados da semana passada some os coeficientes de determinação de cada modelo individual. Explique pq a soma dos coeficientes de determinação dos ajsutes individuais não é igual a do modelo conjunto. Existe alguma situação em que o coeficiente de determinação do modelo conjunto é igual a soma dos coeficientes de determinação dos modelos individuais? Explique.</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="gala-dataset">
+<h1>Gala dataset<a class="headerlink" href="#gala-dataset" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="importando-os-dados">
+<h2>Importando os dados<a class="headerlink" href="#importando-os-dados" title="Link permanente para este título">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">read_cameras_dataset</span>
+<span class="n">dados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;./datasets/gala.txt&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
+<span class="n">dados</span><span class="o">.</span><span class="n">Island</span> <span class="o">=</span> <span class="n">dados</span><span class="o">.</span><span class="n">Island</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">())</span>
 
-<span class="o">%</span><span class="k">matplotlib</span> inline
-
-<span class="n">covariaveis</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;weight_lens&#39;</span><span class="p">,</span> <span class="s1">&#39;weight_body&#39;</span><span class="p">,</span> <span class="s1">&#39;focal_length_min&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cameras_dataframe</span> <span class="o">=</span> <span class="n">read_cameras_dataset</span><span class="p">()</span>
-<span class="n">price_e_covariaveis_dataframe</span> <span class="o">=</span> <span class="n">cameras_dataframe</span><span class="p">[[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">covariaveis</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
-
-<span class="n">price_e_covariaveis_dataframe</span>
+<span class="n">dados</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -506,318 +523,205 @@ const thebe_selector_output = ".output, .cell_output"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>price</th>
-      <th>weight_lens</th>
-      <th>weight_body</th>
-      <th>focal_length_min</th>
+      <th>Island</th>
+      <th>Species</th>
+      <th>Endemics</th>
+      <th>Area</th>
+      <th>Elevation</th>
+      <th>Nearest</th>
+      <th>Scruz</th>
+      <th>Adjacent</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>499.99</td>
-      <td>3.88</td>
-      <td>14.46</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2096.95</td>
-      <td>16.10</td>
-      <td>30.34</td>
-      <td>16.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>499.99</td>
-      <td>7.40</td>
-      <td>15.20</td>
-      <td>18.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>498.00</td>
-      <td>4.09</td>
-      <td>12.13</td>
-      <td>16.0</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2896.00</td>
-      <td>22.22</td>
-      <td>22.60</td>
-      <td>35.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>248</th>
-      <td>1449.00</td>
-      <td>18.16</td>
-      <td>24.73</td>
-      <td>18.0</td>
-    </tr>
-    <tr>
-      <th>249</th>
-      <td>2099.00</td>
-      <td>10.40</td>
-      <td>22.92</td>
-      <td>28.0</td>
-    </tr>
-    <tr>
-      <th>250</th>
-      <td>325.99</td>
-      <td>6.70</td>
-      <td>15.37</td>
-      <td>18.0</td>
-    </tr>
-    <tr>
-      <th>253</th>
-      <td>1623.90</td>
-      <td>12.34</td>
-      <td>29.63</td>
-      <td>85.0</td>
-    </tr>
-    <tr>
-      <th>254</th>
-      <td>996.95</td>
-      <td>4.76</td>
-      <td>15.87</td>
-      <td>16.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>99 rows × 4 columns</p>
-</div></div></div>
-</div>
-<p>Seja X a matriz das covariaveis e Y o vetor das respostas, temos:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y</span> <span class="o">=</span> <span class="n">price_e_covariaveis_dataframe</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span>
-
-<span class="n">vetor_beta0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">price_e_covariaveis_dataframe</span><span class="p">))</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">vetor_beta0</span><span class="p">,</span> <span class="n">price_e_covariaveis_dataframe</span><span class="p">[</span><span class="n">covariaveis</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1.0</td>
-      <td>3.88</td>
-      <td>14.46</td>
-      <td>14.0</td>
+      <td>Baltra</td>
+      <td>58</td>
+      <td>23</td>
+      <td>25.09</td>
+      <td>346</td>
+      <td>0.6</td>
+      <td>0.6</td>
+      <td>1.84</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.0</td>
-      <td>16.10</td>
-      <td>30.34</td>
-      <td>16.0</td>
+      <td>Bartolome</td>
+      <td>31</td>
+      <td>21</td>
+      <td>1.24</td>
+      <td>109</td>
+      <td>0.6</td>
+      <td>26.3</td>
+      <td>572.33</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.0</td>
-      <td>7.40</td>
-      <td>15.20</td>
-      <td>18.0</td>
+      <td>Caldwell</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0.21</td>
+      <td>114</td>
+      <td>2.8</td>
+      <td>58.7</td>
+      <td>0.78</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.0</td>
-      <td>4.09</td>
-      <td>12.13</td>
-      <td>16.0</td>
+      <td>Champion</td>
+      <td>25</td>
+      <td>9</td>
+      <td>0.10</td>
+      <td>46</td>
+      <td>1.9</td>
+      <td>47.4</td>
+      <td>0.18</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.0</td>
-      <td>22.22</td>
-      <td>22.60</td>
-      <td>35.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>1.0</td>
-      <td>18.16</td>
-      <td>24.73</td>
-      <td>18.0</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>1.0</td>
-      <td>10.40</td>
-      <td>22.92</td>
-      <td>28.0</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>1.0</td>
-      <td>6.70</td>
-      <td>15.37</td>
-      <td>18.0</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>1.0</td>
-      <td>12.34</td>
-      <td>29.63</td>
-      <td>85.0</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>1.0</td>
-      <td>4.76</td>
-      <td>15.87</td>
-      <td>16.0</td>
+      <td>Coamano</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0.05</td>
+      <td>77</td>
+      <td>1.9</td>
+      <td>1.9</td>
+      <td>903.82</td>
     </tr>
   </tbody>
 </table>
-<p>99 rows × 4 columns</p>
-</div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0       499.99
-2      2096.95
-3       499.99
-5       498.00
-19     2896.00
-        ...   
-248    1449.00
-249    2099.00
-250     325.99
-253    1623.90
-254     996.95
-Name: price, Length: 99, dtype: float64
-</pre></div>
+</div></div></div>
 </div>
 </div>
-</div>
-<p>Estimando <span class="math notranslate nohighlight">\(\hat{\beta} = (X^{T} X)^{-1} X^{T} Y\)</span>, temos:</p>
+<div class="section" id="ajustando-modelo-poisson-com-offset">
+<h2>Ajustando modelo Poisson com offset<a class="headerlink" href="#ajustando-modelo-poisson-com-offset" title="Link permanente para este título">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beta_estimado</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span> \
-                  <span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">))</span> \
-                  <span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> \
-                  <span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">from</span> <span class="nn">statsmodels.genmod.generalized_linear_model</span> <span class="kn">import</span> <span class="n">GLMResults</span>
 
-<span class="n">beta_estimado</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-250.17574454,   74.82135626,   20.7988353 ,   12.18768157])
-</pre></div>
-</div>
-</div>
-</div>
-<p>Usando a biblioteca StatsModels, temos:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="n">offset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">dados</span><span class="o">.</span><span class="n">Area</span><span class="p">)</span>
+<span class="n">formula</span> <span class="o">=</span> <span class="s2">&quot;Species ~ Endemics + Elevation + Nearest + Scruz + np.log(Adjacent)&quot;</span>
+
+<span class="n">modelo</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+    <span class="n">formula</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span>
+    <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Poisson</span><span class="p">(),</span>
+    <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ajuste</span><span class="p">:</span> <span class="n">GLMResults</span> <span class="o">=</span> <span class="n">modelo</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ajuste</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><table class="simpletable">
-<caption>OLS Regression Results</caption>
+<caption>Generalized Linear Model Regression Results</caption>
 <tr>
-  <th>Dep. Variable:</th>          <td>price</td>      <th>  R-squared:         </th> <td>   0.593</td>
+  <th>Dep. Variable:</th>        <td>Species</td>     <th>  No. Observations:  </th>  <td>    30</td> 
 </tr>
 <tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.580</td>
+  <th>Model:</th>                  <td>GLM</td>       <th>  Df Residuals:      </th>  <td>    24</td> 
 </tr>
 <tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   46.14</td>
+  <th>Model Family:</th>         <td>Poisson</td>     <th>  Df Model:          </th>  <td>     5</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Tue, 29 Nov 2022</td> <th>  Prob (F-statistic):</th> <td>1.73e-18</td>
+  <th>Link Function:</th>          <td>Log</td>       <th>  Scale:             </th> <td>  1.0000</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>13:41:33</td>     <th>  Log-Likelihood:    </th> <td> -767.51</td>
+  <th>Method:</th>                <td>IRLS</td>       <th>  Log-Likelihood:    </th> <td> -808.82</td>
 </tr>
 <tr>
-  <th>No. Observations:</th>      <td>    99</td>      <th>  AIC:               </th> <td>   1543.</td>
+  <th>Date:</th>            <td>Tue, 29 Nov 2022</td> <th>  Deviance:          </th> <td>  1456.8</td>
 </tr>
 <tr>
-  <th>Df Residuals:</th>          <td>    95</td>      <th>  BIC:               </th> <td>   1553.</td>
+  <th>Time:</th>                <td>13:42:03</td>     <th>  Pearson chi2:      </th> <td>3.59e+03</td>
 </tr>
 <tr>
-  <th>Df Model:</th>              <td>     3</td>      <th>                     </th>     <td> </td>   
+  <th>No. Iterations:</th>          <td>7</td>        <th>  Pseudo R-squ. (CS):</th>  <td> 1.000</td> 
 </tr>
 <tr>
-  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
-</tr>
-</table>
-<table class="simpletable">
-<tr>
-    <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
-</tr>
-<tr>
-  <th>const</th> <td> -250.1757</td> <td>  179.353</td> <td>   -1.395</td> <td> 0.166</td> <td> -606.236</td> <td>  105.884</td>
-</tr>
-<tr>
-  <th>x1</th>    <td>   74.8214</td> <td>   12.424</td> <td>    6.022</td> <td> 0.000</td> <td>   50.157</td> <td>   99.486</td>
-</tr>
-<tr>
-  <th>x2</th>    <td>   20.7988</td> <td>   13.087</td> <td>    1.589</td> <td> 0.115</td> <td>   -5.182</td> <td>   46.780</td>
-</tr>
-<tr>
-  <th>x3</th>    <td>   12.1877</td> <td>    7.404</td> <td>    1.646</td> <td> 0.103</td> <td>   -2.511</td> <td>   26.887</td>
+  <th>Covariance Type:</th>     <td>nonrobust</td>    <th>                     </th>     <td> </td>   
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Omnibus:</th>       <td>59.296</td> <th>  Durbin-Watson:     </th> <td>   2.224</td>
+          <td></td>            <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td> 273.316</td>
+  <th>Intercept</th>        <td>    2.7204</td> <td>    0.075</td> <td>   36.116</td> <td> 0.000</td> <td>    2.573</td> <td>    2.868</td>
 </tr>
 <tr>
-  <th>Skew:</th>          <td> 1.953</td> <th>  Prob(JB):          </th> <td>4.47e-60</td>
+  <th>Endemics</th>         <td>   -0.0175</td> <td>    0.002</td> <td>  -11.161</td> <td> 0.000</td> <td>   -0.021</td> <td>   -0.014</td>
 </tr>
 <tr>
-  <th>Kurtosis:</th>      <td>10.141</td> <th>  Cond. No.          </th> <td>    93.2</td>
+  <th>Elevation</th>        <td>   -0.0020</td> <td>    0.000</td> <td>  -17.512</td> <td> 0.000</td> <td>   -0.002</td> <td>   -0.002</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
+<tr>
+  <th>Nearest</th>          <td>   -0.0161</td> <td>    0.002</td> <td>  -10.460</td> <td> 0.000</td> <td>   -0.019</td> <td>   -0.013</td>
+</tr>
+<tr>
+  <th>Scruz</th>            <td>   -0.0045</td> <td>    0.001</td> <td>   -5.775</td> <td> 0.000</td> <td>   -0.006</td> <td>   -0.003</td>
+</tr>
+<tr>
+  <th>np.log(Adjacent)</th> <td>   -0.0479</td> <td>    0.012</td> <td>   -3.855</td> <td> 0.000</td> <td>   -0.072</td> <td>   -0.024</td>
+</tr>
+</table></div></div>
+</div>
+</div>
+<div class="section" id="analise-dos-residuos">
+<h2>Análise dos resíduos<a class="headerlink" href="#analise-dos-residuos" title="Link permanente para este título">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">residuos_originais</span> <span class="o">=</span> <span class="n">ajuste</span><span class="o">.</span><span class="n">resid_pearson</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="n">k_repeticoes</span> <span class="o">=</span> <span class="mi">99</span>
+
+<span class="n">matriz_residuos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">residuos_originais</span><span class="p">),</span> <span class="n">k_repeticoes</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k_repeticoes</span><span class="p">):</span>
+    <span class="n">y_preditos</span> <span class="o">=</span> <span class="n">ajuste</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+    <span class="n">dados_simulados</span> <span class="o">=</span> <span class="n">dados</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">dados_simulados</span><span class="o">.</span><span class="n">Species</span> <span class="o">=</span> <span class="n">y_preditos</span>
+
+    <span class="n">ajuste_simuladas</span><span class="p">:</span> <span class="n">GLMResults</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span>
+        <span class="n">formula</span><span class="p">,</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">dados_simulados</span><span class="p">,</span>
+        <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Poisson</span><span class="p">(),</span>
+        <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+    <span class="n">matriz_residuos</span><span class="p">[:,</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">ajuste</span><span class="o">.</span><span class="n">resid_pearson</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+
+<span class="n">matriz_residuos</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(30, 99)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limite_inferior</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">matriz_residuos</span><span class="p">,</span> <span class="mf">.025</span><span class="p">)</span>
+<span class="n">limite_superior</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">matriz_residuos</span><span class="p">,</span> <span class="mf">.975</span><span class="p">)</span>
+<span class="n">limite_inferior</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-11.974594722065927
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -834,7 +738,7 @@ Name: price, Length: 99, dtype: float64
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./analise_de_regressao_linear"
+            path: "./extensoes_modelos_regressao"
         },
         predefinedOutput: true
     }
@@ -846,19 +750,12 @@ Name: price, Length: 99, dtype: float64
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="atividade2.html" title="anterior page">
+    <a class='left-prev' id="prev-link" href="../metodos_estatisticos_multivariados/trabalho_4.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Atividade 2</p>
+            <p class="prev-next-title">Trabalho No. 4</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="atividade6.html" title="próximo page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Atividade 6</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
