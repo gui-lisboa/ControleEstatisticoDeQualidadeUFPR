@@ -79,3 +79,4 @@ parts:
 - caption: Análise de Séries Temporais
   chapters:
   - file: analise_de_series_temporais/trabalho_1
+  - file: analise_de_series_temporais/trabalho_2
