@@ -1,0 +1,1251 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho No. 2 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="prev" title="Trabalho No. 1" href="trabalho_1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/anotacoes.html">
+   Anotações para prova
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_3.html">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_2.html">
+   2º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Estatísticos Multivariados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_1.html">
+   Trabalho No. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Extensões de Modelos de Regressão
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
+   Gala dataset
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Séries Temporais
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="trabalho_1.html">
+   Trabalho No. 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Trabalho No. 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analise_de_series_temporais/trabalho_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-10">
+   Exercício 10
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-18">
+   Exercício 18
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-20">
+   Exercício 20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-31">
+   Exercício 31
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-32">
+   Exercício 32
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-35">
+   Exercício 35
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-36">
+   Exercício 36
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trabalho No. 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-10">
+   Exercício 10
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-18">
+   Exercício 18
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-20">
+   Exercício 20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-31">
+   Exercício 31
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-32">
+   Exercício 32
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-35">
+   Exercício 35
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicio-36">
+   Exercício 36
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-2">
+<h1>Trabalho No. 2<a class="headerlink" href="#trabalho-no-2" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questoes admonition">
+<p class="admonition-title">Questões</p>
+<p>Capítulo III. Modelos ARIMA</p>
+<p>Seção III.10: 10, 18, 20, 31, 32, 35, 36</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="exercicio-10">
+<h2>Exercício 10<a class="headerlink" href="#exercicio-10" title="Link permanente para este título">¶</a></h2>
+<p>Seja <span class="math notranslate nohighlight">\(X_t\)</span> um processo que represente a série de mortalidade cardiovascular <strong>cmort</strong> discutida no Exemplo II.2.</p>
+<p>(a) Ajuste um modelo <strong>AR(2)</strong> à <span class="math notranslate nohighlight">\(X_t\)</span> usando regressão linear como no Exemplo III.18.</p>
+<p>(b) Assumindo que o modelo ajustado em (a) seja o modelo verdadeiro, encontre as previsões ao longo de um horizonte de quatro semanas, <span class="math notranslate nohighlight">\(X^n_{n+m}\)</span> para <span class="math notranslate nohighlight">\(m=1,2,3,4\)</span> e os intervalos de previsão de 95% correspondentes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="n">cmort</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/cmort.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">cmort</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">cmort</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.ar_model</span> <span class="kn">import</span> <span class="n">AutoReg</span><span class="p">,</span> <span class="n">AutoRegResults</span>
+
+<span class="n">ajuste_ar</span><span class="p">:</span> <span class="n">AutoRegResults</span> <span class="o">=</span> <span class="n">AutoReg</span><span class="p">(</span><span class="n">cmort</span><span class="p">,</span> <span class="n">lags</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">old_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ajuste_ar</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>AutoReg Model Results</caption>
+<tr>
+  <th>Dep. Variable:</th>       <td>cmort</td>      <th>  No. Observations:  </th>    <td>508</td>   
+</tr>
+<tr>
+  <th>Model:</th>            <td>AutoReg(2)</td>    <th>  Log Likelihood     </th> <td>-1597.312</td>
+</tr>
+<tr>
+  <th>Method:</th>         <td>Conditional MLE</td> <th>  S.D. of innovations</th>   <td>5.685</td>  
+</tr>
+<tr>
+  <th>Date:</th>          <td>Sat, 10 Dec 2022</td> <th>  AIC                </th> <td>3202.624</td> 
+</tr>
+<tr>
+  <th>Time:</th>              <td>15:30:47</td>     <th>  BIC                </th> <td>3219.530</td> 
+</tr>
+<tr>
+  <th>Sample:</th>           <td>01-18-1970</td>    <th>  HQIC               </th> <td>3209.254</td> 
+</tr>
+<tr>
+  <th></th>                 <td>- 10-07-1979</td>   <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>intercept</th> <td>   11.4506</td> <td>    2.394</td> <td>    4.784</td> <td> 0.000</td> <td>    6.759</td> <td>   16.142</td>
+</tr>
+<tr>
+  <th>cmort.L1</th>  <td>    0.4286</td> <td>    0.040</td> <td>   10.770</td> <td> 0.000</td> <td>    0.351</td> <td>    0.507</td>
+</tr>
+<tr>
+  <th>cmort.L2</th>  <td>    0.4418</td> <td>    0.040</td> <td>   11.111</td> <td> 0.000</td> <td>    0.364</td> <td>    0.520</td>
+</tr>
+</table>
+<table class="simpletable">
+<caption>Roots</caption>
+<tr>
+    <td></td>   <th>            Real</th>  <th>         Imaginary</th> <th>         Modulus</th>  <th>        Frequency</th>
+</tr>
+<tr>
+  <th>AR.1</th> <td>           1.0957</td> <td>          +0.0000j</td> <td>           1.0957</td> <td>           0.0000</td>
+</tr>
+<tr>
+  <th>AR.2</th> <td>          -2.0658</td> <td>          +0.0000j</td> <td>           2.0658</td> <td>           0.5000</td>
+</tr>
+</table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ultima_semana</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cmort</span><span class="p">)</span>
+<span class="n">previsao_ar</span> <span class="o">=</span> <span class="n">ajuste_ar</span><span class="o">.</span><span class="n">get_prediction</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">ultima_semana</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">ultima_semana</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">summary_frame</span><span class="p">()</span>
+
+<span class="n">previsao_ar</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mean</th>
+      <th>mean_se</th>
+      <th>mean_ci_lower</th>
+      <th>mean_ci_upper</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1979-09-24/1979-09-30</th>
+      <td>87.599864</td>
+      <td>5.684848</td>
+      <td>76.457767</td>
+      <td>98.741961</td>
+    </tr>
+    <tr>
+      <th>1979-10-01/1979-10-07</th>
+      <td>86.763490</td>
+      <td>6.184973</td>
+      <td>74.641165</td>
+      <td>98.885814</td>
+    </tr>
+    <tr>
+      <th>1979-10-08/1979-10-14</th>
+      <td>87.337139</td>
+      <td>7.134227</td>
+      <td>73.354310</td>
+      <td>101.319967</td>
+    </tr>
+    <tr>
+      <th>1979-10-15/1979-10-21</th>
+      <td>87.213500</td>
+      <td>7.593357</td>
+      <td>72.330793</td>
+      <td>102.096206</td>
+    </tr>
+    <tr>
+      <th>1979-10-22/1979-10-28</th>
+      <td>87.413940</td>
+      <td>8.054210</td>
+      <td>71.627979</td>
+      <td>103.199901</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">cmort</span><span class="p">[</span><span class="s1">&#39;cmort&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+<span class="n">previsao_ar</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;k--&#39;</span><span class="p">);</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">previsao_ar</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">previsao_ar</span><span class="o">.</span><span class="n">mean_ci_lower</span><span class="p">,</span> <span class="n">previsao_ar</span><span class="o">.</span><span class="n">mean_ci_upper</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_7_0.png" src="../_images/trabalho_2_7_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="exercicio-18">
+<h2>Exercício 18<a class="headerlink" href="#exercicio-18" title="Link permanente para este título">¶</a></h2>
+<p>Ajustar um modelo <strong>AR(2)</strong> para a série de mortalidade cardiovascular cmort discutida no Exemplo II.2. usando regressão linear e usando Yule-Walker.</p>
+<p>(a) Compare as estimativas dos parâmetros obtidos pelos dois métodos.</p>
+<p>(b) Compare os erros padrão estimados das estimativas dos coeficientes obtidos por regressão linear com suas aproximações assintóticas correspondentes, como dado no Teorema III.10.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.regression.linear_model</span> <span class="kn">import</span> <span class="n">yule_walker</span>
+
+<span class="n">ajuste_yule_walker</span> <span class="o">=</span> <span class="n">yule_walker</span><span class="p">(</span><span class="n">cmort</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ajuste_yule_walker</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0.43147813, 0.44187887]), 5.683757998742249)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercicio-20">
+<h2>Exercício 20<a class="headerlink" href="#exercicio-20" title="Link permanente para este título">¶</a></h2>
+<p>Repita o seguinte exercício numérico três vezes. Gere <span class="math notranslate nohighlight">\(n=500\)</span> observações do modelo ARMA dado por <span class="math notranslate nohighlight">\(X_t=0.9X_{t−1} + W_t − 0.9W_{t−1}\)</span>, com <span class="math notranslate nohighlight">\(W_t \sim N(0,1)\)</span> independentes. Plote os dados simulados, calcule o ACF e o PACF amostrais dos dados simulados e ajuste um modelo <strong>ARMA(1,1)</strong> aos dados. O que aconteceu e como você explica os resultados?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.api</span> <span class="kn">import</span> <span class="n">arma_generate_sample</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.arima.model</span> <span class="kn">import</span> <span class="n">ARIMA</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
+
+<span class="n">arparams</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.9</span><span class="p">])</span>
+<span class="n">maparams</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.9</span><span class="p">])</span>
+<span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="n">arparams</span><span class="p">]</span>
+<span class="n">ma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">maparams</span><span class="p">]</span>
+
+<span class="n">ex20_dados</span> <span class="o">=</span> <span class="n">arma_generate_sample</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span> <span class="n">ma</span><span class="p">,</span> <span class="n">nsample</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">ex20_dados</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_11_0.png" src="../_images/trabalho_2_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.graphics.tsaplots</span> <span class="k">as</span> <span class="nn">sm_tsa_plots</span>
+
+<span class="n">sm_tsa_plots</span><span class="o">.</span><span class="n">plot_acf</span><span class="p">(</span><span class="n">ex20_dados</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;ACF&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_12_0.png" src="../_images/trabalho_2_12_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sm_tsa_plots</span><span class="o">.</span><span class="n">plot_pacf</span><span class="p">(</span><span class="n">ex20_dados</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;PACF&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_13_0.png" src="../_images/trabalho_2_13_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">ex20_dados</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">ajuste</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>SARIMAX Results</caption>
+<tr>
+  <th>Dep. Variable:</th>           <td>y</td>        <th>  No. Observations:  </th>    <td>500</td>  
+</tr>
+<tr>
+  <th>Model:</th>            <td>ARIMA(1, 0, 1)</td>  <th>  Log Likelihood     </th> <td>-704.063</td>
+</tr>
+<tr>
+  <th>Date:</th>            <td>Sat, 10 Dec 2022</td> <th>  AIC                </th> <td>1416.125</td>
+</tr>
+<tr>
+  <th>Time:</th>                <td>15:30:49</td>     <th>  BIC                </th> <td>1432.984</td>
+</tr>
+<tr>
+  <th>Sample:</th>                  <td>0</td>        <th>  HQIC               </th> <td>1422.741</td>
+</tr>
+<tr>
+  <th></th>                      <td> - 500</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>        <td>opg</td>       <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+     <td></td>       <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th>  <td>   -0.0101</td> <td>    0.043</td> <td>   -0.234</td> <td> 0.815</td> <td>   -0.094</td> <td>    0.074</td>
+</tr>
+<tr>
+  <th>ar.L1</th>  <td>   -0.5988</td> <td>    0.526</td> <td>   -1.138</td> <td> 0.255</td> <td>   -1.630</td> <td>    0.433</td>
+</tr>
+<tr>
+  <th>ma.L1</th>  <td>    0.5487</td> <td>    0.549</td> <td>    1.000</td> <td> 0.317</td> <td>   -0.527</td> <td>    1.625</td>
+</tr>
+<tr>
+  <th>sigma2</th> <td>    0.9786</td> <td>    0.065</td> <td>   15.029</td> <td> 0.000</td> <td>    0.851</td> <td>    1.106</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.08</td> <th>  Jarque-Bera (JB):  </th> <td>0.74</td>
+</tr>
+<tr>
+  <th>Prob(Q):</th>                <td>0.78</td> <th>  Prob(JB):          </th> <td>0.69</td>
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th> <td>0.70</td> <th>  Skew:              </th> <td>0.05</td>
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>    <td>0.02</td> <th>  Kurtosis:          </th> <td>2.84</td>
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
+</div>
+<p>Como <span class="math notranslate nohighlight">\(X_t - 0.9 X_{t-1} = W_t - 0.9 W_{t-1}\)</span>, temos que <span class="math notranslate nohighlight">\(X_t = W_t\)</span>. O modelo encontra valores de <span class="math notranslate nohighlight">\(\phi_1 = - \theta_1\)</span>, porém com erro padrão muito alto, fazendo que não sejam estatísticamente significativos. Isso devido a relação entre os coeficientes que impossibilita o modelo de identificar o valor correto do parâmetro. Nota-se também nos gráficos do ACF e PACF que o lag=1 não é significativo.</p>
+</div>
+<div class="section" id="exercicio-31">
+<h2>Exercício 31<a class="headerlink" href="#exercicio-31" title="Link permanente para este título">¶</a></h2>
+<p>No Exemplo III.40, apresentamos os diagnósticos para o MA(2) ajustado à série de taxas de crescimento do PIB. Usando esse exemplo como guia, conclua o diagnóstico para o ajuste do AR(1).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gnp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/gnp.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">gnp</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">gnp</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="n">ex31_ajuste</span><span class="p">:</span> <span class="n">AutoRegResults</span> <span class="o">=</span> <span class="n">AutoReg</span><span class="p">(</span><span class="n">gnp</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ex31_ajuste</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency QS-OCT will be used.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>AutoReg Model Results</caption>
+<tr>
+  <th>Dep. Variable:</th>       <td>value</td>      <th>  No. Observations:  </th>    <td>223</td>   
+</tr>
+<tr>
+  <th>Model:</th>            <td>AutoReg(1)</td>    <th>  Log Likelihood     </th> <td>-1132.936</td>
+</tr>
+<tr>
+  <th>Method:</th>         <td>Conditional MLE</td> <th>  S.D. of innovations</th>  <td>39.820</td>  
+</tr>
+<tr>
+  <th>Date:</th>          <td>Sat, 10 Dec 2022</td> <th>  AIC                </th> <td>2271.872</td> 
+</tr>
+<tr>
+  <th>Time:</th>              <td>15:30:49</td>     <th>  BIC                </th> <td>2282.080</td> 
+</tr>
+<tr>
+  <th>Sample:</th>           <td>04-01-1947</td>    <th>  HQIC               </th> <td>2275.994</td> 
+</tr>
+<tr>
+  <th></th>                 <td>- 07-01-2002</td>   <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>        <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th>    <td>    7.8741</td> <td>    5.972</td> <td>    1.319</td> <td> 0.187</td> <td>   -3.830</td> <td>   19.579</td>
+</tr>
+<tr>
+  <th>value.L1</th> <td>    1.0062</td> <td>    0.001</td> <td>  857.334</td> <td> 0.000</td> <td>    1.004</td> <td>    1.008</td>
+</tr>
+</table>
+<table class="simpletable">
+<caption>Roots</caption>
+<tr>
+    <td></td>   <th>            Real</th>  <th>         Imaginary</th> <th>         Modulus</th>  <th>        Frequency</th>
+</tr>
+<tr>
+  <th>AR.1</th> <td>           0.9939</td> <td>          +0.0000j</td> <td>           0.9939</td> <td>           0.0000</td>
+</tr>
+</table></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex31_ajuste</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_18_0.png" src="../_images/trabalho_2_18_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ex31_ajuste</span><span class="o">.</span><span class="n">diagnostic_summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       Test of No Serial Correlation       
+===========================================
+       Lag  Ljung-Box LB P-value         DF
+-------------------------------------------
+         1     34.906      0.000          1
+         2     34.919      0.000          2
+         3     37.674      0.000          3
+         4     39.233      0.000          4
+         5     41.809      0.000          5
+         6     46.204      0.000          6
+         7     46.229      0.000          7
+         8     46.292      0.000          8
+
+
+             Test of Normality              
+============================================
+Jarque-Bera    P-value   Skewness   Kurtosis
+--------------------------------------------
+     16.561      0.000     -0.353      4.137
+
+
+    Test of Conditional Homoskedasticity   
+===========================================
+       Lag    ARCH-LM    P-value         DF
+-------------------------------------------
+         1      3.830      0.050          1
+         2      5.675      0.059          2
+         3      7.769      0.051          3
+         4      9.113      0.058          4
+         5      8.933      0.112          5
+         6     11.973      0.063          6
+         7     16.776      0.019          7
+         8     22.222      0.005          8
+         9     22.313      0.008          9
+        10     23.213      0.010         10
+-------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+<p>Correlação e LB confirma que dados não são independentes</p>
+</div>
+<div class="section" id="exercicio-32">
+<h2>Exercício 32<a class="headerlink" href="#exercicio-32" title="Link permanente para este título">¶</a></h2>
+<p>Os preços do petróleo bruto em dólares por barril são guardados em <strong>oil</strong>. Ajuste um modelo <strong>ARIMA(p,d,q)</strong> para a taxa de crescimento realizando todos os diagnósticos necessários. Comente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oil</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/oil.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">oil</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">oil</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s1">&#39;W&#39;</span><span class="p">)</span>
+
+<span class="n">ex32_ajuste</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">oil</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ex32_ajuste</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>SARIMAX Results</caption>
+<tr>
+  <th>Dep. Variable:</th>             <td>value</td>           <th>  No. Observations:  </th>    <td>545</td>   
+</tr>
+<tr>
+  <th>Model:</th>           <td>ARIMA([1, 3, 5, 8], 1, 0)</td> <th>  Log Likelihood     </th> <td>-1268.428</td>
+</tr>
+<tr>
+  <th>Date:</th>                <td>Sat, 10 Dec 2022</td>      <th>  AIC                </th> <td>2546.855</td> 
+</tr>
+<tr>
+  <th>Time:</th>                    <td>15:30:50</td>          <th>  BIC                </th> <td>2568.350</td> 
+</tr>
+<tr>
+  <th>Sample:</th>                 <td>01-02-2000</td>         <th>  HQIC               </th> <td>2555.259</td> 
+</tr>
+<tr>
+  <th></th>                       <td>- 06-20-2010</td>        <th>                     </th>     <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>            <td>opg</td>            <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+     <td></td>       <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>ar.L1</th>  <td>    0.1644</td> <td>    0.025</td> <td>    6.449</td> <td> 0.000</td> <td>    0.114</td> <td>    0.214</td>
+</tr>
+<tr>
+  <th>ar.L3</th>  <td>    0.0843</td> <td>    0.025</td> <td>    3.322</td> <td> 0.001</td> <td>    0.035</td> <td>    0.134</td>
+</tr>
+<tr>
+  <th>ar.L5</th>  <td>    0.0475</td> <td>    0.035</td> <td>    1.340</td> <td> 0.180</td> <td>   -0.022</td> <td>    0.117</td>
+</tr>
+<tr>
+  <th>ar.L8</th>  <td>    0.1761</td> <td>    0.029</td> <td>    5.992</td> <td> 0.000</td> <td>    0.118</td> <td>    0.234</td>
+</tr>
+<tr>
+  <th>sigma2</th> <td>    6.2018</td> <td>    0.229</td> <td>   27.113</td> <td> 0.000</td> <td>    5.753</td> <td>    6.650</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.02</td> <th>  Jarque-Bera (JB):  </th> <td>981.42</td>
+</tr>
+<tr>
+  <th>Prob(Q):</th>                <td>0.89</td> <th>  Prob(JB):          </th>  <td>0.00</td> 
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th> <td>7.34</td> <th>  Skew:              </th>  <td>-0.30</td>
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>    <td>0.00</td> <th>  Kurtosis:          </th>  <td>9.55</td> 
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex32_ajuste</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_23_0.png" src="../_images/trabalho_2_23_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="exercicio-35">
+<h2>Exercício 35<a class="headerlink" href="#exercicio-35" title="Link permanente para este título">¶</a></h2>
+<p>Consideremos que <span class="math notranslate nohighlight">\(S_t\)</span> representa os dados de vendas mensais em <strong>sales</strong>, <span class="math notranslate nohighlight">\(n=150\)</span> e seja <span class="math notranslate nohighlight">\(L_t\)</span> o principal indicador em <strong>lead</strong>.</p>
+<p>(a) Ajustar um modelo ARIMA para <span class="math notranslate nohighlight">\(S_t\)</span>, os dados de vendas mensais. Discuta seu modelo passo-a-passo, apresentando seu (A) exame inicial dos dados, (B) transformações, se necessário, (C) identificação inicial das ordens de dependência e grau de diferenciação, (D) estimativas dos parâmetros, (E) diagnósticos dos resíduos e escolha do modelo.</p>
+<p>(b) Use os gráficos CCF e lag entre <span class="math notranslate nohighlight">\(∇S_t\)</span> e <span class="math notranslate nohighlight">\(∇L_t\)</span> para argumentar que uma regressão de <span class="math notranslate nohighlight">\(∇S_t\)</span> em <span class="math notranslate nohighlight">\(∇L_t\)</span> é razoável. Observe que, em lag2.plot(), a primeira série nomeada é aquela que fica defasada.</p>
+<p>(c) Ajuste o modelo de regressão <span class="math notranslate nohighlight">\(∇S_t=β_0+β_1∇L_{t−3}+X_t\)</span>, onde <span class="math notranslate nohighlight">\(X_t\)</span> é um processo ARMA. Explique como você decidiu o seu modelo para <span class="math notranslate nohighlight">\(X_t\)</span>. Discuta seus resultados. Veja o Exemplo III.45 para ajudar na codificação deste problema.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/sales.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">lead</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/lead.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+
+<span class="n">ex35_dados</span> <span class="o">=</span> <span class="n">sales</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lead</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;_sales&#39;</span><span class="p">,</span> <span class="s1">&#39;_lead&#39;</span><span class="p">))</span>
+
+<span class="n">ex35_dados</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>value_sales</th>
+      <th>value_lead</th>
+    </tr>
+    <tr>
+      <th>index</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>200.1</td>
+      <td>10.01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>199.5</td>
+      <td>10.07</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>199.4</td>
+      <td>10.32</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>198.9</td>
+      <td>9.75</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>199.0</td>
+      <td>10.33</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>263.3</td>
+      <td>13.50</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>262.8</td>
+      <td>13.58</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>261.8</td>
+      <td>13.51</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>262.2</td>
+      <td>13.77</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>262.7</td>
+      <td>13.40</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 2 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="exercicio-36">
+<h2>Exercício 36<a class="headerlink" href="#exercicio-36" title="Link permanente para este título">¶</a></h2>
+<p>Um dos notáveis desenvolvimentos tecnológicos na indústria de computadores tem sido a capacidade de armazenar informações densamente em um disco rígido. Além disso, o custo de armazenamento diminuiu constantemente, causando problemas de excesso de dados, em vez de big datas. O conjunto de dados para esta tarefa é o <strong>cpg</strong>, que consiste no preço mediano anual de varejo por GB de discos rígidos, digamos <span class="math notranslate nohighlight">\(C_t\)</span>, de uma amostra de fabricantes de 1980 a 2008.</p>
+<p>(a) Mostre gráficamente <span class="math notranslate nohighlight">\(C_t\)</span> e descreva o que você vê.</p>
+<p>(b) Argumente que a curva <span class="math notranslate nohighlight">\(C_t\)</span> versus <span class="math notranslate nohighlight">\(t\)</span> se comporta como <span class="math notranslate nohighlight">\(C_t ≈ αe^{βt}\)</span> ajustando uma regressão linear de <span class="math notranslate nohighlight">\(log(C_t)\)</span> em t e então plotando a linha ajustada para compará-la aos dados registrados. Comente.</p>
+<p>(c) Inspecione os resíduos do ajuste de regressão linear e comente.</p>
+<p>(d) Ajuste a regressão novamente, mas agora usando o fato de que os erros são autocorrelacionados. Comente.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analise_de_series_temporais"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="trabalho_1.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Trabalho No. 1</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
