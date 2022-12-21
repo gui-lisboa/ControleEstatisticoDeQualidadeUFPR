@@ -57,6 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Exercícios" href="../inferencia_bayesiana/exercicios.html" />
     <link rel="prev" title="Trabalho No. 1" href="trabalho_1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
@@ -378,6 +379,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inferência Bayesiana
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../inferencia_bayesiana/exercicios.html">
+   Exercícios
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -573,6 +586,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
 <span class="n">cmort</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/cmort.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
@@ -585,9 +599,9 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.ar_model</span> <span class="kn">import</span> <span class="n">AutoReg</span><span class="p">,</span> <span class="n">AutoRegResults</span>
 
-<span class="n">ajuste_ar</span><span class="p">:</span> <span class="n">AutoRegResults</span> <span class="o">=</span> <span class="n">AutoReg</span><span class="p">(</span><span class="n">cmort</span><span class="p">,</span> <span class="n">lags</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">old_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">ajuste_ar_cmort</span><span class="p">:</span> <span class="n">AutoRegResults</span> <span class="o">=</span> <span class="n">AutoReg</span><span class="p">(</span><span class="n">cmort</span><span class="p">,</span> <span class="n">lags</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">old_names</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 
-<span class="n">ajuste_ar</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="n">ajuste_ar_cmort</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -604,10 +618,10 @@ const thebe_selector_output = ".output, .cell_output"
   <th>Method:</th>         <td>Conditional MLE</td> <th>  S.D. of innovations</th>   <td>5.685</td>  
 </tr>
 <tr>
-  <th>Date:</th>          <td>Sat, 10 Dec 2022</td> <th>  AIC                </th> <td>3202.624</td> 
+  <th>Date:</th>          <td>Wed, 21 Dec 2022</td> <th>  AIC                </th> <td>3202.624</td> 
 </tr>
 <tr>
-  <th>Time:</th>              <td>15:30:47</td>     <th>  BIC                </th> <td>3219.530</td> 
+  <th>Time:</th>              <td>18:16:43</td>     <th>  BIC                </th> <td>3219.530</td> 
 </tr>
 <tr>
   <th>Sample:</th>           <td>01-18-1970</td>    <th>  HQIC               </th> <td>3209.254</td> 
@@ -643,10 +657,11 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </table></div></div>
 </div>
+<p>Previsões para as próximas 4 semanas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ultima_semana</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cmort</span><span class="p">)</span>
-<span class="n">previsao_ar</span> <span class="o">=</span> <span class="n">ajuste_ar</span><span class="o">.</span><span class="n">get_prediction</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">ultima_semana</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">ultima_semana</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">summary_frame</span><span class="p">()</span>
+<span class="n">previsao_ar</span> <span class="o">=</span> <span class="n">ajuste_ar_cmort</span><span class="o">.</span><span class="n">get_prediction</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">ultima_semana</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">ultima_semana</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">summary_frame</span><span class="p">()</span>
 
 <span class="n">previsao_ar</span>
 </pre></div>
@@ -723,7 +738,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-<span class="n">cmort</span><span class="p">[</span><span class="s1">&#39;cmort&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
+<span class="n">cmort</span><span class="p">[</span><span class="s1">&#39;cmort&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">);</span>
 <span class="n">previsao_ar</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;k--&#39;</span><span class="p">);</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">previsao_ar</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">previsao_ar</span><span class="o">.</span><span class="n">mean_ci_lower</span><span class="p">,</span> <span class="n">previsao_ar</span><span class="o">.</span><span class="n">mean_ci_upper</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">);</span>
@@ -731,7 +746,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/trabalho_2_7_0.png" src="../_images/trabalho_2_7_0.png" />
+<img alt="../_images/trabalho_2_8_0.png" src="../_images/trabalho_2_8_0.png" />
 </div>
 </div>
 </div>
@@ -744,14 +759,33 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.regression.linear_model</span> <span class="kn">import</span> <span class="n">yule_walker</span>
 
-<span class="n">ajuste_yule_walker</span> <span class="o">=</span> <span class="n">yule_walker</span><span class="p">(</span><span class="n">cmort</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">coeficientes</span><span class="p">,</span> <span class="n">desvio_padrão</span> <span class="o">=</span> <span class="n">yule_walker</span><span class="p">(</span><span class="n">cmort</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="n">ajuste_yule_walker</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Yule Walker&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Coeficientes: </span><span class="si">{</span><span class="n">coeficientes</span><span class="si">}</span><span class="s2">, desvio padrão: </span><span class="si">{</span><span class="n">desvio_padrão</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([0.43147813, 0.44187887]), 5.683757998742249)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yule Walker
+Coeficientes: [0.43147813 0.44187887], desvio padrão: 5.683757998742249
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;AR(2):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Coeficientes: </span><span class="si">{</span><span class="n">ajuste_ar_cmort</span><span class="o">.</span><span class="n">params</span><span class="si">}</span><span class="s2">, desvio padrão: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ajuste_ar_cmort</span><span class="o">.</span><span class="n">sigma2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AR(2):
+Coeficientes: intercept    11.450613
+cmort.L1      0.428591
+cmort.L2      0.441787
+dtype: float64, desvio padrão: 5.684847835121764
 </pre></div>
 </div>
 </div>
@@ -765,7 +799,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.api</span> <span class="kn">import</span> <span class="n">arma_generate_sample</span>
 <span class="kn">from</span> <span class="nn">statsmodels.tsa.arima.model</span> <span class="kn">import</span> <span class="n">ARIMA</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
 
 <span class="n">arparams</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.9</span><span class="p">])</span>
@@ -780,7 +813,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/trabalho_2_11_0.png" src="../_images/trabalho_2_11_0.png" />
+<img alt="../_images/trabalho_2_13_0.png" src="../_images/trabalho_2_13_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -792,7 +825,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/trabalho_2_12_0.png" src="../_images/trabalho_2_12_0.png" />
+<img alt="../_images/trabalho_2_14_0.png" src="../_images/trabalho_2_14_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -802,7 +835,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/trabalho_2_13_0.png" src="../_images/trabalho_2_13_0.png" />
+<img alt="../_images/trabalho_2_15_0.png" src="../_images/trabalho_2_15_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -819,16 +852,16 @@ const thebe_selector_output = ".output, .cell_output"
   <th>Dep. Variable:</th>           <td>y</td>        <th>  No. Observations:  </th>    <td>500</td>  
 </tr>
 <tr>
-  <th>Model:</th>            <td>ARIMA(1, 0, 1)</td>  <th>  Log Likelihood     </th> <td>-704.063</td>
+  <th>Model:</th>            <td>ARIMA(1, 0, 1)</td>  <th>  Log Likelihood     </th> <td>-706.653</td>
 </tr>
 <tr>
-  <th>Date:</th>            <td>Sat, 10 Dec 2022</td> <th>  AIC                </th> <td>1416.125</td>
+  <th>Date:</th>            <td>Wed, 21 Dec 2022</td> <th>  AIC                </th> <td>1421.306</td>
 </tr>
 <tr>
-  <th>Time:</th>                <td>15:30:49</td>     <th>  BIC                </th> <td>1432.984</td>
+  <th>Time:</th>                <td>18:16:45</td>     <th>  BIC                </th> <td>1438.164</td>
 </tr>
 <tr>
-  <th>Sample:</th>                  <td>0</td>        <th>  HQIC               </th> <td>1422.741</td>
+  <th>Sample:</th>                  <td>0</td>        <th>  HQIC               </th> <td>1427.921</td>
 </tr>
 <tr>
   <th></th>                      <td> - 500</td>      <th>                     </th>     <td> </td>   
@@ -842,30 +875,30 @@ const thebe_selector_output = ".output, .cell_output"
      <td></td>       <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>const</th>  <td>   -0.0101</td> <td>    0.043</td> <td>   -0.234</td> <td> 0.815</td> <td>   -0.094</td> <td>    0.074</td>
+  <th>const</th>  <td>   -0.0898</td> <td>    0.012</td> <td>   -7.766</td> <td> 0.000</td> <td>   -0.112</td> <td>   -0.067</td>
 </tr>
 <tr>
-  <th>ar.L1</th>  <td>   -0.5988</td> <td>    0.526</td> <td>   -1.138</td> <td> 0.255</td> <td>   -1.630</td> <td>    0.433</td>
+  <th>ar.L1</th>  <td>    0.9721</td> <td>    0.017</td> <td>   55.551</td> <td> 0.000</td> <td>    0.938</td> <td>    1.006</td>
 </tr>
 <tr>
-  <th>ma.L1</th>  <td>    0.5487</td> <td>    0.549</td> <td>    1.000</td> <td> 0.317</td> <td>   -0.527</td> <td>    1.625</td>
+  <th>ma.L1</th>  <td>   -1.0000</td> <td>    3.363</td> <td>   -0.297</td> <td> 0.766</td> <td>   -7.592</td> <td>    5.592</td>
 </tr>
 <tr>
-  <th>sigma2</th> <td>    0.9786</td> <td>    0.065</td> <td>   15.029</td> <td> 0.000</td> <td>    0.851</td> <td>    1.106</td>
+  <th>sigma2</th> <td>    0.9847</td> <td>    3.304</td> <td>    0.298</td> <td> 0.766</td> <td>   -5.491</td> <td>    7.461</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Ljung-Box (L1) (Q):</th>     <td>0.08</td> <th>  Jarque-Bera (JB):  </th> <td>0.74</td>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.03</td> <th>  Jarque-Bera (JB):  </th> <td>1.89</td> 
 </tr>
 <tr>
-  <th>Prob(Q):</th>                <td>0.78</td> <th>  Prob(JB):          </th> <td>0.69</td>
+  <th>Prob(Q):</th>                <td>0.87</td> <th>  Prob(JB):          </th> <td>0.39</td> 
 </tr>
 <tr>
-  <th>Heteroskedasticity (H):</th> <td>0.70</td> <th>  Skew:              </th> <td>0.05</td>
+  <th>Heteroskedasticity (H):</th> <td>1.16</td> <th>  Skew:              </th> <td>-0.13</td>
 </tr>
 <tr>
-  <th>Prob(H) (two-sided):</th>    <td>0.02</td> <th>  Kurtosis:          </th> <td>2.84</td>
+  <th>Prob(H) (two-sided):</th>    <td>0.33</td> <th>  Kurtosis:          </th> <td>3.14</td> 
 </tr>
 </table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
 </div>
@@ -886,7 +919,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.8/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency QS-OCT will be used.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency QS-OCT will be used.
   self._init_dates(dates, freq)
 </pre></div>
 </div>
@@ -902,10 +935,10 @@ const thebe_selector_output = ".output, .cell_output"
   <th>Method:</th>         <td>Conditional MLE</td> <th>  S.D. of innovations</th>  <td>39.820</td>  
 </tr>
 <tr>
-  <th>Date:</th>          <td>Sat, 10 Dec 2022</td> <th>  AIC                </th> <td>2271.872</td> 
+  <th>Date:</th>          <td>Wed, 21 Dec 2022</td> <th>  AIC                </th> <td>2271.872</td> 
 </tr>
 <tr>
-  <th>Time:</th>              <td>15:30:49</td>     <th>  BIC                </th> <td>2282.080</td> 
+  <th>Time:</th>              <td>18:16:45</td>     <th>  BIC                </th> <td>2282.080</td> 
 </tr>
 <tr>
   <th>Sample:</th>           <td>04-01-1947</td>    <th>  HQIC               </th> <td>2275.994</td> 
@@ -942,7 +975,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/trabalho_2_18_0.png" src="../_images/trabalho_2_18_0.png" />
+<img alt="../_images/trabalho_2_20_0.png" src="../_images/trabalho_2_20_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -992,7 +1025,7 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </div>
 </div>
 </div>
-<p>Correlação e LB confirma que dados não são independentes</p>
+<p>Os gráficos e testes indicam que os resíduos seguem um padrão normalizado (p-valor Jarque-Bera próximo de 0). Entretanto, o teste de correlção Ljung-Box mostra que os resíduos são correlacionados. Isso também é notável no gráfico de correlação, onde os valores extrapolam valores de referência da área azul claro.</p>
 </div>
 <div class="section" id="exercicio-32">
 <h2>Exercício 32<a class="headerlink" href="#exercicio-32" title="Link permanente para este título">¶</a></h2>
@@ -1018,10 +1051,10 @@ Jarque-Bera    P-value   Skewness   Kurtosis
   <th>Model:</th>           <td>ARIMA([1, 3, 5, 8], 1, 0)</td> <th>  Log Likelihood     </th> <td>-1268.428</td>
 </tr>
 <tr>
-  <th>Date:</th>                <td>Sat, 10 Dec 2022</td>      <th>  AIC                </th> <td>2546.855</td> 
+  <th>Date:</th>                <td>Wed, 21 Dec 2022</td>      <th>  AIC                </th> <td>2546.855</td> 
 </tr>
 <tr>
-  <th>Time:</th>                    <td>15:30:50</td>          <th>  BIC                </th> <td>2568.350</td> 
+  <th>Time:</th>                    <td>18:16:46</td>          <th>  BIC                </th> <td>2568.350</td> 
 </tr>
 <tr>
   <th>Sample:</th>                 <td>01-02-2000</td>         <th>  HQIC               </th> <td>2555.259</td> 
@@ -1075,9 +1108,10 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/trabalho_2_23_0.png" src="../_images/trabalho_2_23_0.png" />
+<img alt="../_images/trabalho_2_25_0.png" src="../_images/trabalho_2_25_0.png" />
 </div>
 </div>
+<p>Os gráficos de diagnóstico mostram que o modelo é bem ajustado, entretanto os resíduos apresentam desvios significativos nas extremidades do gráfico QQ. Estas observações se devem a crise financeira de 2008 onde o barril de petróleo sofreu grande variação como é possível observar no gráfico dos resíduos normalizados.</p>
 </div>
 <div class="section" id="exercicio-35">
 <h2>Exercício 35<a class="headerlink" href="#exercicio-35" title="Link permanente para este título">¶</a></h2>
@@ -1085,6 +1119,7 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 <p>(a) Ajustar um modelo ARIMA para <span class="math notranslate nohighlight">\(S_t\)</span>, os dados de vendas mensais. Discuta seu modelo passo-a-passo, apresentando seu (A) exame inicial dos dados, (B) transformações, se necessário, (C) identificação inicial das ordens de dependência e grau de diferenciação, (D) estimativas dos parâmetros, (E) diagnósticos dos resíduos e escolha do modelo.</p>
 <p>(b) Use os gráficos CCF e lag entre <span class="math notranslate nohighlight">\(∇S_t\)</span> e <span class="math notranslate nohighlight">\(∇L_t\)</span> para argumentar que uma regressão de <span class="math notranslate nohighlight">\(∇S_t\)</span> em <span class="math notranslate nohighlight">\(∇L_t\)</span> é razoável. Observe que, em lag2.plot(), a primeira série nomeada é aquela que fica defasada.</p>
 <p>(c) Ajuste o modelo de regressão <span class="math notranslate nohighlight">\(∇S_t=β_0+β_1∇L_{t−3}+X_t\)</span>, onde <span class="math notranslate nohighlight">\(X_t\)</span> é um processo ARMA. Explique como você decidiu o seu modelo para <span class="math notranslate nohighlight">\(X_t\)</span>. Discuta seus resultados. Veja o Exemplo III.45 para ajudar na codificação deste problema.</p>
+<p>Inicialmente, ajustamos os dados para que as linhas fiquem sobrepostas para auxiliar na visualização da relação entre sales e leads.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/sales.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
@@ -1092,98 +1127,270 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 
 <span class="n">ex35_dados</span> <span class="o">=</span> <span class="n">sales</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lead</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">suffixes</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;_sales&#39;</span><span class="p">,</span> <span class="s1">&#39;_lead&#39;</span><span class="p">))</span>
 
-<span class="n">ex35_dados</span>
+<span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_sales</span> <span class="o">=</span> <span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_sales</span> <span class="o">/</span> <span class="mi">20</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">ex35_dados</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<img alt="../_images/trabalho_2_29_0.png" src="../_images/trabalho_2_29_0.png" />
+</div>
+</div>
+<p>Ajustando os modelos em função do AIC e avaliando resíduos buscando normalização e baixa correlação, chegamos no seguinte modelo que parece adequado:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex35_modelo</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_sales</span><span class="p">,</span> <span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_lead</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>value_sales</th>
-      <th>value_lead</th>
-    </tr>
-    <tr>
-      <th>index</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>200.1</td>
-      <td>10.01</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>199.5</td>
-      <td>10.07</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>199.4</td>
-      <td>10.32</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>198.9</td>
-      <td>9.75</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>199.0</td>
-      <td>10.33</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>263.3</td>
-      <td>13.50</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>262.8</td>
-      <td>13.58</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>261.8</td>
-      <td>13.51</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>262.2</td>
-      <td>13.77</td>
-    </tr>
-    <tr>
-      <th>150</th>
-      <td>262.7</td>
-      <td>13.40</td>
-    </tr>
-  </tbody>
+<span class="n">ex35_modelo</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>SARIMAX Results</caption>
+<tr>
+  <th>Dep. Variable:</th>       <td>value_sales</td>     <th>  No. Observations:  </th>    <td>150</td>  
+</tr>
+<tr>
+  <th>Model:</th>           <td>ARIMA([1, 3], 1, 1)</td> <th>  Log Likelihood     </th>  <td>193.692</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Wed, 21 Dec 2022</td>   <th>  AIC                </th> <td>-377.385</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:16:47</td>       <th>  BIC                </th> <td>-362.365</td>
+</tr>
+<tr>
+  <th>Sample:</th>                   <td>0</td>          <th>  HQIC               </th> <td>-371.282</td>
+</tr>
+<tr>
+  <th></th>                       <td> - 150</td>        <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>         <td>opg</td>         <th>                     </th>     <td> </td>   
+</tr>
 </table>
-<p>150 rows × 2 columns</p>
-</div></div></div>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>value_lead</th> <td>   -0.0500</td> <td>    0.016</td> <td>   -3.056</td> <td> 0.002</td> <td>   -0.082</td> <td>   -0.018</td>
+</tr>
+<tr>
+  <th>ar.L1</th>      <td>    0.4294</td> <td>    0.165</td> <td>    2.605</td> <td> 0.009</td> <td>    0.106</td> <td>    0.753</td>
+</tr>
+<tr>
+  <th>ar.L3</th>      <td>    0.3184</td> <td>    0.083</td> <td>    3.841</td> <td> 0.000</td> <td>    0.156</td> <td>    0.481</td>
+</tr>
+<tr>
+  <th>ma.L1</th>      <td>   -0.2007</td> <td>    0.209</td> <td>   -0.960</td> <td> 0.337</td> <td>   -0.611</td> <td>    0.209</td>
+</tr>
+<tr>
+  <th>sigma2</th>     <td>    0.0043</td> <td>    0.000</td> <td>    9.619</td> <td> 0.000</td> <td>    0.003</td> <td>    0.005</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.00</td> <th>  Jarque-Bera (JB):  </th> <td>2.00</td> 
+</tr>
+<tr>
+  <th>Prob(Q):</th>                <td>0.99</td> <th>  Prob(JB):          </th> <td>0.37</td> 
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th> <td>0.44</td> <th>  Skew:              </th> <td>-0.03</td>
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>    <td>0.00</td> <th>  Kurtosis:          </th> <td>3.56</td> 
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex35_modelo</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_32_0.png" src="../_images/trabalho_2_32_0.png" />
+</div>
+</div>
+<p>Código abaixo para plotar CCF:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">ccf</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MaxNLocator</span>
+
+<span class="k">def</span> <span class="nf">plot_ccf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lag_range</span><span class="p">,</span>
+             <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+             <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">xlabel_fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">ylabel_fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    plot cross-correlation between series x and y</span>
+<span class="sd">    :param x: series that we leads y on the left</span>
+<span class="sd">    :type x: pd.Series</span>
+<span class="sd">    :param y: series that we leads x on the right</span>
+<span class="sd">    :type y: pd.Series</span>
+<span class="sd">    :param lag_range: range of lag</span>
+<span class="sd">    :type lag_range: int</span>
+<span class="sd">    :param figsize: figure size</span>
+<span class="sd">    :type figsize: tuple</span>
+<span class="sd">    :param title_fontsize: title font size</span>
+<span class="sd">    :type title_fontsize: int</span>
+<span class="sd">    :param xlabel_fontsize: x axis label size</span>
+<span class="sd">    :type xlabel_fontsize: int</span>
+<span class="sd">    :param ylabel_fontsize: y axis label size</span>
+<span class="sd">    :type ylabel_fontsize: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> &amp; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">lags</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="n">lag_range</span><span class="p">,</span> <span class="n">lag_range</span> <span class="p">)</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">ccf</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)[:</span><span class="n">lag_range</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">ccf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)[:</span><span class="n">lag_range</span><span class="p">]</span>
+
+    <span class="n">left</span> <span class="o">=</span> <span class="n">left</span><span class="p">[</span><span class="mi">1</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">cc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">])</span>
+
+    <span class="n">sigma</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cc</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">lags</span><span class="p">),</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">lags</span><span class="p">),</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">lags</span><span class="p">),</span> <span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Lag&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">xlabel_fontsize</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;cross-correlation&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">ylabel_fontsize</span><span class="p">)</span>    
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">title_fontsize</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.93</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">ccf</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plot_ccf</span><span class="p">(</span><span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_lead</span><span class="p">,</span> <span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_sales</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_35_0.png" src="../_images/trabalho_2_35_0.png" />
+</div>
+</div>
+<p>Notamos que o ponto mais alto está em um atraso de t-3. Assim, empurramos os 3 primeiros valores de leads para frente para alinhar os índices e refazemos o modelo com alguns ajustes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vendas</span> <span class="o">=</span> <span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_sales</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Empurra os valores dos leads 3 tempos para frente e preenche os vazios com o valores do primeiro válido (10.1)</span>
+<span class="n">leads</span> <span class="o">=</span> <span class="n">ex35_dados</span><span class="o">.</span><span class="n">value_lead</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;backfill&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">ex35_modelo_delta</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">vendas</span><span class="p">,</span> <span class="n">exog</span><span class="o">=</span><span class="n">leads</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ex35_modelo_delta</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/base/model.py:604: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn(&quot;Maximum Likelihood optimization failed to &quot;
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>SARIMAX Results</caption>
+<tr>
+  <th>Dep. Variable:</th>         <td>value_sales</td>      <th>  No. Observations:  </th>    <td>150</td>  
+</tr>
+<tr>
+  <th>Model:</th>           <td>ARIMA([2, 3, 4], 0, 2)</td> <th>  Log Likelihood     </th>  <td>269.355</td>
+</tr>
+<tr>
+  <th>Date:</th>               <td>Wed, 21 Dec 2022</td>    <th>  AIC                </th> <td>-522.710</td>
+</tr>
+<tr>
+  <th>Time:</th>                   <td>18:16:48</td>        <th>  BIC                </th> <td>-498.625</td>
+</tr>
+<tr>
+  <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th> <td>-512.925</td>
+</tr>
+<tr>
+  <th></th>                         <td> - 150</td>         <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>           <td>opg</td>          <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th>      <td>   10.0014</td> <td>    0.322</td> <td>   31.065</td> <td> 0.000</td> <td>    9.370</td> <td>   10.632</td>
+</tr>
+<tr>
+  <th>value_lead</th> <td>    0.1386</td> <td>    0.008</td> <td>   18.063</td> <td> 0.000</td> <td>    0.124</td> <td>    0.154</td>
+</tr>
+<tr>
+  <th>ar.L2</th>      <td>    1.3000</td> <td>    0.094</td> <td>   13.825</td> <td> 0.000</td> <td>    1.116</td> <td>    1.484</td>
+</tr>
+<tr>
+  <th>ar.L3</th>      <td>    0.3009</td> <td>    0.080</td> <td>    3.784</td> <td> 0.000</td> <td>    0.145</td> <td>    0.457</td>
+</tr>
+<tr>
+  <th>ar.L4</th>      <td>   -0.6337</td> <td>    0.091</td> <td>   -6.970</td> <td> 0.000</td> <td>   -0.812</td> <td>   -0.456</td>
+</tr>
+<tr>
+  <th>ma.L1</th>      <td>    1.7761</td> <td>    0.054</td> <td>   32.937</td> <td> 0.000</td> <td>    1.670</td> <td>    1.882</td>
+</tr>
+<tr>
+  <th>ma.L2</th>      <td>    0.9411</td> <td>    0.047</td> <td>   20.229</td> <td> 0.000</td> <td>    0.850</td> <td>    1.032</td>
+</tr>
+<tr>
+  <th>sigma2</th>     <td>    0.0017</td> <td>    0.000</td> <td>    7.640</td> <td> 0.000</td> <td>    0.001</td> <td>    0.002</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.57</td> <th>  Jarque-Bera (JB):  </th> <td>0.40</td> 
+</tr>
+<tr>
+  <th>Prob(Q):</th>                <td>0.45</td> <th>  Prob(JB):          </th> <td>0.82</td> 
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th> <td>0.66</td> <th>  Skew:              </th> <td>-0.10</td>
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>    <td>0.14</td> <th>  Kurtosis:          </th> <td>3.15</td> 
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex35_modelo_delta</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_38_0.png" src="../_images/trabalho_2_38_0.png" />
+</div>
 </div>
 </div>
 <div class="section" id="exercicio-36">
@@ -1193,6 +1400,191 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 <p>(b) Argumente que a curva <span class="math notranslate nohighlight">\(C_t\)</span> versus <span class="math notranslate nohighlight">\(t\)</span> se comporta como <span class="math notranslate nohighlight">\(C_t ≈ αe^{βt}\)</span> ajustando uma regressão linear de <span class="math notranslate nohighlight">\(log(C_t)\)</span> em t e então plotando a linha ajustada para compará-la aos dados registrados. Comente.</p>
 <p>(c) Inspecione os resíduos do ajuste de regressão linear e comente.</p>
 <p>(d) Ajuste a regressão novamente, mas agora usando o fato de que os erros são autocorrelacionados. Comente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cpg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/cpg.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="c1">#cpg.index = pd.DatetimeIndex(cpg.index).to_period(&#39;Y&#39;)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">cpg</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_40_0.png" src="../_images/trabalho_2_40_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+
+<span class="n">cpg</span><span class="p">[</span><span class="s1">&#39;indice_anos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cpg</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ex36_modelo_linear</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;np.log(value) ~ indice_anos&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">cpg</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ex36_modelo_linear</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>      <td>np.log(value)</td>  <th>  R-squared:         </th> <td>   0.985</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.985</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   1790.</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Wed, 21 Dec 2022</td> <th>  Prob (F-statistic):</th> <td>3.23e-26</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>18:16:49</td>     <th>  Log-Likelihood:    </th> <td> -26.396</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>    29</td>      <th>  AIC:               </th> <td>   56.79</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>    27</td>      <th>  BIC:               </th> <td>   59.53</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     1</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>          <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>   <td>   14.6257</td> <td>    0.238</td> <td>   61.570</td> <td> 0.000</td> <td>   14.138</td> <td>   15.113</td>
+</tr>
+<tr>
+  <th>indice_anos</th> <td>   -0.5851</td> <td>    0.014</td> <td>  -42.304</td> <td> 0.000</td> <td>   -0.613</td> <td>   -0.557</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 4.198</td> <th>  Durbin-Watson:     </th> <td>   0.476</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.123</td> <th>  Jarque-Bera (JB):  </th> <td>   2.584</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.628</td> <th>  Prob(JB):          </th> <td>   0.275</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.749</td> <th>  Cond. No.          </th> <td>    35.4</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utils.regression_plots</span> <span class="kn">import</span> <span class="n">Linear_Reg_Diagnostic</span>
+
+<span class="n">diagnostico</span> <span class="o">=</span> <span class="n">Linear_Reg_Diagnostic</span><span class="p">(</span><span class="n">ex36_modelo_linear</span><span class="p">)</span>
+
+<span class="n">diagnostico</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_42_0.png" src="../_images/trabalho_2_42_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Features  VIF Factor
+1  indice_anos        1.00
+0    Intercept        4.21
+</pre></div>
+</div>
+</div>
+</div>
+<p>Analisando o gráfico de resíduos x valores ajustados notamos um padrão na disposição dos pontos (similar a uma senóide), indicando correlação.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex36_modelo_arima</span> <span class="o">=</span> <span class="n">ARIMA</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">cpg</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]),</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">ex36_modelo_arima</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
+  self._init_dates(dates, freq)
+/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
+  self._init_dates(dates, freq)
+/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
+  self._init_dates(dates, freq)
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>SARIMAX Results</caption>
+<tr>
+  <th>Dep. Variable:</th>         <td>value</td>      <th>  No. Observations:  </th>   <td>29</td>   
+</tr>
+<tr>
+  <th>Model:</th>            <td>ARIMA(2, 1, 1)</td>  <th>  Log Likelihood     </th> <td>-15.322</td>
+</tr>
+<tr>
+  <th>Date:</th>            <td>Wed, 21 Dec 2022</td> <th>  AIC                </th> <td>38.643</td> 
+</tr>
+<tr>
+  <th>Time:</th>                <td>18:16:50</td>     <th>  BIC                </th> <td>43.972</td> 
+</tr>
+<tr>
+  <th>Sample:</th>             <td>01-01-1980</td>    <th>  HQIC               </th> <td>40.272</td> 
+</tr>
+<tr>
+  <th></th>                   <td>- 01-01-2008</td>   <th>                     </th>    <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>        <td>opg</td>       <th>                     </th>    <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+     <td></td>       <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>ar.L1</th>  <td>    0.5085</td> <td>    0.209</td> <td>    2.437</td> <td> 0.015</td> <td>    0.099</td> <td>    0.918</td>
+</tr>
+<tr>
+  <th>ar.L2</th>  <td>    0.4619</td> <td>    0.195</td> <td>    2.372</td> <td> 0.018</td> <td>    0.080</td> <td>    0.844</td>
+</tr>
+<tr>
+  <th>ma.L1</th>  <td>   -0.6376</td> <td>    0.273</td> <td>   -2.339</td> <td> 0.019</td> <td>   -1.172</td> <td>   -0.103</td>
+</tr>
+<tr>
+  <th>sigma2</th> <td>    0.1640</td> <td>    0.054</td> <td>    3.065</td> <td> 0.002</td> <td>    0.059</td> <td>    0.269</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.26</td> <th>  Jarque-Bera (JB):  </th> <td>0.69</td> 
+</tr>
+<tr>
+  <th>Prob(Q):</th>                <td>0.61</td> <th>  Prob(JB):          </th> <td>0.71</td> 
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th> <td>0.85</td> <th>  Skew:              </th> <td>-0.38</td>
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>    <td>0.81</td> <th>  Kurtosis:          </th> <td>2.84</td> 
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex36_modelo_arima</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_2_45_0.png" src="../_images/trabalho_2_45_0.png" />
+</div>
+</div>
 </div>
 </div>
 
@@ -1227,6 +1619,13 @@ Jarque-Bera    P-value   Skewness   Kurtosis
             <p class="prev-next-subtitle">anterior</p>
             <p class="prev-next-title">Trabalho No. 1</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../inferencia_bayesiana/exercicios.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Exercícios</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
