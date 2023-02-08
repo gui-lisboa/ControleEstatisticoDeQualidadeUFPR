@@ -1,0 +1,1033 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho No. 3 &#8212; Estatística - UFPR</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Exercícios" href="../inferencia_bayesiana/exercicios.html" />
+    <link rel="prev" title="Trabalho No. 2" href="trabalho_2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Estatística - UFPR</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquisar..." aria-label="Pesquisar..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Regressão Linear
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/atividade6.html">
+   Atividade 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/prova1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_regressao_linear/projeto_final.html">
+   Projeto Final: Modelo de Regressão Linear para Taxa de Vacinação contra COVID-19
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Controle Estatístico de Qualidade
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
+   Atividade 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
+   Atividade 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
+   Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Planejamento de Experimentos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../planejamento_de_experimentos/anotacoes_prova_1.html">
+   Anotações - Prova 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Teoria do Risco
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade1.html">
+   Atividade 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../teoria_do_risco/atividade2.html">
+   Atividade 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Visualização de Dados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio1.html">
+   Desafio 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao1.html">
+   Avaliação 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/desafio2.html">
+   Desafio 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/avaliacao2.html">
+   Avaliação 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visualizacao_de_dados/exame.html">
+   Exame
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Processos Estocásticos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/intro.html">
+   Sobre
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../processos_estocasticos/trabalho.html">
+   Modelo Aberto de Jackson Aplicado à uma Estação de Tratamento de Água
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Estatística Não Paramétrica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/anotacoes.html">
+   Anotações para prova
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_1.html">
+   Teste Não-Paramétrico de Alternativas Ordenadas de Jonckheere-Terpstra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nao_parametrica/desafio_3.html">
+   Comparação de poder dos testes Z e Binomial.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Dados Categóricos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_1.html">
+   1º Lista de Exercícios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_dados_categoricos/lista_2.html">
+   2º Lista de Exercícios
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Lineares Generalizados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelos_lineares_generalizados/lista_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modelos Estatísticos Multivariados
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_1.html">
+   Trabalho No. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_3.html">
+   Trabalho No. 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../metodos_estatisticos_multivariados/trabalho_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Extensões de Modelos de Regressão
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
+   Gala dataset
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Análise de Séries Temporais
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="trabalho_1.html">
+   Trabalho No. 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trabalho_2.html">
+   Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Trabalho No. 3
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Inferência Bayesiana
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../inferencia_bayesiana/exercicios.html">
+   Exercícios
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/analise_de_series_temporais/trabalho_3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ex-9">
+   Ex 9
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ex-20">
+   Ex 20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ex-22">
+   Ex 22
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Trabalho No. 3</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ex-9">
+   Ex 9
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ex-20">
+   Ex 20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ex-22">
+   Ex 22
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-3">
+<h1>Trabalho No. 3<a class="headerlink" href="#trabalho-no-3" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
+</ul>
+<div class="admonition-questoes admonition">
+<p class="admonition-title">Questões</p>
+<p>Parte IV: Análise Espectral e Filtragem</p>
+<p>Seção IV.11 Exercícios 9, 20 e 22</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ex-9">
+<h2>Ex 9<a class="headerlink" href="#ex-9" title="Link permanente para este título">¶</a></h2>
+<p>A Figura IV.22 mostra o número de manchas solares suavizadas bi-ano (média móvel de 12 meses) de junho de 1749 a dezembro de 1978 com <span class="math notranslate nohighlight">\(n=459\)</span> pontos que foram obtidos duas vezes por ano; os dados estão contidos em <strong>sunspotz</strong>. Com o Exemplo IV.13 como guia, execute uma análise de periodograma identificando os períodos predominantes e obtendo intervalos de confiança para os períodos identificados. Interprete suas descobertas.</p>
+<p><img alt="Figura IV.22" src="../_images/Rplotsunspotz.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sunspotz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/sunspotz.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">sunspotz</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">sunspotz</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Utilizamos a diferença entre observações consecutivas para remover tendência e assim também temos um número de observações pares:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">sunspotz</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="n">num_diferenças</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 458</span>
+<span class="n">metade_num_diferenças</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_diferenças</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Plotando o periodograma (unilateral) temos um pico próximo de 0,05:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num_diferenças</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">P</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="n">num_diferenças</span><span class="p">)</span><span class="o">*</span><span class="n">I</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="n">metade_num_diferenças</span><span class="p">)]</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="n">metade_num_diferenças</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">P</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_3_8_0.png" src="../_images/trabalho_3_8_0.png" />
+</div>
+</div>
+<p>Verificando a inspeção visual:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">P</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.05021834061135371
+</pre></div>
+</div>
+</div>
+</div>
+<p>Portanto, a frequência encontrada corresponde a 1/0,05 = 20 observações. Como as observações são bi-anuais, 20 observações ocorrem no período de 10 anos. Assim, a periodicidade dominante é de 10 anos.</p>
+</div>
+<div class="section" id="ex-20">
+<h2>Ex 20<a class="headerlink" href="#ex-20" title="Link permanente para este título">¶</a></h2>
+<p>Os dados no arquivo <strong>climhyd</strong> contém 454 meses de valores medidos para as variáveis climáticas: temperatura do ar (Temp), ponto de orvalho (DewPt), cobertura de nuvens (CldCvr), velocidade do vento (WndSpd), precipitação (Precip) e influxo (Inflow), no Lago Shasta; os dados são exibidos na Figura VII.3. Gostaríamos de examinar as possíveis relações entre os fatores climáticos e o influxo para o Lago Shasta.</p>
+<p>(a) Ajuste um modelo <span class="math notranslate nohighlight">\(ARIMA(0,0,0)×(0,1,1)_{12}\)</span> para (i) a precipitação transformada <span class="math notranslate nohighlight">\(P_t = \sqrt{Precip}\)</span> e (ii) influxo transformado <span class="math notranslate nohighlight">\(I_t = ln(Inflow)\)</span>.</p>
+<p>(b) Calcule as coerências quadradas entre todas as variáveis meteorológicas e o influxo transformado e argumente que o determinante mais forte da série de influxo é a precipitação (transformada). Dica: se <span class="math notranslate nohighlight">\(x\)</span> contiver várias séries temporais, a maneira mais fácil de exibir todas as coerências quadradas é graficar as coerências suprimindo os intervalos de confiança.</p>
+<p>(c) Ajuste um modelo de regressão defasada da forma <span class="math notranslate nohighlight">\(I_t = \beta_0+\sum_{j=0}^\infty \beta_j P_{t-j}+\omega_t\)</span> usando limiarização e depois comentar a capacidade preditiva da precipitação para o influxo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">climhyd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/climhyd.csv&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">climhyd</span><span class="p">[[</span><span class="s1">&#39;Precip&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflow&#39;</span><span class="p">]]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_3_13_0.png" src="../_images/trabalho_3_13_0.png" />
+</div>
+</div>
+<p>(i) Ajuste modelo <span class="math notranslate nohighlight">\(P_t = \sqrt{Precip}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.statespace.sarimax</span> <span class="kn">import</span> <span class="n">SARIMAX</span>
+
+<span class="n">ajuste_pt</span> <span class="o">=</span> <span class="n">SARIMAX</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">climhyd</span><span class="o">.</span><span class="n">Precip</span><span class="p">),</span> <span class="n">climhyd</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Precip&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">ajuste_pt</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            7     M =           10
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  2.58485D+00    |proj g|=  2.07159D+00
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate    5    f=  2.55161D+00    |proj g|=  2.02528D-01
+
+At iterate   10    f=  2.55058D+00    |proj g|=  6.15124D-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   15    f=  2.54647D+00    |proj g|=  4.00522D-02
+
+At iterate   20    f=  2.54611D+00    |proj g|=  1.93462D-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   25    f=  2.54610D+00    |proj g|=  1.12905D-02
+
+At iterate   30    f=  2.54607D+00    |proj g|=  1.55850D-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   35    f=  2.54604D+00    |proj g|=  1.58965D-03
+
+At iterate   40    f=  2.54600D+00    |proj g|=  1.45483D-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   45    f=  2.54545D+00    |proj g|=  1.70814D-02
+
+At iterate   50    f=  2.54520D+00    |proj g|=  6.22292D-02
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    7     50     63      1     0     0   6.223D-02   2.545D+00
+  F =   2.5452031874417900     
+
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT                 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/base/model.py:604: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn(&quot;Maximum Likelihood optimization failed to &quot;
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>SARIMAX Results</caption>
+<tr>
+  <th>Dep. Variable:</th>           <td>Precip</td>         <th>  No. Observations:  </th>    <td>454</td>   
+</tr>
+<tr>
+  <th>Model:</th>           <td>SARIMAX(0, 1, [1], 12)</td> <th>  Log Likelihood     </th> <td>-1155.522</td>
+</tr>
+<tr>
+  <th>Date:</th>               <td>Wed, 08 Feb 2023</td>    <th>  AIC                </th> <td>2325.044</td> 
+</tr>
+<tr>
+  <th>Time:</th>                   <td>13:50:02</td>        <th>  BIC                </th> <td>2353.684</td> 
+</tr>
+<tr>
+  <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th> <td>2336.341</td> 
+</tr>
+<tr>
+  <th></th>                         <td> - 454</td>         <th>                     </th>     <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>           <td>opg</td>          <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>        <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Temp</th>     <td>   -0.7580</td> <td>    0.117</td> <td>   -6.457</td> <td> 0.000</td> <td>   -0.988</td> <td>   -0.528</td>
+</tr>
+<tr>
+  <th>DewPt</th>    <td>    0.5888</td> <td>    0.116</td> <td>    5.057</td> <td> 0.000</td> <td>    0.361</td> <td>    0.817</td>
+</tr>
+<tr>
+  <th>CldCvr</th>   <td>   16.3372</td> <td>    2.073</td> <td>    7.881</td> <td> 0.000</td> <td>   12.274</td> <td>   20.400</td>
+</tr>
+<tr>
+  <th>WndSpd</th>   <td>    2.2908</td> <td>    1.038</td> <td>    2.207</td> <td> 0.027</td> <td>    0.256</td> <td>    4.325</td>
+</tr>
+<tr>
+  <th>Inflow</th>   <td>    0.0131</td> <td>    0.001</td> <td>   11.744</td> <td> 0.000</td> <td>    0.011</td> <td>    0.015</td>
+</tr>
+<tr>
+  <th>ma.S.L12</th> <td>   -0.9198</td> <td>    0.031</td> <td>  -29.376</td> <td> 0.000</td> <td>   -0.981</td> <td>   -0.858</td>
+</tr>
+<tr>
+  <th>sigma2</th>   <td>   10.3794</td> <td>    0.648</td> <td>   16.010</td> <td> 0.000</td> <td>    9.109</td> <td>   11.650</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.70</td> <th>  Jarque-Bera (JB):  </th> <td>3.86</td>
+</tr>
+<tr>
+  <th>Prob(Q):</th>                <td>0.40</td> <th>  Prob(JB):          </th> <td>0.15</td>
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th> <td>1.18</td> <th>  Skew:              </th> <td>0.06</td>
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>    <td>0.31</td> <th>  Kurtosis:          </th> <td>3.44</td>
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste_pt</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_3_16_0.png" src="../_images/trabalho_3_16_0.png" />
+</div>
+</div>
+<p>O modelo mostra-se adequado, passando pelos testes de correlação, homocedasticidade e normalidade dos resíduos. Tanto as variáveis explicativas quanto os termos do modelo SARIMA proposto são significantes.</p>
+<p>(ii) Ajuste modelo <span class="math notranslate nohighlight">\(I_t = ln(Inflow)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste_it</span> <span class="o">=</span> <span class="n">SARIMAX</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">climhyd</span><span class="o">.</span><span class="n">Inflow</span><span class="p">),</span> <span class="n">climhyd</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Inflow&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">order</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">seasonal_order</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">ajuste_it</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =            7     M =           10
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  2.40969D-01    |proj g|=  4.80667D+00
+
+At iterate    5    f=  2.40786D-01    |proj g|=  5.42079D+00
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   10    f=  2.36318D-01    |proj g|=  1.40701D+01
+
+At iterate   15    f=  2.35905D-01    |proj g|=  6.25692D-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   20    f=  2.34997D-01    |proj g|=  3.39669D+00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   25    f=  2.34772D-01    |proj g|=  2.34694D-01
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+    7     26     39      1     0     0   2.330D-01   2.348D-01
+  F =  0.23477189980805074     
+
+CONVERGENCE: REL_REDUCTION_OF_F_&lt;=_FACTR*EPSMCH             
+</pre></div>
+</div>
+<div class="output text_html"><table class="simpletable">
+<caption>SARIMAX Results</caption>
+<tr>
+  <th>Dep. Variable:</th>           <td>Inflow</td>         <th>  No. Observations:  </th>    <td>454</td>  
+</tr>
+<tr>
+  <th>Model:</th>           <td>SARIMAX(0, 1, [1], 12)</td> <th>  Log Likelihood     </th> <td>-106.586</td>
+</tr>
+<tr>
+  <th>Date:</th>               <td>Wed, 08 Feb 2023</td>    <th>  AIC                </th>  <td>227.173</td>
+</tr>
+<tr>
+  <th>Time:</th>                   <td>13:50:04</td>        <th>  BIC                </th>  <td>255.812</td>
+</tr>
+<tr>
+  <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th>  <td>238.469</td>
+</tr>
+<tr>
+  <th></th>                         <td> - 454</td>         <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>           <td>opg</td>          <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+      <td></td>        <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Temp</th>     <td>   -0.0220</td> <td>    0.010</td> <td>   -2.217</td> <td> 0.027</td> <td>   -0.041</td> <td>   -0.003</td>
+</tr>
+<tr>
+  <th>DewPt</th>    <td>    0.0569</td> <td>    0.010</td> <td>    5.539</td> <td> 0.000</td> <td>    0.037</td> <td>    0.077</td>
+</tr>
+<tr>
+  <th>CldCvr</th>   <td>   -0.1376</td> <td>    0.184</td> <td>   -0.750</td> <td> 0.453</td> <td>   -0.497</td> <td>    0.222</td>
+</tr>
+<tr>
+  <th>WndSpd</th>   <td>    0.2510</td> <td>    0.103</td> <td>    2.426</td> <td> 0.015</td> <td>    0.048</td> <td>    0.454</td>
+</tr>
+<tr>
+  <th>Precip</th>   <td>    0.0019</td> <td>    0.000</td> <td>   16.221</td> <td> 0.000</td> <td>    0.002</td> <td>    0.002</td>
+</tr>
+<tr>
+  <th>ma.S.L12</th> <td>   -0.7015</td> <td>    0.034</td> <td>  -20.675</td> <td> 0.000</td> <td>   -0.768</td> <td>   -0.635</td>
+</tr>
+<tr>
+  <th>sigma2</th>   <td>    0.0929</td> <td>    0.005</td> <td>   17.981</td> <td> 0.000</td> <td>    0.083</td> <td>    0.103</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Ljung-Box (L1) (Q):</th>     <td>118.35</td> <th>  Jarque-Bera (JB):  </th> <td>27.75</td>
+</tr>
+<tr>
+  <th>Prob(Q):</th>                 <td>0.00</td>  <th>  Prob(JB):          </th> <td>0.00</td> 
+</tr>
+<tr>
+  <th>Heteroskedasticity (H):</th>  <td>1.75</td>  <th>  Skew:              </th> <td>0.10</td> 
+</tr>
+<tr>
+  <th>Prob(H) (two-sided):</th>     <td>0.00</td>  <th>  Kurtosis:          </th> <td>4.21</td> 
+</tr>
+</table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste_it</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_3_20_0.png" src="../_images/trabalho_3_20_0.png" />
+</div>
+</div>
+<p>O modelo para o influxo apresenta principalmente um problema de correlação.</p>
+<p>Correlação cruzada:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">utils.plot_ccf</span> <span class="kn">import</span> <span class="n">plot_ccf</span>
+
+<span class="n">plot_ccf</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">climhyd</span><span class="o">.</span><span class="n">Precip</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">climhyd</span><span class="o">.</span><span class="n">Inflow</span><span class="p">),</span> <span class="mi">12</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Precipitação &amp; Influxo Transformados&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_3_23_0.png" src="../_images/trabalho_3_23_0.png" />
+</div>
+</div>
+<p>O gráfico de correlação cruzada mostra que há uma forte correlação entre Precipitação e Influxo, sendo que medidas de <span class="math notranslate nohighlight">\(t-1\)</span> até <span class="math notranslate nohighlight">\(t-4\)</span> ainda apresentam correlação positiva. Após esse período, passamos a ter uma correlação negativa, ou seja, o influxo do lago diminui se comparado há precipitação em <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Parte da explicação poder ser atribuída há períodos chuvosos. (Fonte: https://weatherspark.com/y/666/Average-Weather-in-Shasta-Lake-California-United-States-Year-Round)</p>
+<p><img alt="Período Chuvoso" src="../_images/shasta_lake_rainfall.png" /></p>
+<p>Vemos que os primeiros atrasasos ainda estão na temporada chuvosa (de Janeiro <span class="math notranslate nohighlight">\(t\)</span> a Abril <span class="math notranslate nohighlight">\(t-4\)</span>). Já os atrasos <span class="math notranslate nohighlight">\(t-5\)</span> até <span class="math notranslate nohighlight">\(t-10\)</span> (Maio a Outubro) estão no período seco, ou seja, há um menor influxo no lago se comparado ao período <span class="math notranslate nohighlight">\(t\)</span> de precipitação. Ao chegar no tempo <span class="math notranslate nohighlight">\(t-11\)</span>, voltam as chuvas e o influxo passa a ser correlacionado com a precipitação em <span class="math notranslate nohighlight">\(t\)</span></p>
+</div>
+<div class="section" id="ex-22">
+<h2>Ex 22<a class="headerlink" href="#ex-22" title="Link permanente para este título">¶</a></h2>
+<p>Analise os dados do preço do frango (<strong>chicken</strong>) usando um procedimento de estimação espectral paramétrica. Compare os resultados com os do Exercício 1, Seção IV.4.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chicken</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dados/chicken.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">chicken</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">chicken</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">chicken</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/trabalho_3_26_0.png" src="../_images/trabalho_3_26_0.png" />
+</div>
+</div>
+<p>O método escolhido implementa o algoritmo de Yule-Walker para estimar os parametros de um modelo AR(4):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">spectrum</span> <span class="kn">import</span> <span class="n">arma2psd</span><span class="p">,</span> <span class="n">arburg</span><span class="p">,</span> <span class="n">aryule</span>
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">plot</span><span class="p">,</span> <span class="n">linspace</span><span class="p">,</span> <span class="n">log10</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">legend</span>
+
+<span class="n">AR</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">aryule</span><span class="p">(</span><span class="n">chicken</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">PSD</span> <span class="o">=</span> <span class="n">arma2psd</span><span class="p">(</span><span class="n">AR</span><span class="p">,</span> <span class="n">NFFT</span><span class="o">=</span><span class="mi">512</span><span class="p">)</span>
+<span class="n">PSD</span> <span class="o">=</span> <span class="n">PSD</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">PSD</span><span class="p">):</span><span class="nb">len</span><span class="p">(</span><span class="n">PSD</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">PSD</span><span class="p">)),</span> <span class="mi">10</span><span class="o">*</span><span class="n">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">PSD</span><span class="p">)</span><span class="o">*</span><span class="mf">2.</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">pi</span><span class="p">)),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Estimação de y usando Yule-Walker AR(4)&#39;</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Frequência normalizada ($\times$ $\pi$ rad/sample)&#39;</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;One-sided PSD (dB/rad/sample)&#39;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [13],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">spectrum</span> <span class="kn">import</span> <span class="n">arma2psd</span><span class="p">,</span> <span class="n">arburg</span><span class="p">,</span> <span class="n">aryule</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">plot</span><span class="p">,</span> <span class="n">linspace</span><span class="p">,</span> <span class="n">log10</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">legend</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">AR</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">aryule</span><span class="p">(</span><span class="n">chicken</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;spectrum&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./analise_de_series_temporais"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="trabalho_2.html" title="anterior page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">Trabalho No. 2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../inferencia_bayesiana/exercicios.html" title="próximo page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Exercícios</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Guilherme L Oliveira<br/>
+    
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

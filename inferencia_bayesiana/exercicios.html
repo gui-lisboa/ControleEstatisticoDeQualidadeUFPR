@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="prev" title="Trabalho No. 2" href="../analise_de_series_temporais/trabalho_2.html" />
+    <link rel="prev" title="Trabalho No. 3" href="../analise_de_series_temporais/trabalho_3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -375,6 +375,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../analise_de_series_temporais/trabalho_2.html">
    Trabalho No. 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_series_temporais/trabalho_3.html">
+   Trabalho No. 3
   </a>
  </li>
 </ul>
@@ -818,58 +823,40 @@ P(\theta \leq \theta^*) = \frac{c_1}{c_1 + c_2} = \frac{1}{1 + 3} = \frac{1}{4}
 <span class="ne">----&gt; </span><span class="mi">8</span>     <span class="n">entradas</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="n">theta</span> <span class="o">*</span> <span class="n">normal</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">entradas</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:866,</span> in <span class="ni">rv_generic.__call__</span><span class="nt">(self, *args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">866</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">freeze</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:453,</span> in <span class="ni">rv_frozen.pdf</span><span class="nt">(self, x)</span>
+<span class="g g-Whitespace">    </span><span class="mi">452</span> <span class="k">def</span> <span class="nf">pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>   <span class="c1"># raises AttributeError in frozen discrete distribution</span>
+<span class="ne">--&gt; </span><span class="mi">453</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">)</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:863,</span> in <span class="ni">rv_generic.freeze</span><span class="nt">(self, *args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">848</span> <span class="k">def</span> <span class="nf">freeze</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">849</span>     <span class="sd">&quot;&quot;&quot;Freeze the distribution for the given arguments.</span>
-<span class="g g-Whitespace">    </span><span class="mi">850</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">851</span><span class="sd">     Parameters</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:1906,</span> in <span class="ni">rv_continuous.pdf</span><span class="nt">(self, x, *args, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1904</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">loc</span><span class="p">)</span><span class="o">/</span><span class="n">scale</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtyp</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1905</span> <span class="n">cond0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_argcheck</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">scale</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1906</span> <span class="n">cond1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_support_mask</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">scale</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1907</span> <span class="n">cond</span> <span class="o">=</span> <span class="n">cond0</span> <span class="o">&amp;</span> <span class="n">cond1</span>
+<span class="g g-Whitespace">   </span><span class="mi">1908</span> <span class="n">output</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="p">(</span><span class="n">cond</span><span class="p">),</span> <span class="n">dtyp</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:995,</span> in <span class="ni">rv_generic._support_mask</span><span class="nt">(self, x, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">993</span> <span class="k">def</span> <span class="nf">_support_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">994</span>     <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_support</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">995</span>     <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">invalid</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">996</span>         <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/numpy/core/_ufunc_config.py:435,</span> in <span class="ni">errstate.__exit__</span><span class="nt">(self, *exc_info)</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span> <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">exc_info</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">435</span>     <span class="n">seterr</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">oldstate</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">436</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">call</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">_Unspecified</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span>         <span class="n">seterrcall</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">oldcall</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/numpy/core/_ufunc_config.py:110,</span> in <span class="ni">seterr</span><span class="nt">(all, divide, over, under, invalid)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span><span class="sd"> Set how floating-point errors are handled.</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span><span class="sd"> </span>
 <span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">861</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">863</span>     <span class="k">return</span> <span class="n">rv_frozen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:439,</span> in <span class="ni">rv_frozen.__init__</span><span class="nt">(self, dist, *args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">436</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span> <span class="o">=</span> <span class="n">kwds</span>
-<span class="g g-Whitespace">    </span><span class="mi">438</span> <span class="c1"># create a new instance</span>
-<span class="ne">--&gt; </span><span class="mi">439</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="o">**</span><span class="n">dist</span><span class="o">.</span><span class="n">_updated_ctor_param</span><span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="n">shapes</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="o">.</span><span class="n">_parse_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">442</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="o">.</span><span class="n">_get_support</span><span class="p">(</span><span class="o">*</span><span class="n">shapes</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:1755,</span> in <span class="ni">rv_continuous.__init__</span><span class="nt">(self, momtype, a, b, xtol, badvalue, name, longname, shapes, extradoc, seed)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1750</span> <span class="bp">self</span><span class="o">.</span><span class="n">extradoc</span> <span class="o">=</span> <span class="n">extradoc</span>
-<span class="g g-Whitespace">   </span><span class="mi">1752</span> <span class="bp">self</span><span class="o">.</span><span class="n">_construct_argparser</span><span class="p">(</span><span class="n">meths_to_inspect</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_pdf</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdf</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1753</span>                           <span class="n">locscale_in</span><span class="o">=</span><span class="s1">&#39;loc=0, scale=1&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1754</span>                           <span class="n">locscale_out</span><span class="o">=</span><span class="s1">&#39;loc, scale&#39;</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1755</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attach_methods</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1757</span> <span class="k">if</span> <span class="n">longname</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1758</span>     <span class="k">if</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;aeiouAEIOU&#39;</span><span class="p">]:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:1790,</span> in <span class="ni">rv_continuous._attach_methods</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1786</span> <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1787</span><span class="sd"> Attaches dynamically created methods to the rv_continuous instance.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1788</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1789</span> <span class="c1"># _attach_methods is responsible for calling _attach_argparser_methods</span>
-<span class="ne">-&gt; </span><span class="mi">1790</span> <span class="bp">self</span><span class="o">.</span><span class="n">_attach_argparser_methods</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1792</span> <span class="c1"># nin correction</span>
-<span class="g g-Whitespace">   </span><span class="mi">1793</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ppfvec</span> <span class="o">=</span> <span class="n">vectorize</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ppf_single</span><span class="p">,</span> <span class="n">otypes</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:709,</span> in <span class="ni">rv_generic._attach_argparser_methods</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span> <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="sd"> Generates the argument-parsing functions dynamically and attaches</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span><span class="sd"> them to the instance.</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span><span class="sd"> during unpickling (__setstate__)</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">708</span> <span class="n">ns</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="ne">--&gt; </span><span class="mi">709</span> <span class="n">exec</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parse_arg_template</span><span class="p">,</span> <span class="n">ns</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span> <span class="c1"># NB: attach to the instance, not class</span>
-<span class="g g-Whitespace">    </span><span class="mi">711</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;_parse_args&#39;</span><span class="p">,</span> <span class="s1">&#39;_parse_args_stats&#39;</span><span class="p">,</span> <span class="s1">&#39;_parse_args_rvs&#39;</span><span class="p">]:</span>
-
-<span class="n">File</span> <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">    </span><span class="mi">106</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="n">pyvals</span> <span class="o">=</span> <span class="n">umath</span><span class="o">.</span><span class="n">geterrobj</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">110</span> <span class="n">old</span> <span class="o">=</span> <span class="n">geterr</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="k">if</span> <span class="n">divide</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span>     <span class="n">divide</span> <span class="o">=</span> <span class="nb">all</span> <span class="ow">or</span> <span class="n">old</span><span class="p">[</span><span class="s1">&#39;divide&#39;</span><span class="p">]</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -961,11 +948,11 @@ P(\theta \leq \theta^*) = \frac{c_1}{c_1 + c_2} = \frac{1}{1 + 3} = \frac{1}{4}
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../analise_de_series_temporais/trabalho_2.html" title="anterior page">
+    <a class='left-prev' id="prev-link" href="../analise_de_series_temporais/trabalho_3.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Trabalho No. 2</p>
+            <p class="prev-next-title">Trabalho No. 3</p>
         </div>
     </a>
 </div>
