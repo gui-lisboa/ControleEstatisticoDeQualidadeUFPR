@@ -4,11 +4,13 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Atividade 1 &#8212; Estatística - UFPR</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,13 +37,15 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,7 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Atividade 2" href="atividade2.html" />
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -357,8 +371,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
-   Gala dataset
+  <a class="reference internal" href="../extensoes_modelos_regressao/exercicio_5.html">
+   Exercício 5
   </a>
  </li>
 </ul>
@@ -383,6 +397,11 @@ const thebe_selector_output = ".output, .cell_output"
    Trabalho No. 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_series_temporais/trabalho_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -398,12 +417,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -411,61 +435,117 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
-                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/teoria_do_risco/atividade1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/teoria_do_risco/atividade1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
-        title="Modo tela cheia"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Conteúdo
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#estabeleca-a-funcao-densidade-de-x-2-z-1-z-2">
    1. Estabeleça a função densidade de
@@ -643,12 +723,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Atividade 1</h1>
@@ -657,7 +736,7 @@ const thebe_selector_output = ".output, .cell_output"
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Conteúdo </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -842,11 +921,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="atividade-1">
-<h1>Atividade 1<a class="headerlink" href="#atividade-1" title="Link permanente para este título">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="atividade-1">
+<h1>Atividade 1<a class="headerlink" href="#atividade-1" title="Link permanente para este título">#</a></h1>
 <div class="admonition-questao admonition">
 <p class="admonition-title">Questão</p>
 <p>Considere que uma seguradora vai assumir os riscos A e B na sua carteira. Para tanto precisa fixar o prêmio de risco e o prêmio puro para este negócio.</p>
@@ -865,8 +945,8 @@ f_{Z_{2}}(z_{2}) = \frac{1}{20}; \quad  0 &lt; z_{2} &lt; 20 \\
 0; \quad \text{caso contrário}
 \end{split}\]</div>
 </div>
-<div class="section" id="estabeleca-a-funcao-densidade-de-x-2-z-1-z-2">
-<h2>1. Estabeleça a função densidade de <span class="math notranslate nohighlight">\(X_{2} = Z_{1} + Z_{2}\)</span><a class="headerlink" href="#estabeleca-a-funcao-densidade-de-x-2-z-1-z-2" title="Link permanente para este título">¶</a></h2>
+<section id="estabeleca-a-funcao-densidade-de-x-2-z-1-z-2">
+<h2>1. Estabeleça a função densidade de <span class="math notranslate nohighlight">\(X_{2} = Z_{1} + Z_{2}\)</span><a class="headerlink" href="#estabeleca-a-funcao-densidade-de-x-2-z-1-z-2" title="Link permanente para este título">#</a></h2>
 <p>A função densidade de probabilidade <span class="math notranslate nohighlight">\(X_{2} = Z_{1} + Z_{2}\)</span> é definida como:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -946,9 +1026,9 @@ f_{X_{2}}(x) =
     0 &amp; \quad \text{caso contrário}
 \end{cases}
 \end{split}\]</div>
-</div>
-<div class="section" id="prove-que-esta-e-uma-funcao-densidade-de-probabilidade">
-<h2>2. Prove que esta é uma função densidade de probabilidade<a class="headerlink" href="#prove-que-esta-e-uma-funcao-densidade-de-probabilidade" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="prove-que-esta-e-uma-funcao-densidade-de-probabilidade">
+<h2>2. Prove que esta é uma função densidade de probabilidade<a class="headerlink" href="#prove-que-esta-e-uma-funcao-densidade-de-probabilidade" title="Link permanente para este título">#</a></h2>
 <p>Seja <span class="math notranslate nohighlight">\(F_{X_{2}}(x)\)</span> a função acumulada de probabilidade de <span class="math notranslate nohighlight">\(X_{2}\)</span>, temos que:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -988,9 +1068,9 @@ F_{X_{2}}(x) = \int_{0}^{20} \frac{x^{2}}{8000} dx + \int_{20}^{40} \frac{-x^{2}
 \[F_{X_{2}} =1\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="faca-o-grafico-de-funcao-densidade-de-probabilidade-de-x-2">
-<h2>3. Faça o gráfico de função densidade de probabilidade de <span class="math notranslate nohighlight">\(X_{2}\)</span><a class="headerlink" href="#faca-o-grafico-de-funcao-densidade-de-probabilidade-de-x-2" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="faca-o-grafico-de-funcao-densidade-de-probabilidade-de-x-2">
+<h2>3. Faça o gráfico de função densidade de probabilidade de <span class="math notranslate nohighlight">\(X_{2}\)</span><a class="headerlink" href="#faca-o-grafico-de-funcao-densidade-de-probabilidade-de-x-2" title="Link permanente para este título">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -1023,9 +1103,9 @@ F_{X_{2}}(x) = \int_{0}^{20} \frac{x^{2}}{8000} dx + \int_{20}^{40} \frac{-x^{2}
 <img alt="../_images/atividade1_9_0.png" src="../_images/atividade1_9_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="qual-o-valor-esperado-de-x-2">
-<h2>4. Qual o valor esperado de <span class="math notranslate nohighlight">\(X_{2}\)</span><a class="headerlink" href="#qual-o-valor-esperado-de-x-2" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="qual-o-valor-esperado-de-x-2">
+<h2>4. Qual o valor esperado de <span class="math notranslate nohighlight">\(X_{2}\)</span><a class="headerlink" href="#qual-o-valor-esperado-de-x-2" title="Link permanente para este título">#</a></h2>
 <p>O valor esperado de <span class="math notranslate nohighlight">\(X_{2}\)</span> é dado por:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1061,9 +1141,9 @@ E[X_{2}] =
 \[E[X_{2}] = 23.333333333333336\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="considerando-que-um-sinistro-ocorre-no-risco-a-com-probabilidade-p-1-e-um-sinistro-ocorre-no-risco-b-com-probabilidade-p-2-estabeleca-a-funcao-densidade-de-probabilidade-do-montante-agregado-de-sinistros-x">
-<h2>5. Considerando que um sinistro ocorre no risco A com probabilidade <span class="math notranslate nohighlight">\(p_{1}\)</span> e um sinistro ocorre no risco B com probabilidade <span class="math notranslate nohighlight">\(p_{2}\)</span> estabeleça a função densidade de probabilidade do montante agregado de sinistros (<span class="math notranslate nohighlight">\(X\)</span>).<a class="headerlink" href="#considerando-que-um-sinistro-ocorre-no-risco-a-com-probabilidade-p-1-e-um-sinistro-ocorre-no-risco-b-com-probabilidade-p-2-estabeleca-a-funcao-densidade-de-probabilidade-do-montante-agregado-de-sinistros-x" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="considerando-que-um-sinistro-ocorre-no-risco-a-com-probabilidade-p-1-e-um-sinistro-ocorre-no-risco-b-com-probabilidade-p-2-estabeleca-a-funcao-densidade-de-probabilidade-do-montante-agregado-de-sinistros-x">
+<h2>5. Considerando que um sinistro ocorre no risco A com probabilidade <span class="math notranslate nohighlight">\(p_{1}\)</span> e um sinistro ocorre no risco B com probabilidade <span class="math notranslate nohighlight">\(p_{2}\)</span> estabeleça a função densidade de probabilidade do montante agregado de sinistros (<span class="math notranslate nohighlight">\(X\)</span>).<a class="headerlink" href="#considerando-que-um-sinistro-ocorre-no-risco-a-com-probabilidade-p-1-e-um-sinistro-ocorre-no-risco-b-com-probabilidade-p-2-estabeleca-a-funcao-densidade-de-probabilidade-do-montante-agregado-de-sinistros-x" title="Link permanente para este título">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>A</p></th>
@@ -1148,9 +1228,9 @@ f_{X}(x) =
 \[F_{X}(x) = 1\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-indenizacao-no-periodo-de-um-ano-p-x-0">
-<h2>6. Qual a probabilidade de que a seguradora tenha que pagar indenização no período de um ano (<span class="math notranslate nohighlight">\(P[X&gt;0]\)</span>)<a class="headerlink" href="#qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-indenizacao-no-periodo-de-um-ano-p-x-0" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-indenizacao-no-periodo-de-um-ano-p-x-0">
+<h2>6. Qual a probabilidade de que a seguradora tenha que pagar indenização no período de um ano (<span class="math notranslate nohighlight">\(P[X&gt;0]\)</span>)<a class="headerlink" href="#qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-indenizacao-no-periodo-de-um-ano-p-x-0" title="Link permanente para este título">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 P[X&gt;0] = \int_{0}^{40} f_{X}(x) dx
@@ -1178,9 +1258,9 @@ P[X&gt;0] =
 \[
 P[X&gt;0] = p_{1} + p_{2} - p_{1}p_{2}
 \]</div>
-</div>
-<div class="section" id="qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-mais-do-que-t-unidades-monetarias-em-um-ano-resolva-para-t-pertencente-ao-intervalo-20-40">
-<h2>7. Qual a probabilidade de que a seguradora tenha que pagar mais do que t unidades monetárias em um ano – resolva para t pertencente ao intervalo (20;40)<a class="headerlink" href="#qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-mais-do-que-t-unidades-monetarias-em-um-ano-resolva-para-t-pertencente-ao-intervalo-20-40" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-mais-do-que-t-unidades-monetarias-em-um-ano-resolva-para-t-pertencente-ao-intervalo-20-40">
+<h2>7. Qual a probabilidade de que a seguradora tenha que pagar mais do que t unidades monetárias em um ano – resolva para t pertencente ao intervalo (20;40)<a class="headerlink" href="#qual-a-probabilidade-de-que-a-seguradora-tenha-que-pagar-mais-do-que-t-unidades-monetarias-em-um-ano-resolva-para-t-pertencente-ao-intervalo-20-40" title="Link permanente para este título">#</a></h2>
 <p>Para o intervalo (20;40), <span class="math notranslate nohighlight">\(f_{X}(x)\)</span> é definida como <span class="math notranslate nohighlight">\(f_{X}(x) = \frac{-x^{2} + 40x}{8000}p_{1}p_{2} \)</span>.</p>
 <p>Logo, <span class="math notranslate nohighlight">\(P[X&gt;t]\)</span> pode ser calculada por:</p>
 <div class="math notranslate nohighlight">
@@ -1192,9 +1272,9 @@ P[X&gt;t] = \int_{t}^{40} \frac{-x^{2} + 40x}{8000}p_{1}p_{2} dx
 \[
 P[X&gt;t] = \frac{p_{1}p_{2}(t^3 - 60t^2 + 32000)}{24000}
 \]</div>
-</div>
-<div class="section" id="para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-a-probabilidade-de-x-20">
-<h2>8. Para probabilidades de sinistro <span class="math notranslate nohighlight">\(p_{1}=0,1\)</span> e <span class="math notranslate nohighlight">\(p_{2}=0,3\)</span> qual a probabilidade de <span class="math notranslate nohighlight">\(X&gt;20\)</span><a class="headerlink" href="#para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-a-probabilidade-de-x-20" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-a-probabilidade-de-x-20">
+<h2>8. Para probabilidades de sinistro <span class="math notranslate nohighlight">\(p_{1}=0,1\)</span> e <span class="math notranslate nohighlight">\(p_{2}=0,3\)</span> qual a probabilidade de <span class="math notranslate nohighlight">\(X&gt;20\)</span><a class="headerlink" href="#para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-a-probabilidade-de-x-20" title="Link permanente para este título">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 P[X&gt;20] = \int_{20}^{40} f_{X}(x) dx
@@ -1221,14 +1301,14 @@ P[X&gt;20] = \int_{20}^{40} \frac{-x^{2} + 40x}{8000}p_{1}p_{2} dx
 \[F_{X}(x) = 0.02\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="qual-o-valor-esperado-de-x-premio-de-risco-e-x-determine-a-formula-generica-para-diferentes-valores-de-p-1-e-p-2">
-<h2>9. Qual o valor esperado de <span class="math notranslate nohighlight">\(X\)</span> (prêmio de risco) (<span class="math notranslate nohighlight">\(E[X]\)</span>)? (determine a fórmula genérica para diferentes valores de <span class="math notranslate nohighlight">\(p_{1}\)</span> e <span class="math notranslate nohighlight">\(p_{2}\)</span>)<a class="headerlink" href="#qual-o-valor-esperado-de-x-premio-de-risco-e-x-determine-a-formula-generica-para-diferentes-valores-de-p-1-e-p-2" title="Link permanente para este título">¶</a></h2>
-<div class="section" id="para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-o-valor-esperado-de-x">
-<h3>Para probabilidades de sinistro <span class="math notranslate nohighlight">\(p_{1}\)</span>=0,1 e <span class="math notranslate nohighlight">\(p_{2}\)</span>=0,3 qual o valor esperado de <span class="math notranslate nohighlight">\(X\)</span>?<a class="headerlink" href="#para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-o-valor-esperado-de-x" title="Link permanente para este título">¶</a></h3>
-</div>
-<div class="section" id="para-probabilidades-de-sinistro-p-1-0-01-e-p-2-0-03-qual-o-valor-esperado-de-x">
-<h3>Para probabilidades de sinistro <span class="math notranslate nohighlight">\(p_{1}\)</span>=0,01 e <span class="math notranslate nohighlight">\(p_{2}\)</span>=0,03 qual o valor esperado de <span class="math notranslate nohighlight">\(X\)</span>?<a class="headerlink" href="#para-probabilidades-de-sinistro-p-1-0-01-e-p-2-0-03-qual-o-valor-esperado-de-x" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="qual-o-valor-esperado-de-x-premio-de-risco-e-x-determine-a-formula-generica-para-diferentes-valores-de-p-1-e-p-2">
+<h2>9. Qual o valor esperado de <span class="math notranslate nohighlight">\(X\)</span> (prêmio de risco) (<span class="math notranslate nohighlight">\(E[X]\)</span>)? (determine a fórmula genérica para diferentes valores de <span class="math notranslate nohighlight">\(p_{1}\)</span> e <span class="math notranslate nohighlight">\(p_{2}\)</span>)<a class="headerlink" href="#qual-o-valor-esperado-de-x-premio-de-risco-e-x-determine-a-formula-generica-para-diferentes-valores-de-p-1-e-p-2" title="Link permanente para este título">#</a></h2>
+<section id="para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-o-valor-esperado-de-x">
+<h3>Para probabilidades de sinistro <span class="math notranslate nohighlight">\(p_{1}\)</span>=0,1 e <span class="math notranslate nohighlight">\(p_{2}\)</span>=0,3 qual o valor esperado de <span class="math notranslate nohighlight">\(X\)</span>?<a class="headerlink" href="#para-probabilidades-de-sinistro-p-1-0-1-e-p-2-0-3-qual-o-valor-esperado-de-x" title="Link permanente para este título">#</a></h3>
+</section>
+<section id="para-probabilidades-de-sinistro-p-1-0-01-e-p-2-0-03-qual-o-valor-esperado-de-x">
+<h3>Para probabilidades de sinistro <span class="math notranslate nohighlight">\(p_{1}\)</span>=0,01 e <span class="math notranslate nohighlight">\(p_{2}\)</span>=0,03 qual o valor esperado de <span class="math notranslate nohighlight">\(X\)</span>?<a class="headerlink" href="#para-probabilidades-de-sinistro-p-1-0-01-e-p-2-0-03-qual-o-valor-esperado-de-x" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(E[X]\)</span> para dois riscos com probabilidades de sinistro <span class="math notranslate nohighlight">\(p_{1}\)</span> e <span class="math notranslate nohighlight">\(p_{2}\)</span> é dado por:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1294,12 +1374,12 @@ E[X] = p_{1} \int_{0}^{20} \frac{z_{1}^{2}}{200}dz_{1} + p_{2} \int_{0}^{20} \fr
 \[E[X] = 0.43333333333333335\]</div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="simule-20-000-repeticoes-de-x-para-p-1-0-6-e-p-2-0-6-e-calcule">
-<h2>10. 	Simule 20.000 repetições de <span class="math notranslate nohighlight">\(X\)</span> para <span class="math notranslate nohighlight">\(p_{1}=0,6\)</span> e <span class="math notranslate nohighlight">\(p_{2}=0,6\)</span> e calcule:<a class="headerlink" href="#simule-20-000-repeticoes-de-x-para-p-1-0-6-e-p-2-0-6-e-calcule" title="Link permanente para este título">¶</a></h2>
-<div class="section" id="a-a-distribuicao-de-frequencia-das-simulacoes-estabelecendo-a-frequencia-percentual-de-0s-e-das-classes-definidas-por-0-0001-a-4-4-0001-a-8-36-0001-a-40">
-<h3>a. A distribuição de frequência das simulações estabelecendo a frequência percentual de 0’s e das classes definidas por 0,0001 a 4; 4,0001 a 8; … ; 36,0001 a 40<a class="headerlink" href="#a-a-distribuicao-de-frequencia-das-simulacoes-estabelecendo-a-frequencia-percentual-de-0s-e-das-classes-definidas-por-0-0001-a-4-4-0001-a-8-36-0001-a-40" title="Link permanente para este título">¶</a></h3>
+</section>
+</section>
+<section id="simule-20-000-repeticoes-de-x-para-p-1-0-6-e-p-2-0-6-e-calcule">
+<h2>10. 	Simule 20.000 repetições de <span class="math notranslate nohighlight">\(X\)</span> para <span class="math notranslate nohighlight">\(p_{1}=0,6\)</span> e <span class="math notranslate nohighlight">\(p_{2}=0,6\)</span> e calcule:<a class="headerlink" href="#simule-20-000-repeticoes-de-x-para-p-1-0-6-e-p-2-0-6-e-calcule" title="Link permanente para este título">#</a></h2>
+<section id="a-a-distribuicao-de-frequencia-das-simulacoes-estabelecendo-a-frequencia-percentual-de-0s-e-das-classes-definidas-por-0-0001-a-4-4-0001-a-8-36-0001-a-40">
+<h3>a. A distribuição de frequência das simulações estabelecendo a frequência percentual de 0’s e das classes definidas por 0,0001 a 4; 4,0001 a 8; … ; 36,0001 a 40<a class="headerlink" href="#a-a-distribuicao-de-frequencia-das-simulacoes-estabelecendo-a-frequencia-percentual-de-0s-e-das-classes-definidas-por-0-0001-a-4-4-0001-a-8-36-0001-a-40" title="Link permanente para este título">#</a></h3>
 <p>Para simular <span class="math notranslate nohighlight">\(X\)</span> devemos definir funções que geram valores de <span class="math notranslate nohighlight">\(z_{1}\)</span> e <span class="math notranslate nohighlight">\(z_{2}\)</span> a partir de uma Uniforme:</p>
 <p><span class="math notranslate nohighlight">\(Z_{1}\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -1369,54 +1449,54 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
   <tbody>
     <tr>
       <th>[0.0, 0.0001)</th>
-      <td>15.820</td>
+      <td>16.185</td>
     </tr>
     <tr>
       <th>[0.0001, 4.0)</th>
-      <td>6.030</td>
+      <td>5.865</td>
     </tr>
     <tr>
       <th>[4.0, 8.0)</th>
-      <td>8.130</td>
+      <td>8.275</td>
     </tr>
     <tr>
       <th>[8.0, 12.0)</th>
-      <td>11.350</td>
+      <td>11.525</td>
     </tr>
     <tr>
       <th>[12.0, 16.0)</th>
-      <td>14.885</td>
+      <td>15.315</td>
     </tr>
     <tr>
       <th>[16.0, 20.0)</th>
-      <td>19.345</td>
+      <td>19.080</td>
     </tr>
     <tr>
       <th>[20.0, 24.0)</th>
-      <td>7.450</td>
+      <td>7.030</td>
     </tr>
     <tr>
       <th>[24.0, 28.0)</th>
-      <td>6.575</td>
+      <td>6.715</td>
     </tr>
     <tr>
       <th>[28.0, 32.0)</th>
-      <td>5.360</td>
+      <td>5.070</td>
     </tr>
     <tr>
       <th>[32.0, 36.0)</th>
-      <td>3.655</td>
+      <td>3.580</td>
     </tr>
     <tr>
       <th>[36.0, 40.0)</th>
-      <td>1.400</td>
+      <td>1.360</td>
     </tr>
   </tbody>
 </table></div></div>
 </div>
-</div>
-<div class="section" id="b-desenhe-o-histograma-da-distribuicao-construida-em-a">
-<h3>b. Desenhe o histograma da distribuição construída em a.<a class="headerlink" href="#b-desenhe-o-histograma-da-distribuicao-construida-em-a" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="b-desenhe-o-histograma-da-distribuicao-construida-em-a">
+<h3>b. Desenhe o histograma da distribuição construída em a.<a class="headerlink" href="#b-desenhe-o-histograma-da-distribuicao-construida-em-a" title="Link permanente para este título">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distribuicao_frequencias</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
@@ -1427,9 +1507,9 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
 <img alt="../_images/atividade1_35_0.png" src="../_images/atividade1_35_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="c-calcule-a-media-dos-valores-simulados-de-x">
-<h3>c. Calcule a média dos valores simulados de <span class="math notranslate nohighlight">\(X\)</span><a class="headerlink" href="#c-calcule-a-media-dos-valores-simulados-de-x" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="c-calcule-a-media-dos-valores-simulados-de-x">
+<h3>c. Calcule a média dos valores simulados de <span class="math notranslate nohighlight">\(X\)</span><a class="headerlink" href="#c-calcule-a-media-dos-valores-simulados-de-x" title="Link permanente para este título">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simulacoes</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -1437,14 +1517,14 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.053441627979087
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.920431375309306
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="d-calcule-os-percentis-0-3333-e-0-98">
-<h3>d. Calcule os percentis 0,3333 e 0,98<a class="headerlink" href="#d-calcule-os-percentis-0-3333-e-0-98" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="d-calcule-os-percentis-0-3333-e-0-98">
+<h3>d. Calcule os percentis 0,3333 e 0,98<a class="headerlink" href="#d-calcule-os-percentis-0-3333-e-0-98" title="Link permanente para este título">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentis</span> <span class="o">=</span> <span class="n">simulacoes</span><span class="p">[</span><span class="s1">&#39;X&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">.3333</span><span class="p">,</span> <span class="mf">.98</span><span class="p">])</span>
@@ -1463,18 +1543,18 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
   <tbody>
     <tr>
       <th>0.3333</th>
-      <td>9.314476</td>
+      <td>9.163190</td>
     </tr>
     <tr>
       <th>0.9800</th>
-      <td>35.147817</td>
+      <td>35.094464</td>
     </tr>
   </tbody>
 </table></div></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1488,7 +1568,7 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./teoria_do_risco"
         },
         predefinedOutput: true
@@ -1498,9 +1578,11 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="intro.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1516,23 +1598,27 @@ u = \frac{z_{2}}{20} \rightarrow z_{2} = 20u
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guilherme L Oliveira<br/>
+  
+</p>
+        </footer>
+    </div>
     
-      De Guilherme L Oliveira<br/>
-    
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

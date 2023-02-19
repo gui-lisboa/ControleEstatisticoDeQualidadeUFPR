@@ -4,11 +4,13 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Trabalho No. 1 &#8212; Estatística - UFPR</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,13 +37,15 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,7 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Trabalho No. 2" href="trabalho_2.html" />
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -357,8 +371,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
-   Gala dataset
+  <a class="reference internal" href="../extensoes_modelos_regressao/exercicio_5.html">
+   Exercício 5
   </a>
  </li>
 </ul>
@@ -383,6 +397,11 @@ const thebe_selector_output = ".output, .cell_output"
    Trabalho No. 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_series_temporais/trabalho_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -398,12 +417,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -411,61 +435,117 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
-                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/metodos_estatisticos_multivariados/trabalho_1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/metodos_estatisticos_multivariados/trabalho_1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
-        title="Modo tela cheia"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Conteúdo
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#questao-1">
    Questão 1
@@ -498,12 +578,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Trabalho No. 1</h1>
@@ -512,7 +591,7 @@ const thebe_selector_output = ".output, .cell_output"
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Conteúdo </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -552,11 +631,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-1">
-<h1>Trabalho No. 1<a class="headerlink" href="#trabalho-no-1" title="Link permanente para este título">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="trabalho-no-1">
+<h1>Trabalho No. 1<a class="headerlink" href="#trabalho-no-1" title="Link permanente para este título">#</a></h1>
 <ul class="simple">
 <li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
 </ul>
@@ -565,13 +645,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Questões: 1, 7, 8, 9, 14 e 15 na Seção I.10 Exercícios em
 http://leg.ufpr.br/~lucambio/MSM/MSM01.htm</p>
 </div>
-<div class="section" id="questao-1">
-<h2>Questão 1<a class="headerlink" href="#questao-1" title="Link permanente para este título">¶</a></h2>
+<section id="questao-1">
+<h2>Questão 1<a class="headerlink" href="#questao-1" title="Link permanente para este título">#</a></h2>
 <p>No gráfico boxplot, o extremo superior é sempre um outlier?</p>
 <p>Não, uma observação apenas será considerada um outlier caso ela seja maior que <span class="math notranslate nohighlight">\(F_U + 1,5 d_F\)</span> ou menor que <span class="math notranslate nohighlight">\(F_L - 1,5 d_F\)</span></p>
-</div>
-<div class="section" id="questao-7">
-<h2>Questão 7<a class="headerlink" href="#questao-7" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="questao-7">
+<h2>Questão 7<a class="headerlink" href="#questao-7" title="Link permanente para este título">#</a></h2>
 <p>Faça o histograma para a variável de milhagem (quilometragem) do Exemplo I.2, o exemplo dos carros. Faça o mesmo para os três grupos (EUA, Japão e Europa). Você obtém uma conclusão semelhante à do boxplot para esses dados?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -597,9 +677,9 @@ http://leg.ufpr.br/~lucambio/MSM/MSM01.htm</p>
 <p>Fica claro que os carros japoneses são, de maneira geral, mais eficientes que os norte americanos. Pelos histogramas, notamos que não há modelos japones com consumo pior que 20 milhas/galão, enquanto existem vários modelos abaixo de 20 milhas/galão de marcas estaunidenses. Já a comparação entre modelos europeus fica um pouco confusa, isso porque existem modelos abaixo de 20 milhas/galão, mas existe uma concentração em modelos entre 20 e 30 milhas/galão, o que pode confundir com a concentração de modelos japones na faixa de 20 milhas/galão.</p>
 <p>A detecção de oulier é mais explícita no boxplot. Nota-se no histograma dos modelos europeus que existe uma barra separada das demais (VW-Rabbit Golf Diesel), apontando a observação como possível outlier. Entretanto no histograma dos carros de marcars americanas não fica claro se existem ouliers.</p>
 <p>Enfim, para visualizar a distribuição do consumo em função do país de origem da sede, os histogramas me parecem mais adequados. Já caso o objetivo seja comparar o consumo e/ou detectar ouliers, os boxplots facilitaram visualizar principalmente a diferença entre os modelos japoneses e europeus e a presença de outlier nos modelos americanos.</p>
-</div>
-<div class="section" id="questao-8">
-<h2>Questão 8<a class="headerlink" href="#questao-8" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="questao-8">
+<h2>Questão 8<a class="headerlink" href="#questao-8" title="Link permanente para este título">#</a></h2>
 <p>Use algum critério de seleção de largura de banda para calcular a largura de banda h escolhida de forma ótima para a variável Diagonal das cédulas. Seria melhor ter uma largura de banda para os dois grupos?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -631,9 +711,9 @@ http://leg.ufpr.br/~lucambio/MSM/MSM01.htm</p>
 <img alt="../_images/trabalho_1_9_01.png" src="../_images/trabalho_1_9_01.png" />
 </div>
 </div>
-</div>
-<div class="section" id="questao-9">
-<h2>Questão 9<a class="headerlink" href="#questao-9" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="questao-9">
+<h2>Questão 9<a class="headerlink" href="#questao-9" title="Link permanente para este título">#</a></h2>
 <p>Faça um gráfico de coordenadas paralelas para os dados dos carros (Exemplo I.2).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -657,84 +737,27 @@ http://leg.ufpr.br/~lucambio/MSM/MSM01.htm</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
-ValueError                                Traceback (most recent call last)
-Input In [4], in &lt;cell line: 16&gt;()
-      5 colunas_linhas_paralelas = [
-      6     coluna for coluna in dados_carros.columns if coluna not in [&quot;C&quot;, &quot;Model&quot;]
-      7 ]
-      9 fig = px.parallel_coordinates(
-     10     dados_carros,
-     11     color=&quot;C&quot;,
-     12     dimensions=colunas_linhas_paralelas,
-     13     #color_continuous_scale=px.colors.diverging.RdYlBu,
-     14 )
----&gt; 16 fig.write_image(&quot;./imagens/trabalho1_q9.png&quot;)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">dados_carros</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;./dados/CarData.txt&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;\s+&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">colunas_linhas_paralelas</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">coluna</span> <span class="k">for</span> <span class="n">coluna</span> <span class="ow">in</span> <span class="n">dados_carros</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">coluna</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;Model&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="p">]</span>
 
-File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/plotly/basedatatypes.py:3829, in BaseFigure.write_image(self, *args, **kwargs)
-   3769 &quot;&quot;&quot;
-   3770 Convert a figure to a static image and write it to a file or writeable
-   3771 object
-   (...)
-   3825 None
-   3826 &quot;&quot;&quot;
-   3827 import plotly.io as pio
--&gt; 3829 return pio.write_image(self, *args, **kwargs)
-
-File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:268, in write_image(fig, file, format, scale, width, height, validate, engine)
-    252             raise ValueError(
-    253                 &quot;&quot;&quot;
-    254 Cannot infer image type from output path &#39;{file}&#39;.
-   (...)
-    262                 )
-    263             )
-    265     # Request image
-    266     # -------------
-    267     # Do this first so we don&#39;t create a file if image conversion fails
---&gt; 268     img_data = to_image(
-    269         fig,
-    270         format=format,
-    271         scale=scale,
-    272         width=width,
-    273         height=height,
-    274         validate=validate,
-    275         engine=engine,
-    276     )
-    278     # Open file
-    279     # ---------
-    280     if path is None:
-    281         # We previously failed to make sense of `file` as a pathlib object.
-    282         # Attempt to write to `file` as an open file descriptor.
-
-File /opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:134, in to_image(fig, format, width, height, scale, validate, engine)
-    132     # Raise informative error message if Kaleido is not installed
-    133     if scope is None:
---&gt; 134         raise ValueError(
-    135             &quot;&quot;&quot;
-    136 Image export using the &quot;kaleido&quot; engine requires the kaleido package,
-    137 which can be installed using pip:
-    138     $ pip install -U kaleido
-    139 &quot;&quot;&quot;
-    140         )
-    142     # Validate figure
-    143     # ---------------
-    144     fig_dict = validate_coerce_fig_to_dict(fig, validate)
-
-ValueError: 
-Image export using the &quot;kaleido&quot; engine requires the kaleido package,
-which can be installed using pip:
-    $ pip install -U kaleido
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;plotly&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <p><img alt="Quadro" src="../_images/trabalho1_q9.png" /></p>
-</div>
-<div class="section" id="questao-14">
-<h2>Questão 14<a class="headerlink" href="#questao-14" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="questao-14">
+<h2>Questão 14<a class="headerlink" href="#questao-14" title="Link permanente para este título">#</a></h2>
 <p>Descreva os dados do desemprego (leitura abaixo) que contêm taxas de desemprego de todos os estados federais alemães usando várias técnicas descritivas.</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taxas de desemprego em todos os estados federais da Alemanha em setembro de 1999.</span>
-<span class="n">dados</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;http://leg.ufpr.br/~lucambio/MSM/desemprego.txt&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
+<span class="n">dados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;http://leg.ufpr.br/~lucambio/MSM/desemprego.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
 <span class="c1">##                   Estado Taxa</span>
 <span class="c1">## 1     Schleswig-Holstein  8.7</span>
@@ -770,9 +793,9 @@ which can be installed using pip:
 </div>
 <p>Pelo histograma, vemos que há dois perfis de cidades em relação ao desemprego. Há um grupo com índices relativamente mais baixos, entre 6% e 10%. Já outro grupo com índices altos, entre 14% e 20%. Considerando o contexto da pesquisa, a distribuição mostra os efeitos da separação da alemanha, mesmo uma década após a reunificação.</p>
 <p>Apenas por curiosidade, mesmo nos anos 2010 ainda há diferenças entre as taxas de emprego entre as regiões: https://www.pewresearch.org/fact-tank/2019/11/06/east-germany-has-narrowed-economic-gap-with-west-germany-since-fall-of-communism-but-still-lags/</p>
-</div>
-<div class="section" id="questao-15">
-<h2>Questão 15<a class="headerlink" href="#questao-15" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="questao-15">
+<h2>Questão 15<a class="headerlink" href="#questao-15" title="Link permanente para este título">#</a></h2>
 <p>Usando dados anuais da população (leitura abaixo) e gerar:</p>
 <ol class="simple">
 <li><p>Um boxplot, escolha uma das variáveis.</p></li>
@@ -782,7 +805,7 @@ which can be installed using pip:
 </ol>
 <p>Os dados mostram taxas populacionais médias anuais para o antigo território da República Federal da Alemanha, inclunindo Berlim-West, dados em 1.000 habitantes.</p>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Taxas de desemprego em todos os estados federais da Alemanha em setembro de 1999.</span>
-<span class="n">dados</span> <span class="o">=</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;http://leg.ufpr.br/~lucambio/MSM/population.txt&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">)</span>
+<span class="n">dados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;http://leg.ufpr.br/~lucambio/MSM/population.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
 <span class="c1">##   Year Inhabitants Unemployed</span>
 <span class="c1">## 1 1960       55433        271</span>
@@ -839,8 +862,8 @@ which can be installed using pip:
 </div>
 </div>
 <p>Como podemos observar no boxplot, o histograma também aponta uma concentração de observações abaixo de 500, entretanto vemos que a faixa de 1500 teve poucas observações, reflexo das variações vistas no gráfico de disperção, quando o Alemanha alternava períodos de baixo desemprego (observações &lt; 1000) com subidas bastante íngremes nas taxas em momentos de instabilidade política (observações &gt; 2000).</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -854,7 +877,7 @@ which can be installed using pip:
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./metodos_estatisticos_multivariados"
         },
         predefinedOutput: true
@@ -864,9 +887,11 @@ which can be installed using pip:
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../modelos_lineares_generalizados/lista_4.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -882,23 +907,27 @@ which can be installed using pip:
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guilherme L Oliveira<br/>
+  
+</p>
+        </footer>
+    </div>
     
-      De Guilherme L Oliveira<br/>
-    
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

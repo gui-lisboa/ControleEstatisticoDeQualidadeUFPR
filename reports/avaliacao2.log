@@ -1,122 +1,89 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
     return future.result()
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+           ^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from urllib.request import urlopen
-from IPython.display import display, Image
-import json
+import warnings
+warnings.filterwarnings('ignore')
+
+import numpy as np
 import pandas as pd
 import plotly.express as px
+from sklearn.datasets import load_boston
+from plotly.subplots import make_subplots
 
-GEOJSON_PARANA = 'https://raw.githubusercontent.com/tbrugz/geodata-br/master/geojson/geojs-41-mun.json'
-with urlopen(GEOJSON_PARANA) as response:
-    cidades_geo = json.load(response)
+# carrega o dataset e cria o dataframe
+boston_dataset = load_boston()
+colunas = boston_dataset.feature_names
 
-populacao_estimada = pd.read_csv('./dados/populacao_estimada.csv', delimiter=';')
-pib = pd.read_csv('./dados/pib.csv')
-cidades = pd.merge(populacao_estimada, pib, on='Cidade')
-cidades['PIB_per_capita'] = cidades.PIB/cidades.Populacao
+#seleciona colunas
+var_resposta = 'MEDV'
+var_categorica_cor = 'CHAS'
+var_quantitativas = [v for v in colunas if v not in [var_resposta, var_categorica_cor]]
 
-def criar_mapa(cor: str, escala_cor: str):
-    fig = px.choropleth_mapbox(cidades, geojson=cidades_geo,
-                               locations='Codigo', featureidkey="properties.id",
-                               color=cor, color_continuous_scale=escala_cor,
-                               mapbox_style="white-bg", zoom=5.9, center = {"lat": -24.5, "lon": -51.4}, opacity=0.5)
-    fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-    return fig
+#cria dataframe
+boston_housing = pd.DataFrame(boston_dataset.data, columns=colunas)
+boston_housing[var_resposta] = boston_dataset.target
+boston_housing['CHAS'] = boston_housing['CHAS'].astype(int).astype('category')
 
-mapa_populacao = criar_mapa('Populacao', 'Blues')
-mapa_populacao.write_image("./imagens/mapa_parana_pop.png")
-display(Image('./imagens/mapa_parana_pop.png'))
-#mapa_populacao.show()
+# cria painel 12x1
+painel = make_subplots(rows=len(var_quantitativas),
+                       cols=1,
+                       print_grid=False,
+                       shared_xaxes=True,
+                       vertical_spacing=.005,
+                       x_title='Variável Resposta - MEDV')
 
-mapa_PIB_per_capita = criar_mapa('PIB_per_capita', 'Reds')
-mapa_PIB_per_capita.write_image("./imagens/mapa_parana_pib_capita.png")
-display(Image('./imagens/mapa_parana_pib_capita.png'))
-#mapa_PIB_per_capita.show()
+# para cada var quantitativa, cria gráfico e adiciona ao painel
+for i, variavel in enumerate(var_quantitativas):
+    grafico = px.scatter(boston_housing, x=var_resposta, y=variavel, color=var_categorica_cor, marginal_y='box', trendline='ols')
+    tracos = [grafico['data'][dimensao] for dimensao in range(len(grafico['data']))]
+    [painel.append_trace(traco, row=i+1, col=1) for traco in tracos]
+    painel.update_layout(**{f'yaxis{i+1}':dict(title=variavel)})
+
+# arruma aparência do painel
+painel.update_layout(height=1900,
+                     width=1000,
+                     title_text="Boston Housing Dataset",
+                     legend=dict(title_text="CHAS", itemsizing='constant', orientation="h", yanchor="bottom", y=1, xanchor="right", x=1))
+painel.update_traces(marker={'size': 3})
+names = set()
+painel.for_each_trace(
+    lambda trace:
+        trace.update(showlegend=False)
+        if (trace.name in names) else names.add(trace.name))
+
+# mostra painel
+painel.show()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mValueError[0m                                Traceback (most recent call last)
-Input [0;32mIn [2][0m, in [0;36m<cell line: 25>[0;34m()[0m
-[1;32m     22[0m     [38;5;28;01mreturn[39;00m fig
-[1;32m     24[0m mapa_populacao [38;5;241m=[39m criar_mapa([38;5;124m'[39m[38;5;124mPopulacao[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mBlues[39m[38;5;124m'[39m)
-[0;32m---> 25[0m [43mmapa_populacao[49m[38;5;241;43m.[39;49m[43mwrite_image[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43m./imagens/mapa_parana_pop.png[39;49m[38;5;124;43m"[39;49m[43m)[49m
-[1;32m     26[0m display(Image([38;5;124m'[39m[38;5;124m./imagens/mapa_parana_pop.png[39m[38;5;124m'[39m))
-[1;32m     27[0m [38;5;66;03m#mapa_populacao.show()[39;00m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 6[0m
+[1;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[0;32m----> 6[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexpress[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpx[39;00m
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdatasets[39;00m [38;5;28;01mimport[39;00m load_boston
+[1;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01msubplots[39;00m [38;5;28;01mimport[39;00m make_subplots
 
-File [0;32m/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/plotly/basedatatypes.py:3829[0m, in [0;36mBaseFigure.write_image[0;34m(self, *args, **kwargs)[0m
-[1;32m   3769[0m [38;5;124;03m"""[39;00m
-[1;32m   3770[0m [38;5;124;03mConvert a figure to a static image and write it to a file or writeable[39;00m
-[1;32m   3771[0m [38;5;124;03mobject[39;00m
-[0;32m   (...)[0m
-[1;32m   3825[0m [38;5;124;03mNone[39;00m
-[1;32m   3826[0m [38;5;124;03m"""[39;00m
-[1;32m   3827[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mio[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpio[39;00m
-[0;32m-> 3829[0m [38;5;28;01mreturn[39;00m [43mpio[49m[38;5;241;43m.[39;49m[43mwrite_image[49m[43m([49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-
-File [0;32m/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:268[0m, in [0;36mwrite_image[0;34m(fig, file, format, scale, width, height, validate, engine)[0m
-[1;32m    252[0m             [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
-[1;32m    253[0m                 [38;5;124;03m"""[39;00m
-[1;32m    254[0m [38;5;124;03mCannot infer image type from output path '{file}'.[39;00m
-[0;32m   (...)[0m
-[1;32m    262[0m                 )
-[1;32m    263[0m             )
-[1;32m    265[0m     [38;5;66;03m# Request image[39;00m
-[1;32m    266[0m     [38;5;66;03m# -------------[39;00m
-[1;32m    267[0m     [38;5;66;03m# Do this first so we don't create a file if image conversion fails[39;00m
-[0;32m--> 268[0m     img_data [38;5;241m=[39m [43mto_image[49m[43m([49m
-[1;32m    269[0m [43m        [49m[43mfig[49m[43m,[49m
-[1;32m    270[0m [43m        [49m[38;5;28;43mformat[39;49m[38;5;241;43m=[39;49m[38;5;28;43mformat[39;49m[43m,[49m
-[1;32m    271[0m [43m        [49m[43mscale[49m[38;5;241;43m=[39;49m[43mscale[49m[43m,[49m
-[1;32m    272[0m [43m        [49m[43mwidth[49m[38;5;241;43m=[39;49m[43mwidth[49m[43m,[49m
-[1;32m    273[0m [43m        [49m[43mheight[49m[38;5;241;43m=[39;49m[43mheight[49m[43m,[49m
-[1;32m    274[0m [43m        [49m[43mvalidate[49m[38;5;241;43m=[39;49m[43mvalidate[49m[43m,[49m
-[1;32m    275[0m [43m        [49m[43mengine[49m[38;5;241;43m=[39;49m[43mengine[49m[43m,[49m
-[1;32m    276[0m [43m    [49m[43m)[49m
-[1;32m    278[0m     [38;5;66;03m# Open file[39;00m
-[1;32m    279[0m     [38;5;66;03m# ---------[39;00m
-[1;32m    280[0m     [38;5;28;01mif[39;00m path [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[1;32m    281[0m         [38;5;66;03m# We previously failed to make sense of `file` as a pathlib object.[39;00m
-[1;32m    282[0m         [38;5;66;03m# Attempt to write to `file` as an open file descriptor.[39;00m
-
-File [0;32m/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/plotly/io/_kaleido.py:134[0m, in [0;36mto_image[0;34m(fig, format, width, height, scale, validate, engine)[0m
-[1;32m    132[0m     [38;5;66;03m# Raise informative error message if Kaleido is not installed[39;00m
-[1;32m    133[0m     [38;5;28;01mif[39;00m scope [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[0;32m--> 134[0m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
-[1;32m    135[0m             [38;5;124;03m"""[39;00m
-[1;32m    136[0m [38;5;124;03mImage export using the "kaleido" engine requires the kaleido package,[39;00m
-[1;32m    137[0m [38;5;124;03mwhich can be installed using pip:[39;00m
-[1;32m    138[0m [38;5;124;03m    $ pip install -U kaleido[39;00m
-[1;32m    139[0m [38;5;124;03m"""[39;00m
-[1;32m    140[0m         )
-[1;32m    142[0m     [38;5;66;03m# Validate figure[39;00m
-[1;32m    143[0m     [38;5;66;03m# ---------------[39;00m
-[1;32m    144[0m     fig_dict [38;5;241m=[39m validate_coerce_fig_to_dict(fig, validate)
-
-[0;31mValueError[0m: 
-Image export using the "kaleido" engine requires the kaleido package,
-which can be installed using pip:
-    $ pip install -U kaleido
-
-ValueError: 
-Image export using the "kaleido" engine requires the kaleido package,
-which can be installed using pip:
-    $ pip install -U kaleido
-
+[0;31mModuleNotFoundError[0m: No module named 'plotly'
+ModuleNotFoundError: No module named 'plotly'
 

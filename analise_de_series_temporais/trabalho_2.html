@@ -4,11 +4,13 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Trabalho No. 2 &#8212; Estatística - UFPR</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,13 +37,15 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,7 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Trabalho No. 3" href="trabalho_3.html" />
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -357,8 +371,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
-   Gala dataset
+  <a class="reference internal" href="../extensoes_modelos_regressao/exercicio_5.html">
+   Exercício 5
   </a>
  </li>
 </ul>
@@ -383,6 +397,11 @@ const thebe_selector_output = ".output, .cell_output"
    Trabalho No. 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="trabalho_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -398,12 +417,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -411,61 +435,117 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
-                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/analise_de_series_temporais/trabalho_2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/analise_de_series_temporais/trabalho_2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
-        title="Modo tela cheia"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Conteúdo
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercicio-10">
    Exercício 10
@@ -503,12 +583,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Trabalho No. 2</h1>
@@ -517,7 +596,7 @@ const thebe_selector_output = ".output, .cell_output"
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Conteúdo </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -562,11 +641,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-2">
-<h1>Trabalho No. 2<a class="headerlink" href="#trabalho-no-2" title="Link permanente para este título">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="trabalho-no-2">
+<h1>Trabalho No. 2<a class="headerlink" href="#trabalho-no-2" title="Link permanente para este título">#</a></h1>
 <ul class="simple">
 <li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
 </ul>
@@ -583,8 +663,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="exercicio-10">
-<h2>Exercício 10<a class="headerlink" href="#exercicio-10" title="Link permanente para este título">¶</a></h2>
+<section id="exercicio-10">
+<h2>Exercício 10<a class="headerlink" href="#exercicio-10" title="Link permanente para este título">#</a></h2>
 <p>Seja <span class="math notranslate nohighlight">\(X_t\)</span> um processo que represente a série de mortalidade cardiovascular <strong>cmort</strong> discutida no Exemplo II.2.</p>
 <p>(a) Ajuste um modelo <strong>AR(2)</strong> à <span class="math notranslate nohighlight">\(X_t\)</span> usando regressão linear como no Exemplo III.18.</p>
 <p>(b) Assumindo que o modelo ajustado em (a) seja o modelo verdadeiro, encontre as previsões ao longo de um horizonte de quatro semanas, <span class="math notranslate nohighlight">\(X^n_{n+m}\)</span> para <span class="math notranslate nohighlight">\(m=1,2,3,4\)</span> e os intervalos de previsão de 95% correspondentes.</p>
@@ -623,10 +703,10 @@ const thebe_selector_output = ".output, .cell_output"
   <th>Method:</th>         <td>Conditional MLE</td> <th>  S.D. of innovations</th>   <td>5.685</td>  
 </tr>
 <tr>
-  <th>Date:</th>          <td>Wed, 08 Feb 2023</td> <th>  AIC                </th> <td>3202.624</td> 
+  <th>Date:</th>          <td>Sun, 19 Feb 2023</td> <th>  AIC                </th> <td>3202.624</td> 
 </tr>
 <tr>
-  <th>Time:</th>              <td>13:49:49</td>     <th>  BIC                </th> <td>3219.530</td> 
+  <th>Time:</th>              <td>23:43:17</td>     <th>  BIC                </th> <td>3219.530</td> 
 </tr>
 <tr>
   <th>Sample:</th>           <td>01-18-1970</td>    <th>  HQIC               </th> <td>3209.254</td> 
@@ -754,9 +834,9 @@ const thebe_selector_output = ".output, .cell_output"
 <img alt="../_images/trabalho_2_8_0.png" src="../_images/trabalho_2_8_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="exercicio-18">
-<h2>Exercício 18<a class="headerlink" href="#exercicio-18" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="exercicio-18">
+<h2>Exercício 18<a class="headerlink" href="#exercicio-18" title="Link permanente para este título">#</a></h2>
 <p>Ajustar um modelo <strong>AR(2)</strong> para a série de mortalidade cardiovascular cmort discutida no Exemplo II.2. usando regressão linear e usando Yule-Walker.</p>
 <p>(a) Compare as estimativas dos parâmetros obtidos pelos dois métodos.</p>
 <p>(b) Compare os erros padrão estimados das estimativas dos coeficientes obtidos por regressão linear com suas aproximações assintóticas correspondentes, como dado no Teorema III.10.</p>
@@ -773,7 +853,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yule Walker
-Coeficientes: [0.43147813 0.44187887], desvio padrão: 5.683757998742249
+Coeficientes: [0.43147813 0.44187887], desvio padrão: 5.68375799874225
 </pre></div>
 </div>
 </div>
@@ -795,9 +875,9 @@ dtype: float64, desvio padrão: 5.684847835121764
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exercicio-20">
-<h2>Exercício 20<a class="headerlink" href="#exercicio-20" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="exercicio-20">
+<h2>Exercício 20<a class="headerlink" href="#exercicio-20" title="Link permanente para este título">#</a></h2>
 <p>Repita o seguinte exercício numérico três vezes. Gere <span class="math notranslate nohighlight">\(n=500\)</span> observações do modelo ARMA dado por <span class="math notranslate nohighlight">\(X_t=0.9X_{t−1} + W_t − 0.9W_{t−1}\)</span>, com <span class="math notranslate nohighlight">\(W_t \sim N(0,1)\)</span> independentes. Plote os dados simulados, calcule o ACF e o PACF amostrais dos dados simulados e ajuste um modelo <strong>ARMA(1,1)</strong> aos dados. O que aconteceu e como você explica os resultados?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -857,16 +937,16 @@ dtype: float64, desvio padrão: 5.684847835121764
   <th>Dep. Variable:</th>           <td>y</td>        <th>  No. Observations:  </th>    <td>500</td>  
 </tr>
 <tr>
-  <th>Model:</th>            <td>ARIMA(1, 0, 1)</td>  <th>  Log Likelihood     </th> <td>-690.414</td>
+  <th>Model:</th>            <td>ARIMA(1, 0, 1)</td>  <th>  Log Likelihood     </th> <td>-714.030</td>
 </tr>
 <tr>
-  <th>Date:</th>            <td>Wed, 08 Feb 2023</td> <th>  AIC                </th> <td>1388.828</td>
+  <th>Date:</th>            <td>Sun, 19 Feb 2023</td> <th>  AIC                </th> <td>1436.061</td>
 </tr>
 <tr>
-  <th>Time:</th>                <td>13:49:51</td>     <th>  BIC                </th> <td>1405.686</td>
+  <th>Time:</th>                <td>23:43:19</td>     <th>  BIC                </th> <td>1452.919</td>
 </tr>
 <tr>
-  <th>Sample:</th>                  <td>0</td>        <th>  HQIC               </th> <td>1395.443</td>
+  <th>Sample:</th>                  <td>0</td>        <th>  HQIC               </th> <td>1442.676</td>
 </tr>
 <tr>
   <th></th>                      <td> - 500</td>      <th>                     </th>     <td> </td>   
@@ -880,37 +960,37 @@ dtype: float64, desvio padrão: 5.684847835121764
      <td></td>       <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>const</th>  <td>    0.0366</td> <td>    0.041</td> <td>    0.885</td> <td> 0.376</td> <td>   -0.044</td> <td>    0.118</td>
+  <th>const</th>  <td>    0.0634</td> <td>    0.063</td> <td>    1.009</td> <td> 0.313</td> <td>   -0.060</td> <td>    0.187</td>
 </tr>
 <tr>
-  <th>ar.L1</th>  <td>   -0.0924</td> <td>    0.876</td> <td>   -0.105</td> <td> 0.916</td> <td>   -1.809</td> <td>    1.624</td>
+  <th>ar.L1</th>  <td>    0.9367</td> <td>    0.096</td> <td>    9.770</td> <td> 0.000</td> <td>    0.749</td> <td>    1.125</td>
 </tr>
 <tr>
-  <th>ma.L1</th>  <td>    0.0416</td> <td>    0.879</td> <td>    0.047</td> <td> 0.962</td> <td>   -1.681</td> <td>    1.764</td>
+  <th>ma.L1</th>  <td>   -0.9111</td> <td>    0.112</td> <td>   -8.161</td> <td> 0.000</td> <td>   -1.130</td> <td>   -0.692</td>
 </tr>
 <tr>
-  <th>sigma2</th> <td>    0.9266</td> <td>    0.054</td> <td>   17.206</td> <td> 0.000</td> <td>    0.821</td> <td>    1.032</td>
+  <th>sigma2</th> <td>    1.0183</td> <td>    0.065</td> <td>   15.697</td> <td> 0.000</td> <td>    0.891</td> <td>    1.145</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Ljung-Box (L1) (Q):</th>     <td>0.00</td> <th>  Jarque-Bera (JB):  </th> <td>4.59</td>
+  <th>Ljung-Box (L1) (Q):</th>     <td>0.13</td> <th>  Jarque-Bera (JB):  </th> <td>0.26</td> 
 </tr>
 <tr>
-  <th>Prob(Q):</th>                <td>1.00</td> <th>  Prob(JB):          </th> <td>0.10</td>
+  <th>Prob(Q):</th>                <td>0.71</td> <th>  Prob(JB):          </th> <td>0.88</td> 
 </tr>
 <tr>
-  <th>Heteroskedasticity (H):</th> <td>1.26</td> <th>  Skew:              </th> <td>0.12</td>
+  <th>Heteroskedasticity (H):</th> <td>1.01</td> <th>  Skew:              </th> <td>-0.05</td>
 </tr>
 <tr>
-  <th>Prob(H) (two-sided):</th>    <td>0.13</td> <th>  Kurtosis:          </th> <td>3.41</td>
+  <th>Prob(H) (two-sided):</th>    <td>0.95</td> <th>  Kurtosis:          </th> <td>2.98</td> 
 </tr>
 </table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
 </div>
 <p>Como <span class="math notranslate nohighlight">\(X_t - 0.9 X_{t-1} = W_t - 0.9 W_{t-1}\)</span>, temos que <span class="math notranslate nohighlight">\(X_t = W_t\)</span>. O modelo encontra valores de <span class="math notranslate nohighlight">\(\phi_1 = - \theta_1\)</span>, porém com erro padrão muito alto, fazendo que não sejam estatísticamente significativos. Isso devido a relação entre os coeficientes que impossibilita o modelo de identificar o valor correto do parâmetro. Nota-se também nos gráficos do ACF e PACF que o lag=1 não é significativo.</p>
-</div>
-<div class="section" id="exercicio-31">
-<h2>Exercício 31<a class="headerlink" href="#exercicio-31" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="exercicio-31">
+<h2>Exercício 31<a class="headerlink" href="#exercicio-31" title="Link permanente para este título">#</a></h2>
 <p>No Exemplo III.40, apresentamos os diagnósticos para o MA(2) ajustado à série de taxas de crescimento do PIB. Usando esse exemplo como guia, conclua o diagnóstico para o ajuste do AR(1).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -924,7 +1004,7 @@ dtype: float64, desvio padrão: 5.684847835121764
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency QS-OCT will be used.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency QS-OCT will be used.
   self._init_dates(dates, freq)
 </pre></div>
 </div>
@@ -940,10 +1020,10 @@ dtype: float64, desvio padrão: 5.684847835121764
   <th>Method:</th>         <td>Conditional MLE</td> <th>  S.D. of innovations</th>  <td>39.820</td>  
 </tr>
 <tr>
-  <th>Date:</th>          <td>Wed, 08 Feb 2023</td> <th>  AIC                </th> <td>2271.872</td> 
+  <th>Date:</th>          <td>Sun, 19 Feb 2023</td> <th>  AIC                </th> <td>2271.872</td> 
 </tr>
 <tr>
-  <th>Time:</th>              <td>13:49:51</td>     <th>  BIC                </th> <td>2282.080</td> 
+  <th>Time:</th>              <td>23:43:19</td>     <th>  BIC                </th> <td>2282.080</td> 
 </tr>
 <tr>
   <th>Sample:</th>           <td>04-01-1947</td>    <th>  HQIC               </th> <td>2275.994</td> 
@@ -1031,9 +1111,9 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </div>
 </div>
 <p>Os gráficos e testes indicam que os resíduos seguem um padrão normalizado (p-valor Jarque-Bera próximo de 0). Entretanto, o teste de correlção Ljung-Box mostra que os resíduos são correlacionados. Isso também é notável no gráfico de correlação, onde os valores extrapolam valores de referência da área azul claro.</p>
-</div>
-<div class="section" id="exercicio-32">
-<h2>Exercício 32<a class="headerlink" href="#exercicio-32" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="exercicio-32">
+<h2>Exercício 32<a class="headerlink" href="#exercicio-32" title="Link permanente para este título">#</a></h2>
 <p>Os preços do petróleo bruto em dólares por barril são guardados em <strong>oil</strong>. Ajuste um modelo <strong>ARIMA(p,d,q)</strong> para a taxa de crescimento realizando todos os diagnósticos necessários. Comente.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1056,10 +1136,10 @@ Jarque-Bera    P-value   Skewness   Kurtosis
   <th>Model:</th>           <td>ARIMA([1, 3, 5, 8], 1, 0)</td> <th>  Log Likelihood     </th> <td>-1268.428</td>
 </tr>
 <tr>
-  <th>Date:</th>                <td>Wed, 08 Feb 2023</td>      <th>  AIC                </th> <td>2546.855</td> 
+  <th>Date:</th>                <td>Sun, 19 Feb 2023</td>      <th>  AIC                </th> <td>2546.855</td> 
 </tr>
 <tr>
-  <th>Time:</th>                    <td>13:49:52</td>          <th>  BIC                </th> <td>2568.350</td> 
+  <th>Time:</th>                    <td>23:43:21</td>          <th>  BIC                </th> <td>2568.350</td> 
 </tr>
 <tr>
   <th>Sample:</th>                 <td>01-02-2000</td>         <th>  HQIC               </th> <td>2555.259</td> 
@@ -1117,9 +1197,9 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </div>
 </div>
 <p>Os gráficos de diagnóstico mostram que o modelo é bem ajustado, entretanto os resíduos apresentam desvios significativos nas extremidades do gráfico QQ. Estas observações se devem a crise financeira de 2008 onde o barril de petróleo sofreu grande variação como é possível observar no gráfico dos resíduos normalizados.</p>
-</div>
-<div class="section" id="exercicio-35">
-<h2>Exercício 35<a class="headerlink" href="#exercicio-35" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="exercicio-35">
+<h2>Exercício 35<a class="headerlink" href="#exercicio-35" title="Link permanente para este título">#</a></h2>
 <p>Consideremos que <span class="math notranslate nohighlight">\(S_t\)</span> representa os dados de vendas mensais em <strong>sales</strong>, <span class="math notranslate nohighlight">\(n=150\)</span> e seja <span class="math notranslate nohighlight">\(L_t\)</span> o principal indicador em <strong>lead</strong>.</p>
 <p>(a) Ajustar um modelo ARIMA para <span class="math notranslate nohighlight">\(S_t\)</span>, os dados de vendas mensais. Discuta seu modelo passo-a-passo, apresentando seu (A) exame inicial dos dados, (B) transformações, se necessário, (C) identificação inicial das ordens de dependência e grau de diferenciação, (D) estimativas dos parâmetros, (E) diagnósticos dos resíduos e escolha do modelo.</p>
 <p>(b) Use os gráficos CCF e lag entre <span class="math notranslate nohighlight">\(∇S_t\)</span> e <span class="math notranslate nohighlight">\(∇L_t\)</span> para argumentar que uma regressão de <span class="math notranslate nohighlight">\(∇S_t\)</span> em <span class="math notranslate nohighlight">\(∇L_t\)</span> é razoável. Observe que, em lag2.plot(), a primeira série nomeada é aquela que fica defasada.</p>
@@ -1152,11 +1232,11 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
   self._init_dates(dates, freq)
-/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
   self._init_dates(dates, freq)
-/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
   self._init_dates(dates, freq)
 </pre></div>
 </div>
@@ -1169,10 +1249,10 @@ Jarque-Bera    P-value   Skewness   Kurtosis
   <th>Model:</th>           <td>ARIMA([1, 3], 1, 1)</td> <th>  Log Likelihood     </th>  <td>193.692</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 08 Feb 2023</td>   <th>  AIC                </th> <td>-377.385</td>
+  <th>Date:</th>             <td>Sun, 19 Feb 2023</td>   <th>  AIC                </th> <td>-377.385</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>13:49:53</td>       <th>  BIC                </th> <td>-362.365</td>
+  <th>Time:</th>                 <td>23:43:23</td>       <th>  BIC                </th> <td>-362.365</td>
 </tr>
 <tr>
   <th>Sample:</th>                   <td>0</td>          <th>  HQIC               </th> <td>-371.282</td>
@@ -1239,7 +1319,7 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 <span class="k">def</span> <span class="nf">plot_ccf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">lag_range</span><span class="p">,</span>
              <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
              <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">xlabel_fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">ylabel_fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    plot cross-correlation between series x and y</span>
 <span class="sd">    :param x: series that we leads y on the left</span>
 <span class="sd">    :type x: pd.Series</span>
@@ -1307,15 +1387,15 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
   self._init_dates(dates, freq)
-/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
   self._init_dates(dates, freq)
-/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
+/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: An unsupported index was provided and will be ignored when e.g. forecasting.
   self._init_dates(dates, freq)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/base/model.py:604: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/base/model.py:604: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
   warnings.warn(&quot;Maximum Likelihood optimization failed to &quot;
 </pre></div>
 </div>
@@ -1325,16 +1405,16 @@ Jarque-Bera    P-value   Skewness   Kurtosis
   <th>Dep. Variable:</th>         <td>value_sales</td>      <th>  No. Observations:  </th>    <td>150</td>  
 </tr>
 <tr>
-  <th>Model:</th>           <td>ARIMA([2, 3, 4], 0, 2)</td> <th>  Log Likelihood     </th>  <td>269.355</td>
+  <th>Model:</th>           <td>ARIMA([2, 3, 4], 0, 2)</td> <th>  Log Likelihood     </th>  <td>269.013</td>
 </tr>
 <tr>
-  <th>Date:</th>               <td>Wed, 08 Feb 2023</td>    <th>  AIC                </th> <td>-522.710</td>
+  <th>Date:</th>               <td>Sun, 19 Feb 2023</td>    <th>  AIC                </th> <td>-522.027</td>
 </tr>
 <tr>
-  <th>Time:</th>                   <td>13:49:54</td>        <th>  BIC                </th> <td>-498.625</td>
+  <th>Time:</th>                   <td>23:43:26</td>        <th>  BIC                </th> <td>-497.942</td>
 </tr>
 <tr>
-  <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th> <td>-512.925</td>
+  <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th> <td>-512.242</td>
 </tr>
 <tr>
   <th></th>                         <td> - 150</td>         <th>                     </th>     <td> </td>   
@@ -1348,42 +1428,42 @@ Jarque-Bera    P-value   Skewness   Kurtosis
        <td></td>         <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>const</th>      <td>   10.0014</td> <td>    0.322</td> <td>   31.065</td> <td> 0.000</td> <td>    9.370</td> <td>   10.632</td>
+  <th>const</th>      <td>    9.9691</td> <td>    0.304</td> <td>   32.802</td> <td> 0.000</td> <td>    9.373</td> <td>   10.565</td>
 </tr>
 <tr>
-  <th>value_lead</th> <td>    0.1386</td> <td>    0.008</td> <td>   18.063</td> <td> 0.000</td> <td>    0.124</td> <td>    0.154</td>
+  <th>value_lead</th> <td>    0.1407</td> <td>    0.006</td> <td>   21.675</td> <td> 0.000</td> <td>    0.128</td> <td>    0.153</td>
 </tr>
 <tr>
-  <th>ar.L2</th>      <td>    1.3000</td> <td>    0.094</td> <td>   13.825</td> <td> 0.000</td> <td>    1.116</td> <td>    1.484</td>
+  <th>ar.L2</th>      <td>    1.2934</td> <td>    0.080</td> <td>   16.092</td> <td> 0.000</td> <td>    1.136</td> <td>    1.451</td>
 </tr>
 <tr>
-  <th>ar.L3</th>      <td>    0.3009</td> <td>    0.080</td> <td>    3.784</td> <td> 0.000</td> <td>    0.145</td> <td>    0.457</td>
+  <th>ar.L3</th>      <td>    0.2957</td> <td>    0.061</td> <td>    4.817</td> <td> 0.000</td> <td>    0.175</td> <td>    0.416</td>
 </tr>
 <tr>
-  <th>ar.L4</th>      <td>   -0.6337</td> <td>    0.091</td> <td>   -6.970</td> <td> 0.000</td> <td>   -0.812</td> <td>   -0.456</td>
+  <th>ar.L4</th>      <td>   -0.6184</td> <td>    0.073</td> <td>   -8.494</td> <td> 0.000</td> <td>   -0.761</td> <td>   -0.476</td>
 </tr>
 <tr>
-  <th>ma.L1</th>      <td>    1.7761</td> <td>    0.054</td> <td>   32.937</td> <td> 0.000</td> <td>    1.670</td> <td>    1.882</td>
+  <th>ma.L1</th>      <td>    1.7807</td> <td>    0.036</td> <td>   48.801</td> <td> 0.000</td> <td>    1.709</td> <td>    1.852</td>
 </tr>
 <tr>
-  <th>ma.L2</th>      <td>    0.9411</td> <td>    0.047</td> <td>   20.229</td> <td> 0.000</td> <td>    0.850</td> <td>    1.032</td>
+  <th>ma.L2</th>      <td>    0.9500</td> <td>    0.032</td> <td>   29.434</td> <td> 0.000</td> <td>    0.887</td> <td>    1.013</td>
 </tr>
 <tr>
-  <th>sigma2</th>     <td>    0.0017</td> <td>    0.000</td> <td>    7.640</td> <td> 0.000</td> <td>    0.001</td> <td>    0.002</td>
+  <th>sigma2</th>     <td>    0.0014</td> <td>    0.000</td> <td>    8.963</td> <td> 0.000</td> <td>    0.001</td> <td>    0.002</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Ljung-Box (L1) (Q):</th>     <td>0.57</td> <th>  Jarque-Bera (JB):  </th> <td>0.40</td> 
+  <th>Ljung-Box (L1) (Q):</th>     <td>1.14</td> <th>  Jarque-Bera (JB):  </th> <td>0.05</td> 
 </tr>
 <tr>
-  <th>Prob(Q):</th>                <td>0.45</td> <th>  Prob(JB):          </th> <td>0.82</td> 
+  <th>Prob(Q):</th>                <td>0.29</td> <th>  Prob(JB):          </th> <td>0.98</td> 
 </tr>
 <tr>
-  <th>Heteroskedasticity (H):</th> <td>0.66</td> <th>  Skew:              </th> <td>-0.10</td>
+  <th>Heteroskedasticity (H):</th> <td>0.66</td> <th>  Skew:              </th> <td>-0.03</td>
 </tr>
 <tr>
-  <th>Prob(H) (two-sided):</th>    <td>0.14</td> <th>  Kurtosis:          </th> <td>3.15</td> 
+  <th>Prob(H) (two-sided):</th>    <td>0.14</td> <th>  Kurtosis:          </th> <td>3.05</td> 
 </tr>
 </table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
 </div>
@@ -1397,9 +1477,9 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 <img alt="../_images/trabalho_2_38_0.png" src="../_images/trabalho_2_38_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="exercicio-36">
-<h2>Exercício 36<a class="headerlink" href="#exercicio-36" title="Link permanente para este título">¶</a></h2>
+</section>
+<section id="exercicio-36">
+<h2>Exercício 36<a class="headerlink" href="#exercicio-36" title="Link permanente para este título">#</a></h2>
 <p>Um dos notáveis desenvolvimentos tecnológicos na indústria de computadores tem sido a capacidade de armazenar informações densamente em um disco rígido. Além disso, o custo de armazenamento diminuiu constantemente, causando problemas de excesso de dados, em vez de big datas. O conjunto de dados para esta tarefa é o <strong>cpg</strong>, que consiste no preço mediano anual de varejo por GB de discos rígidos, digamos <span class="math notranslate nohighlight">\(C_t\)</span>, de uma amostra de fabricantes de 1980 a 2008.</p>
 <p>(a) Mostre gráficamente <span class="math notranslate nohighlight">\(C_t\)</span> e descreva o que você vê.</p>
 <p>(b) Argumente que a curva <span class="math notranslate nohighlight">\(C_t\)</span> versus <span class="math notranslate nohighlight">\(t\)</span> se comporta como <span class="math notranslate nohighlight">\(C_t ≈ αe^{βt}\)</span> ajustando uma regressão linear de <span class="math notranslate nohighlight">\(log(C_t)\)</span> em t e então plotando a linha ajustada para compará-la aos dados registrados. Comente.</p>
@@ -1443,10 +1523,10 @@ Jarque-Bera    P-value   Skewness   Kurtosis
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   1790.</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 08 Feb 2023</td> <th>  Prob (F-statistic):</th> <td>3.23e-26</td>
+  <th>Date:</th>             <td>Sun, 19 Feb 2023</td> <th>  Prob (F-statistic):</th> <td>3.23e-26</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>13:49:55</td>     <th>  Log-Likelihood:    </th> <td> -26.396</td>
+  <th>Time:</th>                 <td>23:43:28</td>     <th>  Log-Likelihood:    </th> <td> -26.396</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>    29</td>      <th>  AIC:               </th> <td>   56.79</td>
@@ -1516,11 +1596,11 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
   self._init_dates(dates, freq)
-/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
+/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
   self._init_dates(dates, freq)
-/opt/hostedtoolcache/Python/3.10.9/x64/lib/python3.10/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
+/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/tsa/base/tsa_model.py:471: ValueWarning: No frequency information was provided, so inferred frequency AS-JAN will be used.
   self._init_dates(dates, freq)
 </pre></div>
 </div>
@@ -1533,10 +1613,10 @@ Jarque-Bera    P-value   Skewness   Kurtosis
   <th>Model:</th>            <td>ARIMA(2, 1, 1)</td>  <th>  Log Likelihood     </th> <td>-15.322</td>
 </tr>
 <tr>
-  <th>Date:</th>            <td>Wed, 08 Feb 2023</td> <th>  AIC                </th> <td>38.643</td> 
+  <th>Date:</th>            <td>Sun, 19 Feb 2023</td> <th>  AIC                </th> <td>38.643</td> 
 </tr>
 <tr>
-  <th>Time:</th>                <td>13:49:56</td>     <th>  BIC                </th> <td>43.972</td> 
+  <th>Time:</th>                <td>23:43:30</td>     <th>  BIC                </th> <td>43.972</td> 
 </tr>
 <tr>
   <th>Sample:</th>             <td>01-01-1980</td>    <th>  HQIC               </th> <td>40.272</td> 
@@ -1553,13 +1633,13 @@ Jarque-Bera    P-value   Skewness   Kurtosis
      <td></td>       <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>ar.L1</th>  <td>    0.5085</td> <td>    0.209</td> <td>    2.437</td> <td> 0.015</td> <td>    0.099</td> <td>    0.918</td>
+  <th>ar.L1</th>  <td>    0.5085</td> <td>    0.209</td> <td>    2.436</td> <td> 0.015</td> <td>    0.099</td> <td>    0.917</td>
 </tr>
 <tr>
-  <th>ar.L2</th>  <td>    0.4619</td> <td>    0.195</td> <td>    2.372</td> <td> 0.018</td> <td>    0.080</td> <td>    0.844</td>
+  <th>ar.L2</th>  <td>    0.4620</td> <td>    0.195</td> <td>    2.373</td> <td> 0.018</td> <td>    0.080</td> <td>    0.844</td>
 </tr>
 <tr>
-  <th>ma.L1</th>  <td>   -0.6376</td> <td>    0.273</td> <td>   -2.339</td> <td> 0.019</td> <td>   -1.172</td> <td>   -0.103</td>
+  <th>ma.L1</th>  <td>   -0.6375</td> <td>    0.273</td> <td>   -2.339</td> <td> 0.019</td> <td>   -1.172</td> <td>   -0.103</td>
 </tr>
 <tr>
   <th>sigma2</th> <td>    0.1640</td> <td>    0.054</td> <td>    3.065</td> <td> 0.002</td> <td>    0.059</td> <td>    0.269</td>
@@ -1580,18 +1660,8 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 </tr>
 </table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ex36_modelo_arima</span><span class="o">.</span><span class="n">plot_diagnostics</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">));</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/trabalho_2_45_0.png" src="../_images/trabalho_2_45_0.png" />
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1605,7 +1675,7 @@ Jarque-Bera    P-value   Skewness   Kurtosis
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./analise_de_series_temporais"
         },
         predefinedOutput: true
@@ -1615,9 +1685,11 @@ Jarque-Bera    P-value   Skewness   Kurtosis
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="trabalho_1.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1633,23 +1705,27 @@ Jarque-Bera    P-value   Skewness   Kurtosis
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guilherme L Oliveira<br/>
+  
+</p>
+        </footer>
+    </div>
     
-      De Guilherme L Oliveira<br/>
-    
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

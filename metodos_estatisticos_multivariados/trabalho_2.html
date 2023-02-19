@@ -4,11 +4,13 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Trabalho No. 2 &#8212; Estatística - UFPR</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,13 +37,15 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,7 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Trabalho No. 3" href="trabalho_3.html" />
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -357,8 +371,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
-   Gala dataset
+  <a class="reference internal" href="../extensoes_modelos_regressao/exercicio_5.html">
+   Exercício 5
   </a>
  </li>
 </ul>
@@ -383,6 +397,11 @@ const thebe_selector_output = ".output, .cell_output"
    Trabalho No. 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_series_temporais/trabalho_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -398,12 +417,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -411,61 +435,117 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
-                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/metodos_estatisticos_multivariados/trabalho_2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/metodos_estatisticos_multivariados/trabalho_2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
-        title="Modo tela cheia"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Conteúdo
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#secao-ii-7">
    Seção II.7
@@ -536,12 +616,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Trabalho No. 2</h1>
@@ -550,7 +629,7 @@ const thebe_selector_output = ".output, .cell_output"
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Conteúdo </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -628,11 +707,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="trabalho-no-2">
-<h1>Trabalho No. 2<a class="headerlink" href="#trabalho-no-2" title="Link permanente para este título">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="trabalho-no-2">
+<h1>Trabalho No. 2<a class="headerlink" href="#trabalho-no-2" title="Link permanente para este título">#</a></h1>
 <ul class="simple">
 <li><p>Aluno: Guilherme Lisboa de Oliveira (GRR20170414)</p></li>
 </ul>
@@ -643,28 +723,28 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Questões: 3, 5 e 11 na Seção IV.9 Exercícios em http://leg.ufpr.br/~lucambio/MSM/MSM04.html#MSMIV.9</p>
 <p>Questão: 3 na Seção X.6 Exercícios em http://leg.ufpr.br/~lucambio/MSM/MSM10.html#MSMX.6</p>
 </div>
-<div class="section" id="secao-ii-7">
-<h2>Seção II.7<a class="headerlink" href="#secao-ii-7" title="Link permanente para este título">¶</a></h2>
-<div class="section" id="questao-1">
-<h3>Questão 1<a class="headerlink" href="#questao-1" title="Link permanente para este título">¶</a></h3>
+<section id="secao-ii-7">
+<h2>Seção II.7<a class="headerlink" href="#secao-ii-7" title="Link permanente para este título">#</a></h2>
+<section id="questao-1">
+<h3>Questão 1<a class="headerlink" href="#questao-1" title="Link permanente para este título">#</a></h3>
 <p>Suponha que <span class="math notranslate nohighlight">\(|A|=0\)</span>. É possível que todos os valores próprios de A sejam positivos?</p>
 <p>Não, pois dado que <span class="math notranslate nohighlight">\(|A| = 0\)</span>, temos <span class="math notranslate nohighlight">\(|A| = |Λ|= \prod_{j=1}^{p}λ_j = 0\)</span>. Para que o produtório seja igual a 0, pelo menos um autovalor deve ser igual a 0, logo, não positivo.</p>
-</div>
-<div class="section" id="questao-2">
-<h3>Questão 2<a class="headerlink" href="#questao-2" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="questao-2">
+<h3>Questão 2<a class="headerlink" href="#questao-2" title="Link permanente para este título">#</a></h3>
 <p>Suponha que todos os valores próprios de alguma matriz (quadrada) A sejam diferentes de zero. A inversa <span class="math notranslate nohighlight">\(A^{−1}\)</span> existe?</p>
 <p>Para que a matrix quadrada admita inversa, <span class="math notranslate nohighlight">\(|A| \neq 0\)</span>. Como todos os autovalores são diferentes de 0, temos que <span class="math notranslate nohighlight">\(\prod_{j=1}^{p}λ_j \neq 0\)</span> e assim, <span class="math notranslate nohighlight">\(\prod_{j=1}^{p}λ_j = |Λ| = |A| \neq 0\)</span>, logo, a inversa <span class="math notranslate nohighlight">\(A^{-1}\)</span> existe.</p>
-</div>
-</div>
-<div class="section" id="secao-iii-8">
-<h2>Seção III.8<a class="headerlink" href="#secao-iii-8" title="Link permanente para este título">¶</a></h2>
-<div class="section" id="questao-3">
-<h3>Questão 3<a class="headerlink" href="#questao-3" title="Link permanente para este título">¶</a></h3>
+</section>
+</section>
+<section id="secao-iii-8">
+<h2>Seção III.8<a class="headerlink" href="#secao-iii-8" title="Link permanente para este título">#</a></h2>
+<section id="questao-3">
+<h3>Questão 3<a class="headerlink" href="#questao-3" title="Link permanente para este título">#</a></h3>
 <p>Observamos que, para duas variáveis aleatórias normais, a covariância zero implica independência. Por que essa observação não se aplica ao Exemplo III.4?</p>
 <p>Porque a relação de depedência de <span class="math notranslate nohighlight">\(Y\)</span> e <span class="math notranslate nohighlight">\(X\)</span> é expressa de forma quadrática: <span class="math notranslate nohighlight">\(Y = X^2\)</span>, portanto como a covariância avalia apenas relação linear e não há um termo linar na relação, <span class="math notranslate nohighlight">\(Cov(Y,X) = 0\)</span> apesar de <span class="math notranslate nohighlight">\(Y\)</span> depender de <span class="math notranslate nohighlight">\(X\)</span></p>
-</div>
-<div class="section" id="questao-16">
-<h3>Questão 16<a class="headerlink" href="#questao-16" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="questao-16">
+<h3>Questão 16<a class="headerlink" href="#questao-16" title="Link permanente para este título">#</a></h3>
 <p>Mostre que <span class="math notranslate nohighlight">\(posto(H)=tr(H)=n−1\)</span>.</p>
 <p>Seja <span class="math notranslate nohighlight">\(H = I_n - \frac{1}{n} 1_n 1_n^T\)</span>, temos que <span class="math notranslate nohighlight">\(1_n 1_n^T = n\)</span>,</p>
 <p>Reescrevendo <span class="math notranslate nohighlight">\(H\)</span>, temos: <span class="math notranslate nohighlight">\(H = I_n - [\frac{n}{n}\)</span>]</p>
@@ -672,12 +752,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Como <span class="math notranslate nohighlight">\(tr(A + B) = tr(A) + tr(B)\)</span>, temos: <span class="math notranslate nohighlight">\(tr(H) = tr(I_n) - tr([1])\)</span></p>
 <p>Como o traço é a soma da diagonal, para uma matriz identidade com <span class="math notranslate nohighlight">\(n\)</span> linhas o traço é igual a <span class="math notranslate nohighlight">\(n\)</span>, logo:</p>
 <p><span class="math notranslate nohighlight">\(tr(H) = n - 1\)</span></p>
-</div>
-</div>
-<div class="section" id="secao-iv-9">
-<h2>Seção IV.9<a class="headerlink" href="#secao-iv-9" title="Link permanente para este título">¶</a></h2>
-<div class="section" id="id1">
-<h3>Questão 3<a class="headerlink" href="#id1" title="Link permanente para este título">¶</a></h3>
+</section>
+</section>
+<section id="secao-iv-9">
+<h2>Seção IV.9<a class="headerlink" href="#secao-iv-9" title="Link permanente para este título">#</a></h2>
+<section id="id1">
+<h3>Questão 3<a class="headerlink" href="#id1" title="Link permanente para este título">#</a></h3>
 <p>Encontre os momentos condicionais <span class="math notranslate nohighlight">\(E(X_2|x_1)\)</span> e <span class="math notranslate nohighlight">\(E(X_1|x_2)\)</span> para a função de densidade no Exemplo IV.5.</p>
 <p><span class="math notranslate nohighlight">\(E(X_2|x_1)\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -693,9 +773,9 @@ E(X_1|x_2) = \int_{0}^{1} x_1 f(x_1|x_2) dx_1 \\
 E(X_1|x_2) = \int_{0}^{1} x_1 \frac{\frac{1}{2}x_1 + \frac{3}{2}x_2}{\frac{3}{2}x_2 + \frac{1}{4}} dx_1 \\
 E(X_1|x_2) = \frac{2}{3(6x_2 + 1)} + \frac{3x_2}{1 + 6x_2} = \frac{2 + 9x_2}{3(6x_2 + 1)}
 \end{split}\]</div>
-</div>
-<div class="section" id="questao-5">
-<h3>Questão 5<a class="headerlink" href="#questao-5" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="questao-5">
+<h3>Questão 5<a class="headerlink" href="#questao-5" title="Link permanente para este título">#</a></h3>
 <p>Uma montadora européia testou um novo modelo e relata a consumo de gasolina <span class="math notranslate nohighlight">\(X_1\)</span> e de óleo <span class="math notranslate nohighlight">\(X_2\)</span>. O consumo previsto de gasolina é de 8 litros por 100 km (<span class="math notranslate nohighlight">\(μ_1\)</span>) e o consumo esperado de óleo é de 1 litro por 10.000 km (<span class="math notranslate nohighlight">\(μ_2\)</span>). O consumo medido de gasolina é de 8.1 litros por 100 km (<span class="math notranslate nohighlight">\(\bar{x_1}\)</span>) e o consumo medido de óleo é de 1.1 litros por 10.000 km (<span class="math notranslate nohighlight">\(\bar{x_2}\)</span>). A distribuição assintótica de:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -711,9 +791,9 @@ E(X_1|x_2) = \frac{2}{3(6x_2 + 1)} + \frac{3x_2}{1 + 6x_2} = \frac{2 + 9x_2}{3(6
 \end{gather}
 \end{split}\]</div>
 <p>Para o mercado americano as unidades básicas de medição são milhas (1 milha 1.6 km) e galões (1 galão 3.8 l). Os consumos de gasolina <span class="math notranslate nohighlight">\(Y_1\)</span> e óleo <span class="math notranslate nohighlight">\(Y_2\)</span> são geralmente informados em milhas por galão. Você pode expressar <span class="math notranslate nohighlight">\(\bar{y_1}\)</span> e <span class="math notranslate nohighlight">\(\bar{y_2}\)</span> em termos de <span class="math notranslate nohighlight">\(\bar{x_1}\)</span> e <span class="math notranslate nohighlight">\(\bar{x_2}\)</span>? Recalcule a distribuição assintótica para o mercado americano.</p>
-</div>
-<div class="section" id="questao-11">
-<h3>Questão 11<a class="headerlink" href="#questao-11" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="questao-11">
+<h3>Questão 11<a class="headerlink" href="#questao-11" title="Link permanente para este título">#</a></h3>
 <p>Considere a função de densidade <span class="math notranslate nohighlight">\(f(x_1,x_2) = \frac{1}{8x_2} exp(−(\frac{x_1}{2x_2} + \frac{x_2}{4}))\)</span>, <span class="math notranslate nohighlight">\(x1,x2 \gt 0\)</span>.
 Encontre <span class="math notranslate nohighlight">\(f(x_2)\)</span> e <span class="math notranslate nohighlight">\(f(x_1|x_2)\)</span>. Encontre também a melhor aproximação de <span class="math notranslate nohighlight">\(X_1\)</span> por uma função de <span class="math notranslate nohighlight">\(X_2\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(f_{X_2}(x_2)\)</span>:</p>
@@ -736,12 +816,12 @@ f_(x_1|x_2) = \frac{1}{2x_2 exp(\frac{x_1}{2x_2})}
 \[
 E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
 \]</div>
-</div>
-</div>
-<div class="section" id="secao-x-6">
-<h2>Seção X.6<a class="headerlink" href="#secao-x-6" title="Link permanente para este título">¶</a></h2>
-<div class="section" id="id2">
-<h3>Questão 3<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h3>
+</section>
+</section>
+<section id="secao-x-6">
+<h2>Seção X.6<a class="headerlink" href="#secao-x-6" title="Link permanente para este título">#</a></h2>
+<section id="id2">
+<h3>Questão 3<a class="headerlink" href="#id2" title="Link permanente para este título">#</a></h3>
 <p>Aplicar as técnicas fatoriais ao conjunto de dados: Time Budget Data ou dados temporais de orçamento em In Volle (1985). Nestes arquivo de dados, 28 indivíduos identificados de acordo com o sexo, país onde vivem, atividade profissional e estado civil, indicando o tempo que cada pessoa gastou em 10 categorias de atividades ao longo de 100 dias, 100×24h = 2400 horas total em cada linha, em 1976.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -924,94 +1004,94 @@ E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
   <tbody>
     <tr>
       <th>prof</th>
-      <td>-0.977173</td>
-      <td>-0.665943</td>
-      <td>0.482837</td>
-      <td>0.445095</td>
-      <td>0.180067</td>
-      <td>0.016560</td>
-      <td>-0.0</td>
-      <td>0.046509</td>
-      <td>0.008937</td>
-      <td>0.009310</td>
+      <td>0.977173</td>
+      <td>0.665943</td>
+      <td>-0.482837</td>
+      <td>-0.445095</td>
+      <td>-0.180067</td>
+      <td>-0.016560</td>
+      <td>0.0</td>
+      <td>-0.046509</td>
+      <td>-0.008937</td>
+      <td>-0.009310</td>
     </tr>
     <tr>
       <th>tran</th>
-      <td>-0.178091</td>
-      <td>0.058116</td>
-      <td>0.017881</td>
-      <td>0.134089</td>
-      <td>0.357542</td>
-      <td>0.250686</td>
-      <td>0.0</td>
-      <td>-0.060473</td>
-      <td>0.025533</td>
-      <td>0.016384</td>
+      <td>0.178091</td>
+      <td>-0.058116</td>
+      <td>-0.017881</td>
+      <td>-0.134089</td>
+      <td>-0.357542</td>
+      <td>-0.250686</td>
+      <td>-0.0</td>
+      <td>0.060473</td>
+      <td>-0.025533</td>
+      <td>-0.016384</td>
     </tr>
     <tr>
       <th>hous</th>
-      <td>0.157632</td>
-      <td>0.010633</td>
-      <td>-0.362434</td>
-      <td>-0.079647</td>
-      <td>0.002715</td>
-      <td>0.117293</td>
-      <td>-0.0</td>
-      <td>0.025682</td>
-      <td>0.155790</td>
-      <td>-0.005689</td>
+      <td>-0.157632</td>
+      <td>-0.010633</td>
+      <td>0.362434</td>
+      <td>0.079647</td>
+      <td>-0.002715</td>
+      <td>-0.117293</td>
+      <td>0.0</td>
+      <td>-0.025682</td>
+      <td>-0.155790</td>
+      <td>0.005689</td>
     </tr>
     <tr>
       <th>kids</th>
-      <td>0.131168</td>
-      <td>0.060667</td>
-      <td>0.225149</td>
-      <td>0.294447</td>
-      <td>-0.075771</td>
-      <td>-0.025934</td>
-      <td>-0.0</td>
-      <td>-0.044206</td>
-      <td>0.026634</td>
-      <td>-0.189483</td>
+      <td>-0.131168</td>
+      <td>-0.060667</td>
+      <td>-0.225149</td>
+      <td>-0.294447</td>
+      <td>0.075771</td>
+      <td>0.025934</td>
+      <td>0.0</td>
+      <td>0.044206</td>
+      <td>-0.026634</td>
+      <td>0.189483</td>
     </tr>
     <tr>
       <th>shop</th>
-      <td>0.300600</td>
-      <td>-0.236259</td>
-      <td>0.006982</td>
-      <td>-0.303439</td>
-      <td>-0.085248</td>
-      <td>0.292344</td>
-      <td>-0.0</td>
-      <td>0.070744</td>
-      <td>-0.067759</td>
-      <td>-0.068044</td>
+      <td>-0.300600</td>
+      <td>0.236259</td>
+      <td>-0.006982</td>
+      <td>0.303439</td>
+      <td>0.085248</td>
+      <td>-0.292344</td>
+      <td>0.0</td>
+      <td>-0.070744</td>
+      <td>0.067759</td>
+      <td>0.068044</td>
     </tr>
     <tr>
       <th>pers</th>
-      <td>-0.087076</td>
-      <td>0.027594</td>
-      <td>0.112249</td>
-      <td>-0.625076</td>
-      <td>0.417702</td>
-      <td>-0.161713</td>
-      <td>0.0</td>
-      <td>0.037727</td>
-      <td>0.018907</td>
-      <td>-0.059458</td>
+      <td>0.087076</td>
+      <td>-0.027594</td>
+      <td>-0.112249</td>
+      <td>0.625076</td>
+      <td>-0.417702</td>
+      <td>0.161713</td>
+      <td>-0.0</td>
+      <td>-0.037727</td>
+      <td>-0.018907</td>
+      <td>0.059458</td>
     </tr>
     <tr>
       <th>eat</th>
-      <td>-1.517321</td>
-      <td>-0.218441</td>
-      <td>-0.713118</td>
-      <td>-0.103989</td>
-      <td>-0.069589</td>
-      <td>-0.016048</td>
-      <td>0.0</td>
-      <td>-0.014375</td>
-      <td>-0.023694</td>
-      <td>-0.043219</td>
+      <td>1.517321</td>
+      <td>0.218441</td>
+      <td>0.713118</td>
+      <td>0.103989</td>
+      <td>0.069589</td>
+      <td>0.016048</td>
+      <td>-0.0</td>
+      <td>0.014375</td>
+      <td>0.023694</td>
+      <td>0.043219</td>
     </tr>
     <tr>
       <th>slee</th>
@@ -1104,29 +1184,29 @@ E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
   <tbody>
     <tr>
       <th>prof</th>
-      <td>-0.977173</td>
-      <td>-0.665943</td>
-      <td>0.482837</td>
-      <td>0.445095</td>
-      <td>0.180067</td>
-      <td>0.016560</td>
-      <td>-0.0</td>
-      <td>0.046509</td>
-      <td>0.008937</td>
-      <td>0.009310</td>
+      <td>0.977173</td>
+      <td>0.665943</td>
+      <td>-0.482837</td>
+      <td>-0.445095</td>
+      <td>-0.180067</td>
+      <td>-0.016560</td>
+      <td>0.0</td>
+      <td>-0.046509</td>
+      <td>-0.008937</td>
+      <td>-0.009310</td>
     </tr>
     <tr>
       <th>tran</th>
-      <td>-0.178091</td>
-      <td>0.058116</td>
-      <td>0.017881</td>
-      <td>0.134089</td>
-      <td>0.357542</td>
-      <td>0.250686</td>
-      <td>0.0</td>
-      <td>-0.060473</td>
-      <td>0.025533</td>
-      <td>0.016384</td>
+      <td>0.178091</td>
+      <td>-0.058116</td>
+      <td>-0.017881</td>
+      <td>-0.134089</td>
+      <td>-0.357542</td>
+      <td>-0.250686</td>
+      <td>-0.0</td>
+      <td>0.060473</td>
+      <td>-0.025533</td>
+      <td>-0.016384</td>
     </tr>
   </tbody>
 </table>
@@ -1190,65 +1270,65 @@ E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
   <tbody>
     <tr>
       <th>maus</th>
-      <td>-0.335054</td>
-      <td>0.129652</td>
-      <td>0.353636</td>
-      <td>0.108694</td>
-      <td>-0.161464</td>
-      <td>0.125790</td>
-      <td>1.606093e-16</td>
+      <td>0.335054</td>
+      <td>-0.129652</td>
+      <td>-0.353636</td>
+      <td>-0.108694</td>
+      <td>0.161464</td>
+      <td>-0.125790</td>
+      <td>-6.076042e-17</td>
       <td>0.020331</td>
       <td>0.020168</td>
       <td>-0.002055</td>
     </tr>
     <tr>
       <th>waus</th>
-      <td>-0.032427</td>
-      <td>0.418656</td>
-      <td>0.124873</td>
-      <td>0.082690</td>
-      <td>0.236541</td>
-      <td>0.009103</td>
-      <td>2.533893e-17</td>
+      <td>0.032427</td>
+      <td>-0.418656</td>
+      <td>-0.124873</td>
+      <td>-0.082690</td>
+      <td>-0.236541</td>
+      <td>-0.009103</td>
+      <td>5.118790e-17</td>
       <td>0.025320</td>
       <td>0.009486</td>
       <td>-0.011220</td>
     </tr>
     <tr>
       <th>wnus</th>
-      <td>0.766020</td>
-      <td>0.430446</td>
-      <td>0.200419</td>
-      <td>-0.098330</td>
-      <td>-0.195981</td>
-      <td>-0.170411</td>
-      <td>-5.190507e-16</td>
+      <td>-0.766020</td>
+      <td>-0.430446</td>
+      <td>-0.200419</td>
+      <td>0.098330</td>
+      <td>0.195981</td>
+      <td>0.170411</td>
+      <td>3.944416e-16</td>
       <td>-0.030467</td>
       <td>-0.042020</td>
       <td>0.002719</td>
     </tr>
     <tr>
       <th>mmus</th>
-      <td>-0.336270</td>
-      <td>0.055310</td>
-      <td>0.356258</td>
-      <td>0.138518</td>
-      <td>-0.196244</td>
-      <td>0.156888</td>
-      <td>1.849335e-16</td>
+      <td>0.336270</td>
+      <td>-0.055310</td>
+      <td>-0.356258</td>
+      <td>-0.138518</td>
+      <td>0.196244</td>
+      <td>-0.156888</td>
+      <td>-7.371219e-17</td>
       <td>-0.000953</td>
       <td>0.015927</td>
       <td>0.034947</td>
     </tr>
     <tr>
       <th>wmus</th>
-      <td>0.494048</td>
-      <td>0.431881</td>
-      <td>0.150662</td>
-      <td>0.020335</td>
-      <td>-0.070052</td>
-      <td>-0.108334</td>
-      <td>-3.919741e-16</td>
+      <td>-0.494048</td>
+      <td>-0.431881</td>
+      <td>-0.150662</td>
+      <td>-0.020335</td>
+      <td>0.070052</td>
+      <td>0.108334</td>
+      <td>3.849234e-16</td>
       <td>-0.012986</td>
       <td>-0.044897</td>
       <td>-0.011610</td>
@@ -1273,9 +1353,9 @@ E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
 <img alt="../_images/trabalho_2_16_0.png" src="../_images/trabalho_2_16_0.png" />
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1289,7 +1369,7 @@ E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./metodos_estatisticos_multivariados"
         },
         predefinedOutput: true
@@ -1299,9 +1379,11 @@ E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="trabalho_1.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1317,23 +1399,27 @@ E(X_1) = E(E(X_1 | X_2)) = E(X_2) = \frac{1}{\lambda} = 4
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guilherme L Oliveira<br/>
+  
+</p>
+        </footer>
+    </div>
     
-      De Guilherme L Oliveira<br/>
-    
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

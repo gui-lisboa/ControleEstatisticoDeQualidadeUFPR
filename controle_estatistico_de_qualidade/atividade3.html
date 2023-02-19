@@ -4,11 +4,13 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Atividade 3 &#8212; Estatística - UFPR</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,13 +37,15 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,7 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Atividade 4" href="atividade4.html" />
@@ -66,7 +65,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +88,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -357,8 +371,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/gala.html">
-   Gala dataset
+  <a class="reference internal" href="../extensoes_modelos_regressao/exercicio_5.html">
+   Exercício 5
   </a>
  </li>
 </ul>
@@ -383,6 +397,11 @@ const thebe_selector_output = ".output, .cell_output"
    Trabalho No. 3
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../analise_de_series_temporais/trabalho_4.html">
+   Trabalho No. 4
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -398,12 +417,17 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -411,61 +435,117 @@ const thebe_selector_output = ".output, .cell_output"
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
-                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/controle_estatistico_de_qualidade/atividade3.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/controle_estatistico_de_qualidade/atividade3.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
-        title="Modo tela cheia"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Conteúdo
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resumo-de-teste-de-hipoteses">
    Resumo de Teste de Hipóteses
@@ -528,12 +608,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Atividade 3</h1>
@@ -542,7 +621,7 @@ const thebe_selector_output = ".output, .cell_output"
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Conteúdo </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -612,13 +691,14 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="atividade-3">
-<h1>Atividade 3<a class="headerlink" href="#atividade-3" title="Link permanente para este título">¶</a></h1>
-<div class="section" id="resumo-de-teste-de-hipoteses">
-<h2>Resumo de Teste de Hipóteses<a class="headerlink" href="#resumo-de-teste-de-hipoteses" title="Link permanente para este título">¶</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="atividade-3">
+<h1>Atividade 3<a class="headerlink" href="#atividade-3" title="Link permanente para este título">#</a></h1>
+<section id="resumo-de-teste-de-hipoteses">
+<h2>Resumo de Teste de Hipóteses<a class="headerlink" href="#resumo-de-teste-de-hipoteses" title="Link permanente para este título">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
@@ -630,8 +710,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="teste-sobre-a-media-com-variancia-conhecida">
-<h3>1. Teste sobre a média com variância conhecida<a class="headerlink" href="#teste-sobre-a-media-com-variancia-conhecida" title="Link permanente para este título">¶</a></h3>
+<section id="teste-sobre-a-media-com-variancia-conhecida">
+<h3>1. Teste sobre a média com variância conhecida<a class="headerlink" href="#teste-sobre-a-media-com-variancia-conhecida" title="Link permanente para este título">#</a></h3>
 <p>1.1</p>
 <p><span class="math notranslate nohighlight">\(H_{0}: \mu \geq 500 \\ H_{1}: \mu \lt 500\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mu = 500g \\ \sigma^{2} = 400g \\ \bar{x} = 492g \\ n = 16\)</span></p>
@@ -677,9 +757,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste z = 1.296 e p-valor = 0.0974, a evidência é insuficiente contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="teste-sobre-a-media-com-variancia-desconhecida">
-<h3>2. Teste sobre a média com variância desconhecida<a class="headerlink" href="#teste-sobre-a-media-com-variancia-desconhecida" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="teste-sobre-a-media-com-variancia-desconhecida">
+<h3>2. Teste sobre a média com variância desconhecida<a class="headerlink" href="#teste-sobre-a-media-com-variancia-desconhecida" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: \mu \leq 30mg \\ H_{1}: \mu \gt 30mg\)</span></p>
 <p><span class="math notranslate nohighlight">\(\mu = 30mg \\ \bar{x} = 31,5mg \\ \sigma = 3 mg \\ n = 25 \\ \alpha = 5\%\)</span></p>
 <div class="cell docutils container">
@@ -701,9 +781,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste t = 2.500 e p-valor = 0.0098, a evidência é suficiente contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="comparacao-duas-medias-com-variancias-conhecidas">
-<h3>3. Comparação duas médias com variâncias conhecidas<a class="headerlink" href="#comparacao-duas-medias-com-variancias-conhecidas" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="comparacao-duas-medias-com-variancias-conhecidas">
+<h3>3. Comparação duas médias com variâncias conhecidas<a class="headerlink" href="#comparacao-duas-medias-com-variancias-conhecidas" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: \mu_{A} = \mu_{B} \\ H_{1}: \mu_{A} \neq \mu_{B}\)</span></p>
 <p><span class="math notranslate nohighlight">\(\bar{x}_{A} = 502,74g \\ \bar{x}_{B} = 496,60g \\ n_{A} = 25 \\ n_{B} = 16 \\ \alpha = 5\%\)</span></p>
 <div class="cell docutils container">
@@ -728,9 +808,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste t = 1.918 e p-valor = 0.0312, a evidência é suficiente contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="variancias-iguais-desconhecidas">
-<h3>4. Variâncias iguais, desconhecidas<a class="headerlink" href="#variancias-iguais-desconhecidas" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="variancias-iguais-desconhecidas">
+<h3>4. Variâncias iguais, desconhecidas<a class="headerlink" href="#variancias-iguais-desconhecidas" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: \mu_{A} = \mu_{B} \\ H_{1}: \mu_{A} \lt \mu_{B}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -762,9 +842,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste t = -2.582 e p-valor = 0.0080, a evidência é muito forte contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="variancias-desiguais-desconhecidas">
-<h3>5. Variancias desiguais, desconhecidas<a class="headerlink" href="#variancias-desiguais-desconhecidas" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="variancias-desiguais-desconhecidas">
+<h3>5. Variancias desiguais, desconhecidas<a class="headerlink" href="#variancias-desiguais-desconhecidas" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: \mu_{A} = \mu_{B} \\ H_{1}: \mu_{A} \lt \mu_{B}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -800,9 +880,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste t = -4.076 e p-valor = 0.0003, a evidência é muito forte contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="observacoes-emparelhadas">
-<h3>6. Observações emparelhadas<a class="headerlink" href="#observacoes-emparelhadas" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="observacoes-emparelhadas">
+<h3>6. Observações emparelhadas<a class="headerlink" href="#observacoes-emparelhadas" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: \mu_{d} = 0 \\ H_{1}: \mu_{d} \gt 0\)</span></p>
 <p><span class="math notranslate nohighlight">\(Amostra A = [80, 72, 65, 78, 85] \\ Amostra B = [75, 70, 60, 72, 78]\)</span></p>
 <div class="cell docutils container">
@@ -824,9 +904,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste t = 3.536 e p-valor = 0.0121, a evidência é insuficiente contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="teste-para-a-variancia-de-uma-distribuicao-normal-n-mu-sigma-2">
-<h3>7. Teste para a variância de uma distribuição normal <span class="math notranslate nohighlight">\(N(\mu , \sigma^{2})\)</span><a class="headerlink" href="#teste-para-a-variancia-de-uma-distribuicao-normal-n-mu-sigma-2" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="teste-para-a-variancia-de-uma-distribuicao-normal-n-mu-sigma-2">
+<h3>7. Teste para a variância de uma distribuição normal <span class="math notranslate nohighlight">\(N(\mu , \sigma^{2})\)</span><a class="headerlink" href="#teste-para-a-variancia-de-uma-distribuicao-normal-n-mu-sigma-2" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: \sigma^{2} = 100 \\ H_{1}: \sigma^{2} = 100\)</span></p>
 <p><span class="math notranslate nohighlight">\(\sigma^{2} = 100 \\ \mu = 500 \\ s^{2} = 169 \\ n = 16\)</span></p>
 <div class="cell docutils container">
@@ -847,9 +927,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste X² = 0.254 e p-valor = 1.0000, a evidência é insuficiente contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="comparacao-das-variancias-de-duas-populacoes-normais">
-<h3>8. Comparação das variâncias de duas populações normais<a class="headerlink" href="#comparacao-das-variancias-de-duas-populacoes-normais" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="comparacao-das-variancias-de-duas-populacoes-normais">
+<h3>8. Comparação das variâncias de duas populações normais<a class="headerlink" href="#comparacao-das-variancias-de-duas-populacoes-normais" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: \sigma_{A}^{2} = \sigma_{B}^{2} \\ H_{1}: \sigma_{A}^{2} \gt \sigma_{B}^{2}\)</span></p>
 <p><span class="math notranslate nohighlight">\(Amostra A = [145, 127, 136, 142, 141, 137] \\ Amostra B = [143, 128, 132, 138, 142, 132]\)</span></p>
 <div class="cell docutils container">
@@ -870,9 +950,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste f = 1.082 e p-valor = 0.4666, a evidência é insuficiente contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="teste-para-a-proporcao">
-<h3>9. Teste para a proporção<a class="headerlink" href="#teste-para-a-proporcao" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="teste-para-a-proporcao">
+<h3>9. Teste para a proporção<a class="headerlink" href="#teste-para-a-proporcao" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: p = 0,6  \\ H_{1}: p \lt 0,6\)</span></p>
 <p><span class="math notranslate nohighlight">\(\hat{p} = 0,52 \\ n = 200\)</span></p>
 <div class="cell docutils container">
@@ -892,9 +972,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste z = -2.265 e p-valor = 0.0118, a evidência é adequada contra a hipótese nula</p>
 </div>
 </div>
-</div>
-<div class="section" id="comparacao-de-duas-proporcoes">
-<h3>10. Comparação de duas proporções<a class="headerlink" href="#comparacao-de-duas-proporcoes" title="Link permanente para este título">¶</a></h3>
+</section>
+<section id="comparacao-de-duas-proporcoes">
+<h3>10. Comparação de duas proporções<a class="headerlink" href="#comparacao-de-duas-proporcoes" title="Link permanente para este título">#</a></h3>
 <p><span class="math notranslate nohighlight">\(H_{0}: p_{A} = p_{B} \\ H_{1}: p_{A} \lt p_{B}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -923,9 +1003,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Solução</strong>: dada a estatística de teste z = -1.339 e p-valor = 0.0903, a evidência é insuficiente contra a hipótese nula</p>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -939,7 +1019,7 @@ const thebe_selector_output = ".output, .cell_output"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./controle_estatistico_de_qualidade"
         },
         predefinedOutput: true
@@ -949,9 +1029,11 @@ const thebe_selector_output = ".output, .cell_output"
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="atividade2.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -967,23 +1049,27 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Guilherme L Oliveira<br/>
+  
+</p>
+        </footer>
+    </div>
     
-      De Guilherme L Oliveira<br/>
-    
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
