@@ -81,6 +81,7 @@ parts:
   - file: analise_de_series_temporais/trabalho_1
   - file: analise_de_series_temporais/trabalho_2
   - file: analise_de_series_temporais/trabalho_3
+  - file: analise_de_series_temporais/trabalho_4
 
 - caption: Inferência Bayesiana
   chapters:
