@@ -74,7 +74,7 @@ parts:
 
 - caption: Extensões de Modelos de Regressão
   chapters:
-  - file: extensoes_modelos_regressao/gala
+  - file: extensoes_modelos_regressao/exercicio_5
 
 - caption: Análise de Séries Temporais
   chapters:
