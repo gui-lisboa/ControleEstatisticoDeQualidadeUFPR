@@ -375,6 +375,11 @@ const thebe_selector_output = ".output, .cell_output"
    Exercício 5
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../extensoes_modelos_regressao/reg_logistica_kernel.html">
+   Regressão Logística com expansão de dimensionalidade
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -728,34 +733,22 @@ At iterate    0    f=  2.58485D+00    |proj g|=  2.07159D+00
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate    5    f=  2.55161D+00    |proj g|=  2.02528D-01
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate    5    f=  2.55161D+00    |proj g|=  2.02527D-01
+
+At iterate   10    f=  2.55058D+00    |proj g|=  6.15161D-01
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   10    f=  2.55058D+00    |proj g|=  6.15145D-01
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   15    f=  2.54647D+00    |proj g|=  4.01123D-02
+
+At iterate   20    f=  2.54611D+00    |proj g|=  1.96375D-01
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   15    f=  2.54647D+00    |proj g|=  4.00759D-02
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   25    f=  2.54610D+00    |proj g|=  1.06271D-02
+
+At iterate   30    f=  2.54608D+00    |proj g|=  1.34406D-01
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   20    f=  2.54611D+00    |proj g|=  1.94601D-01
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   25    f=  2.54610D+00    |proj g|=  1.09926D-02
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   30    f=  2.54607D+00    |proj g|=  1.11852D-01
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   35    f=  2.54604D+00    |proj g|=  3.35044D-03
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   40    f=  2.54603D+00    |proj g|=  2.89728D-02
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   45    f=  2.54572D+00    |proj g|=  5.46747D-01
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   50    f=  2.54518D+00    |proj g|=  3.96656D-03
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   35    f=  2.54604D+00    |proj g|=  6.86031D-03
 
            * * *
 
@@ -770,14 +763,10 @@ F     = final function value
            * * *
 
    N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
-    7     50     66      1     0     0   3.967D-03   2.545D+00
-  F =   2.5451844275188451     
+    7     36     47      1     0     0   3.131D-03   2.546D+00
+  F =   2.5460352254023140     
 
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT                 
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.11.2/x64/lib/python3.11/site-packages/statsmodels/base/model.py:604: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
-  warnings.warn(&quot;Maximum Likelihood optimization failed to &quot;
+CONVERGENCE: REL_REDUCTION_OF_F_&lt;=_FACTR*EPSMCH             
 </pre></div>
 </div>
 <div class="output text_html"><table class="simpletable">
@@ -786,16 +775,16 @@ STOP: TOTAL NO. of ITERATIONS REACHED LIMIT
   <th>Dep. Variable:</th>           <td>Precip</td>         <th>  No. Observations:  </th>    <td>454</td>   
 </tr>
 <tr>
-  <th>Model:</th>           <td>SARIMAX(0, 1, [1], 12)</td> <th>  Log Likelihood     </th> <td>-1155.514</td>
+  <th>Model:</th>           <td>SARIMAX(0, 1, [1], 12)</td> <th>  Log Likelihood     </th> <td>-1155.900</td>
 </tr>
 <tr>
-  <th>Date:</th>               <td>Sun, 19 Feb 2023</td>    <th>  AIC                </th> <td>2325.027</td> 
+  <th>Date:</th>               <td>Sun, 26 Feb 2023</td>    <th>  AIC                </th> <td>2325.800</td> 
 </tr>
 <tr>
-  <th>Time:</th>                   <td>23:43:37</td>        <th>  BIC                </th> <td>2353.667</td> 
+  <th>Time:</th>                   <td>18:19:58</td>        <th>  BIC                </th> <td>2354.439</td> 
 </tr>
 <tr>
-  <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th> <td>2336.324</td> 
+  <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th> <td>2337.096</td> 
 </tr>
 <tr>
   <th></th>                         <td> - 454</td>         <th>                     </th>     <td> </td>    
@@ -809,39 +798,39 @@ STOP: TOTAL NO. of ITERATIONS REACHED LIMIT
       <td></td>        <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>Temp</th>     <td>   -0.7489</td> <td>    0.118</td> <td>   -6.373</td> <td> 0.000</td> <td>   -0.979</td> <td>   -0.519</td>
+  <th>Temp</th>     <td>   -0.7763</td> <td>    0.118</td> <td>   -6.595</td> <td> 0.000</td> <td>   -1.007</td> <td>   -0.546</td>
 </tr>
 <tr>
-  <th>DewPt</th>    <td>    0.5844</td> <td>    0.117</td> <td>    5.012</td> <td> 0.000</td> <td>    0.356</td> <td>    0.813</td>
+  <th>DewPt</th>    <td>    0.6182</td> <td>    0.116</td> <td>    5.328</td> <td> 0.000</td> <td>    0.391</td> <td>    0.846</td>
 </tr>
 <tr>
-  <th>CldCvr</th>   <td>   16.3409</td> <td>    2.075</td> <td>    7.877</td> <td> 0.000</td> <td>   12.275</td> <td>   20.407</td>
+  <th>CldCvr</th>   <td>   15.9492</td> <td>    2.075</td> <td>    7.687</td> <td> 0.000</td> <td>   11.883</td> <td>   20.016</td>
 </tr>
 <tr>
-  <th>WndSpd</th>   <td>    2.2826</td> <td>    1.038</td> <td>    2.199</td> <td> 0.028</td> <td>    0.248</td> <td>    4.317</td>
+  <th>WndSpd</th>   <td>    3.1548</td> <td>    1.064</td> <td>    2.965</td> <td> 0.003</td> <td>    1.069</td> <td>    5.240</td>
 </tr>
 <tr>
-  <th>Inflow</th>   <td>    0.0131</td> <td>    0.001</td> <td>   11.738</td> <td> 0.000</td> <td>    0.011</td> <td>    0.015</td>
+  <th>Inflow</th>   <td>    0.0131</td> <td>    0.001</td> <td>   11.591</td> <td> 0.000</td> <td>    0.011</td> <td>    0.015</td>
 </tr>
 <tr>
-  <th>ma.S.L12</th> <td>   -0.9179</td> <td>    0.031</td> <td>  -29.271</td> <td> 0.000</td> <td>   -0.979</td> <td>   -0.856</td>
+  <th>ma.S.L12</th> <td>   -0.9223</td> <td>    0.032</td> <td>  -29.142</td> <td> 0.000</td> <td>   -0.984</td> <td>   -0.860</td>
 </tr>
 <tr>
-  <th>sigma2</th>   <td>   10.3857</td> <td>    0.649</td> <td>   16.005</td> <td> 0.000</td> <td>    9.114</td> <td>   11.657</td>
+  <th>sigma2</th>   <td>   10.4283</td> <td>    0.655</td> <td>   15.922</td> <td> 0.000</td> <td>    9.145</td> <td>   11.712</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Ljung-Box (L1) (Q):</th>     <td>0.67</td> <th>  Jarque-Bera (JB):  </th> <td>3.80</td>
+  <th>Ljung-Box (L1) (Q):</th>     <td>1.02</td> <th>  Jarque-Bera (JB):  </th> <td>3.79</td>
 </tr>
 <tr>
-  <th>Prob(Q):</th>                <td>0.41</td> <th>  Prob(JB):          </th> <td>0.15</td>
+  <th>Prob(Q):</th>                <td>0.31</td> <th>  Prob(JB):          </th> <td>0.15</td>
 </tr>
 <tr>
-  <th>Heteroskedasticity (H):</th> <td>1.18</td> <th>  Skew:              </th> <td>0.05</td>
+  <th>Heteroskedasticity (H):</th> <td>1.20</td> <th>  Skew:              </th> <td>0.05</td>
 </tr>
 <tr>
-  <th>Prob(H) (two-sided):</th>    <td>0.31</td> <th>  Kurtosis:          </th> <td>3.44</td>
+  <th>Prob(H) (two-sided):</th>    <td>0.27</td> <th>  Kurtosis:          </th> <td>3.44</td>
 </tr>
 </table><br/><br/>Warnings:<br/>[1] Covariance matrix calculated using the outer product of gradients (complex-step).</div></div>
 </div>
@@ -865,6 +854,9 @@ STOP: TOTAL NO. of ITERATIONS REACHED LIMIT
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RUNNING THE L-BFGS-B CODE
 
            * * *
@@ -875,24 +867,18 @@ Machine precision = 2.220D-16
 At X0         0 variables are exactly at the bounds
 
 At iterate    0    f=  2.40969D-01    |proj g|=  4.80667D+00
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> This problem is unconstrained.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate    5    f=  2.40786D-01    |proj g|=  5.42079D+00
+
+At iterate    5    f=  2.40786D-01    |proj g|=  5.42079D+00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   10    f=  2.36318D-01    |proj g|=  1.40701D+01
+
+At iterate   15    f=  2.35905D-01    |proj g|=  6.25692D-01
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   15    f=  2.35905D-01    |proj g|=  6.25692D-01
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   20    f=  2.34997D-01    |proj g|=  3.39669D+00
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   25    f=  2.34772D-01    |proj g|=  2.34708D-01
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At iterate   20    f=  2.34997D-01    |proj g|=  3.39654D+00
+
+At iterate   25    f=  2.34772D-01    |proj g|=  2.35452D-01
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           * * *
@@ -908,8 +894,8 @@ F     = final function value
            * * *
 
    N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
-    7     26     39      1     0     0   2.330D-01   2.348D-01
-  F =  0.23477189977258137     
+    7     26     39      1     0     0   2.339D-01   2.348D-01
+  F =  0.23477189819468833     
 
 CONVERGENCE: REL_REDUCTION_OF_F_&lt;=_FACTR*EPSMCH             
 </pre></div>
@@ -923,10 +909,10 @@ CONVERGENCE: REL_REDUCTION_OF_F_&lt;=_FACTR*EPSMCH
   <th>Model:</th>           <td>SARIMAX(0, 1, [1], 12)</td> <th>  Log Likelihood     </th> <td>-106.586</td>
 </tr>
 <tr>
-  <th>Date:</th>               <td>Sun, 19 Feb 2023</td>    <th>  AIC                </th>  <td>227.173</td>
+  <th>Date:</th>               <td>Sun, 26 Feb 2023</td>    <th>  AIC                </th>  <td>227.173</td>
 </tr>
 <tr>
-  <th>Time:</th>                   <td>23:43:41</td>        <th>  BIC                </th>  <td>255.812</td>
+  <th>Time:</th>                   <td>18:20:00</td>        <th>  BIC                </th>  <td>255.812</td>
 </tr>
 <tr>
   <th>Sample:</th>                     <td>0</td>           <th>  HQIC               </th>  <td>238.469</td>

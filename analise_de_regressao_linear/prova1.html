@@ -375,6 +375,11 @@ const thebe_selector_output = ".output, .cell_output"
    Exercício 5
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../extensoes_modelos_regressao/reg_logistica_kernel.html">
+   Regressão Logística com expansão de dimensionalidade
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -1106,33 +1111,33 @@ H1: \beta_{1} \ne 0
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.604169</td>
-      <td>1629.012871</td>
-      <td>63.306989</td>
+      <td>1.612643</td>
+      <td>2851.850478</td>
+      <td>74.091356</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1.173462</td>
-      <td>2845.669431</td>
-      <td>59.838623</td>
+      <td>1.923817</td>
+      <td>2683.565299</td>
+      <td>84.019535</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.650654</td>
-      <td>1548.913181</td>
-      <td>74.747403</td>
+      <td>1.982191</td>
+      <td>1438.846286</td>
+      <td>81.774102</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1.070022</td>
-      <td>3021.403768</td>
-      <td>59.656705</td>
+      <td>1.902720</td>
+      <td>2445.499794</td>
+      <td>78.634013</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1.660314</td>
-      <td>1739.582554</td>
-      <td>67.735757</td>
+      <td>1.544620</td>
+      <td>2988.454067</td>
+      <td>72.739083</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1142,33 +1147,33 @@ H1: \beta_{1} \ne 0
     </tr>
     <tr>
       <th>95</th>
-      <td>1.684432</td>
-      <td>2483.213429</td>
-      <td>84.970466</td>
+      <td>2.056511</td>
+      <td>1763.337118</td>
+      <td>90.278668</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>1.794677</td>
-      <td>1340.764158</td>
-      <td>79.669191</td>
+      <td>1.765854</td>
+      <td>1407.762927</td>
+      <td>78.670016</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>1.377511</td>
-      <td>2021.611912</td>
-      <td>67.149551</td>
+      <td>1.890974</td>
+      <td>2192.390237</td>
+      <td>74.838705</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>1.602189</td>
-      <td>2146.999912</td>
-      <td>68.815221</td>
+      <td>1.971581</td>
+      <td>1859.388345</td>
+      <td>84.541919</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>1.446293</td>
-      <td>1480.037172</td>
-      <td>69.712413</td>
+      <td>1.709183</td>
+      <td>2546.178885</td>
+      <td>78.973853</td>
     </tr>
   </tbody>
 </table>
@@ -1197,25 +1202,25 @@ H1: \beta_{1} \ne 0
 <div class="output text_html"><table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tr>
-  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.760</td>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.755</td>
 </tr>
 <tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.755</td>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.749</td>
 </tr>
 <tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   153.3</td>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   149.1</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Sun, 19 Feb 2023</td> <th>  Prob (F-statistic):</th> <td>9.29e-31</td>
+  <th>Date:</th>             <td>Sun, 26 Feb 2023</td> <th>  Prob (F-statistic):</th> <td>2.61e-30</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>23:43:08</td>     <th>  Log-Likelihood:    </th> <td> -308.24</td>
+  <th>Time:</th>                 <td>18:19:38</td>     <th>  Log-Likelihood:    </th> <td> -298.16</td>
 </tr>
 <tr>
-  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   622.5</td>
+  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   602.3</td>
 </tr>
 <tr>
-  <th>Df Residuals:</th>          <td>    97</td>      <th>  BIC:               </th> <td>   630.3</td>
+  <th>Df Residuals:</th>          <td>    97</td>      <th>  BIC:               </th> <td>   610.1</td>
 </tr>
 <tr>
   <th>Df Model:</th>              <td>     2</td>      <th>                     </th>     <td> </td>   
@@ -1229,29 +1234,29 @@ H1: \beta_{1} \ne 0
     <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>const</th> <td>   24.1118</td> <td>    3.650</td> <td>    6.606</td> <td> 0.000</td> <td>   16.868</td> <td>   31.356</td>
+  <th>const</th> <td>   22.3670</td> <td>    3.419</td> <td>    6.542</td> <td> 0.000</td> <td>   15.581</td> <td>   29.153</td>
 </tr>
 <tr>
-  <th>x1</th>    <td>   31.2675</td> <td>    1.786</td> <td>   17.510</td> <td> 0.000</td> <td>   27.723</td> <td>   34.812</td>
+  <th>x1</th>    <td>   28.3781</td> <td>    1.649</td> <td>   17.210</td> <td> 0.000</td> <td>   25.105</td> <td>   31.651</td>
 </tr>
 <tr>
-  <th>x2</th>    <td>   -0.0005</td> <td>    0.001</td> <td>   -0.517</td> <td> 0.606</td> <td>   -0.003</td> <td>    0.002</td>
+  <th>x2</th>    <td>    0.0022</td> <td>    0.001</td> <td>    2.416</td> <td> 0.018</td> <td>    0.000</td> <td>    0.004</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Omnibus:</th>       <td> 9.280</td> <th>  Durbin-Watson:     </th> <td>   1.612</td>
+  <th>Omnibus:</th>       <td> 1.176</td> <th>  Durbin-Watson:     </th> <td>   1.868</td>
 </tr>
 <tr>
-  <th>Prob(Omnibus):</th> <td> 0.010</td> <th>  Jarque-Bera (JB):  </th> <td>  13.843</td>
+  <th>Prob(Omnibus):</th> <td> 0.555</td> <th>  Jarque-Bera (JB):  </th> <td>   0.788</td>
 </tr>
 <tr>
-  <th>Skew:</th>          <td>-0.394</td> <th>  Prob(JB):          </th> <td>0.000986</td>
+  <th>Skew:</th>          <td> 0.204</td> <th>  Prob(JB):          </th> <td>   0.674</td>
 </tr>
 <tr>
-  <th>Kurtosis:</th>      <td> 4.644</td> <th>  Cond. No.          </th> <td>1.55e+04</td>
+  <th>Kurtosis:</th>      <td> 3.151</td> <th>  Cond. No.          </th> <td>1.57e+04</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.55e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.57e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
 </div>
 </section>
 </section>

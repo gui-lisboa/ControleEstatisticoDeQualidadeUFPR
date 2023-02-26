@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Prova 1 &#8212; Estatística - UFPR</title>
+    <title>Regressão Logística com expansão de dimensionalidade &#8212; Estatística - UFPR</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Sobre" href="../planejamento_de_experimentos/intro.html" />
-    <link rel="prev" title="Atividade 4" href="atividade4.html" />
+    <link rel="next" title="Trabalho No. 1" href="../analise_de_series_temporais/trabalho_1.html" />
+    <link rel="prev" title="Exercício 5" href="exercicio_5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="pt">
     
@@ -154,29 +154,29 @@ const thebe_selector_output = ".output, .cell_output"
   Controle Estatístico de Qualidade
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/intro.html">
    Sobre
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="atividade2.html">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade2.html">
    Atividade 2
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="atividade3.html">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade3.html">
    Atividade 3
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="atividade4.html">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/atividade4.html">
    Atividade 4
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../controle_estatistico_de_qualidade/prova1.html">
    Prova 1
   </a>
  </li>
@@ -367,14 +367,14 @@ const thebe_selector_output = ".output, .cell_output"
   Extensões de Modelos de Regressão
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/exercicio_5.html">
+  <a class="reference internal" href="exercicio_5.html">
    Exercício 5
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../extensoes_modelos_regressao/reg_logistica_kernel.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Regressão Logística com expansão de dimensionalidade
   </a>
  </li>
@@ -490,7 +490,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/controle_estatistico_de_qualidade/prova1.ipynb"
+        <a href="../_sources/extensoes_modelos_regressao/reg_logistica_kernel.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -539,7 +539,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Prova 1</h1>
+                <h1>Regressão Logística com expansão de dimensionalidade</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -551,225 +551,141 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="prova-1">
-<h1>Prova 1<a class="headerlink" href="#prova-1" title="Link permanente para este título">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="regressao-logistica-com-expansao-de-dimensionalidade">
+<h1>Regressão Logística com expansão de dimensionalidade<a class="headerlink" href="#regressao-logistica-com-expansao-de-dimensionalidade" title="Link permanente para este título">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_circles</span>
+<span class="kn">from</span> <span class="nn">sklearn.inspection</span> <span class="kn">import</span> <span class="n">DecisionBoundaryDisplay</span>
+
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_circles</span><span class="p">(</span><span class="n">noise</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/reg_logistica_kernel_1_0.png" src="../_images/reg_logistica_kernel_1_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fronteiras_de_decisão</span><span class="p">(</span><span class="n">classificador</span><span class="p">,</span> <span class="n">_X</span><span class="p">,</span> <span class="n">_y</span><span class="p">,</span> <span class="n">título</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span>  <span class="n">DecisionBoundaryDisplay</span><span class="p">:</span>
+    <span class="n">imagem</span> <span class="o">=</span>  <span class="n">DecisionBoundaryDisplay</span><span class="o">.</span><span class="n">from_estimator</span><span class="p">(</span><span class="n">classificador</span><span class="p">,</span>
+                                                    <span class="n">_X</span><span class="p">,</span>
+                                                    <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span>
+                                                    <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;X2&#39;</span><span class="p">,</span>
+                                                    <span class="n">grid_resolution</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+                                                    <span class="n">response_method</span><span class="o">=</span><span class="s1">&#39;predict&#39;</span><span class="p">)</span>
+
+    <span class="n">imagem</span><span class="o">.</span><span class="n">ax_</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">_X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">_X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">_y</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="n">imagem</span><span class="o">.</span><span class="n">ax_</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">título</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">imagem</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># questão 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-<span class="n">dados</span> <span class="o">=</span> <span class="p">[</span><span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.8</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.0</span><span class="p">,</span> <span class="mf">36.9</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span>
-         <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">36.9</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span>
-         <span class="mf">37.5</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">36.4</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.4</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">36.9</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span>
-         <span class="mf">37.0</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.6</span><span class="p">,</span> <span class="mf">37.0</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">36.7</span><span class="p">,</span> <span class="mf">37.6</span><span class="p">,</span> <span class="mf">36.7</span><span class="p">,</span> <span class="mf">36.5</span><span class="p">,</span>
-         <span class="mf">37.1</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">36.5</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span>
-         <span class="mf">37.0</span><span class="p">,</span> <span class="mf">37.7</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">,</span> <span class="mf">37.3</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">37.1</span><span class="p">,</span> <span class="mf">36.8</span><span class="p">]</span>
-
-<span class="n">media</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
-<span class="n">desvio</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
-<span class="n">mediana</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
-<span class="n">quartis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">])</span>
-<span class="n">minimo</span><span class="p">,</span> <span class="n">maximo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dados</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
-
-<span class="n">display</span><span class="p">((</span><span class="n">minimo</span><span class="p">,</span> <span class="n">quartis</span><span class="p">,</span> <span class="n">maximo</span><span class="p">))</span>
-
-<span class="n">assimetria</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="n">media</span> <span class="o">-</span> <span class="n">mediana</span><span class="p">)</span><span class="o">/</span><span class="n">desvio</span>
-<span class="n">display</span><span class="p">(</span><span class="n">assimetria</span><span class="p">)</span>
-
-<span class="n">curtose</span> <span class="o">=</span> <span class="p">(</span><span class="n">quartis</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">quartis</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="p">[</span><span class="mi">90</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">dados</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">])))</span>
-
-<span class="n">display</span><span class="p">(</span><span class="n">curtose</span><span class="p">)</span>
+<span class="n">fronteiras_de_decisão</span><span class="p">(</span><span class="n">ajuste</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;Regressão Logística&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(36.4, array([36.975, 37.1  , 37.3  ]), 37.8)
-</pre></div>
+<img alt="../_images/reg_logistica_kernel_3_0.png" src="../_images/reg_logistica_kernel_3_0.png" />
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.293807855560021
-</pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.23214286])
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">polinomio_quadrático</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]]</span>
+
+<span class="n">X_transformado</span> <span class="o">=</span> <span class="n">polinomio_quadrático</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># questão 2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xs</span><span class="o">=</span><span class="n">X_transformado</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">ys</span><span class="o">=</span><span class="n">X_transformado</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">zs</span><span class="o">=</span><span class="n">X_transformado</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
 
-<span class="n">n</span><span class="o">=</span><span class="mi">100</span>
-<span class="n">media_amostral</span> <span class="o">=</span> <span class="mf">74.2</span>
-<span class="n">desvio_padrao</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">desvio_padrao_media</span> <span class="o">=</span> <span class="mf">.1</span>
-<span class="n">media</span> <span class="o">=</span> <span class="mi">74</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X1^2&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;X2^2&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;X1*X2&#39;</span><span class="p">)</span>
 
-<span class="n">estatistica_de_teste</span> <span class="o">=</span> <span class="p">(</span><span class="n">media_amostral</span> <span class="o">-</span> <span class="n">media</span><span class="p">)</span> <span class="o">/</span> <span class="n">desvio_padrao_media</span>
-<span class="n">pvalor</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">estatistica_de_teste</span><span class="p">))</span>
-
-<span class="n">display</span><span class="p">((</span><span class="n">estatistica_de_teste</span><span class="p">,</span> <span class="n">pvalor</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">figure</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.0000000000000284, 0.022750131948177654)
+<img alt="../_images/reg_logistica_kernel_5_0.png" src="../_images/reg_logistica_kernel_5_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X_transformado</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">X_transformado</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">hue</span><span class="o">=</span><span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/reg_logistica_kernel_6_0.png" src="../_images/reg_logistica_kernel_6_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste_transformado_quadrados</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_transformado</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]],</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">fronteiras_de_decisão</span><span class="p">(</span><span class="n">ajuste_transformado_quadrados</span><span class="p">,</span> <span class="n">X_transformado</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]],</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;Regressão Logística com dados transformados&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/reg_logistica_kernel_7_0.png" src="../_images/reg_logistica_kernel_7_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ajuste_transformado</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_transformado</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># questão 3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.1</span>
+<span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.1</span>
 
-<span class="n">amostras</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-    <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="p">})</span>
+<span class="n">xx</span><span class="p">,</span> <span class="n">yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span><span class="n">x_max</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
 
-<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;medias&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">amostras</span><span class="o">.</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;amplitudes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">a</span> <span class="o">-</span> <span class="n">amostras</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
-<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;variancias&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">amostras</span><span class="o">.</span><span class="n">medias</span> <span class="o">-</span> <span class="n">amostras</span><span class="o">.</span><span class="n">medias</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">amostras</span><span class="p">)</span>
-<span class="n">amostras</span><span class="p">[</span><span class="s1">&#39;desvios_padrao&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">variancias</span><span class="p">)</span>
+<span class="n">x_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">xx</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">yy</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
+<span class="n">x_in</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">ajuste_transformado</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">polinomio_quadrático</span><span class="p">(</span><span class="n">x_in</span><span class="p">))</span>
 
-<span class="n">media</span> <span class="o">=</span> <span class="p">(</span><span class="n">amostras</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">amostras</span><span class="o">.</span><span class="n">b</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">amostras</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">media_das_medias</span> <span class="o">=</span> <span class="n">amostras</span><span class="o">.</span><span class="n">medias</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">mediana_medias</span> <span class="o">=</span> <span class="n">amostras</span><span class="o">.</span><span class="n">medias</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-<span class="n">display</span><span class="p">(</span><span class="n">amostras</span><span class="p">,</span> <span class="n">media</span><span class="p">,</span> <span class="n">media_das_medias</span><span class="p">,</span> <span class="n">mediana_medias</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">y_pred</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">xx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Regressão Logística com dados transformados na dimensão original&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;X1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;X2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-      <th>medias</th>
-      <th>amplitudes</th>
-      <th>variancias</th>
-      <th>desvios_padrao</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2</td>
-      <td>2</td>
-      <td>2.0</td>
-      <td>0</td>
-      <td>0.444444</td>
-      <td>0.666667</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>3</td>
-      <td>2.5</td>
-      <td>1</td>
-      <td>0.250000</td>
-      <td>0.500000</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>7</td>
-      <td>4.5</td>
-      <td>5</td>
-      <td>0.027778</td>
-      <td>0.166667</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>2</td>
-      <td>2.5</td>
-      <td>1</td>
-      <td>0.250000</td>
-      <td>0.500000</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3</td>
-      <td>3</td>
-      <td>3.0</td>
-      <td>0</td>
-      <td>0.111111</td>
-      <td>0.333333</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>3</td>
-      <td>7</td>
-      <td>5.0</td>
-      <td>4</td>
-      <td>0.111111</td>
-      <td>0.333333</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>2</td>
-      <td>4.5</td>
-      <td>5</td>
-      <td>0.027778</td>
-      <td>0.166667</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>7</td>
-      <td>3</td>
-      <td>5.0</td>
-      <td>4</td>
-      <td>0.111111</td>
-      <td>0.333333</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>7</td>
-      <td>7</td>
-      <td>7.0</td>
-      <td>0</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.0
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.5
-</pre></div>
-</div>
+<img alt="../_images/reg_logistica_kernel_9_0.png" src="../_images/reg_logistica_kernel_9_0.png" />
 </div>
 </div>
 </section>
@@ -787,7 +703,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./controle_estatistico_de_qualidade"
+            path: "./extensoes_modelos_regressao"
         },
         predefinedOutput: true
     }
@@ -801,17 +717,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="atividade4.html" title="anterior page">
+    <a class='left-prev' id="prev-link" href="exercicio_5.html" title="anterior page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">anterior</p>
-            <p class="prev-next-title">Atividade 4</p>
+            <p class="prev-next-title">Exercício 5</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../planejamento_de_experimentos/intro.html" title="próximo page">
+    <a class='right-next' id="next-link" href="../analise_de_series_temporais/trabalho_1.html" title="próximo page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Sobre</p>
+        <p class="prev-next-title">Trabalho No. 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
