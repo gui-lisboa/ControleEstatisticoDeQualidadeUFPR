@@ -8,7 +8,7 @@
 title                       : Estatística - UFPR
 author                      : Guilherme L Oliveira
 logo                        : logo.png
-exclude_patterns            : [_build, "**.ipynb_checkpoints", "venv/*"]
+exclude_patterns            : [_build, "**.ipynb_checkpoints", ".venv/*"]
 only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.

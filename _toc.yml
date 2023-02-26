@@ -75,6 +75,7 @@ parts:
 - caption: Extensões de Modelos de Regressão
   chapters:
   - file: extensoes_modelos_regressao/exercicio_5
+  - file: extensoes_modelos_regressao/reg_logistica_kernel
 
 - caption: Análise de Séries Temporais
   chapters:
